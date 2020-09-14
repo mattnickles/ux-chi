@@ -14,7 +14,7 @@ rules:
     - allow-single-line: true
   class-name-format:
     - 0
-    - convention: '^(chi|([amo]-[a-z][a-zA-Z0-9]*(__[a-z][a-zA-Z0-9]*)*)|(-[a-z][-a-zA-Z0-9]*))$'
+    - convention: '^(lux|([amo]-[a-z][a-zA-Z0-9]*(__[a-z][a-zA-Z0-9]*)*)|(-[a-z][-a-zA-Z0-9]*))$'
     - convention-explanation: 'class must be a valid A-B__E (A=[a|m|o] atomicIdentifier, B=blockName, E=elementName) or -M (M=modifierName) identifier'
   clean-import-paths:
     - 1

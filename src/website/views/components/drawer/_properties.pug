@@ -1,12 +1,12 @@
 h2 Web Component
-:stencilDoc(name='chi-drawer')
+:stencilDoc(name='lux-drawer')
 
-.chi-divider.-my--5
+.lux-divider.-my--5
 
 h2 JavaScript
 p.-text This component accepts options to configure its behavior.
 
-section.chi-table.chi-table__options.-bordered.-my--3
+section.lux-table.lux-table__options.-bordered.-my--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -52,7 +52,7 @@ section.chi-table.chi-table__options.-bordered.-my--3
               | outside the drawer.
 
 h3.mt--2 Methods
-section.chi-table.chi-table__methods.-bordered.-my--3
+section.lux-table.lux-table__methods.-bordered.-my--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -101,7 +101,7 @@ p.-text
   | and object data. You should call this method when you want to remove the component.
 :code(lang="javascript")
   var elem = document.getElementById('drawer-1');
-  var drawer = chi.drawer(elem);
+  var drawer = lux.drawer(elem);
   // do stuff
   drawer.dispose();
 
@@ -110,9 +110,9 @@ p.-text
   | associated to the trigger.
 :code(lang="javascript")
   var elem = document.getElementById('drawer-2');
-  var drawer = chi.drawer(elem);
+  var drawer = lux.drawer(elem);
   var elem2 = document.getElementById('drawer-2');
-  var drawer2 = chi.drawer(elem2);
+  var drawer2 = lux.drawer(elem2);
   drawer === drawer2; // returns true
 
   drawer.dispose(); // Only have to do it once.

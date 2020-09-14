@@ -9,7 +9,7 @@
     {
       "filePath": "src/components/alert/alert.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-alert",
+      "tag": "lux-alert",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -87,7 +87,7 @@
           "mutable": false,
           "attr": "icon",
           "reflectToAttr": true,
-          "docs": "to avoid necessity of adding <chi-icon> to alert markup.",
+          "docs": "to avoid necessity of adding <lux-icon> to alert markup.",
           "docsTags": [],
           "values": [
             {
@@ -182,23 +182,23 @@
       "slots": [],
       "dependents": [],
       "dependencies": [
-        "chi-icon",
-        "chi-button"
+        "lux-icon",
+        "lux-button"
       ],
       "dependencyGraph": {
-        "chi-alert": [
-          "chi-icon",
-          "chi-button"
+        "lux-alert": [
+          "lux-icon",
+          "lux-button"
         ],
-        "chi-button": [
-          "chi-icon"
+        "lux-button": [
+          "lux-icon"
         ]
       }
     },
     {
       "filePath": "src/components/badge/badge.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-badge",
+      "tag": "lux-badge",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -279,7 +279,7 @@
     {
       "filePath": "src/components/brand/brand.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-brand",
+      "tag": "lux-brand",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -344,7 +344,7 @@
     {
       "filePath": "src/components/button/button.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-button",
+      "tag": "lux-button",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -404,7 +404,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": true,
-          "docs": "to disable chi-button.",
+          "docs": "to disable lux-button.",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -517,7 +517,7 @@
       "methods": [],
       "events": [
         {
-          "event": "chiClick",
+          "event": "luxClick",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -529,25 +529,25 @@
       "styles": [],
       "slots": [],
       "dependents": [
-        "chi-alert"
+        "lux-alert"
       ],
       "dependencies": [
-        "chi-icon"
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-button": [
-          "chi-icon"
+        "lux-button": [
+          "lux-icon"
         ],
-        "chi-alert": [
-          "chi-button"
+        "lux-alert": [
+          "lux-button"
         ]
       }
     },
     {
       "filePath": "src/components/date/date.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-date",
-      "readme": "# chi-date\n\n\n",
+      "tag": "lux-date",
+      "readme": "# lux-date\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -695,7 +695,7 @@
       ],
       "events": [
         {
-          "event": "chiDateChange",
+          "event": "luxDateChange",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -707,25 +707,25 @@
       "styles": [],
       "slots": [],
       "dependents": [
-        "chi-date-picker"
+        "lux-date-picker"
       ],
       "dependencies": [
-        "chi-icon"
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-date": [
-          "chi-icon"
+        "lux-date": [
+          "lux-icon"
         ],
-        "chi-date-picker": [
-          "chi-date"
+        "lux-date-picker": [
+          "lux-date"
         ]
       }
     },
     {
       "filePath": "src/components/date-picker/date-picker.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-date-picker",
-      "readme": "# chi-date-picker\n\n\n",
+      "tag": "lux-date-picker",
+      "readme": "# lux-date-picker\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -753,7 +753,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": true,
-          "docs": "to disable chi-date-picker.",
+          "docs": "to disable lux-date-picker.",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -910,26 +910,26 @@
       "slots": [],
       "dependents": [],
       "dependencies": [
-        "chi-popover",
-        "chi-date",
-        "chi-icon"
+        "lux-popover",
+        "lux-date",
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-date-picker": [
-          "chi-popover",
-          "chi-date",
-          "chi-icon"
+        "lux-date-picker": [
+          "lux-popover",
+          "lux-date",
+          "lux-icon"
         ],
-        "chi-date": [
-          "chi-icon"
+        "lux-date": [
+          "lux-icon"
         ]
       }
     },
     {
       "filePath": "src/components/drawer/drawer.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-drawer",
-      "readme": "# chi-drawer\n\n\n",
+      "tag": "lux-drawer",
+      "readme": "# lux-drawer\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1104,7 +1104,7 @@
       ],
       "events": [
         {
-          "event": "chiDrawerHidden",
+          "event": "luxDrawerHidden",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -1113,7 +1113,7 @@
           "docsTags": []
         },
         {
-          "event": "chiDrawerHide",
+          "event": "luxDrawerHide",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -1122,7 +1122,7 @@
           "docsTags": []
         },
         {
-          "event": "chiDrawerShow",
+          "event": "luxDrawerShow",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -1131,7 +1131,7 @@
           "docsTags": []
         },
         {
-          "event": "chiDrawerShown",
+          "event": "luxDrawerShown",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -1144,18 +1144,18 @@
       "slots": [],
       "dependents": [],
       "dependencies": [
-        "chi-icon"
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-drawer": [
-          "chi-icon"
+        "lux-drawer": [
+          "lux-icon"
         ]
       }
     },
     {
       "filePath": "src/components/expansion-panel/expansion-panel.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-expansion-panel",
+      "tag": "lux-expansion-panel",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1238,8 +1238,8 @@
     {
       "filePath": "src/components/icon/icon.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-icon",
-      "readme": "# chi-icon\n\n\n",
+      "tag": "lux-icon",
+      "readme": "# lux-icon\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1347,47 +1347,47 @@
       "styles": [],
       "slots": [],
       "dependents": [
-        "chi-alert",
-        "chi-button",
-        "chi-date",
-        "chi-date-picker",
-        "chi-drawer",
-        "chi-number-input",
-        "chi-text-input",
-        "chi-textarea"
+        "lux-alert",
+        "lux-button",
+        "lux-date",
+        "lux-date-picker",
+        "lux-drawer",
+        "lux-number-input",
+        "lux-text-input",
+        "lux-textarea"
       ],
       "dependencies": [],
       "dependencyGraph": {
-        "chi-alert": [
-          "chi-icon"
+        "lux-alert": [
+          "lux-icon"
         ],
-        "chi-button": [
-          "chi-icon"
+        "lux-button": [
+          "lux-icon"
         ],
-        "chi-date": [
-          "chi-icon"
+        "lux-date": [
+          "lux-icon"
         ],
-        "chi-date-picker": [
-          "chi-icon"
+        "lux-date-picker": [
+          "lux-icon"
         ],
-        "chi-drawer": [
-          "chi-icon"
+        "lux-drawer": [
+          "lux-icon"
         ],
-        "chi-number-input": [
-          "chi-icon"
+        "lux-number-input": [
+          "lux-icon"
         ],
-        "chi-text-input": [
-          "chi-icon"
+        "lux-text-input": [
+          "lux-icon"
         ],
-        "chi-textarea": [
-          "chi-icon"
+        "lux-textarea": [
+          "lux-icon"
         ]
       }
     },
     {
       "filePath": "src/components/label/label.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-label",
+      "tag": "lux-label",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1471,7 +1471,7 @@
     {
       "filePath": "src/components/number-input/number-input.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-number-input",
+      "tag": "lux-number-input",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1644,7 +1644,7 @@
       "methods": [],
       "events": [
         {
-          "event": "chiChange",
+          "event": "luxChange",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -1657,18 +1657,18 @@
       "slots": [],
       "dependents": [],
       "dependencies": [
-        "chi-icon"
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-number-input": [
-          "chi-icon"
+        "lux-number-input": [
+          "lux-icon"
         ]
       }
     },
     {
       "filePath": "src/components/pagination/pagination.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-pagination",
+      "tag": "lux-pagination",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -1846,7 +1846,7 @@
       "methods": [],
       "events": [
         {
-          "event": "chiPageChange",
+          "event": "luxPageChange",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -1855,7 +1855,7 @@
           "docsTags": []
         },
         {
-          "event": "chiPageSizeChange",
+          "event": "luxPageSizeChange",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -1873,8 +1873,8 @@
     {
       "filePath": "src/components/popover/popover.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-popover",
-      "readme": "# chi-popover\n\n\n",
+      "tag": "lux-popover",
+      "readme": "# lux-popover\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2088,7 +2088,7 @@
       ],
       "events": [
         {
-          "event": "chiPopoverHidden",
+          "event": "luxPopoverHidden",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -2097,7 +2097,7 @@
           "docsTags": []
         },
         {
-          "event": "chiPopoverHide",
+          "event": "luxPopoverHide",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -2106,7 +2106,7 @@
           "docsTags": []
         },
         {
-          "event": "chiPopoverShow",
+          "event": "luxPopoverShow",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -2115,7 +2115,7 @@
           "docsTags": []
         },
         {
-          "event": "chiPopoverShown",
+          "event": "luxPopoverShown",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -2127,19 +2127,19 @@
       "styles": [],
       "slots": [],
       "dependents": [
-        "chi-date-picker"
+        "lux-date-picker"
       ],
       "dependencies": [],
       "dependencyGraph": {
-        "chi-date-picker": [
-          "chi-popover"
+        "lux-date-picker": [
+          "lux-popover"
         ]
       }
     },
     {
       "filePath": "src/components/progress/progress.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-progress",
+      "tag": "lux-progress",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2206,7 +2206,7 @@
     {
       "filePath": "src/components/spinner/spinner.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-spinner",
+      "tag": "lux-spinner",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2272,7 +2272,7 @@
     {
       "filePath": "src/components/toggle-switch/toggle-switch.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-switch",
+      "tag": "lux-switch",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2398,7 +2398,7 @@
     {
       "filePath": "src/components/text-input/text-input.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-text-input",
+      "tag": "lux-text-input",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -2737,7 +2737,7 @@
       "methods": [],
       "events": [
         {
-          "event": "chiBlur",
+          "event": "luxBlur",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -2746,7 +2746,7 @@
           "docsTags": []
         },
         {
-          "event": "chiChange",
+          "event": "luxChange",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -2755,7 +2755,7 @@
           "docsTags": []
         },
         {
-          "event": "chiFocus",
+          "event": "luxFocus",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -2764,7 +2764,7 @@
           "docsTags": []
         },
         {
-          "event": "chiInput",
+          "event": "luxInput",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -2777,18 +2777,18 @@
       "slots": [],
       "dependents": [],
       "dependencies": [
-        "chi-icon"
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-text-input": [
-          "chi-icon"
+        "lux-text-input": [
+          "lux-icon"
         ]
       }
     },
     {
       "filePath": "src/components/textarea/textarea.tsx",
       "encapsulation": "scoped",
-      "tag": "chi-textarea",
+      "tag": "lux-textarea",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -3031,7 +3031,7 @@
       "methods": [],
       "events": [
         {
-          "event": "chiBlur",
+          "event": "luxBlur",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -3040,7 +3040,7 @@
           "docsTags": []
         },
         {
-          "event": "chiChange",
+          "event": "luxChange",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -3049,7 +3049,7 @@
           "docsTags": []
         },
         {
-          "event": "chiFocus",
+          "event": "luxFocus",
           "detail": "any",
           "bubbles": true,
           "cancelable": true,
@@ -3058,7 +3058,7 @@
           "docsTags": []
         },
         {
-          "event": "chiInput",
+          "event": "luxInput",
           "detail": "string",
           "bubbles": true,
           "cancelable": true,
@@ -3071,11 +3071,11 @@
       "slots": [],
       "dependents": [],
       "dependencies": [
-        "chi-icon"
+        "lux-icon"
       ],
       "dependencyGraph": {
-        "chi-textarea": [
-          "chi-icon"
+        "lux-textarea": [
+          "lux-icon"
         ]
       }
     }

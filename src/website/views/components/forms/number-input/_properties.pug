@@ -1,12 +1,12 @@
 h2 Web Component
-:stencilDoc(name='chi-number-input')
+:stencilDoc(name='lux-number-input')
 
-.chi-divider.-my--5
+.lux-divider.-my--5
 
 h2 JavaScript
 p.-text This component accepts options to configure its behavior.
 
-section.chi-table.chi-table__options.-bordered.-my--3
+section.lux-table.lux-table__options.-bordered.-my--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -38,33 +38,33 @@ p.-text
   | any pair value, or a value greater than 5 or lesser than 1, the component will automatically correct the value.
 .example.-mb--3
   .-p--3
-    .chi-form__item.-row
-      .chi-number-input.-expanded
-        input#input-number-3.chi-input(type="number", value="1", min="0", max="6", step="2", aria-label="Input label")
-        button.chi-button.-icon(aria-label='Decrease')
-          .chi-button__content
-            i.chi-icon.icon-minus
-        button.chi-button.-icon(aria-label='Increase')
-          .chi-button__content
-            i.chi-icon.icon-plus
+    .lux-form__item.-row
+      .lux-number-input.-expanded
+        input#input-number-3.lux-input(type="number", value="1", min="0", max="6", step="2", aria-label="Input label")
+        button.lux-button.-icon(aria-label='Decrease')
+          .lux-button__content
+            i.lux-icon.icon-minus
+        button.lux-button.-icon(aria-label='Increase')
+          .lux-button__content
+            i.lux-icon.icon-plus
   :code(lang="html")
-    <div class="chi-form__item -row">
-      <div class="chi-number-input -expanded">
-        <input id="input-number-3" class="chi-input" type="number" value="1" min="0" max="6" step="2" aria-label="Input label">
-        <button class="chi-button -icon" aria-label="Decrease">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-minus"></i>
+    <div class="lux-form__item -row">
+      <div class="lux-number-input -expanded">
+        <input id="input-number-3" class="lux-input" type="number" value="1" min="0" max="6" step="2" aria-label="Input label">
+        <button class="lux-button -icon" aria-label="Decrease">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-minus"></i>
           </div>
         </button>
-        <button class="chi-button -icon" aria-label="Increase">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-plus"></i>
+        <button class="lux-button -icon" aria-label="Increase">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-plus"></i>
           </div>
         </button>
       </div>
     </div>
     <script>
-      chi.numberInput(
+      lux.numberInput(
         document.getElementById('input-number-2'),
         {autofix: true}
       );
@@ -76,20 +76,20 @@ p.-text
   | listeners and object data. You should call this method when you want to remove the component.
 :code(lang="javascript")
   var elem = document.getElementById('input-number-1');
-  var inputNumberComponent = chi.numberInput(elem);
+  var inputNumberComponent = lux.numberInput(elem);
   // do stuff
   inputNumberComponent.dispose();
 
 p.-text
-  span.chi-badge.-dark.-sm.-mr--1
+  span.lux-badge.-dark.-sm.-mr--1
     span Tip
   | It is safe to call the <code>numberInput</code> method more than once, as it will return any previously created
   | number input component associated to the input.
 :code(lang="javascript")
   var elem = document.getElementById('input-number-1');
-  var inputNumberComponent = chi.numberInput(elem);
+  var inputNumberComponent = lux.numberInput(elem);
   var elem2 = document.getElementById('input-number-1');
-  var inputNumberComponent2 = chi.numberInput(elem2);
+  var inputNumberComponent2 = lux.numberInput(elem2);
   inputNumberComponent === inputNumberComponent2; // returns true
 
   inputNumberComponent.dispose(); // Only have to do it once.
@@ -98,7 +98,7 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.numberInput(
+      lux.numberInput(
         document.getElementById('input-number-3'),
         {autofix:true}
       );

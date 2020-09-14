@@ -1,0 +1,26 @@
+@import '_horizontal-button-groups';
+@import '_vertical-button-groups';
+
+.lux-button-group {
+  &.-fluid {
+    display: flex;
+
+    .lux-button {
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: center;
+
+      &.-no-fluid {
+        flex: 0 0 auto;
+      }
+
+      &.-align--left {
+        justify-content: flex-start;
+      }
+
+      &.-align--right {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

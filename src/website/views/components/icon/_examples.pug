@@ -1,32 +1,32 @@
 h2 Overview
 p.-text
-  | Chi icons are a collection of high-quality vector icons designed by Lumen for use in consumer, enterprise, and internal applications.
+  | Lux icons are a collection of high-quality vector icons designed by Lumen for use in consumer, enterprise, and internal applications.
   | All icons have been manually optimized to achieve the fastest load time without compromising visual path and shape quality. For icon requests or
-  | feedback, please email <a href="mailto:chi.support@centurylink.com">Chi Support</a>.
+  | feedback, please email <a href="mailto:lux.support@centurylink.com">Lux Support</a>.
 
 h2 Using Icons
 p.-text
-  | Chi icons can be added to projects in one of two ways: Web Component (SVG) or HTML Blueprint (Web Font).
-  | The Web Component approach is dependent on your project using Chi's <a href="../../getting-started/installation">Web Components</a>.
-  | The HTML Blueprint approach has no dependencies and all icons come pre-packaged in <a href="../../getting-started/installation">Chi CSS</a>.
+  | Lux icons can be added to projects in one of two ways: Web Component (SVG) or HTML Blueprint (Web Font).
+  | The Web Component approach is dependent on your project using Lux's <a href="../../getting-started/installation">Web Components</a>.
+  | The HTML Blueprint approach has no dependencies and all icons come pre-packaged in <a href="../../getting-started/installation">Lux CSS</a>.
 
 h2 Examples
 h3 Base
 .example.-mb--3
   .-p--3
-    chi-icon(icon="atom")
+    lux-icon(icon="atom")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-default
+    ul.lux-tabs#example-default
       li.-active
         a(href='#webcomponent-default') Web Component
       li
         a(href='#webfont-default') HTML Blueprint
-  #webcomponent-default.chi-tabs-panel.-active
+  #webcomponent-default.lux-tabs-panel.-active
     :code(lang="html")
-      <chi-icon icon="atom"></chi-icon>
-  #webfont-default.chi-tabs-panel
+      <lux-icon icon="atom"></lux-icon>
+  #webfont-default.lux-tabs-panel
     :code(lang="html")
-      <i class="chi-icon icon-atom"></i>
+      <i class="lux-icon icon-atom"></i>
 
 h3 Sizes
 p.-text
@@ -37,53 +37,53 @@ p.-text
   | (e.g. large button), and <code>sm--3</code> for displaying 24px icons within a 48px container.
 .example.-mb--3
   .-p--3
-    .chi-grid.-align-items--end
+    .lux-grid.-align-items--end
       each size in ['xs', 'sm', 'sm--2', 'sm--3', 'md', 'lg', 'xl', 'xxl']
         div.-p--2.-m--1
-          chi-icon(icon="atom", size=size)
+          lux-icon(icon="atom", size=size)
           p.-text.-text--center= size
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes
+    ul.lux-tabs#example-sizes
       li.-active
         a(href='#webcomponent-sizes') Web Component
       li
         a(href='#webfont-sizes') HTML Blueprint
-  #webcomponent-sizes.chi-tabs-panel.-active
+  #webcomponent-sizes.lux-tabs-panel.-active
     :code(lang="html")
       <!-- -xs : 12x12px -->
-      <chi-icon icon="atom" size="xs"></chi-icon>
+      <lux-icon icon="atom" size="xs"></lux-icon>
       <!-- -sm : 16x16px -->
-      <chi-icon icon="atom" size="sm"></chi-icon>
+      <lux-icon icon="atom" size="sm"></lux-icon>
       <!-- -sm--2 : 20x20px -->
-      <chi-icon icon="atom" size="sm--2"></chi-icon>
+      <lux-icon icon="atom" size="sm--2"></lux-icon>
       <!-- -sm--3 : 24x24px -->
-      <chi-icon icon="atom" size="sm--3"></chi-icon>
+      <lux-icon icon="atom" size="sm--3"></lux-icon>
       <!-- -md : 32x32px -->
-      <chi-icon icon="atom" size="md"></chi-icon>
+      <lux-icon icon="atom" size="md"></lux-icon>
       <!-- -lg : 64x64px -->
-      <chi-icon icon="atom" size="lg"></chi-icon>
+      <lux-icon icon="atom" size="lg"></lux-icon>
       <!-- -xl : 96x96px -->
-      <chi-icon icon="atom" size="xl"></chi-icon>
+      <lux-icon icon="atom" size="xl"></lux-icon>
       <!-- -xxl : 128x128px -->
-      <chi-icon icon="atom" size="xxl"></chi-icon>
-  #webfont-sizes.chi-tabs-panel
+      <lux-icon icon="atom" size="xxl"></lux-icon>
+  #webfont-sizes.lux-tabs-panel
     :code(lang="html")
       <!-- -xs : 12x12px -->
-      <i class="chi-icon icon-atom -xs"></i>
+      <i class="lux-icon icon-atom -xs"></i>
       <!-- -sm : 16x16px -->
-      <i class="chi-icon icon-atom -sm"></i>
+      <i class="lux-icon icon-atom -sm"></i>
       <!-- -sm--2 : 20x20px -->
-      <i class="chi-icon icon-atom -sm--2"></i>
+      <i class="lux-icon icon-atom -sm--2"></i>
       <!-- -sm--3 : 24x24px -->
-      <i class="chi-icon icon-atom -sm--3"></i>
+      <i class="lux-icon icon-atom -sm--3"></i>
       <!-- -md : 32x32px -->
-      <i class="chi-icon icon-atom -md"></i>
+      <i class="lux-icon icon-atom -md"></i>
       <!-- -lg : 64x64px -->
-      <i class="chi-icon icon-atom -lg"></i>
+      <i class="lux-icon icon-atom -lg"></i>
       <!-- -xl : 96x96px -->
-      <i class="chi-icon icon-atom -xl"></i>
+      <i class="lux-icon icon-atom -xl"></i>
       <!-- -xxl : 128x128px -->
-      <i class="chi-icon icon-atom -xxl"></i>
+      <i class="lux-icon icon-atom -xxl"></i>
 
 h3 Colors
 p.-text
@@ -93,46 +93,46 @@ h4 Brand
 p.-text
   | Brand icon colors reinforce Lumen's brand. Use primary and secondary as accents and base, grey, dark, and light as neutrals.
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6.-p--1.-d--flex.-justify-content--center
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6.-p--1.-d--flex.-justify-content--center
       each color in ['icon--body', 'icon--primary', 'icon--grey']
-        div(class=`chi-icon -md -${color} -m--1`)
+        div(class=`lux-icon -md -${color} -m--1`)
           svg
             use(xlink:href='#icon-atom')
-    .chi-col.-w--12.-w-md--6.-bg--black.-p--1.-d--flex.-justify-content--center
+    .lux-col.-w--12.-w-md--6.-bg--black.-p--1.-d--flex.-justify-content--center
       each color in ['icon--secondary', 'icon--light']
         if (color === 'icon--secondary')
-          div(class=`chi-icon -md -icon--secondary -m--1`)
+          div(class=`lux-icon -md -icon--secondary -m--1`)
             svg
               use(xlink:href='#icon-atom')
         else if (color === 'icon--light')
-          div(class=`chi-icon -md -icon--light -m--1`)
+          div(class=`lux-icon -md -icon--light -m--1`)
             svg
               use(xlink:href='#icon-atom')
   .example-tabs.-pl--2
-    ul.chi-tabs#example-colors
+    ul.lux-tabs#example-colors
       li.-active
         a(href='#webcomponent-colors') Web Component
       li
         a(href='#webfont-color') HTML Blueprint
-  #webcomponent-colors.chi-tabs-panel.-active
+  #webcomponent-colors.lux-tabs-panel.-active
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-icon icon="atom" size="md"></chi-icon>
-      <chi-icon icon="atom" size="md" color="primary"></chi-icon>
-      <chi-icon icon="atom" size="md" color="grey"></chi-icon>
+      <lux-icon icon="atom" size="md"></lux-icon>
+      <lux-icon icon="atom" size="md" color="primary"></lux-icon>
+      <lux-icon icon="atom" size="md" color="grey"></lux-icon>
       <!-- For dark backgrounds -->
-      <chi-icon icon="atom" size="md" color="secondary"></chi-icon>
-      <chi-icon icon="atom" size="md" color="light"></chi-icon>
-  #webfont-color.chi-tabs-panel
+      <lux-icon icon="atom" size="md" color="secondary"></lux-icon>
+      <lux-icon icon="atom" size="md" color="light"></lux-icon>
+  #webfont-color.lux-tabs-panel
     :code(lang="html")
       <!-- For light backgrounds -->
-      <i class="chi-icon icon-atom -md"></i>
-      <i class="chi-icon icon-atom -md -icon--primary"></i>
-      <i class="chi-icon icon-atom -md -icon--grey"></i>
+      <i class="lux-icon icon-atom -md"></i>
+      <i class="lux-icon icon-atom -md -icon--primary"></i>
+      <i class="lux-icon icon-atom -md -icon--grey"></i>
       <!-- For dark backgrounds -->
-      <i class="chi-icon icon-atom -md -icon--secondary"></i>
-      <i class="chi-icon icon-atom -md -icon--light"></i>
+      <i class="lux-icon icon-atom -md -icon--secondary"></i>
+      <i class="lux-icon icon-atom -md -icon--light"></i>
 h4 Semantic
 p.-text
   | Use semantic colors to communicate meaning to users. Examples include displaying alerts, form field
@@ -140,49 +140,49 @@ p.-text
   | for informative, red (danger) for negative, yellow (warning) for needs attention, and grey (muted)
   | for neutral. Semantic colors should never be used for decorative purposes.
 .example.-mb--3
-  .chi-grid
-    .chi-col.-w--12-text--center.-p--1.-d--flex.-justify-content--center
+  .lux-grid
+    .lux-col.-w--12-text--center.-p--1.-d--flex.-justify-content--center
       each color in ['icon--success', 'icon--info', 'icon--warning', 'icon--danger', 'icon--muted']
-        div(class=`chi-icon -md -${color} -m--1`)
+        div(class=`lux-icon -md -${color} -m--1`)
           svg
             use(xlink:href='#icon-atom')
   .example-tabs.-pl--2
-    ul.chi-tabs#example-colors-semantic
+    ul.lux-tabs#example-colors-semantic
       li.-active
         a(href='#webcomponent-colors-semantic') Web Component
       li
         a(href='#html-colors-semantic') HTML Blueprint
-  #webcomponent-colors-semantic.chi-tabs-panel.-active
+  #webcomponent-colors-semantic.lux-tabs-panel.-active
     :code(lang="html")
-      <chi-icon icon="atom" size="md" color="success"></chi-icon>
-      <chi-icon icon="atom" size="md" color="info"></chi-icon>
-      <chi-icon icon="atom" size="md" color="warning"></chi-icon>
-      <chi-icon icon="atom" size="md" color="danger"></chi-icon>
-      <chi-icon icon="atom" size="md" color="muted"></chi-icon>
-  #html-colors-semantic.chi-tabs-panel
+      <lux-icon icon="atom" size="md" color="success"></lux-icon>
+      <lux-icon icon="atom" size="md" color="info"></lux-icon>
+      <lux-icon icon="atom" size="md" color="warning"></lux-icon>
+      <lux-icon icon="atom" size="md" color="danger"></lux-icon>
+      <lux-icon icon="atom" size="md" color="muted"></lux-icon>
+  #html-colors-semantic.lux-tabs-panel
     :code(lang="html")
-      <i class="chi-icon icon-atom -md -icon--success"></i>
-      <i class="chi-icon icon-atom -md -icon--info"></i>
-      <i class="chi-icon icon-atom -md -icon--warning"></i>
-      <i class="chi-icon icon-atom -md -icon--danger"></i>
-      <i class="chi-icon icon-atom -md -icon--muted"></i>
+      <i class="lux-icon icon-atom -md -icon--success"></i>
+      <i class="lux-icon icon-atom -md -icon--info"></i>
+      <i class="lux-icon icon-atom -md -icon--warning"></i>
+      <i class="lux-icon icon-atom -md -icon--danger"></i>
+      <i class="lux-icon icon-atom -md -icon--muted"></i>
 
 h3 Icons
-.chi-grid.icon-library.-pt--2.-pb--6
+.lux-grid.icon-library.-pt--2.-pb--6
   each name in ['activity', 'address-book', 'api', 'arrow-down', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-sync', 'arrow-to-bottom', 'arrow-vertical', 'arrows', 'asterisk', 'atom', 'attachment', 'autopay', 'ban', 'bank', 'bell-off-outline', 'bell-off', 'bell-outline', 'bell', 'box-application', 'box-cloudformation', 'box-container', 'box-deployment', 'box-fill', 'box-outline', 'box-script', 'box', 'cart-alt', 'cart-outline', 'cart', 'chart-bar', 'chart-line', 'chart-pie', 'chat', 'check-alt', 'check', 'checkbox-checked', 'checkbox', 'chevron-down', 'chevron-left', 'chevron-right', 'chevron-up', 'circle-alert-outline', 'circle-alert', 'circle-arrow-down-outline', 'circle-arrow-down', 'circle-arrow-up-outline', 'circle-arrow-up', 'circle-check-outline', 'circle-check', 'circle-clock-outline', 'circle-clock', 'circle-code-outline', 'circle-code', 'circle-gear-outline', 'circle-gear', 'circle-info-outline', 'circle-info', 'circle-minus-outline', 'circle-minus', 'circle-outline', 'circle-play-outline', 'circle-play', 'circle-plus-outline', 'circle-plus', 'circle-question-outline', 'circle-question', 'circle-reload-outline', 'circle-reload', 'circle-stop-outline', 'circle-stop', 'circle-user', 'circle-warning', 'circle-x-outline', 'circle-x', 'circle', 'cloud', 'comment-dots-outline', 'comment-dots', 'comment-outline', 'comment', 'comments-dots-outline', 'comments-dots', 'comments-outline', 'comments', 'cost', 'database-outline', 'database', 'date', 'delete', 'edit', 'edit-cancel', 'external-link', 'file-error-outline', 'file-export', 'file-invoice', 'file-outline', 'file', 'filter', 'flag', 'folder-gear', 'folder-open', 'folder', 'globe-network', 'globe-outline', 'grid', 'handshake', 'heart', 'home-outline', 'home', 'inbox', 'key', 'life-ring', 'link', 'list', 'lock-outline', 'lock', 'login', 'logo-amazon', 'logo-aws', 'logo-azure', 'logo-centurylink', 'logo-cloudstack', 'logo-dimensiondata', 'logo-facebook', 'logo-github', 'logo-google', 'logo-hp', 'logo-linkedin', 'logo-linux', 'logo-openstack', 'logo-rackspace', 'logo-slack', 'logo-twitter', 'logo-vcloud', 'logo-vsphere', 'logo-youtube', 'logout', 'mail-outline', 'mail', 'map-marker-alt', 'map-marker', 'map-marker-outline', 'menu', 'microphone-mute', 'microphone', 'minus-alt', 'minus', 'more-vert', 'more', 'nodes', 'number', 'page-first', 'page-last', 'paste', 'pause', 'phone', 'play', 'plus-alt', 'plus', 'print', 'radio-checked', 'radio', 'refresh', 'rocket', 'search', 'settings', 'share', 'shield', 'square-minus-outline', 'square-minus', 'square-plus-outline', 'square-plus', 'star-outline', 'star', 'stop', 'sync', 'table-column-settings', 'table', 'tag-outline', 'tag', 'text', 'thumbtack-angle', 'ticket-wrench', 'triangle-down', 'triangle-left', 'triangle-right', 'triangle-up', 'user-outline', 'user', 'user-settings', 'users', 'verified', 'video-camera-mute', 'video-camera', 'visible-off', 'visible', 'voip', 'warning-outline', 'warning', 'wifi-outline', 'wifi', 'wrench', 'x-alt', 'x']
-    .chi-col.-w--6.-w-xl--2.-w-lg--3.-w-md--6.-mb--2
-      .chi-card.-py--4.-bg--grey-10
-        .chi-card__content
-          chi-icon(icon=`${name}` size='sm--3')
+    .lux-col.-w--6.-w-xl--2.-w-lg--3.-w-md--6.-mb--2
+      .lux-card.-py--4.-bg--grey-10
+        .lux-card__content
+          lux-icon(icon=`${name}` size='sm--3')
       p.-text--center= 'icon-' + name
 
 script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.getElementById('example-default'));
-      chi.tab(document.getElementById('example-sizes'));
-      chi.tab(document.getElementById('example-colors'));
-      chi.tab(document.getElementById('example-colors-semantic'));
+      lux.tab(document.getElementById('example-default'));
+      lux.tab(document.getElementById('example-sizes'));
+      lux.tab(document.getElementById('example-colors'));
+      lux.tab(document.getElementById('example-colors-semantic'));
     }
   );

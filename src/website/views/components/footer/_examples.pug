@@ -1,20 +1,20 @@
 h2 Examples
 p.-text
-  | To use footers, apply the class <code>chi-footer</code> to <code>&lt;footer&gt;</code>
-  | and wrap all content in <code>chi-footer__content</code>.
+  | To use footers, apply the class <code>lux-footer</code> to <code>&lt;footer&gt;</code>
+  | and wrap all content in <code>lux-footer__content</code>.
 
 h3 External
 p.-text
   | Show the external footer for all public facing webpages.
 .example.-mb--3
   .-p--3
-    footer.chi-footer
-      .chi-footer__content
-        .chi-footer__external
-          .chi-footer__external-content.-mw--1200
-            .chi-footer__header
-              .chi-footer__brand
-                a.chi-brand(href="/", aria-label="Lumen")
+    footer.lux-footer
+      .lux-footer__content
+        .lux-footer__external
+          .lux-footer__external-content.-mw--1200
+            .lux-footer__header
+              .lux-footer__brand
+                a.lux-brand(href="/", aria-label="Lumen")
                   svg(viewBox='0 0 140 20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true')
                     path(fill='#000', d='M.27396667 2.00213333V17.8541333c0 .9566667.558 1.395 1.634 1.395H16.8916333c1.0363334 0 1.634-.4383333 1.634-1.395 0-.9163333-.5976666-1.3946666-1.634-1.3946666H4.01996667c-.518 0-.71733334-.239-.71733334-.7173334V2.00213333c0-.797-.59766666-1.39466666-1.51433333-1.39466666-.87666667 0-1.51433333.59766666-1.51433333 1.39466666')
                     path(fill='#000', d='M26.0176333 12.2995V2.00216667c0-.797-.5976666-1.395-1.5143333-1.395-.9166667 0-1.5143333.598-1.5143333 1.395V12.5785c0 6.416 3.985 7.1486667 10.8793333 7.1486667 6.894 0 10.8793333-.7326667 10.8793333-7.1486667V2.00216667c0-.797-.598-1.395-1.5143333-1.395-.9166667 0-1.5143333.598-1.5143333 1.395V12.2995c0 5.2203333-2.7896667 4.5186667-7.8506667 4.5186667s-7.8506667.622-7.8506667-4.5186667')
@@ -23,12 +23,12 @@ p.-text
                     path(fill='#000', d='M85.4348 8.71616667v9.13800003c0 .9563333.558 1.3946666 1.634 1.3946666h15.303c1.035667 0 1.593667-.4383333 1.593667-1.3946666 0-.9166667-.558-1.3946667-1.593667-1.3946667h-13.191c-.5176667 0-.7173333-.2393333-.7173333-.7173333V11.5425h9.963c1.0756666 0 1.6336663-.4783333 1.6336663-1.395 0-.87666667-.5579997-1.39466667-1.6336663-1.39466667L85.4348 8.71616667z')
                     path(fill='#000', d='M132.8176 17.6948667V2.0022c0-.797-.637667-1.395-1.514667-1.395-.916666 0-1.514333.598-1.514333 1.395v12.704L114.804933 2.12153333C113.773267 1.2562 113.1996.6072 112.214267.6072c-1.080667 0-1.792667.71733333-1.792667 2.07233333V18.0935333c0 .797.637333 1.3946667 1.514 1.3946667.916667 0 1.514333-.5976667 1.514333-1.3946667V5.11053333L128.274267 17.8542c.993333.8433333 1.681666 1.634 2.710333 1.634 1.037 0 1.833-.7573333 1.833-1.7933333')
                     path(fill='#000', d='M137.447467 3.0801c.316333 0 .495333-.165.495333-.399 0-.26166667-.179-.39933333-.495333-.39933333h-.591667V3.0801h.591667zm-1.06-1.211h1.101333c.536667 0 .936.26133333.936.77066667 0 .399-.234333.64666666-.564667.743l.647.922h-.564333l-.578-.83933334h-.509v.83933334h-.468333V1.8691zm3.055333 1.266v-.01366667c0-1.17-.908-2.133-2.119333-2.133-1.197334 0-2.119334.977-2.119334 2.14666667v.014c0 1.16966667.908 2.133 2.119334 2.133 1.197333 0 2.119333-.97733333 2.119333-2.147zm-4.514.014v-.014c0-1.30733333 1.06-2.40833333 2.394667-2.40833333 1.349 0 2.394666 1.08733333 2.394666 2.39466666V3.1351c0 1.30733333-1.059333 2.40866667-2.394666 2.40866667-1.348667 0-2.394667-1.08766667-2.394667-2.39466667z')
-              .chi-footer__search
-                .chi-form__item
-                  label.chi-label.-d--none(for="chi-footer-search-input") Search Lumen
-                  input.chi-input(type="text" placeholder="Search" id="chi-footer-search-input")
-            .chi-footer__links.chi-grid
-              .chi-col.-w--12.-w-md--6.-w-lg--3
+              .lux-footer__search
+                .lux-form__item
+                  label.lux-label.-d--none(for="lux-footer-search-input") Search Lumen
+                  input.lux-input(type="text" placeholder="Search" id="lux-footer-search-input")
+            .lux-footer__links.lux-grid
+              .lux-col.-w--12.-w-md--6.-w-lg--3
                 ul.-text--bold
                   li
                     a(href="https://www.lumen.com/en-us/contact-us.html") Contact Us
@@ -36,16 +36,16 @@ p.-text
                     a(href="https://www.centurylink.com/business/login/" target="_blank") Sign in / Pay bill
                   li
                     a(href="https://www.lumen.com/help/en-us/home.html") Support
-                .chi-footer__social
+                .lux-footer__social
                   a(href="https://www.twitter.com/lumentechco" aria-label="Lumen on Twitter" rel="noopener" target="_blank")
-                    i.chi-icon.icon-logo-twitter.-md
+                    i.lux-icon.icon-logo-twitter.-md
                   a(href="https://www.linkedin.com/company/lumen-tech" aria-label="Lumen on LinkedIn" rel="noopener" target="_blank")
-                    i.chi-icon.icon-logo-linkedin.-md
+                    i.lux-icon.icon-logo-linkedin.-md
                   a(href="https://www.facebook.com/lumentechnologies" aria-label="Lumen on Facebook" rel="noopener" target="_blank")
-                    i.chi-icon.icon-logo-facebook.-md
+                    i.lux-icon.icon-logo-facebook.-md
                   a(href="https://www.youtube.com/lumentechnologies" aria-label="Lumen on YouTube" rel="noopener" target="_blank")
-                    i.chi-icon.icon-logo-youtube.-md
-              .chi-col.-w--12.-w-md--6.-w-lg--3
+                    i.lux-icon.icon-logo-youtube.-md
+              .lux-col.-w--12.-w-md--6.-w-lg--3
                 ul.-text--bold
                   li
                     a(href="https://www.lumen.com/en-us/about.html") About Us
@@ -61,8 +61,8 @@ p.-text
                     a(href="https://www.centurylink.com/home/" target="_blank") Residential
                   li
                     a(href="https://www.lumen.com/wholesale.html" target="_blank") Wholesale
-              .chi-col.-w--12.-w-md--6.-w-lg--3
-                .chi-footer__links-title Solutions
+              .lux-col.-w--12.-w-md--6.-w-lg--3
+                .lux-footer__links-title Solutions
                 ul
                   li
                     a(href="https://www.lumen.com/en-us/solutions/adaptive-networking.html") Adaptive Networking
@@ -74,12 +74,12 @@ p.-text
                     a(href="https://www.lumen.com/en-us/solutions/edge-computing.html") Edge Computing
                   li
                     a(href="https://www.lumen.com/en-us/solutions/hybrid-cloud.html") Hybrid Cloud
-                .chi-footer__links-title Shop
+                .lux-footer__links-title Shop
                 ul
                   li
                     a(href="https://www.lumen.com/en-us/communications/hosted-voip.html") Lumen Engage
-              .chi-col.-w--12.-w-md--6.-w-lg--3
-                .chi-footer__links-title Resources
+              .lux-col.-w--12.-w-md--6.-w-lg--3
+                .lux-footer__links-title Resources
                 ul
                   li
                     a(href="https://www.lumen.com/en-us/about/4th-industrial-revolution.html") 4th Industrial Revolution
@@ -93,12 +93,12 @@ p.-text
                     a(href="https://www.lumen.com/en-us/partner.html") Partners
                   li
                     a(href="https://www.lumen.com/help/en-us/home.html" target="_blank") Support
-        .chi-footer__internal
-          .chi-footer__internal-content.-mw--1200
-            .chi-footer__language
-              select.chi-input(aria-label="Select Language")
+        .lux-footer__internal
+          .lux-footer__internal-content.-mw--1200
+            .lux-footer__language
+              select.lux-input(aria-label="Select Language")
                 option(selected) EN
-            .chi-footer__links
+            .lux-footer__links
               ul
                 li
                   a(href="https://www.lumen.com/en-us/about.html") About Us
@@ -134,25 +134,25 @@ p.-text
                   a(href="https://assets.centurylink.com/is/content/centurylink/Modern-Slavery-Statement-2019?Creativeid=fe9a3e89-5681-4142-95fa-5785b3cef63f" target="_blank") Modern Slavery Statement 2019 (UK)
                 li
                   a(href="https://www.lumen.com/en-us/about/legal/uk-tax-strategy.html") UK Tax Strategy
-              .chi-footer__copyright
+              .lux-footer__copyright
                 | &copy; 2020 Lumen Technologies. All Rights Reserved.
                 | Lumen is a registered trademark in the United States, EU and certain other countries.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-internal
+    ul.lux-tabs#example-internal
       li.-disabled
         a(href=`#webcomponent-internal`) Web Component
       li.-active
         a(href=`#html-internal`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-internal
-  .chi-tabs-panel.-active#html-internal
+  .lux-tabs-panel#webcomponent-internal
+  .lux-tabs-panel.-active#html-internal
     :code(lang="html")
-      <footer class="chi-footer">
-        <div class="chi-footer__content">
-          <div class="chi-footer__external">
-            <div class="chi-footer__external-content -mw--1200">
-              <div class="chi-footer__header">
-                <div class="chi-footer__brand">
-                  <a href="/" class="chi-brand" aria-label="Lumen">
+      <footer class="lux-footer">
+        <div class="lux-footer__content">
+          <div class="lux-footer__external">
+            <div class="lux-footer__external-content -mw--1200">
+              <div class="lux-footer__header">
+                <div class="lux-footer__brand">
+                  <a href="/" class="lux-brand" aria-label="Lumen">
                     <svg viewBox="0 0 140 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path fill="#000" d="M.27396667 2.00213333V17.8541333c0 .9566667.558 1.395 1.634 1.395H16.8916333c1.0363334 0 1.634-.4383333 1.634-1.395 0-.9163333-.5976666-1.3946666-1.634-1.3946666H4.01996667c-.518 0-.71733334-.239-.71733334-.7173334V2.00213333c0-.797-.59766666-1.39466666-1.51433333-1.39466666-.87666667 0-1.51433333.59766666-1.51433333 1.39466666"/>
                       <path fill="#000" d="M26.0176333 12.2995V2.00216667c0-.797-.5976666-1.395-1.5143333-1.395-.9166667 0-1.5143333.598-1.5143333 1.395V12.5785c0 6.416 3.985 7.1486667 10.8793333 7.1486667 6.894 0 10.8793333-.7326667 10.8793333-7.1486667V2.00216667c0-.797-.598-1.395-1.5143333-1.395-.9166667 0-1.5143333.598-1.5143333 1.395V12.2995c0 5.2203333-2.7896667 4.5186667-7.8506667 4.5186667s-7.8506667.622-7.8506667-4.5186667"/>
@@ -164,15 +164,15 @@ p.-text
                     </svg>
                   </a>
                 </div>
-                <div class="chi-footer__search">
-                  <div class="chi-form__item">
-                    <label class="chi-label -d--none" for="chi-footer-search-input">Search Lumen</label>
-                    <input class="chi-input" type="text" placeholder="Search" id="chi-footer-search-input">
+                <div class="lux-footer__search">
+                  <div class="lux-form__item">
+                    <label class="lux-label -d--none" for="lux-footer-search-input">Search Lumen</label>
+                    <input class="lux-input" type="text" placeholder="Search" id="lux-footer-search-input">
                   </div>
                 </div>
               </div>
-              <div class="chi-footer__links chi-grid">
-                <div class="chi-col -w--12 -w-md--6 -w-lg--3">
+              <div class="lux-footer__links lux-grid">
+                <div class="lux-col -w--12 -w-md--6 -w-lg--3">
                   <ul class="-text--bold">
                     <li>
                       <a href="https://www.lumen.com/en-us/contact-us.html">Contact Us</a>
@@ -184,22 +184,22 @@ p.-text
                       <a href="https://www.lumen.com/help/en-us/home.html" target="_blank">Support</a>
                     </li>
                   </ul>
-                  <div class="chi-footer__social">
+                  <div class="lux-footer__social">
                     <a href="https://www.twitter.com/lumentechco" aria-label="Lumen on Twitter" rel="noopener" target="_blank">
-                      <i class="chi-icon icon-logo-twitter -md"></i>
+                      <i class="lux-icon icon-logo-twitter -md"></i>
                     </a>
                     <a href="https://www.linkedin.com/company/lumen-tech" aria-label="Lumen on LinkedIn" rel="noopener" target="_blank">
-                      <i class="chi-icon icon-logo-linkedin -md"></i>
+                      <i class="lux-icon icon-logo-linkedin -md"></i>
                     </a>
                     <a href="https://www.facebook.com/lumentechnologies" aria-label="Lumen on Facebook" rel="noopener" target="_blank">
-                      <i class="chi-icon icon-logo-facebook -md"></i>
+                      <i class="lux-icon icon-logo-facebook -md"></i>
                     </a>
                     <a href="https://www.youtube.com/lumentechnologies" aria-label="Lumen on YouTube" rel="noopener" target="_blank">
-                      <i class="chi-icon chi-icon icon-logo-youtube -md"></i>
+                      <i class="lux-icon lux-icon icon-logo-youtube -md"></i>
                     </a>
                   </div>
                 </div>
-                <div class="chi-col -w--12 -w-md--6 -w-lg--3">
+                <div class="lux-col -w--12 -w-md--6 -w-lg--3">
                   <ul class="-text--bold">
                     <li>
                       <a href="https://www.lumen.com/en-us/about.html">About Us</a>
@@ -224,8 +224,8 @@ p.-text
                     </li>
                   </ul>
                 </div>
-                <div class="chi-col -w--12 -w-md--6 -w-lg--3">
-                  <div class="chi-footer__links-title">Solutions</div>
+                <div class="lux-col -w--12 -w-md--6 -w-lg--3">
+                  <div class="lux-footer__links-title">Solutions</div>
                   <ul>
                     <li>
                       <a href="https://www.lumen.com/en-us/solutions/adaptive-networking.html">Adaptive Networking</a>
@@ -243,15 +243,15 @@ p.-text
                       <a href="https://www.lumen.com/en-us/solutions/hybrid-cloud.html">Hybrid Cloud</a>
                     </li>
                   </ul>
-                  <div class="chi-footer__links-title">Shop</div>
+                  <div class="lux-footer__links-title">Shop</div>
                   <ul>
                     <li>
                       <a href="https://www.lumen.com/en-us/communications/hosted-voip.html">Lumen Engage</a>
                     </li>
                   </ul>
                 </div>
-                <div class="chi-col -w--12 -w-md--6 -w-lg--3">
-                  <div class="chi-footer__links-title">Resources</div>
+                <div class="lux-col -w--12 -w-md--6 -w-lg--3">
+                  <div class="lux-footer__links-title">Resources</div>
                   <ul>
                     <li>
                       <a href="https://www.lumen.com/en-us/about/4th-industrial-revolution.html">4th Industrial Revolution</a>
@@ -276,14 +276,14 @@ p.-text
               </div>
             </div>
           </div>
-          <div class="chi-footer__internal">
-            <div class="chi-footer__internal-content -mw--1200">
-              <div class="chi-footer__language">
-                <select class="chi-input">
+          <div class="lux-footer__internal">
+            <div class="lux-footer__internal-content -mw--1200">
+              <div class="lux-footer__language">
+                <select class="lux-input">
                   <option selected>EN</option>
                 </select>
               </div>
-              <div class="chi-footer__links">
+              <div class="lux-footer__links">
                 <ul>
                   <li>
                     <a href="https://www.lumen.com/en-us/about.html">About Us</a>
@@ -336,7 +336,7 @@ p.-text
                     <a href="https://www.lumen.com/en-us/about/legal/uk-tax-strategy.html">UK Tax Strategy</a>
                   </li>
                 </ul>
-                <div class="chi-footer__copyright">&copy; 2020 Lumen Technologies. All Rights Reserved. Lumen is a registered trademark in the United States, EU and certain other countries.</div>
+                <div class="lux-footer__copyright">&copy; 2020 Lumen Technologies. All Rights Reserved. Lumen is a registered trademark in the United States, EU and certain other countries.</div>
               </div>
             </div>
           </div>
@@ -348,14 +348,14 @@ p.-text
   | Show the internal footer for authenticated users.
 .example.-mb--3
   .-p--3
-    footer.chi-footer
-      .chi-footer__content
-        .chi-footer__internal
-          .chi-footer__internal-content.-mw--1200
-            .chi-footer__language
-              select.chi-input(aria-label="Select Language")
+    footer.lux-footer
+      .lux-footer__content
+        .lux-footer__internal
+          .lux-footer__internal-content.-mw--1200
+            .lux-footer__language
+              select.lux-input(aria-label="Select Language")
                 option(selected) EN
-            .chi-footer__links
+            .lux-footer__links
               ul
                 li
                   a(href="https://www.lumen.com/en-us/about.html") About Us
@@ -391,28 +391,28 @@ p.-text
                   a(href="https://assets.centurylink.com/is/content/centurylink/Modern-Slavery-Statement-2019?Creativeid=fe9a3e89-5681-4142-95fa-5785b3cef63f" target="_blank") Modern Slavery Statement 2019 (UK)
                 li
                   a(href="https://www.lumen.com/en-us/about/legal/uk-tax-strategy.html") UK Tax Strategy
-              .chi-footer__copyright
+              .lux-footer__copyright
                 | &copy; 2020 Lumen Technologies. All Rights Reserved.
                 | Lumen is a registered trademark in the United States, EU and certain other countries.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-internal
+    ul.lux-tabs#example-internal
       li.-disabled
         a(href=`#webcomponent-internal`) Web Component
       li.-active
         a(href=`#html-internal`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-internal
-  .chi-tabs-panel.-active#html-internal
+  .lux-tabs-panel#webcomponent-internal
+  .lux-tabs-panel.-active#html-internal
     :code(lang="html")
-      <footer class="chi-footer">
-        <div class="chi-footer__content">
-          <div class="chi-footer__internal">
-            <div class="chi-footer__internal-content -mw--1200">
-              <div class="chi-footer__language">
-                <select class="chi-input">
+      <footer class="lux-footer">
+        <div class="lux-footer__content">
+          <div class="lux-footer__internal">
+            <div class="lux-footer__internal-content -mw--1200">
+              <div class="lux-footer__language">
+                <select class="lux-input">
                   <option selected>EN</option>
                 </select>
               </div>
-              <div class="chi-footer__links">
+              <div class="lux-footer__links">
                 <ul>
                   <li>
                     <a href="https://www.lumen.com/en-us/about.html">About Us</a>
@@ -465,7 +465,7 @@ p.-text
                     <a href="https://www.lumen.com/en-us/about/legal/uk-tax-strategy.html">UK Tax Strategy</a>
                   </li>
                 </ul>
-                <div class="chi-footer__copyright">&copy; 2020 Lumen Technologies. All Rights Reserved. Lumen is a registered trademark in the United States, EU and certain other countries.</div>
+                <div class="lux-footer__copyright">&copy; 2020 Lumen Technologies. All Rights Reserved. Lumen is a registered trademark in the United States, EU and certain other countries.</div>
               </div>
             </div>
           </div>
@@ -476,6 +476,6 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

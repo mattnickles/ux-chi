@@ -1,0 +1,61 @@
+---
+title: Popover
+scripts:
+  - js/lux
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+- var sides = ['top', 'right', 'bottom', 'left'];
+- var moreSides = ['top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end'];
+
+.test-base(style='width: 220px; height: 220px;')
+  span.-text--h2 Base
+  .-position--relative
+    section.lux-popover.lux-popover--top.-active.-position--absolute(aria-modal="true", aria-label="Popover Title", role="dialog")
+      header.lux-popover__header
+        h2.lux-popover__title Popover Title
+      .lux-popover__content
+        p.lux-popover__text Popover content.
+
+each side in sides
+  div(class=`test-${side}`, style='width: 330px; height: 220px;')
+    span.-text--h2=`Simple side ${side}`
+    .-position--relative
+      section.lux-popover.-active.-position--absolute(class=`lux-popover--${side}`, aria-modal="true", aria-label="Popover Title", role="dialog")
+        header.lux-popover__header
+          h2.lux-popover__title Popover Title
+        .lux-popover__content
+          p.lux-popover__text Popover content.
+        .lux-popover__arrow
+
+each side in moreSides
+  div(class=`test-more-${side}`)
+    span.-text--h2=`Popper side ${side}`
+    .-d--flex.-justify-content--center.-align-items--center(style="margin: 120px 220px;")
+      button(data-position=side, data-popover-content='<header class="lux-popover__header"><h2 class="lux-popover__title">Popover Title</h2></header><div class="lux-popover__content"><p class="lux-popover__text">Popover content.</p></div>').lux-button.autostart Popover
+
+div(class=`test-with-custom-content`, style='width: 450px; height: 320px;')
+  span.-text--h2=`Popover with custom content`
+  .-position--relative
+    section.lux-popover.lux-popover--top.-active(aria-modal="true", aria-label="Are you sure?", role="dialog")
+      header.lux-popover__header
+        h2.lux-popover__title Are you sure?
+      .lux-popover__content
+        p.lux-popover__text Are you sure you want to delete this?
+      .lux-popover__footer
+        button.lux-button.-danger Delete
+        button.lux-button Cancel
+      .lux-popover__arrow
+script.
+  document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+      var popovers = lux.popover(
+        document.querySelectorAll('.autostart')
+      );
+      Array.prototype.forEach.call(popovers, function(popover){
+        popover.show();
+      });
+    }
+  );

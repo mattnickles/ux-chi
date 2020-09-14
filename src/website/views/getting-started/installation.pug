@@ -5,29 +5,29 @@ order: 2
 
 h2.-text--h2.-text--bold CSS
 p.-text
-  | Add Chi CSS by copying and pasting the stylesheet below into the header of your project.
-  | Chi's stylesheet is hosted on Lumen's Assets Server which is a highly available and 
+  | Add Lux CSS by copying and pasting the stylesheet below into the header of your project.
+  | Lux's stylesheet is hosted on Lumen's Assets Server which is a highly available and 
   | performant option for loading assets into your Lumen project.
 .-mb--2
   :code(lang='html')
-    <link rel="stylesheet" href="https://assets.ctl.io/chi/3.0.0/chi.css">
+    <link rel="stylesheet" href="https://assets.ctl.io/lux/3.0.0/lux.css">
 
 p.-text
-  | Next, add the <code>chi</code> CSS class to the <code>&lt;html&gt;</code> tag of your document to properly scope the styles.
-  | This allows Chi to override any existing styles that have been defined by legacy markup.
+  | Next, add the <code>lux</code> CSS class to the <code>&lt;html&gt;</code> tag of your document to properly scope the styles.
+  | This allows Lux to override any existing styles that have been defined by legacy markup.
 
   .-mb--2
   :code(lang='html')
-    <html class="chi">
+    <html class="lux">
       ...
     </html>
 
 p.-text.-mb--3
-  | At this point you can now start using Chi. The documentation includes a wealth of templates and code samples
+  | At this point you can now start using Lux. The documentation includes a wealth of templates and code samples
   | to get you started.
 
 h2.-text--h2.-text--bold Favicon
-.chi-badge.-dark.-outline.-xs.-mb--1
+.lux-badge.-dark.-outline.-xs.-mb--1
   span Optional
 p.-text
   | A favicon is a small icon associated with a webpage that is typically displayed in a browser's
@@ -35,124 +35,124 @@ p.-text
   | code before the closing <code>&lt;head&gt;</code> tag.
   .-mb--2
   :code(lang='html')
-    <link rel="icon" type="image/svg+xml" href="https://assets.ctl.io/chi/3.0.0/assets/images/favicon.svg">
-    <link rel="alternate icon" href="https://assets.ctl.io/chi/3.0.0/assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="https://assets.ctl.io/lux/3.0.0/assets/images/favicon.svg">
+    <link rel="alternate icon" href="https://assets.ctl.io/lux/3.0.0/assets/images/favicon.ico">
 
 h2.-text--h2.-text--bold JavaScript
-.chi-badge.-dark.-outline.-xs.-mb--1
+.lux-badge.-dark.-outline.-xs.-mb--1
   span Optional
 p.-text
-  | Although Chi can be used as a pure HTML and CSS library with only the stylesheet above, many advanced components
+  | Although Lux can be used as a pure HTML and CSS library with only the stylesheet above, many advanced components
   | like tabs, drop downs, date pickers, and others require JavaScript to function. In most cases the need is minimal.
-  | You may write your own JavaScript to integrate Chi's CSS and blueprints into your project, or use Chi's JavaScript library
+  | You may write your own JavaScript to integrate Lux's CSS and blueprints into your project, or use Lux's JavaScript library
   | which was written to provide a complete solution.
 p.-text
-  | Chi's JavaScript library depends on Popper.js for positioning components like Popovers and Dropdown menus, and Day.js
+  | Lux's JavaScript library depends on Popper.js for positioning components like Popovers and Dropdown menus, and Day.js
   | for calculating dates in the Datepicker component. For the rest, the library is entirely independent.
 p.-text
-  | Chi's JavaScript library is developed as an ES6 component, but with the help of Webpack, it is available in several flavors.
+  | Lux's JavaScript library is developed as an ES6 component, but with the help of Webpack, it is available in several flavors.
   | Choose the method that best fits your project.
-ul#chi-js-tabs.chi-tabs.-border
+ul#lux-js-tabs.lux-tabs.-border
   li.-active
-    a(href='#chi-js-tabs--file') JavaScript file
+    a(href='#lux-js-tabs--file') JavaScript file
   li
-    a(href='#chi-js-tabs--amd') AMD module
+    a(href='#lux-js-tabs--amd') AMD module
   li
-    a(href='#chi-js-tabs--es6') ES6 modules
-#chi-js-tabs--file.chi-tabs-panel.-active
+    a(href='#lux-js-tabs--es6') ES6 modules
+#lux-js-tabs--file.lux-tabs-panel.-active
   p.-text
-    | To use the old method of including Chi in your project, include the ES5, browser prepared, JavaScript
+    | To use the old method of including Lux in your project, include the ES5, browser prepared, JavaScript
     | file from the Lumen Assets Server. In this solution Popper.js and Day.js are bundled into the file.
   .-mb--2
     :code(lang='html')
-      <script src="https://assets.ctl.io/chi/3.0.0/js/chi.js"></script>
-#chi-js-tabs--amd.chi-tabs-panel
+      <script src="https://assets.ctl.io/lux/3.0.0/js/lux.js"></script>
+#lux-js-tabs--amd.lux-tabs-panel
   p.-text
     | If you use RequireJS or any other AMD compatible module loader in your project, you will find the AMD compatible
     | version in the <code>amd</code> folder. Then, you will have to update your require configuration:
   :code(lang='javascript')
-    'chi': {
-      path: [CHI_PATH, 'amd', 'chi'].join('/'),
+    'lux': {
+      path: [LUX_PATH, 'amd', 'lux'].join('/'),
       shim: {
         deps: ['Popper'],
-        exports: 'chi'
+        exports: 'lux'
       }
     }
-#chi-js-tabs--es6.chi-tabs-panel
+#lux-js-tabs--es6.lux-tabs-panel
   p.-text
     | For recent projects already using ES6 modules, will find their version in the <code>es6</code> folder. In this case, there is no
-    | need for importing the whole Chi library as you can import each component separately by using ES6 import syntax.
+    | need for importing the whole Lux library as you can import each component separately by using ES6 import syntax.
   :code(lang='javascript')
-    import {Dropdown} from "route/to/chi/es6/dropdown.js";
+    import {Dropdown} from "route/to/lux/es6/dropdown.js";
 
 h2.-text--h2.-text--bold.-mt--4 Web Components
-.chi-badge.-dark.-outline.-xs.-mb--1
+.lux-badge.-dark.-outline.-xs.-mb--1
   span Optional
 p.-text
-  | Chi Web Components are <a target="_blank" href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements" rel="noopener">Custom Elements</a>
+  | Lux Web Components are <a target="_blank" href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements" rel="noopener">Custom Elements</a>
   | designed to Lumen's specifications and built according to the HTML Living Standard.
   | They are written in vanilla Javascript for compatibility with major frameworks including
   | AngularJS, ReactJS, VueJS, or no framework at all.
 
 p.-text
-  | Add Chi Web Components by copying and pasting the JavaScript files below into the header of your
+  | Add Lux Web Components by copying and pasting the JavaScript files below into the header of your
   | web application. Placing the files in the header is important as it will load any Polyfill if the browser
   | doesn't support Web Components.
 
 .-mb--2
   :code(lang='html')
-    <script type="module" src="https://assets.ctl.io/chi/3.0.0/js/ce/ux-chi-ce/ux-chi-ce.esm.js"></script>
-    <script nomodule="" src="https://assets.ctl.io/chi/3.0.0/js/ce/ux-chi-ce/ux-chi-ce.js"></script>
+    <script type="module" src="https://assets.ctl.io/lux/3.0.0/js/ce/ux-lux-ce/ux-lux-ce.esm.js"></script>
+    <script nomodule="" src="https://assets.ctl.io/lux/3.0.0/js/ce/ux-lux-ce/ux-lux-ce.js"></script>
 
 p.-text.-mb--3
   | After placing the files in your header, you are now ready to use the Web Components described in this documentation.
 
-.chi-expansion-panel.-web-components.-pb--5
-  .chi-epanel.-no-step(data-chi-epanel-group="web-component-details")
-    .chi-epanel__header
-      .chi-epanel__title.-w--100(data-chi-epanel-action="toggle")
-        i.chi-icon.icon-chevron-right.-mr--2
+.lux-expansion-panel.-web-components.-pb--5
+  .lux-epanel.-no-step(data-lux-epanel-group="web-component-details")
+    .lux-epanel__header
+      .lux-epanel__title.-w--100(data-lux-epanel-action="toggle")
+        i.lux-icon.icon-chevron-right.-mr--2
         | HTML attributes and DOM properties
-    .chi-epanel__collapse
+    .lux-epanel__collapse
       .-active--only
-        .chi-epanel__body
-          .chi-epanel__content
-            .chi-epanel__text
+        .lux-epanel__body
+          .lux-epanel__content
+            .lux-epanel__text
               p.-text
-                | Chi Web Components can be used in several different ways. The most common are the HTML attributes
-                | and the DOM properties. In most cases, we keep them synchronized. For example, the <code>chi-button</code> element has
+                | Lux Web Components can be used in several different ways. The most common are the HTML attributes
+                | and the DOM properties. In most cases, we keep them synchronized. For example, the <code>lux-button</code> element has
                 | a <code>size</code> attribute that can be accessed and modified in two ways.
               h3.-text--h5.-mt--3 Modifying the HTML attribute
               :code(lang='html')
-                <chi-button id="close-btn" size="md">Close</chi-button>
+                <lux-button id="close-btn" size="md">Close</lux-button>
                 <script>
                   document.getElementById("close-btn").setAttribute("size", "xl");
                 </script>
               h3.-text--h5.-mt--3 Setting the DOM property
               :code(lang='html')
-                <chi-button id="close-btn" size="md">Close</chi-button>
+                <lux-button id="close-btn" size="md">Close</lux-button>
                 <script>
                   document.getElementById("close-btn").size="xl";
                 </script>
-  .chi-epanel.-no-step(data-chi-epanel-group="web-component-details")
-    .chi-epanel__header
-      .chi-epanel__title.-w--100(data-chi-epanel-action="toggle")
-        i.chi-icon.icon-chevron-right.-mr--2
+  .lux-epanel.-no-step(data-lux-epanel-group="web-component-details")
+    .lux-epanel__header
+      .lux-epanel__title.-w--100(data-lux-epanel-action="toggle")
+        i.lux-icon.icon-chevron-right.-mr--2
         | Boolean attributes and properties
-    .chi-epanel__collapse
+    .lux-epanel__collapse
       .-active--only
-        .chi-epanel__body
-          .chi-epanel__content
-            .chi-epanel__text
+        .lux-epanel__body
+          .lux-epanel__content
+            .lux-epanel__text
               p.-text
-                | Some Chi components have boolean attributes which function the same way as the well known <code>disabled</code>
+                | Some Lux components have boolean attributes which function the same way as the well known <code>disabled</code>
                 | attribute. Boolean attributes are <code>true</code> when the HTML element has the attribute and <code>false</code> when not.
               p.-text
                 | Boolean attributes can be set to true this way:
               .-mb--2
                 :code(lang='html')
                   <input type="text" disabled />
-                  <chi-drawer id="drawer" active />
+                  <lux-drawer id="drawer" active />
                   <script>
                     document.getElementById("drawer").active = true;
                     document.getElementById("drawer").setAttribute("active", "active");
@@ -162,16 +162,16 @@ p.-text.-mb--3
               .-mb--2
                 :code(lang='html')
                   <input type="text"  />
-                  <chi-drawer id="drawer" />
+                  <lux-drawer id="drawer" />
                   <script>
                     document.getElementById("drawer").active = false;
                     document.getElementById("drawer").removeAttribute("active");
                   </script>
               p.-text
-                | Some components, like <code>chi-drawer</code>, have helper methods in order to change the state of commonly modified attributes:
+                | Some components, like <code>lux-drawer</code>, have helper methods in order to change the state of commonly modified attributes:
               .-mb--2
                 :code(lang='html')
-                  <chi-drawer id="drawer" />
+                  <lux-drawer id="drawer" />
                   <script>
                     document.getElementById("drawer").show();   // This sets the active property to true
                     document.getElementById("drawer").hide();   // This sets the active property to false
@@ -179,8 +179,8 @@ p.-text.-mb--3
                   </script>
 
 script.
-  chi.tab(document.getElementById('chi-js-tabs'));
-  chi.expansionPanel(
-    document.querySelectorAll('[data-chi-epanel-group="web-component-details"]'),
+  lux.tab(document.getElementById('lux-js-tabs'));
+  lux.expansionPanel(
+    document.querySelectorAll('[data-lux-epanel-group="web-component-details"]'),
     {mode: 'accordion'}
   );

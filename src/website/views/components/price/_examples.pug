@@ -1,26 +1,26 @@
 h2 Examples
 p.-text
-  | To render price, use the class <code>chi-price</code>.
+  | To render price, use the class <code>lux-price</code>.
 
 h3 Base
 .example.-mb--3
   .-p--3
-    .chi-price.-m--3
+    .lux-price.-m--3
       sup
         | $
       | 100
       sup
         | 00
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
     :code(lang="html")
-      <div class="chi-price">
+      <div class="lux-price">
         <sup>$</sup>
         100
         <sup>00</sup>
@@ -31,32 +31,32 @@ h3 Sizes
   .-p--3
     each size in ['sm', 'md', 'lg']
       p.-text--bold.-mb--3= '-' + size
-      .chi-price(class=`-${size}`)
+      .lux-price(class=`-${size}`)
         sup
           | $
         | 100
         sup
           | 00
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes
+    ul.lux-tabs#example-sizes
       li.-disabled
         a(href=`#webcomponent-sizes`) Web Component
       li.-active
         a(href=`#html-sizes`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-sizes
-  .chi-tabs-panel.-active#html-sizes
+  .lux-tabs-panel#webcomponent-sizes
+  .lux-tabs-panel.-active#html-sizes
     :code(lang="html")
-      <div class="chi-price -sm">
+      <div class="lux-price -sm">
         <sup>$</sup>
         100
         <sup>00</sup>
       </div>
-      <div class="chi-price -md">
+      <div class="lux-price -md">
         <sup>$</sup>
         100
         <sup>00</sup>
       </div>
-      <div class="chi-price -lg">
+      <div class="lux-price -lg">
         <sup>$</sup>
         100
         <sup>00</sup>
@@ -66,7 +66,7 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.getElementById('example-base'));
-      chi.tab(document.getElementById('example-sizes'));
+      lux.tab(document.getElementById('example-base'));
+      lux.tab(document.getElementById('example-sizes'));
     }
   );

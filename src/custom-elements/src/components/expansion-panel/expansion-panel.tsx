@@ -3,7 +3,7 @@ import { Component, Prop, Watch, h, Element, State } from '@stencil/core';
 const EP_MODES = ['done', 'active', 'pending', 'disabled'];
 
 @Component({
-  tag: 'chi-expansion-panel',
+  tag: 'lux-expansion-panel',
   styleUrl: 'expansion-panel.scss',
   scoped: true
 })
@@ -76,37 +76,37 @@ export class ExpansionPanel {
   render() {
     return (
       <div
-        class={`chi-epanel ${this.state === 'disabled' ? `-disabled` : ''} ${
+        class={`lux-epanel ${this.state === 'disabled' ? `-disabled` : ''} ${
           this.state === 'active' ? `-active` : ''
           } ${this.state === 'done' ? `-done` : ''} ${
           this.bordered ? `-bordered` : ''
           }`}
       >
-        <div class="chi-epanel__header">
-          {this.step ? <span class="chi-epanel__number">{this.step}.</span> : ''}
-          <div class="chi-epanel__title">{this.epanelTitle}</div>
-          <div class={`chi-epanel__content ${this.step ? '' : '-ml--0'}`}>
-            <div class="chi-epanel__collapse">
+        <div class="lux-epanel__header">
+          {this.step ? <span class="lux-epanel__number">{this.step}.</span> : ''}
+          <div class="lux-epanel__title">{this.epanelTitle}</div>
+          <div class={`lux-epanel__content ${this.step ? '' : '-ml--0'}`}>
+            <div class="lux-epanel__collapse">
               <div class="-done--only">
                 <slot name="done" />
               </div>
             </div>
           </div>
           {this.state === 'done' || this.state === 'active' ? (
-            <div class="chi-epanel__action">
+            <div class="lux-epanel__action">
               <slot name="change" />
             </div>
           ) : (
               ''
             )}
         </div>
-        <div class={`chi-epanel__collapse ${this.step ? '' : '-ml--0'}`}>
+        <div class={`lux-epanel__collapse ${this.step ? '' : '-ml--0'}`}>
           <div class="-active--only">
-            <div class="chi-epanel__body">
-              <div class="chi-epanel__content">
+            <div class="lux-epanel__body">
+              <div class="lux-epanel__content">
                 <slot name="active" />
               </div>
-              <div class="chi-epanel__footer">
+              <div class="lux-epanel__footer">
                 <slot name="footer" />
               </div>
             </div>

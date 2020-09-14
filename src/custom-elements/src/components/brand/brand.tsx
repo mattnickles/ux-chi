@@ -2,7 +2,7 @@ import { Component, Prop, Watch, h } from '@stencil/core';
 import { ICON_SIZES } from '../../constants/size';
 
 @Component({
-  tag: 'chi-brand',
+  tag: 'lux-brand',
   styleUrl: 'brand.scss',
   scoped: true
 })
@@ -56,7 +56,7 @@ export class Brand {
 
   render() {
     return (
-      <span class={`chi-brand ${this.size ? `-${this.size}` : ''}`}>
+      <span class={`lux-brand ${this.size ? `-${this.size}` : ''}`}>
         {this._brandSVG()}
       </span>
     );

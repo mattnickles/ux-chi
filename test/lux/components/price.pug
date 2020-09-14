@@ -1,0 +1,31 @@
+---
+title: Price
+---
+
+- var sizes = ['sm', 'md', 'lg'];
+
+h4 Base
+.test-base
+  .example.-mb--3
+    .-p--3(style='overflow:auto')
+      div(class=`lux-col -w--12 -p--3`)
+        .lux-price
+          sup
+            | $
+          | 100
+          sup
+            | 00
+
+h4 Sizes
+.test-sizes
+  .example.-mb--3
+    .-p--3(style='overflow:auto')
+      each size in sizes
+        div(class=`lux-col -w--12 -p--3`)
+          .lux-price(class=`-${size}`)
+            sup
+              | $
+            | 100
+            sup
+              | 00
+          p(class=`-text--bold -mb--3`)= '-' + size

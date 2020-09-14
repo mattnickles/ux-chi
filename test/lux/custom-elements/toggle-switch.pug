@@ -1,0 +1,63 @@
+---
+title: Toggle switch
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+.test-states
+  .-mb--1
+    h5 Base
+    .lux-form__item
+      lux-switch(id='toggle1',data-cy='toggle1', label='Label')
+
+  .-mb--1
+    h5 Hover
+    .lux-form__item
+      lux-switch(id='toggle2', extra-class='-hover', data-cy='toggle2', label='Label')
+
+  .-mb--1
+    h5 Focus
+    .lux-form__item
+      lux-switch(id='toggle3', extra-class='-focus', data-cy='toggle3', label='Label')
+
+  .-mb--1
+    h5 Disabled
+    .lux-form__item
+      lux-switch(id='toggle4', disabled, data-cy='toggle4', label='Label')
+
+.test-hide-label-states
+  .-mb--1
+    h5 Base
+    .lux-form__item
+      lux-switch(id='toggle5',data-cy='toggle5', label='Label', hide-label)
+
+  .-mb--1
+    h5 Hover
+    .lux-form__item
+      lux-switch(id='toggle6', extra-class='-hover', data-cy='toggle6', label='Label', hide-label)
+
+  .-mb--1
+    h5 Focus
+    .lux-form__item
+      lux-switch(id='toggle7', extra-class='-focus', data-cy='toggle7', label='Label', hide-label)
+
+  .-mb--1
+    h5 Disabled
+    .lux-form__item
+      lux-switch(id='toggle8', disabled, data-cy='toggle8', label='Label', hide-label)
+
+.test-sizes
+  .-mb--1
+    h5 -xs
+    .lux-form__item
+      lux-switch(id='toggle9',data-cy='toggle9', label='Label', size='xs')
+
+  .-mb--1
+    h5 -sm
+    .lux-form__item
+      lux-switch(id='toggle10', data-cy='toggle10', label='Label', size='sm')
+            
+style.
+  lux-switch {
+    display: inline-block !important;
+  }

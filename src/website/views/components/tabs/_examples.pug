@@ -2,16 +2,16 @@ h2 Examples
 #exampleHashTarget.-position--fixed-top.-sr--only
 
 h3 Horizontal
-ul#chi-tabs--menu.chi-tabs
+ul#lux-tabs--menu.lux-tabs
   li.-active
-    a(href='#chi-tabs-panel--horizontal-base') Base
+    a(href='#lux-tabs-panel--horizontal-base') Base
   li
-    a(href='#chi-tabs-panel--horizontal-inverse') Inverse
+    a(href='#lux-tabs-panel--horizontal-inverse') Inverse
 .example.-mb--3
-  #chi-tabs-panel--horizontal-base.chi-tabs-panel.-active
+  #lux-tabs-panel--horizontal-base.lux-tabs-panel.-active
     .-p--3.-bg--grey-20
       .-bg--white.-px--3
-        ul.chi-tabs#example-horizontal-base
+        ul.lux-tabs#example-horizontal-base
           li.-active
             a(href='#horizontal-base-1') Active Tab
           li
@@ -19,42 +19,42 @@ ul#chi-tabs--menu.chi-tabs
           li
             a(href='#horizontal-base-3') Tab Link
         .-py--3
-          .chi-tabs-panel.-active#horizontal-base-1
+          .lux-tabs-panel.-active#horizontal-base-1
             .-text Tab 1 content
-          .chi-tabs-panel#horizontal-base-2
+          .lux-tabs-panel#horizontal-base-2
             .-text Tab 2 content
-          .chi-tabs-panel#horizontal-base-3
+          .lux-tabs-panel#horizontal-base-3
             .-text Tab 3 content
     .example-tabs.-pl--2
-      ul.chi-tabs#example-base
+      ul.lux-tabs#example-base
         li.-disabled
           a(href=`#webcomponent-base`) Web Component
         li.-active
           a(href=`#html-base`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-base
-    .chi-tabs-panel.-active#html-base
-      .chi-tab__description
+    .lux-tabs-panel#webcomponent-base
+    .lux-tabs-panel.-active#html-base
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang='html')
-        <ul class="chi-tabs" id="example-horizontal-base">
+        <ul class="lux-tabs" id="example-horizontal-base">
           <li class="-active"><a href="#horizontal-base-1">Active Tab</a></li>
           <li><a href="#horizontal-base-2">Tab Link</a></li>
           <li><a href="#horizontal-base-3">Tab Link</a></li>
         </ul>
 
-        <div class="chi-tabs-panel -active" id="horizontal-base-1">Tab 1 content</div>
-        <div class="chi-tabs-panel" id="horizontal-base-2">Tab 2 content</div>
-        <div class="chi-tabs-panel" id="horizontal-base-3">Tab 3 content</div>
+        <div class="lux-tabs-panel -active" id="horizontal-base-1">Tab 1 content</div>
+        <div class="lux-tabs-panel" id="horizontal-base-2">Tab 2 content</div>
+        <div class="lux-tabs-panel" id="horizontal-base-3">Tab 3 content</div>
 
-        <script>chi.tab(document.getElementById('example-horizontal-base'));</script>
+        <script>lux.tab(document.getElementById('example-horizontal-base'));</script>
 
-  #chi-tabs-panel--horizontal-inverse.chi-tabs-panel
+  #lux-tabs-panel--horizontal-inverse.lux-tabs-panel
     .-p--3.-bg--grey-20
       .-bg--black.-px--3
-        ul.chi-tabs.-inverse#example-horizontal-inverse
+        ul.lux-tabs.-inverse#example-horizontal-inverse
           li.-active
             a(href='#horizontal-inverse-1') Active Tab
           li
@@ -62,139 +62,139 @@ ul#chi-tabs--menu.chi-tabs
           li
             a(href='#horizontal-inverse-3') Tab Link
       .-bg--white.-p--3
-        .chi-tabs-panel.-active#horizontal-inverse-1
+        .lux-tabs-panel.-active#horizontal-inverse-1
           .-text Tab 1 content
-        .chi-tabs-panel#horizontal-inverse-2
+        .lux-tabs-panel#horizontal-inverse-2
           .-text Tab 2 content
-        .chi-tabs-panel#horizontal-inverse-3
+        .lux-tabs-panel#horizontal-inverse-3
           .-text Tab 3 content
     .example-tabs.-pl--2
-      ul.chi-tabs#example-base-inverse
+      ul.lux-tabs#example-base-inverse
         li.-disabled
           a(href=`#webcomponent-base-inverse`) Web Component
         li.-active
           a(href=`#html-base-inverse`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-base-inverse
-    .chi-tabs-panel.-active#html-base-inverse
-      .chi-tab__description
+    .lux-tabs-panel#webcomponent-base-inverse
+    .lux-tabs-panel.-active#html-base-inverse
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang='html')
-        <ul class="chi-tabs -inverse" id="example-horizontal-inverse">
+        <ul class="lux-tabs -inverse" id="example-horizontal-inverse">
           <li class="-active"><a href="#horizontal-inverse-1">Active Tab</a></li>
           <li><a href="#horizontal-inverse-2">Tab Link</a></li>
           <li><a href="#horizontal-inverse-3">Tab Link</a></li>
         </ul>
 
-        <div class="chi-tabs-panel -active" id="horizontal-inverse-1">Tab 1 content</div>
-        <div class="chi-tabs-panel" id="horizontal-inverse-2">Tab 2 content</div>
-        <div class="chi-tabs-panel" id="horizontal-inverse-3">Tab 3 content</div>
+        <div class="lux-tabs-panel -active" id="horizontal-inverse-1">Tab 1 content</div>
+        <div class="lux-tabs-panel" id="horizontal-inverse-2">Tab 2 content</div>
+        <div class="lux-tabs-panel" id="horizontal-inverse-3">Tab 3 content</div>
 
-        <script>chi.tab(document.getElementById('example-horizontal-inverse'));</script>
+        <script>lux.tab(document.getElementById('example-horizontal-inverse'));</script>
 
 h3 Vertical
-ul#chi-tabs--menu-vertical.chi-tabs
+ul#lux-tabs--menu-vertical.lux-tabs
   li.-active
-    a(href='#chi-tabs-panel--vertical-base') Base
+    a(href='#lux-tabs-panel--vertical-base') Base
   li
-    a(href='#chi-tabs-panel--vertical-inverse') Inverse
+    a(href='#lux-tabs-panel--vertical-inverse') Inverse
 .example.-mb--3
-  #chi-tabs-panel--vertical-base.chi-tabs-panel.-active
+  #lux-tabs-panel--vertical-base.lux-tabs-panel.-active
     .-p--3.-bg--grey-20
-      .chi-grid.-no-gutter.-bg--white
-        .chi-col.-w--6.-w-sm--4.-p--3
-          ul.chi-tabs.-vertical#example-vertical-base
+      .lux-grid.-no-gutter.-bg--white
+        .lux-col.-w--6.-w-sm--4.-p--3
+          ul.lux-tabs.-vertical#example-vertical-base
             li.-active
               a(href='#vertical-base-1') Active Tab
             li
               a(href='#vertical-base-2') Tab Link
             li
               a(href='#vertical-base-3') Tab Link
-        .chi-col.-p--3
-          .chi-tabs-panel.-active#vertical-base-1
+        .lux-col.-p--3
+          .lux-tabs-panel.-active#vertical-base-1
             .-text Tab 1 content
-          .chi-tabs-panel#vertical-base-2
+          .lux-tabs-panel#vertical-base-2
             .-text Tab 2 content
-          .chi-tabs-panel#vertical-base-3
+          .lux-tabs-panel#vertical-base-3
             .-text Tab 3 content
     .example-tabs.-pl--2
-      ul.chi-tabs#example-vertical
+      ul.lux-tabs#example-vertical
         li.-disabled
           a(href=`#webcomponent-vertical`) Web Component
         li.-active
           a(href=`#html-vertical`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-vertical
-    .chi-tabs-panel.-active#html-vertical
-      .chi-tab__description
+    .lux-tabs-panel#webcomponent-vertical
+    .lux-tabs-panel.-active#html-vertical
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang='html')
-        <ul class="chi-tabs -vertical" id="example-vertical-base">
+        <ul class="lux-tabs -vertical" id="example-vertical-base">
           <li class="-active"><a href="#vertical-base-1">Active Tab</a></li>
           <li><a href="#vertical-base-2">Tab Link</a></li>
           <li><a href="#vertical-base-3">Tab Link</a></li>
         </ul>
 
-        <div class="chi-tabs-panel -active" id="vertical-base-1">Tab 1 content</div>
-        <div class="chi-tabs-panel" id="vertical-base-2">Tab 2 content</div>
-        <div class="chi-tabs-panel" id="vertical-base-3">Tab 3 content</div>
+        <div class="lux-tabs-panel -active" id="vertical-base-1">Tab 1 content</div>
+        <div class="lux-tabs-panel" id="vertical-base-2">Tab 2 content</div>
+        <div class="lux-tabs-panel" id="vertical-base-3">Tab 3 content</div>
 
-        <script>chi.tab(document.getElementById('example-vertical-base'));</script>
-  #chi-tabs-panel--vertical-inverse.chi-tabs-panel
+        <script>lux.tab(document.getElementById('example-vertical-base'));</script>
+  #lux-tabs-panel--vertical-inverse.lux-tabs-panel
     .-p--3.-bg--grey-20
-      .chi-grid.-no-gutter.-bg--black
-        .chi-col.-w--6.-w-sm--4.-p--3
-          ul.chi-tabs.-inverse.-vertical#example-vertical-inverse
+      .lux-grid.-no-gutter.-bg--black
+        .lux-col.-w--6.-w-sm--4.-p--3
+          ul.lux-tabs.-inverse.-vertical#example-vertical-inverse
             li.-active
               a(href='#vertical-inverse-1') Active Tab
             li
               a(href='#vertical-inverse-2') Tab Link
             li
               a(href='#vertical-inverse-3') Tab Link
-        .chi-col.-bg--white.-p--3
-          .chi-tabs-panel.-active#vertical-inverse-1
+        .lux-col.-bg--white.-p--3
+          .lux-tabs-panel.-active#vertical-inverse-1
             .-text Tab 1 content
-          .chi-tabs-panel#vertical-inverse-2
+          .lux-tabs-panel#vertical-inverse-2
             .-text Tab 2 content
-          .chi-tabs-panel#vertical-inverse-3
+          .lux-tabs-panel#vertical-inverse-3
             .-text Tab 3 content
     .example-tabs.-pl--2
-      ul.chi-tabs#example-vertical-inverse-tabs
+      ul.lux-tabs#example-vertical-inverse-tabs
         li.-disabled
           a(href=`#webcomponent-vertical-inverse`) Web Component
         li.-active
           a(href=`#html-vertical-inverse`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-vertical-inverse
-    .chi-tabs-panel.-active#html-vertical-inverse
-      .chi-tab__description
+    .lux-tabs-panel#webcomponent-vertical-inverse
+    .lux-tabs-panel.-active#html-vertical-inverse
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang='html')
-        <ul class="chi-tabs -inverse -vertical" id="example-vertical-inverse">
+        <ul class="lux-tabs -inverse -vertical" id="example-vertical-inverse">
           <li class="-active"><a href="#vertical-inverse-1">Active Tab</a></li>
           <li><a href="#vertical-inverse-2">Tab Link</a></li>
           <li><a href="#vertical-inverse-3">Tab Link</a></li>
         </ul>
 
-        <div class="chi-tabs-panel -active" id="vertical-inverse-1">Tab 1 content</div>
-        <div class="chi-tabs-panel" id="vertical-inverse-2">Tab 2 content</div>
-        <div class="chi-tabs-panel" id="vertical-inverse-3">Tab 3 content</div>
+        <div class="lux-tabs-panel -active" id="vertical-inverse-1">Tab 1 content</div>
+        <div class="lux-tabs-panel" id="vertical-inverse-2">Tab 2 content</div>
+        <div class="lux-tabs-panel" id="vertical-inverse-3">Tab 3 content</div>
 
-        <script>chi.tab(document.getElementById('example-vertical-inverse'));</script>
+        <script>lux.tab(document.getElementById('example-vertical-inverse'));</script>
 
 h2 Keep default link behavior
 p.-text
-  | By default, Chi JavaScript enabled tabs will ignore default link behavior.
+  | By default, Lux JavaScript enabled tabs will ignore default link behavior.
   | To preserve it, specify a target property on the link.
 .example.-mb--3
   .-p--3.-pb--4
-    ul#example-default-link-behavior.chi-tabs
+    ul#example-default-link-behavior.lux-tabs
       li.-active
         a(href='#a2') Tab a
       li
@@ -202,52 +202,52 @@ p.-text
       li
         a(href='#c2') Tab c
       li
-        a(href='https://assets.ctl.io/chi/', target='_self') External Link
+        a(href='https://assets.ctl.io/lux/', target='_self') External Link
 
-    #a2.chi-tabs-panel.-active
+    #a2.lux-tabs-panel.-active
       p.-text Content for tab a
-    #b2.chi-tabs-panel
+    #b2.lux-tabs-panel
       p.-text Content for tab b
-    #c2.chi-tabs-panel
+    #c2.lux-tabs-panel
       p.-text Content for tab c
   .example-tabs.-pl--2
-    ul.chi-tabs#example-target-link
+    ul.lux-tabs#example-target-link
       li.-disabled
         a(href=`#webcomponent-target-link`) Web Component
       li.-active
         a(href=`#html-target-link`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-target-link
-  .chi-tabs-panel.-active#html-target-link
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-target-link
+  .lux-tabs-panel.-active#html-target-link
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <ul class="chi-tabs" id="example-tabs-2">
+      <ul class="lux-tabs" id="example-tabs-2">
         <li class="-active"><a href="#a">Tab a</a></li>
         <li><a href="#b">Tab b</a></li>
         <li><a href="#c">Tab c</a></li>
-        <li><a href="https://assets.ctl.io/chi/" target="_self">External Link</a></li>
+        <li><a href="https://assets.ctl.io/lux/" target="_self">External Link</a></li>
       </ul>
 
-      <div class="chi-tabs-panel -active" id="a">
+      <div class="lux-tabs-panel -active" id="a">
         <p class="-text">Content for tab a</p>
       </div>
-      <div class="chi-tabs-panel" id="b">
+      <div class="lux-tabs-panel" id="b">
         <p class="-text">Content for tab b</p>
       </div>
-      <div class="chi-tabs-panel" id="c">
+      <div class="lux-tabs-panel" id="c">
         <p class="-text">Content for tab c</p>
       </div>
 
-      <script>chi.tab(document.getElementById('example-tabs-2'));</script>
+      <script>lux.tab(document.getElementById('example-tabs-2'));</script>
 
 h2 Tabbed navigation bar
 
 p.-text
-  | The navigation component is a combination of Chi tabs and dropdowns components. You must use
-  | <code>chi.navigation</code> function to instantiate the whole group of components, and there is no need for
+  | The navigation component is a combination of Lux tabs and dropdowns components. You must use
+  | <code>lux.navigation</code> function to instantiate the whole group of components, and there is no need for
   | instantiating the tabs nor the dropdowns independently. The navigation components will manage the lifecycle of the
   | descendants' tabs and dropdowns.
 
@@ -258,20 +258,20 @@ p.-text
 
 .example.-mb--3
   .-p--3.-pb--4
-    ul.chi-tabs.chi-navigationExample#example-tabbed-navigation
-      li.chi-dropdown.-active
-        a.chi-dropdown__trigger(href='#') Active tab
-        .chi-dropdown__menu
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 1
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 2
+    ul.lux-tabs.lux-navigationExample#example-tabbed-navigation
+      li.lux-dropdown.-active
+        a.lux-dropdown__trigger(href='#') Active tab
+        .lux-dropdown__menu
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 1
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 2
           div
-            a.chi-dropdown__menu-item.chi-dropdown__trigger(href='#') Elem 3 more
-            .chi-dropdown__menu
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.1
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.2
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.3
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.4
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 4
+            a.lux-dropdown__menu-item.lux-dropdown__trigger(href='#') Elem 3 more
+            .lux-dropdown__menu
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.1
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.2
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.3
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.4
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 4
       li
         a(href='#exampleHashTarget') Tab Link
       li
@@ -284,39 +284,39 @@ p.-text
         a(href='#exampleHashTarget') Tab Link
       li
         a(href='#exampleHashTarget') Tab Link
-      li.chi-dropdown
-        a.chi-dropdown__trigger(href='#') Tab Dropdown
-        .chi-dropdown__menu
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Element 1
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Element 2
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Element 3
+      li.lux-dropdown
+        a.lux-dropdown__trigger(href='#') Tab Dropdown
+        .lux-dropdown__menu
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Element 1
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Element 2
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Element 3
   .example-tabs.-pl--2
-    ul.chi-tabs#example-tabs-tabbed-navigation
+    ul.lux-tabs#example-tabs-tabbed-navigation
       li.-disabled
         a(href=`#webcomponent-tabbed-navigation`) Web Component
       li.-active
         a(href=`#html-tabbed-navigation`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-tabbed-navigation
-  .chi-tabs-panel.-active#html-tabbed-navigation
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-tabbed-navigation
+  .lux-tabs-panel.-active#html-tabbed-navigation
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <ul id="navigationExample-1" class="chi-tabs">
-        <li class="chi-dropdown -active">
-          <a class="chi-dropdown__trigger" href="#">Active tab</a>
-          <div class="chi-dropdown__menu">
-            <a class="chi-dropdown__menu-item" href="#">Elem 1</a>
-            <a class="chi-dropdown__menu-item" href="#">Elem 2</a>
+      <ul id="navigationExample-1" class="lux-tabs">
+        <li class="lux-dropdown -active">
+          <a class="lux-dropdown__trigger" href="#">Active tab</a>
+          <div class="lux-dropdown__menu">
+            <a class="lux-dropdown__menu-item" href="#">Elem 1</a>
+            <a class="lux-dropdown__menu-item" href="#">Elem 2</a>
             <div>
-              <a class="chi-dropdown__menu-item chi-dropdown__trigger" href="#">Elem 3 more</a>
-              <div class="chi-dropdown__menu">
-                <a class="chi-dropdown__menu-item" href="#">Elem 3.1</a><a class="chi-dropdown__menu-item" href="#">Elem 3.2</a><a class="chi-dropdown__menu-item" href="#">Elem 3.3</a><a class="chi-dropdown__menu-item" href="#">Elem 3.4</a>
+              <a class="lux-dropdown__menu-item lux-dropdown__trigger" href="#">Elem 3 more</a>
+              <div class="lux-dropdown__menu">
+                <a class="lux-dropdown__menu-item" href="#">Elem 3.1</a><a class="lux-dropdown__menu-item" href="#">Elem 3.2</a><a class="lux-dropdown__menu-item" href="#">Elem 3.3</a><a class="lux-dropdown__menu-item" href="#">Elem 3.4</a>
               </div>
             </div>
-            <a class="chi-dropdown__menu-item" href="#">Elem 4</a>
+            <a class="lux-dropdown__menu-item" href="#">Elem 4</a>
           </div>
         </li>
         <li>
@@ -337,77 +337,77 @@ p.-text
         <li>
           <a href="#">Tab Link</a>
         </li>
-        <li class="chi-dropdown">
-          <a class="chi-dropdown__trigger" href="#">Tab Dropdown</a>
-          <div class="chi-dropdown__menu">
-            <a class="chi-dropdown__menu-item" href="#">Element 1</a>
-            <a class="chi-dropdown__menu-item" href="#">Element 2</a>
-            <a class="chi-dropdown__menu-item" href="#">Element 3</a>
+        <li class="lux-dropdown">
+          <a class="lux-dropdown__trigger" href="#">Tab Dropdown</a>
+          <div class="lux-dropdown__menu">
+            <a class="lux-dropdown__menu-item" href="#">Element 1</a>
+            <a class="lux-dropdown__menu-item" href="#">Element 2</a>
+            <a class="lux-dropdown__menu-item" href="#">Element 3</a>
           </div>
         </li>
       </ul>
 
       <script>
         const navigationElem = document.getElementById('#navigationExample-1');
-        chi.navigation(navigationElem);
+        lux.navigation(navigationElem);
       </script>
 
 h3 Components contained
 p.-text
-  | As navigation component is built from other primitive Chi components, most of the components behavior
+  | As navigation component is built from other primitive Lux components, most of the components behavior
   | can be replicated on the navigation component. For example, you can use the <code>-animate</code> class
   | on the dropdowns to make the chevron rotate when activated.
 .example.-mb--3
   .-p--3.-pb--4
-    ul.chi-tabs.chi-navigationExample#navigation-components-contained
-      li.chi-dropdown.-active
-        a.chi-dropdown__trigger.-animate(href='#') Active Tab
-        .chi-dropdown__menu
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 1
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 2
+    ul.lux-tabs.lux-navigationExample#navigation-components-contained
+      li.lux-dropdown.-active
+        a.lux-dropdown__trigger.-animate(href='#') Active Tab
+        .lux-dropdown__menu
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 1
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 2
           div
-            a.chi-dropdown__menu-item.chi-dropdown__trigger.-animate(href='#') Elem 3 more
-            .chi-dropdown__menu
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.1
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.2
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.3
-              a.chi-dropdown__menu-item(href='#exampleHashTarget') Elem 3.4
-          a.chi-dropdown__menu-item(href='#') Elem 4
+            a.lux-dropdown__menu-item.lux-dropdown__trigger.-animate(href='#') Elem 3 more
+            .lux-dropdown__menu
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.1
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.2
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.3
+              a.lux-dropdown__menu-item(href='#exampleHashTarget') Elem 3.4
+          a.lux-dropdown__menu-item(href='#') Elem 4
       li
         a(href='#exampleHashTarget') Tab Link
       li
         a(href='#exampleHashTarget') Tab Link
-      li.chi-dropdown
-        a.chi-dropdown__trigger.-animate(href='#') Tab Link
-        .chi-dropdown__menu
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Element 1
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Element 2
-          a.chi-dropdown__menu-item(href='#exampleHashTarget') Element 3
+      li.lux-dropdown
+        a.lux-dropdown__trigger.-animate(href='#') Tab Link
+        .lux-dropdown__menu
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Element 1
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Element 2
+          a.lux-dropdown__menu-item(href='#exampleHashTarget') Element 3
   .example-tabs.-pl--2
-    ul.chi-tabs#example-nav-contained
+    ul.lux-tabs#example-nav-contained
       li.-disabled
         a(href=`#webcomponent-nav-contained`) Web Component
       li.-active
         a(href=`#html-nav-contained`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-nav-contained
-  .chi-tabs-panel.-active#html-nav-contained
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-nav-contained
+  .lux-tabs-panel.-active#html-nav-contained
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <ul class="chi-tabs" id="navigation-components-contained">
-        <li class="chi-dropdown -active">
-          <a class="chi-dropdown__trigger -animate" href="#">Active Tab</a>
-          <div class="chi-dropdown__menu" x-placement="bottom-start">
-            <a class="chi-dropdown__menu-item" href="#">Elem 1</a><a class="chi-dropdown__menu-item" href="#">Elem 2</a>
+      <ul class="lux-tabs" id="navigation-components-contained">
+        <li class="lux-dropdown -active">
+          <a class="lux-dropdown__trigger -animate" href="#">Active Tab</a>
+          <div class="lux-dropdown__menu" x-placement="bottom-start">
+            <a class="lux-dropdown__menu-item" href="#">Elem 1</a><a class="lux-dropdown__menu-item" href="#">Elem 2</a>
             <div>
-              <a class="chi-dropdown__menu-item chi-dropdown__trigger" href="#">Elem 3 more</a>
-              <div class="chi-dropdown__menu">
-                <a class="chi-dropdown__menu-item" href="#">Elem 3.1</a><a class="chi-dropdown__menu-item" href="#">Elem 3.2</a><a class="chi-dropdown__menu-item" href="#">Elem 3.3</a><a class="chi-dropdown__menu-item" href="#">Elem 3.4</a>
+              <a class="lux-dropdown__menu-item lux-dropdown__trigger" href="#">Elem 3 more</a>
+              <div class="lux-dropdown__menu">
+                <a class="lux-dropdown__menu-item" href="#">Elem 3.1</a><a class="lux-dropdown__menu-item" href="#">Elem 3.2</a><a class="lux-dropdown__menu-item" href="#">Elem 3.3</a><a class="lux-dropdown__menu-item" href="#">Elem 3.4</a>
               </div>
-            </div><a class="chi-dropdown__menu-item" href="#">Elem 4</a>
+            </div><a class="lux-dropdown__menu-item" href="#">Elem 4</a>
           </div>
         </li>
         <li>
@@ -416,15 +416,15 @@ p.-text
         <li>
           <a href="#">Tab Link</a>
         </li>
-        <li class="chi-dropdown">
-          <a class="chi-dropdown__trigger" href="#">Tab Link</a>
-          <div class="chi-dropdown__menu">
-            <a class="chi-dropdown__menu-item" href="#">Element 1</a><a class="chi-dropdown__menu-item" href="#">Element 2</a><a class="chi-dropdown__menu-item" href="#">Element 3</a>
+        <li class="lux-dropdown">
+          <a class="lux-dropdown__trigger" href="#">Tab Link</a>
+          <div class="lux-dropdown__menu">
+            <a class="lux-dropdown__menu-item" href="#">Element 1</a><a class="lux-dropdown__menu-item" href="#">Element 2</a><a class="lux-dropdown__menu-item" href="#">Element 3</a>
           </div>
         </li>
       </ul>
 
-      <script>chi.navigation(document.getElementById('navigation-components-contained'));</script>
+      <script>lux.navigation(document.getElementById('navigation-components-contained'));</script>
 
 h3 Wait for animations
 p.-text
@@ -433,15 +433,15 @@ p.-text
   | the animation will not be done, an this can be confusing for the user. To prevent this possible confusion, this
   | component has the option to wait for the animation to finish and, then, it will redirect the user to the destination
   | URL. You can enable this behavior by setting the <code>waitForAnimations</code> option to <code>true</code>.
-ul.chi-tabs#example-4-switch
+ul.lux-tabs#example-4-switch
   li.-active
     a(href='#example-4__enabled') Enabled
   li
     a(href='#example-4__disabled') Disabled
-.chi-tabs-panel.-active#example-4__enabled
+.lux-tabs-panel.-active#example-4__enabled
   .example.-mb--3
     .-p--3.-pb--4
-      ul.chi-tabs.chi-navigationExample.chi-customExample
+      ul.lux-tabs.lux-navigationExample.lux-customExample
         li.-active
           a(href='?tab=1') Tab Link
         li
@@ -455,20 +455,20 @@ ul.chi-tabs#example-4-switch
         li
           a(href='?tab=6') Tab Link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-nav4-enabled
+      ul.lux-tabs#example-nav4-enabled
         li.-disabled
           a(href=`#webcomponent-nav4-enabled`) Web Component
         li.-active
           a(href=`#html-nav4-enabled`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-nav4-enabled
-    .chi-tabs-panel.-active#html-nav4-enabled
-      .chi-tab__description
+    .lux-tabs-panel#webcomponent-nav4-enabled
+    .lux-tabs-panel.-active#html-nav4-enabled
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang='html')
-        <ul id="navigationexample-4-enabled" class="chi-tabs">
+        <ul id="navigationexample-4-enabled" class="lux-tabs">
           <li class="-active">
             <a href="/">Tab Link</a>
           </li>
@@ -490,15 +490,15 @@ ul.chi-tabs#example-4-switch
         </ul>
         <script>
           const navigationElem = document.getElementById('#navigationexample-4-enabled');
-          chi.navigation(
+          lux.navigation(
             navigationElem,
             {waitForAnimations: true}
           );
         </script>
-.chi-tabs-panel#example-4__disabled
+.lux-tabs-panel#example-4__disabled
   .example.-mb--3
     .-p--3.-pb--4
-      ul.chi-tabs.chi-navigationExample.chi-customExample
+      ul.lux-tabs.lux-navigationExample.lux-customExample
         li.-active
           a(href='?tab=1') Tab Link
         li
@@ -512,20 +512,20 @@ ul.chi-tabs#example-4-switch
         li
           a(href='?tab=6') Tab Link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-nav4-disabled
+      ul.lux-tabs#example-nav4-disabled
         li.-disabled
           a(href=`#webcomponent-nav4-disabled`) Web Component
         li.-active
           a(href=`#html-nav4-disabled`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-nav4-disabled
-    .chi-tabs-panel.-active#html-nav4-disabled
-      .chi-tab__description
+    .lux-tabs-panel#webcomponent-nav4-disabled
+    .lux-tabs-panel.-active#html-nav4-disabled
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang='html')
-        <ul id="navigationexample-4-disabled" class="chi-tabs">
+        <ul id="navigationexample-4-disabled" class="lux-tabs">
           <li class="-active">
             <a href="/">Tab Link</a>
           </li>
@@ -547,7 +547,7 @@ ul.chi-tabs#example-4-switch
         </ul>
         <script>
           const navigationElem = document.getElementById('#navigationexample-4-disabled');
-          chi.navigation(
+          lux.navigation(
             navigationElem,
             {waitForAnimations: false}
           );
@@ -555,119 +555,119 @@ ul.chi-tabs#example-4-switch
 
 h2 Icons
 h3 Horizontal tabs with icons
-ul#chi-tabs--menu-horizontal-icons.chi-tabs
+ul#lux-tabs--menu-horizontal-icons.lux-tabs
   li.-active
-    a(href='#chi-tabs-panel--horizontal-icons-base') Base
+    a(href='#lux-tabs-panel--horizontal-icons-base') Base
   li
-    a(href='#chi-tabs-panel--horizontal-icons-inverse') Inverse
+    a(href='#lux-tabs-panel--horizontal-icons-inverse') Inverse
 .example.-mb--3
-  .chi-tabs-panel.-active#chi-tabs-panel--horizontal-icons-base
+  .lux-tabs-panel.-active#lux-tabs-panel--horizontal-icons-base
     .-p--3.-bg--grey-20
       .-bg--white.-px--3
-        ul.chi-tabs.-icons
+        ul.lux-tabs.-icons
           li.-active
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Active Tab
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-icon-base
+      ul.lux-tabs#example-icon-base
         li.-disabled
           a(href=`#webcomponent-example-icon-base`) Web Component
         li.-active
           a(href=`#html-example-icon-base`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-example-icon-base
-    .chi-tabs-panel.-active#html-example-icon-base
+    .lux-tabs-panel#webcomponent-example-icon-base
+    .lux-tabs-panel.-active#html-example-icon-base
       :code(lang='html')
-        <ul class="chi-tabs -icons">
+        <ul class="lux-tabs -icons">
           <li class="-active">
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Active Tab</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab Link</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab Link</span>
             </a>
           </li>
         </ul>
-  .chi-tabs-panel#chi-tabs-panel--horizontal-icons-inverse
+  .lux-tabs-panel#lux-tabs-panel--horizontal-icons-inverse
     .-p--3.-bg--grey-20
       .-bg--black.-px--3
-        ul.chi-tabs.-inverse.-icons
+        ul.lux-tabs.-inverse.-icons
           li.-active
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Active Tab
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-icon-inverse
+      ul.lux-tabs#example-icon-inverse
         li.-disabled
           a(href=`#webcomponent-example-icon-inverse`) Web Component
         li.-active
           a(href=`#html-example-icon-inverse`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-example-icon-inverse
-    .chi-tabs-panel.-active#html-example-icon-inverse
+    .lux-tabs-panel#webcomponent-example-icon-inverse
+    .lux-tabs-panel.-active#html-example-icon-inverse
       :code(lang='html')
-        <ul class="chi-tabs -inverse -icons">
+        <ul class="lux-tabs -inverse -icons">
           <li class="-active">
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Active Tab</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab Link</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab Link</span>
             </a>
           </li>
         </ul>
 
 h3 Vertical tabs with icons
-ul#chi-tabs--menu-vertical-icons.chi-tabs
+ul#lux-tabs--menu-vertical-icons.lux-tabs
   li.-active
-    a(href='#chi-tabs-panel--vertical-icons-base') Base
+    a(href='#lux-tabs-panel--vertical-icons-base') Base
   li
-    a(href='#chi-tabs-panel--vertical-icons-inverse') Inverse
+    a(href='#lux-tabs-panel--vertical-icons-inverse') Inverse
 .example.-mb--3
-  .chi-tabs-panel.-active#chi-tabs-panel--vertical-icons-base
+  .lux-tabs-panel.-active#lux-tabs-panel--vertical-icons-base
     .-p--3.-bg--grey-20
       .-bg--white.-p--3
-        ul.chi-tabs.-vertical.-icons
+        ul.lux-tabs.-vertical.-icons
           li.-active
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Active Tab
-            ul.chi-tabs__subtabs
+            ul.lux-tabs__subtabs
               li.-active
                 a(href='#') Subtab Link
               li
@@ -676,50 +676,50 @@ ul#chi-tabs--menu-vertical-icons.chi-tabs
                 a(href='#') Subtab Link
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-icon-vertical-base
+      ul.lux-tabs#example-icon-vertical-base
         li.-disabled
           a(href=`#webcomponent-example-icon-vertical-base`) Web Component
         li.-active
           a(href=`#html-example-icon-vertical-base`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-example-icon-vertical-base
-    .chi-tabs-panel.-active#html-example-icon-vertical-base
+    .lux-tabs-panel#webcomponent-example-icon-vertical-base
+    .lux-tabs-panel.-active#html-example-icon-vertical-base
       :code(lang='html')
-        <ul class="chi-tabs -vertical -icons">
+        <ul class="lux-tabs -vertical -icons">
           <li class="-active">
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Active Tab</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab link</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab link</span>
             </a>
           </li>
         </ul>
-  .chi-tabs-panel#chi-tabs-panel--vertical-icons-inverse
+  .lux-tabs-panel#lux-tabs-panel--vertical-icons-inverse
     .-p--3.-bg--grey-20
       .-bg--black.-p--3
-        ul.chi-tabs.-inverse.-vertical.-icons
+        ul.lux-tabs.-inverse.-vertical.-icons
           li.-active
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Active Tab
-            ul.chi-tabs__subtabs
+            ul.lux-tabs__subtabs
               li.-active
                 a(href='#') Subtab Link
               li
@@ -728,37 +728,37 @@ ul#chi-tabs--menu-vertical-icons.chi-tabs
                 a(href='#') Subtab Link
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
           li
             a(href='#')
-              i.chi-icon.icon-atom
+              i.lux-icon.icon-atom
               span Tab Link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-icon-vertical-inverse
+      ul.lux-tabs#example-icon-vertical-inverse
         li.-disabled
           a(href=`#webcomponent-example-icon-vertical-inverse`) Web Component
         li.-active
           a(href=`#html-example-icon-vertical-inverse`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-example-icon-vertical-inverse
-    .chi-tabs-panel.-active#html-example-icon-vertical-inverse
+    .lux-tabs-panel#webcomponent-example-icon-vertical-inverse
+    .lux-tabs-panel.-active#html-example-icon-vertical-inverse
       :code(lang='html')
-        <ul class="chi-tabs -inverse -vertical -icons">
+        <ul class="lux-tabs -inverse -vertical -icons">
           <li class="-active">
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Active Tab</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab link</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="chi-icon icon-atom"></i>
+              <i class="lux-icon icon-atom"></i>
               <span>Tab link</span>
             </a>
           </li>
@@ -768,84 +768,84 @@ h3 Vertical tabs with icons and description
 .example.-mb--3
   .-p--3.-bg--grey-20
     .-bg--white.-p--3
-      ul.chi-tabs.-vertical.-icons.-list
+      ul.lux-tabs.-vertical.-icons.-list
         li.-active
-          a.chi-tabs_item(href='#')
-            i.chi-icon.icon-atom
-            span.chi-tabs_item-title Tab Link
-            span.chi-tabs_item-text Tab description
+          a.lux-tabs_item(href='#')
+            i.lux-icon.icon-atom
+            span.lux-tabs_item-title Tab Link
+            span.lux-tabs_item-text Tab description
         li
-          a.chi-tabs_item(href='#')
-            i.chi-icon.icon-atom
-            span.chi-tabs_item-title Active Tab
-            span.chi-tabs_item-text Tab description
-          ul.chi-tabs__subtabs
+          a.lux-tabs_item(href='#')
+            i.lux-icon.icon-atom
+            span.lux-tabs_item-title Active Tab
+            span.lux-tabs_item-text Tab description
+          ul.lux-tabs__subtabs
             li
-              a.chi-tabs_item(href='#')
-                span.chi-tabs_item-title Subtab Link
-                span.chi-tabs_item-text Subtab description
+              a.lux-tabs_item(href='#')
+                span.lux-tabs_item-title Subtab Link
+                span.lux-tabs_item-text Subtab description
             li
-              a.chi-tabs_item(href='#')
-                span.chi-tabs_item-title Subtab Link
-                span.chi-tabs_item-text Subtab description
+              a.lux-tabs_item(href='#')
+                span.lux-tabs_item-title Subtab Link
+                span.lux-tabs_item-text Subtab description
             li
-              a.chi-tabs_item(href='#')
-                span.chi-tabs_item-title Subtab Link
-                span.chi-tabs_item-text Subtab description
+              a.lux-tabs_item(href='#')
+                span.lux-tabs_item-title Subtab Link
+                span.lux-tabs_item-text Subtab description
         li
-          a.chi-tabs_item(href='#')
-            i.chi-icon.icon-atom
-            span.chi-tabs_item-title Tab Link
-            span.chi-tabs_item-text Tab description
+          a.lux-tabs_item(href='#')
+            i.lux-icon.icon-atom
+            span.lux-tabs_item-title Tab Link
+            span.lux-tabs_item-text Tab description
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-large
+    ul.lux-tabs#example-size-large
       li.-disabled
         a(href=`#webcomponent-size-large`) Web Component
       li.-active
         a(href=`#html-size-large`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-large
-  .chi-tabs-panel.-active#html-size-large
+  .lux-tabs-panel#webcomponent-size-large
+  .lux-tabs-panel.-active#html-size-large
     :code(lang='html')
-      <ul class="chi-tabs -vertical -icons -list">
+      <ul class="lux-tabs -vertical -icons -list">
         <li class="-active">
-          <a class="chi-tabs_item" href="#">
-            <i class="chi-icon icon-atom"></i>
-            <span class="chi-tabs_item-title">Tab Link</span>
-            <span class="chi-tabs_item-text">Tab description</span>
+          <a class="lux-tabs_item" href="#">
+            <i class="lux-icon icon-atom"></i>
+            <span class="lux-tabs_item-title">Tab Link</span>
+            <span class="lux-tabs_item-text">Tab description</span>
           </a>
         </li>
         <li>
-          <a class="chi-tabs_item" href="#">
-            <i class="chi-icon icon-atom"></i>
-            <span class="chi-tabs_item-title">Active Tab</span>
-            <span class="chi-tabs_item-text">Tab description</span>
+          <a class="lux-tabs_item" href="#">
+            <i class="lux-icon icon-atom"></i>
+            <span class="lux-tabs_item-title">Active Tab</span>
+            <span class="lux-tabs_item-text">Tab description</span>
           </a>
-          <ul class="chi-tabs__subtabs">
+          <ul class="lux-tabs__subtabs">
               <li>
-                <a class="chi-tabs_item" href="#">
-                  <span class="chi-tabs_item-title">Subtab Link</span>
-                  <span class="chi-tabs_item-text">Subtab description</span>
+                <a class="lux-tabs_item" href="#">
+                  <span class="lux-tabs_item-title">Subtab Link</span>
+                  <span class="lux-tabs_item-text">Subtab description</span>
                 </a>
               </li>
               <li>
-                <a class="chi-tabs_item" href="#">
-                  <span class="chi-tabs_item-title">Subtab Link</span>
-                  <span class="chi-tabs_item-text">Subtab description</span>
+                <a class="lux-tabs_item" href="#">
+                  <span class="lux-tabs_item-title">Subtab Link</span>
+                  <span class="lux-tabs_item-text">Subtab description</span>
                 </a>
               </li>
               <li>
-                <a class="chi-tabs_item" href="#">
-                  <span class="chi-tabs_item-title">Subtab Link</span>
-                  <span class="chi-tabs_item-text">Subtab description</span>
+                <a class="lux-tabs_item" href="#">
+                  <span class="lux-tabs_item-title">Subtab Link</span>
+                  <span class="lux-tabs_item-text">Subtab description</span>
                 </a>
               </li>
           </ul>
         </li>
         <li>
-          <a class="chi-tabs_item" href="#">
-            <i class="chi-icon icon-atom"></i>
-            <span class="chi-tabs_item-title">Tab Link</span>
-            <span class="chi-tabs_item-text">Tab description</span>
+          <a class="lux-tabs_item" href="#">
+            <i class="lux-icon icon-atom"></i>
+            <span class="lux-tabs_item-title">Tab Link</span>
+            <span class="lux-tabs_item-text">Tab description</span>
           </a>
         </li>
       </ul>
@@ -853,142 +853,142 @@ h3 Portal
 .example.-mb--3
   .-p--3
     .-bg--grey-20.-p--3
-      ul.chi-tabs.-vertical.-icons.-list.-portal.-sm
+      ul.lux-tabs.-vertical.-icons.-list.-portal.-sm
         li.-active
-          a.chi-tabs_item(href='#')
-            i.chi-icon.icon-atom
-            span.chi-tabs_item-title Tab Link
-            span.chi-tabs_item-text Tab description
-            button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-              .chi-button__content
-                i.chi-icon.icon-more-vert
+          a.lux-tabs_item(href='#')
+            i.lux-icon.icon-atom
+            span.lux-tabs_item-title Tab Link
+            span.lux-tabs_item-text Tab description
+            button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+              .lux-button__content
+                i.lux-icon.icon-more-vert
         li
-          a.chi-tabs_item(href='#')
-            i.chi-icon.icon-atom
-            span.chi-tabs_item-title Active Tab
-            span.chi-tabs_item-text Tab description
-            button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-              .chi-button__content
-                i.chi-icon.icon-more-vert
-          ul.chi-tabs__subtabs
+          a.lux-tabs_item(href='#')
+            i.lux-icon.icon-atom
+            span.lux-tabs_item-title Active Tab
+            span.lux-tabs_item-text Tab description
+            button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+              .lux-button__content
+                i.lux-icon.icon-more-vert
+          ul.lux-tabs__subtabs
             li
-              a.chi-tabs_item(href='#')
-                span.chi-tabs_item-title Subtab Link
-                span.chi-tabs_item-text Subtab description
-                button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-                  .chi-button__content
-                    i.chi-icon.icon-more-vert
+              a.lux-tabs_item(href='#')
+                span.lux-tabs_item-title Subtab Link
+                span.lux-tabs_item-text Subtab description
+                button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+                  .lux-button__content
+                    i.lux-icon.icon-more-vert
             li
-              a.chi-tabs_item(href='#')
-                span.chi-tabs_item-title Subtab Link
-                span.chi-tabs_item-text Subtab description
-                button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-                  .chi-button__content
-                    i.chi-icon.icon-more-vert
-              ul.chi-tabs__subtabs
+              a.lux-tabs_item(href='#')
+                span.lux-tabs_item-title Subtab Link
+                span.lux-tabs_item-text Subtab description
+                button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+                  .lux-button__content
+                    i.lux-icon.icon-more-vert
+              ul.lux-tabs__subtabs
                 li
-                  a.chi-tabs_item(href='#')
-                    span.chi-tabs_item-title Subtab Link
-                    span.chi-tabs_item-text Subtab description
-                    button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-                      .chi-button__content
-                        i.chi-icon.icon-more-vert
+                  a.lux-tabs_item(href='#')
+                    span.lux-tabs_item-title Subtab Link
+                    span.lux-tabs_item-text Subtab description
+                    button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+                      .lux-button__content
+                        i.lux-icon.icon-more-vert
                 li
-                  a.chi-tabs_item(href='#')
-                    span.chi-tabs_item-title Subtab Link
-                    span.chi-tabs_item-text Subtab description
-                    button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-                      .chi-button__content
-                        i.chi-icon.icon-more-vert
+                  a.lux-tabs_item(href='#')
+                    span.lux-tabs_item-title Subtab Link
+                    span.lux-tabs_item-text Subtab description
+                    button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+                      .lux-button__content
+                        i.lux-icon.icon-more-vert
             li
-              a.chi-tabs_item(href='#')
-                span.chi-tabs_item-title Subtab Link
-                span.chi-tabs_item-text Subtab description
-                button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-                  .chi-button__content
-                    i.chi-icon.icon-more-vert
+              a.lux-tabs_item(href='#')
+                span.lux-tabs_item-title Subtab Link
+                span.lux-tabs_item-text Subtab description
+                button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+                  .lux-button__content
+                    i.lux-icon.icon-more-vert
         li
-          a.chi-tabs_item(href='#')
-            i.chi-icon.icon-atom
-            span.chi-tabs_item-title Tab Link
-            span.chi-tabs_item-text Tab description
-            button.chi-button.-icon.-flat.-no-hover(aria-label="Button action")
-              .chi-button__content
-                i.chi-icon.icon-more-vert
+          a.lux-tabs_item(href='#')
+            i.lux-icon.icon-atom
+            span.lux-tabs_item-title Tab Link
+            span.lux-tabs_item-text Tab description
+            button.lux-button.-icon.-flat.-no-hover(aria-label="Button action")
+              .lux-button__content
+                i.lux-icon.icon-more-vert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-large
+    ul.lux-tabs#example-size-large
       li.-disabled
         a(href=`#webcomponent-size-large`) Web Component
       li.-active
         a(href=`#html-size-large`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-large
-  .chi-tabs-panel.-active#html-size-large
+  .lux-tabs-panel#webcomponent-size-large
+  .lux-tabs-panel.-active#html-size-large
     :code(lang='html')
-      <ul class="chi-tabs -vertical -icons -list -portal -sm">
+      <ul class="lux-tabs -vertical -icons -list -portal -sm">
         <li class="-active">
-          <a class="chi-tabs_item" href="#">
-            <i class="chi-icon icon-atom"></i>
-            <span class="chi-tabs_item-title">Tab Link</span>
-            <span class="chi-tabs_item-text">Tab description</span>
-            <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-more-vert"></i>
+          <a class="lux-tabs_item" href="#">
+            <i class="lux-icon icon-atom"></i>
+            <span class="lux-tabs_item-title">Tab Link</span>
+            <span class="lux-tabs_item-text">Tab description</span>
+            <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-more-vert"></i>
               </div>
             </button>
           </a>
         </li>
         <li>
-          <a class="chi-tabs_item" href="#">
-            <i class="chi-icon icon-atom"></i>
-            <span class="chi-tabs_item-title">Active Tab</span>
-            <span class="chi-tabs_item-text">Tab description</span>
-            <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-more-vert"></i>
+          <a class="lux-tabs_item" href="#">
+            <i class="lux-icon icon-atom"></i>
+            <span class="lux-tabs_item-title">Active Tab</span>
+            <span class="lux-tabs_item-text">Tab description</span>
+            <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-more-vert"></i>
               </div>
             </button>
           </a>
-          <ul class="chi-tabs__subtabs">
+          <ul class="lux-tabs__subtabs">
               <li>
-                <a class="chi-tabs_item" href="#">
-                  <span class="chi-tabs_item-title">Subtab Link</span>
-                  <span class="chi-tabs_item-text">Subtab description</span>
-                  <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-                    <div class="chi-button__content">
-                      <i class="chi-icon icon-more-vert"></i>
+                <a class="lux-tabs_item" href="#">
+                  <span class="lux-tabs_item-title">Subtab Link</span>
+                  <span class="lux-tabs_item-text">Subtab description</span>
+                  <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+                    <div class="lux-button__content">
+                      <i class="lux-icon icon-more-vert"></i>
                     </div>
                   </button>
                 </a>
               </li>
               <li>
-                <a class="chi-tabs_item" href="#">
-                  <span class="chi-tabs_item-title">Subtab Link</span>
-                  <span class="chi-tabs_item-text">Subtab description</span>
-                  <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-                    <div class="chi-button__content">
-                      <i class="chi-icon icon-more-vert"></i>
+                <a class="lux-tabs_item" href="#">
+                  <span class="lux-tabs_item-title">Subtab Link</span>
+                  <span class="lux-tabs_item-text">Subtab description</span>
+                  <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+                    <div class="lux-button__content">
+                      <i class="lux-icon icon-more-vert"></i>
                     </div>
                   </button>
                 </a>
-                <ul class="chi-tabs__subtabs">
+                <ul class="lux-tabs__subtabs">
                     <li>
-                      <a class="chi-tabs_item" href="#">
-                        <span class="chi-tabs_item-title">Subtab Link</span>
-                        <span class="chi-tabs_item-text">Subtab description</span>
-                        <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-                          <div class="chi-button__content">
-                            <i class="chi-icon icon-more-vert"></i>
+                      <a class="lux-tabs_item" href="#">
+                        <span class="lux-tabs_item-title">Subtab Link</span>
+                        <span class="lux-tabs_item-text">Subtab description</span>
+                        <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+                          <div class="lux-button__content">
+                            <i class="lux-icon icon-more-vert"></i>
                           </div>
                         </button>
                       </a>
                     </li>
                     <li>
-                      <a class="chi-tabs_item" href="#">
-                        <span class="chi-tabs_item-title">Subtab Link</span>
-                        <span class="chi-tabs_item-text">Subtab description</span>
-                        <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-                          <div class="chi-button__content">
-                            <i class="chi-icon icon-more-vert"></i>
+                      <a class="lux-tabs_item" href="#">
+                        <span class="lux-tabs_item-title">Subtab Link</span>
+                        <span class="lux-tabs_item-text">Subtab description</span>
+                        <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+                          <div class="lux-button__content">
+                            <i class="lux-icon icon-more-vert"></i>
                           </div>
                         </button>
                       </a>
@@ -996,12 +996,12 @@ h3 Portal
                 </ul>
               </li>
               <li>
-                <a class="chi-tabs_item" href="#">
-                  <span class="chi-tabs_item-title">Subtab Link</span>
-                  <span class="chi-tabs_item-text">Subtab description</span>
-                  <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-                    <div class="chi-button__content">
-                      <i class="chi-icon icon-more-vert"></i>
+                <a class="lux-tabs_item" href="#">
+                  <span class="lux-tabs_item-title">Subtab Link</span>
+                  <span class="lux-tabs_item-text">Subtab description</span>
+                  <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+                    <div class="lux-button__content">
+                      <i class="lux-icon icon-more-vert"></i>
                     </div>
                   </button>
                 </a>
@@ -1009,32 +1009,32 @@ h3 Portal
           </ul>
         </li>
         <li>
-          <a class="chi-tabs_item" href="#">
-            <i class="chi-icon icon-atom"></i>
-            <span class="chi-tabs_item-title">Tab Link</span>
-            <span class="chi-tabs_item-text">Tab description</span>
-            <button class="chi-button -icon -flat -no-hover" aria-label="Button action">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-more-vert"></i>
+          <a class="lux-tabs_item" href="#">
+            <i class="lux-icon icon-atom"></i>
+            <span class="lux-tabs_item-title">Tab Link</span>
+            <span class="lux-tabs_item-text">Tab description</span>
+            <button class="lux-button -icon -flat -no-hover" aria-label="Button action">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-more-vert"></i>
               </div>
             </button>
           </a>
         </li>
       </ul>
 h2 Vertical Subtabs
-ul#chi-tabs--menu-subtabs.chi-tabs
+ul#lux-tabs--menu-subtabs.lux-tabs
   li.-active
-    a(href='#chi-tabs-panel--subtabs-base') Base
+    a(href='#lux-tabs-panel--subtabs-base') Base
   li
-    a(href='#chi-tabs-panel--subtabs-inverse') Inverse
+    a(href='#lux-tabs-panel--subtabs-inverse') Inverse
 .example.-mb--3
-  .chi-tabs-panel.-active#chi-tabs-panel--subtabs-base
+  .lux-tabs-panel.-active#lux-tabs-panel--subtabs-base
     .-p--3.-bg--grey-20
       .-bg--white.-p--3
-        ul.chi-tabs.-vertical
+        ul.lux-tabs.-vertical
           li.-active
             a(href='#') Active tab
-            ul.chi-tabs__subtabs
+            ul.lux-tabs__subtabs
               li.-active
                 a(href='#') Subtab Link
               li
@@ -1046,18 +1046,18 @@ ul#chi-tabs--menu-subtabs.chi-tabs
           li
             a(href='#') Tab link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-vertical-subtabs-base
+      ul.lux-tabs#example-vertical-subtabs-base
         li.-disabled
           a(href=`#webcomponent-example-vertical-subtabs-base`) Web Component
         li.-active
           a(href=`#html-example-vertical-subtabs-base`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-example-vertical-subtabs-base
-    .chi-tabs-panel.-active#html-example-vertical-subtabs-base
+    .lux-tabs-panel#webcomponent-example-vertical-subtabs-base
+    .lux-tabs-panel.-active#html-example-vertical-subtabs-base
       :code(lang='html')
-        <ul class="chi-tabs -vertical">
+        <ul class="lux-tabs -vertical">
           <li class="-active">
             <a href="#">Active tab</a>
-            <ul class="chi-tabs__subtabs">
+            <ul class="lux-tabs__subtabs">
               <li class="-active">
                 <a href="#">Subtab Link</a>
               </li>
@@ -1076,13 +1076,13 @@ ul#chi-tabs--menu-subtabs.chi-tabs
             <a href="#">Tab link</a>
           </li>
         </ul>
-  .chi-tabs-panel#chi-tabs-panel--subtabs-inverse
+  .lux-tabs-panel#lux-tabs-panel--subtabs-inverse
     .-p--3.-bg--grey-20
       .-bg--black.-p--3
-        ul.chi-tabs.-inverse.-vertical
+        ul.lux-tabs.-inverse.-vertical
           li.-active
             a(href='#') Active tab
-            ul.chi-tabs__subtabs
+            ul.lux-tabs__subtabs
               li.-active
                 a(href='#') Subtab Link
               li
@@ -1094,18 +1094,18 @@ ul#chi-tabs--menu-subtabs.chi-tabs
           li
             a(href='#') Tab link
     .example-tabs.-pl--2
-      ul.chi-tabs#example-vertical-subtabs-inverse
+      ul.lux-tabs#example-vertical-subtabs-inverse
         li.-disabled
           a(href=`#webcomponent-example-vertical-subtabs-inverse`) Web Component
         li.-active
           a(href=`#html-example-vertical-subtabs-inverse`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-example-vertical-subtabs-inverse
-    .chi-tabs-panel.-active#html-example-vertical-subtabs-inverse
+    .lux-tabs-panel#webcomponent-example-vertical-subtabs-inverse
+    .lux-tabs-panel.-active#html-example-vertical-subtabs-inverse
       :code(lang='html')
-        <ul class="chi-tabs -inverse -vertical">
+        <ul class="lux-tabs -inverse -vertical">
           <li class="-active">
             <a href="#">Active tab</a>
-            <ul class="chi-tabs__subtabs">
+            <ul class="lux-tabs__subtabs">
               <li class="-active">
                 <a href="#">Subtab Link</a>
               </li>
@@ -1126,16 +1126,16 @@ ul#chi-tabs--menu-subtabs.chi-tabs
         </ul>
 
 h2 Bordered
-ul#chi-tabs--menu-bordered.chi-tabs
+ul#lux-tabs--menu-bordered.lux-tabs
   li.-active
-    a(href='#chi-tabs-panel--bordered-base') Base
+    a(href='#lux-tabs-panel--bordered-base') Base
   li
-    a(href='#chi-tabs-panel--bordered-inverse') Inverse
+    a(href='#lux-tabs-panel--bordered-inverse') Inverse
 .example.-mb--3
-  .chi-tabs-panel.-active#chi-tabs-panel--bordered-base
+  .lux-tabs-panel.-active#lux-tabs-panel--bordered-base
     .-p--3.-bg--grey-20
       .-bg--white.-p--3
-        ul.chi-tabs.-border
+        ul.lux-tabs.-border
           li.-active
             a(href='#') Active tab
           li
@@ -1143,7 +1143,7 @@ ul#chi-tabs--menu-bordered.chi-tabs
           li
             a(href='#') Tab link
     :code(lang='html')
-      <ul class="chi-tabs -border">
+      <ul class="lux-tabs -border">
         <li class="-active">
           <a href="#">Active tab</a>
         </li>
@@ -1154,10 +1154,10 @@ ul#chi-tabs--menu-bordered.chi-tabs
           <a href="#">Tab link</a>
         </li>
       </ul>
-  .chi-tabs-panel#chi-tabs-panel--bordered-inverse
+  .lux-tabs-panel#lux-tabs-panel--bordered-inverse
     .-p--3.-bg--grey-20
       .-bg--black.-p--3
-        ul.chi-tabs.-inverse.-border
+        ul.lux-tabs.-inverse.-border
           li.-active
             a(href='#') Active tab
           li
@@ -1165,7 +1165,7 @@ ul#chi-tabs--menu-bordered.chi-tabs
           li
             a(href='#') Tab link
     :code(lang='html')
-      <ul class="chi-tabs -inverse -border">
+      <ul class="lux-tabs -inverse -border">
         <li class="-active">
           <a href="#">Active tab</a>
         </li>
@@ -1182,7 +1182,7 @@ h2 Additional Sizes
 h3 Extra small
 .example.-mb--3
   .-p--3.-pb--4
-    ul.chi-tabs.-xs
+    ul.lux-tabs.-xs
       li.-active
         a(href='#') Active Tab
       li
@@ -1190,15 +1190,15 @@ h3 Extra small
       li
         a(href='#') Tab Link
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-xsmall
+    ul.lux-tabs#example-size-xsmall
       li.-disabled
         a(href=`#webcomponent-size-xsmall`) Web Component
       li.-active
         a(href=`#html-size-xsmall`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-xsmall
-  .chi-tabs-panel.-active#html-size-xsmall
+  .lux-tabs-panel#webcomponent-size-xsmall
+  .lux-tabs-panel.-active#html-size-xsmall
     :code(lang='html')
-      <ul class="chi-tabs -xs">
+      <ul class="lux-tabs -xs">
         <li class="-active">
           <a href="#">Active Tab</a>
         </li>
@@ -1213,7 +1213,7 @@ h3 Extra small
 h3 Small
 .example.-mb--3
   .-p--3.-pb--4
-    ul.chi-tabs.-sm
+    ul.lux-tabs.-sm
       li.-active
         a(href='#') Active Tab
       li
@@ -1221,15 +1221,15 @@ h3 Small
       li
         a(href='#') Tab Link
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-small
+    ul.lux-tabs#example-size-small
       li.-disabled
         a(href=`#webcomponent-size-small`) Web Component
       li.-active
         a(href=`#html-size-small`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-small
-  .chi-tabs-panel.-active#html-size-small
+  .lux-tabs-panel#webcomponent-size-small
+  .lux-tabs-panel.-active#html-size-small
     :code(lang='html')
-      <ul class="chi-tabs -sm">
+      <ul class="lux-tabs -sm">
         <li class="-active">
           <a href="#">Active Tab</a>
         </li>
@@ -1244,10 +1244,10 @@ h3 Small
 h3 Large
 .example.-mb--3
   .-p--3.-pb--4
-    ul.chi-tabs.-vertical.-lg
+    ul.lux-tabs.-vertical.-lg
       li.-active
         a(href='#') Active Tab
-        ul.chi-tabs__subtabs
+        ul.lux-tabs__subtabs
           li.-active
             a(href='#') Subtab Link
           li
@@ -1259,18 +1259,18 @@ h3 Large
       li
         a(href='#') Tab Link
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-large
+    ul.lux-tabs#example-size-large
       li.-disabled
         a(href=`#webcomponent-size-large`) Web Component
       li.-active
         a(href=`#html-size-large`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-large
-  .chi-tabs-panel.-active#html-size-large
+  .lux-tabs-panel#webcomponent-size-large
+  .lux-tabs-panel.-active#html-size-large
     :code(lang='html')
-      <ul class="chi-tabs -vertical -lg">
+      <ul class="lux-tabs -vertical -lg">
         <li class="-active">
           <a href="#">Active Tab</a>
-          <ul class="chi-tabs__subtabs">
+          <ul class="lux-tabs__subtabs">
             <li class="-active">
               <a href="#">Subtab Link</a>
             </li>
@@ -1294,36 +1294,36 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.getElementById('chi-tabs--menu'));
-      chi.tab(document.getElementById('chi-tabs--menu-vertical'));
-      chi.tab(document.getElementById('chi-tabs--menu-horizontal-icons'));
-      chi.tab(document.getElementById('chi-tabs--menu-vertical-icons'));
-      chi.tab(document.getElementById('chi-tabs--menu-subtabs'));
-      chi.tab(document.getElementById('chi-tabs--menu-bordered'));
-      chi.tab(document.getElementById('example-base'));
-      chi.tab(document.getElementById('example-base-inverse'));
-      chi.tab(document.getElementById('example-target-link'));
-      chi.tab(document.getElementById('example-tabs-tabbed-navigation'));
-      chi.tab(document.getElementById('example-nav-contained'));
-      chi.tab(document.getElementById('example-horizontal-base'));
-      chi.tab(document.getElementById('example-horizontal-inverse'));
-      chi.tab(document.getElementById('example-vertical-base'));
-      chi.tab(document.getElementById('example-vertical-inverse'));
-      chi.tab(document.getElementById('example-vertical-inverse-tabs'));
-      chi.tab(document.getElementById('example-default-link-behavior'));
-      chi.tab(document.getElementById('example-nav4-enabled'));
-      chi.tab(document.getElementById('example-nav4-disabled'));
-      chi.tab(document.getElementById('example-4-switch'));
-      chi.tab(document.getElementById('example-size-xsmall'));
-      chi.tab(document.getElementById('example-size-small'));
-      chi.tab(document.getElementById('example-size-large'));
-      chi.tab(document.getElementById('example-icon-base'));
-      chi.tab(document.getElementById('example-icon-inverse'));
-      chi.tab(document.getElementById('example-icon-vertical-base'));
-      chi.tab(document.getElementById('example-icon-vertical-inverse'));
-      chi.tab(document.getElementById('example-vertical-subtabs-base'));
-      chi.tab(document.getElementById('example-vertical-subtabs-inverse'));
-      chi.navigation(document.getElementById('navigation-components-contained'));
-      chi.navigation(document.getElementById('example-tabbed-navigation'));
+      lux.tab(document.getElementById('lux-tabs--menu'));
+      lux.tab(document.getElementById('lux-tabs--menu-vertical'));
+      lux.tab(document.getElementById('lux-tabs--menu-horizontal-icons'));
+      lux.tab(document.getElementById('lux-tabs--menu-vertical-icons'));
+      lux.tab(document.getElementById('lux-tabs--menu-subtabs'));
+      lux.tab(document.getElementById('lux-tabs--menu-bordered'));
+      lux.tab(document.getElementById('example-base'));
+      lux.tab(document.getElementById('example-base-inverse'));
+      lux.tab(document.getElementById('example-target-link'));
+      lux.tab(document.getElementById('example-tabs-tabbed-navigation'));
+      lux.tab(document.getElementById('example-nav-contained'));
+      lux.tab(document.getElementById('example-horizontal-base'));
+      lux.tab(document.getElementById('example-horizontal-inverse'));
+      lux.tab(document.getElementById('example-vertical-base'));
+      lux.tab(document.getElementById('example-vertical-inverse'));
+      lux.tab(document.getElementById('example-vertical-inverse-tabs'));
+      lux.tab(document.getElementById('example-default-link-behavior'));
+      lux.tab(document.getElementById('example-nav4-enabled'));
+      lux.tab(document.getElementById('example-nav4-disabled'));
+      lux.tab(document.getElementById('example-4-switch'));
+      lux.tab(document.getElementById('example-size-xsmall'));
+      lux.tab(document.getElementById('example-size-small'));
+      lux.tab(document.getElementById('example-size-large'));
+      lux.tab(document.getElementById('example-icon-base'));
+      lux.tab(document.getElementById('example-icon-inverse'));
+      lux.tab(document.getElementById('example-icon-vertical-base'));
+      lux.tab(document.getElementById('example-icon-vertical-inverse'));
+      lux.tab(document.getElementById('example-vertical-subtabs-base'));
+      lux.tab(document.getElementById('example-vertical-subtabs-inverse'));
+      lux.navigation(document.getElementById('navigation-components-contained'));
+      lux.navigation(document.getElementById('example-tabbed-navigation'));
     }
   );

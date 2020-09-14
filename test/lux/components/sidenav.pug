@@ -1,0 +1,99 @@
+---
+title: Sidenav
+---
+
+- var menuItems=[1, 2, 3, 4];
+- var drawerMenuItems=['A', 'B', 'C', 'D']
+- var active = { menuItem: 1, drawerMenuItem: 'B' };
+- var sizes = ['-sm', '-md', '-lg']
+
+h2.-text--capitalized
+  | Base
+div(class=`test-base`, style='width: 40rem;')
+  aside.lux-sidenav.-flex--shrink0(style='height: 35rem;')
+    .lux-sidenav__content
+      nav
+        ul.lux-sidenav__list
+          each val in menuItems
+            li(class=`${val === active.menuItem ? '-active' : ''}`)
+              a
+                .lux-icon
+                  svg
+                    use(xlink:href='#icon-atom')
+                span=val === active.menuItem ? 'Active Item' : 'Menu Item'
+    .lux-sidenav__drawers
+      .lux-drawer.-active.-animated.-left
+        .lux-drawer__header
+          .lux-drawer__title= 'Menu item 1'
+          button(class='lux-button -icon -close', aria-label='Close')
+            .lux-button__content
+              i.lux-icon.icon-x
+        .lux-drawer__content
+          ul.lux-sidenav__drawer-list
+            each val2, index in drawerMenuItems
+              if val2 === 'A' || val2 === 'B'
+                li(class=`${val2 === active.drawerMenuItem ? '-active -expanded' : ''}`)
+                  a(href=`#drawer-item-list-${val1}-${val2}`)
+                    .lux-sidenav__title=`Title 1`
+                  .lux-sidenav__drawer-item-list
+                    ul.lux-tabs.-vertical.-sm
+                      li
+                        a(class=`lux-sidenav__drawer-item-tab ${val2 === active.drawerMenuItem ? '-active' : ''}`, href='#exampleHashTarget') Sub tab A
+                      li
+                        a(class='lux-sidenav__drawer-item-tab', href='#exampleHashTarget') Sub tab B
+                      li
+                        a(class='lux-sidenav__drawer-item-tab', href='#exampleHashTarget') Sub tab C
+              else
+                li(class=`${val1 === active.menuItem && val2 === active.drawerMenuItem ? '-active -expanded' : ''}`)
+                  a(href=`#exampleHashTarget`)
+                    span.lux-sidenav__title
+                      =`Title 1`
+                      .lux-icon.-xs
+                        svg
+                          use(xlink:href='#icon-external-link')
+
+each size in sizes
+  h2.-text--capitalized
+    = size
+  div(style='width: 40rem;')
+    aside.lux-sidenav.-flex--shrink0(class=`${size}`, style='height: 35rem;')
+      .lux-sidenav__content
+        nav
+          ul.lux-sidenav__list
+            each val in menuItems
+              li(class=`${val===active.menuItem ? '-active':''}`)
+                a
+                  .lux-icon
+                    svg
+                      use(xlink:href='#icon-atom')
+                  span=val===active.menuItem ? 'Active Item' : 'Menu Item'
+      .lux-sidenav__drawers
+        .lux-drawer.-active.-animated.-left
+          .lux-drawer__header
+            .lux-drawer__title= 'Menu item 1'
+            button(class='lux-button -icon -close', aria-label='Close')
+              .lux-button__content
+                i.lux-icon.icon-x
+          .lux-drawer__content
+            ul.lux-sidenav__drawer-list
+              each val2, index in drawerMenuItems
+                if val2 === 'A' || val2 === 'B'
+                  li(class=`${val2 === active.drawerMenuItem ? '-active -expanded' : ''}`)
+                    a(href=`#drawer-item-list-${val1}-${val2}`)
+                      .lux-sidenav__title=`Title 1`
+                    .lux-sidenav__drawer-item-list
+                      ul.lux-tabs.-vertical.-sm
+                        li
+                          a(class=`lux-sidenav__drawer-item-tab ${val2 === active.drawerMenuItem ? '-active' : ''}`, href='#exampleHashTarget') Sub tab A
+                        li
+                          a(class='lux-sidenav__drawer-item-tab', href='#exampleHashTarget') Sub tab B
+                        li
+                          a(class='lux-sidenav__drawer-item-tab', href='#exampleHashTarget') Sub tab C
+                else
+                  li(class=`${val1 === active.menuItem && val2 === active.drawerMenuItem ? '-active -expanded' : ''}`)
+                    a(href=`#exampleHashTarget`)
+                      span.lux-sidenav__title
+                        =`Title 1`
+                        .lux-icon.-xs
+                          svg
+                            use(xlink:href='#icon-external-link')

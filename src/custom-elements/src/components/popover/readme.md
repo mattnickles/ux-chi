@@ -1,4 +1,4 @@
-# chi-popover
+# lux-popover
 
 
 
@@ -20,10 +20,10 @@
 
 | Event               | Description                                                                           | Type                |
 | ------------------- | ------------------------------------------------------------------------------------- | ------------------- |
-| `chiPopover:hidden` | Popover has been hidden to the user. The animation has completed.                     | `CustomEvent<void>` |
-| `chiPopover:hide`   | Popover hide method has executed, but the closing animation has not started yet       | `CustomEvent<void>` |
-| `chiPopover:show`   | Popover show method has executed, but the showing animation has not started yet       | `CustomEvent<void>` |
-| `chiPopover:shown`  | Popover has been shown to the user and is fully visible. The animation has completed. | `CustomEvent<void>` |
+| `luxPopover:hidden` | Popover has been hidden to the user. The animation has completed.                     | `CustomEvent<void>` |
+| `luxPopover:hide`   | Popover hide method has executed, but the closing animation has not started yet       | `CustomEvent<void>` |
+| `luxPopover:show`   | Popover show method has executed, but the showing animation has not started yet       | `CustomEvent<void>` |
+| `luxPopover:shown`  | Popover has been shown to the user and is fully visible. The animation has completed. | `CustomEvent<void>` |
 
 
 ## Methods

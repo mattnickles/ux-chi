@@ -1,149 +1,149 @@
 h2 Examples
 p.-text
-  | Chi includes three button variants: Solid, Outline, and Flat. Use <code>solid</code>
+  | Lux includes three button variants: Solid, Outline, and Flat. Use <code>solid</code>
   | buttons for high emphasis actions, base or <code>outline</code> buttons for medium
   | emphasis actions, and <code>flat</code> buttons for low emphasis actions.
 h3 Solid
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6
       .-p--3.-d--flex(style="justify-content: center;")
         each type, val in {Base:'', Primary:'primary', Dark:'dark'}
           div.-pr--2
-            chi-button(color=type)= val
-    .chi-col.-w--12.-w-md--6
+            lux-button(color=type)= val
+    .lux-col.-w--12.-w-md--6
       .-p--3.-bg--black.-d--flex(style="justify-content: center;")
         each type, val in {Secondary:'secondary', Light:'light'}
           div.-pr--2
-            chi-button(color=type)= val
+            lux-button(color=type)= val
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-default
+    ul.lux-tabs#examples-default
       li.-active
         a(href=`#webcomponent`) Web Component
       li
         a(href=`#html`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent
+  .lux-tabs-panel.-active#webcomponent
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-button>Base</chi-button>
-      <chi-button color="primary">Primary</chi-button>
-      <chi-button color="dark">Dark</chi-button>
+      <lux-button>Base</lux-button>
+      <lux-button color="primary">Primary</lux-button>
+      <lux-button color="dark">Dark</lux-button>
 
       <!-- For dark backgrounds -->
-      <chi-button color="secondary">Secondary</chi-button>
-      <chi-button color="light">Light</chi-button>
-  .chi-tabs-panel#html
-    .chi-tab__description
-      | Chi supports button classes on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> and 
+      <lux-button color="secondary">Secondary</lux-button>
+      <lux-button color="light">Light</lux-button>
+  .lux-tabs-panel#html
+    .lux-tab__description
+      | Lux supports button classes on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> and 
       | <code>&lt;input&gt;</code> elements.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <button class="chi-button">Base</button>
-      <button class="chi-button -primary">Primary</button>
-      <button class="chi-button -dark">Dark</button>
+      <button class="lux-button">Base</button>
+      <button class="lux-button -primary">Primary</button>
+      <button class="lux-button -dark">Dark</button>
 
       <!-- For dark backgrounds -->
-      <button class="chi-button -secondary">Secondary</button>
-      <button class="chi-button -light">Light</button>
+      <button class="lux-button -secondary">Secondary</button>
+      <button class="lux-button -light">Light</button>
 
       <!-- Button classes can be used on other elements -->
-      <a class="chi-button -primary" href="#" role="button">Link button</a>
-      <input class="chi-button -primary" type="button" value="Input button">
-      <input class="chi-button -primary" type="submit" value="Submit button">
+      <a class="lux-button -primary" href="#" role="button">Link button</a>
+      <input class="lux-button -primary" type="button" value="Input button">
+      <input class="lux-button -primary" type="submit" value="Submit button">
 
 h3 Outline
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6
       .-p--3.-d--flex(style="justify-content: center;")
         each type, val in {Primary:'primary', Dark:'dark'}
           div.-pr--2
-            chi-button(color=type, variant='outline')= val
-    .chi-col.-w--12.-w-md--6
+            lux-button(color=type, variant='outline')= val
+    .lux-col.-w--12.-w-md--6
       .-p--3.-bg--black.-d--flex(style="justify-content: center;")
         each type, val in {Secondary:'secondary', Light:'light'}
           div.-pr--2
-            chi-button(color=type, variant='outline')= val
+            lux-button(color=type, variant='outline')= val
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-outline
+    ul.lux-tabs#examples-outline
       li.-active
         a(href=`#webcomponent-outline`) Web Component
       li
         a(href=`#html-outline`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-outline
+  .lux-tabs-panel.-active#webcomponent-outline
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-button color="primary" variant="outline">Primary</chi-button>
-      <chi-button color="dark" variant="outline">Dark</chi-button>
+      <lux-button color="primary" variant="outline">Primary</lux-button>
+      <lux-button color="dark" variant="outline">Dark</lux-button>
 
       <!-- For dark backgrounds -->
-      <chi-button color="secondary" variant="outline">Secondary</chi-button>
-      <chi-button color="light" variant="outline">Light</chi-button>
-  .chi-tabs-panel#html-outline
-    .chi-tab__description
-      | Chi supports button classes on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> and 
+      <lux-button color="secondary" variant="outline">Secondary</lux-button>
+      <lux-button color="light" variant="outline">Light</lux-button>
+  .lux-tabs-panel#html-outline
+    .lux-tab__description
+      | Lux supports button classes on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> and 
       | <code>&lt;input&gt;</code> elements.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <button class="chi-button -primary -outline">Primary</button>
-      <button class="chi-button -dark -outline">Dark</button>
+      <button class="lux-button -primary -outline">Primary</button>
+      <button class="lux-button -dark -outline">Dark</button>
 
       <!-- For dark backgrounds -->
-      <button class="chi-button -secondary -outline">Secondary</button>
-      <button class="chi-button -light -outline">Light</button>
+      <button class="lux-button -secondary -outline">Secondary</button>
+      <button class="lux-button -light -outline">Light</button>
 
       <!-- Button classes can be used on other elements -->
-      <a class="chi-button -primary -outline" href="#" role="button">Link button</a>
-      <input class="chi-button -primary -outline" type="button" value="Input button">
-      <input class="chi-button -primary -outline" type="submit" value="Submit button">
+      <a class="lux-button -primary -outline" href="#" role="button">Link button</a>
+      <input class="lux-button -primary -outline" type="button" value="Input button">
+      <input class="lux-button -primary -outline" type="submit" value="Submit button">
 
 h3 Flat
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6
       .-p--3.-d--flex(style="justify-content: center;")
         each type, val in {Base: '', Primary:'primary', Dark:'dark'}
           div.-pr--2
-            chi-button(color=type, variant='flat')= val
-    .chi-col.-w--12.-w-md--6
+            lux-button(color=type, variant='flat')= val
+    .lux-col.-w--12.-w-md--6
       .-p--3.-bg--black.-d--flex(style="justify-content: center;")
         each type, val in {Secondary:'secondary', Light:'light'}
           div.-pr--2
-            chi-button(color=type, variant='flat')= val
+            lux-button(color=type, variant='flat')= val
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-flat
+    ul.lux-tabs#examples-flat
       li.-active
         a(href=`#webcomponent-flat`) Web Component
       li
         a(href=`#html-flat`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-flat
+  .lux-tabs-panel.-active#webcomponent-flat
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-button variant="flat">Base</chi-button>
-      <chi-button color="primary" variant="flat">Primary</chi-button>
-      <chi-button color="dark" variant="flat">Dark</chi-button>
+      <lux-button variant="flat">Base</lux-button>
+      <lux-button color="primary" variant="flat">Primary</lux-button>
+      <lux-button color="dark" variant="flat">Dark</lux-button>
 
       <!-- For dark backgrounds -->
-      <chi-button color="secondary" variant="flat">Secondary</chi-button>
-      <chi-button color="light" variant="flat">Light</chi-button>
-  .chi-tabs-panel#html-flat
-    .chi-tab__description
-      | Chi supports button classes on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> and 
+      <lux-button color="secondary" variant="flat">Secondary</lux-button>
+      <lux-button color="light" variant="flat">Light</lux-button>
+  .lux-tabs-panel#html-flat
+    .lux-tab__description
+      | Lux supports button classes on <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> and 
       | <code>&lt;input&gt;</code> elements.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <button class="chi-button -flat">Base</button>
-      <button class="chi-button -primary -flat">Primary</button>
-      <button class="chi-button -dark -flat">Dark</button>
+      <button class="lux-button -flat">Base</button>
+      <button class="lux-button -primary -flat">Primary</button>
+      <button class="lux-button -dark -flat">Dark</button>
 
       <!-- For dark backgrounds -->
-      <button class="chi-button -secondary -flat">Secondary</button>
-      <button class="chi-button -light -flat">Light</button>
+      <button class="lux-button -secondary -flat">Secondary</button>
+      <button class="lux-button -light -flat">Light</button>
 
       <!-- Button classes can be used on other elements -->
-      <a class="chi-button -primary -flat" href="#" role="button">Link button</a>
-      <input class="chi-button -primary -flat" type="button" value="Input button">
-      <input class="chi-button -primary -flat" type="submit" value="Submit button">
+      <a class="lux-button -primary -flat" href="#" role="button">Link button</a>
+      <input class="lux-button -primary -flat" type="button" value="Input button">
+      <input class="lux-button -primary -flat" type="submit" value="Submit button">
 
 h2 Uppercase
 p.-text
@@ -155,55 +155,55 @@ p.-text
 .example.-mb--3
   .-p--3.-d--flex
     .-pr--2
-      button(class=`chi-button -uppercase`) Button
+      button(class=`lux-button -uppercase`) Button
     .-pr--2
-      button(class=`chi-button -primary -uppercase`) Button
+      button(class=`lux-button -primary -uppercase`) Button
     .-pr--2
-      button(class=`chi-button -outline -primary -uppercase`) Button
+      button(class=`lux-button -outline -primary -uppercase`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-uppercase
+    ul.lux-tabs#examples-uppercase
       li.-active
         a(href=`#webcomponent-uppercase`) Web Component
       li
         a(href=`#html-uppercase`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-uppercase
+  .lux-tabs-panel.-active#webcomponent-uppercase
     :code(lang="html")
-      <chi-button uppercase>Button</chi-button>
-      <chi-button color="primary" uppercase>Button</chi-button>
-      <chi-button color="primary" variant="outline" uppercase>Button</chi-button>
-  .chi-tabs-panel#html-uppercase
+      <lux-button uppercase>Button</lux-button>
+      <lux-button color="primary" uppercase>Button</lux-button>
+      <lux-button color="primary" variant="outline" uppercase>Button</lux-button>
+  .lux-tabs-panel#html-uppercase
     :code(lang="html")
-      <button class="chi-button -uppercase">Button</button>
-      <button class="chi-button -primary -uppercase">Button</button>
-      <button class="chi-button -primary -outline -uppercase">Button</button>
+      <button class="lux-button -uppercase">Button</button>
+      <button class="lux-button -primary -uppercase">Button</button>
+      <button class="lux-button -primary -outline -uppercase">Button</button>
 
 h2 Fluid
 p.-text
   | Use Fluid buttons to stretch the full width of the parent container.
 .example.-mb--3
   .-p--3
-    button(class=`chi-button -fluid -mb--2`) Button
-    button(class=`chi-button -fluid -justify-content--center`) Button
+    button(class=`lux-button -fluid -mb--2`) Button
+    button(class=`lux-button -fluid -justify-content--center`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-fluid
+    ul.lux-tabs#examples-fluid
       li.-active
         a(href=`#webcomponent-fluid`) Web Component
       li
         a(href=`#html-fluid`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-fluid
+  .lux-tabs-panel.-active#webcomponent-fluid
     :code(lang="html")
       <!-- left aligned content -->
-      <chi-button fluid>Button</chi-button>
+      <lux-button fluid>Button</lux-button>
 
       <!-- center aligned content -->
-      <chi-button fluid center>Button</chi-button>
-  .chi-tabs-panel#html-fluid
+      <lux-button fluid center>Button</lux-button>
+  .lux-tabs-panel#html-fluid
     :code(lang="html")
       <!-- left aligned content -->
-      <button class="chi-button -fluid">Button</button>
+      <button class="lux-button -fluid">Button</button>
 
       <!-- center aligned content -->
-      <button class="chi-button -fluid -justify-content--center">Button</button>
+      <button class="lux-button -fluid -justify-content--center">Button</button>
 
 h2 Icon buttons
 p.-text
@@ -211,199 +211,199 @@ p.-text
   | be used for common actions such as editing, deleting, closing, etc.
 .example.-mb--3
   .-p--3
-    chi-button(type='icon', alternative-text="Button action")
-      chi-icon(icon='atom')
-    chi-button.-ml--2(variant='flat', type='icon', alternative-text="Button action")
-      chi-icon(icon='atom')
+    lux-button(type='icon', alternative-text="Button action")
+      lux-icon(icon='atom')
+    lux-button.-ml--2(variant='flat', type='icon', alternative-text="Button action")
+      lux-icon(icon='atom')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-icon
+    ul.lux-tabs#examples-icon
       li.-active
         a(href=`#webcomponent-icon`) Web Component
       li
         a(href=`#html-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-icon
+  .lux-tabs-panel.-active#webcomponent-icon
     :code(lang="html")
       <!-- base -->
-      <chi-button type="icon" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
+      <lux-button type="icon" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
 
       <!-- flat -->
-      <chi-button variant="flat" type="icon" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
-  .chi-tabs-panel#html-icon
+      <lux-button variant="flat" type="icon" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
+  .lux-tabs-panel#html-icon
     :code(lang="html")
       <!-- base -->
-      <button class="chi-button -icon" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -icon" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
       <!-- flat -->
-      <button class="chi-button -icon -flat" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -icon -flat" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
 h3 Labeled icon buttons
 .example.-mb--3
   .-p--3
-    chi-button
-      chi-icon(icon='atom')
+    lux-button
+      lux-icon(icon='atom')
       span Button
-    chi-button.-mr--2.-ml--2()
+    lux-button.-mr--2.-ml--2()
       span Button
-      chi-icon(icon='atom')
-    chi-button
-      chi-icon(icon='atom')
+      lux-icon(icon='atom')
+    lux-button
+      lux-icon(icon='atom')
       span Button
-      chi-icon(icon='atom')
+      lux-icon(icon='atom')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-labeled
+    ul.lux-tabs#examples-labeled
       li.-active
         a(href=`#webcomponent-labeled`) Web Component
       li
         a(href=`#html-labeled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-labeled
+  .lux-tabs-panel.-active#webcomponent-labeled
     :code(lang="html")
       <!-- left aligned -->
-      <chi-button>
-        <chi-icon icon="atom"></chi-icon>
+      <lux-button>
+        <lux-icon icon="atom"></lux-icon>
         <span>Button</span>
-      </chi-button>
+      </lux-button>
 
       <!-- right aligned -->
-      <chi-button>
+      <lux-button>
         <span>Button</span>
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
 
       <!-- both sides -->
-      <chi-button>
-        <chi-icon icon="atom"></chi-icon>
+      <lux-button>
+        <lux-icon icon="atom"></lux-icon>
         <span>Button</span>
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
-  .chi-tabs-panel#html-labeled
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
+  .lux-tabs-panel#html-labeled
     :code(lang="html")
       <!-- left aligned -->
-      <button class="chi-button">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
           <span>Button</span>
         </div>
       </button>
 
       <!-- right aligned -->
-      <button class="chi-button">
-        <div class="chi-button__content">
+      <button class="lux-button">
+        <div class="lux-button__content">
           <span>Button</span>
-          <i class="chi-icon icon-atom"></i>
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
       <!-- both sides -->
-      <button class="chi-button">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
           <span>Button</span>
-          <i class="chi-icon icon-atom"></i>
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
 h3 Floating icon buttons
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6
       .-p--3.-d--flex(style="justify-content: center;")
         each type, val in {Base:'', Primary:'primary', Dark:'dark'}
           div.-pr--2
-            chi-button(color=type, type='float', alternative-text="Button action")
-              chi-icon(icon='atom')
-    .chi-col.-w--12.-w-md--6
+            lux-button(color=type, type='float', alternative-text="Button action")
+              lux-icon(icon='atom')
+    .lux-col.-w--12.-w-md--6
       .-p--3.-bg--black.-d--flex(style="justify-content: center;")
         each type, val in {Secondary:'secondary', Light:'light'}
           div.-pr--2
-            chi-button(color=type, type='float', alternative-text="Button action")
-              chi-icon(icon='atom')
+            lux-button(color=type, type='float', alternative-text="Button action")
+              lux-icon(icon='atom')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-floating-icon
+    ul.lux-tabs#examples-floating-icon
       li.-active
         a(href=`#webcomponent-floating-icon`) Web Component
       li
         a(href=`#html-floating-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-floating-icon
+  .lux-tabs-panel.-active#webcomponent-floating-icon
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-button type="float" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
-      <chi-button type="float" color="primary" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
-      <chi-button type="float" color="dark" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
+      <lux-button type="float" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
+      <lux-button type="float" color="primary" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
+      <lux-button type="float" color="dark" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
 
       <!-- For dark backgrounds -->
-      <chi-button type="float" color="secondary" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
-      <chi-button type="float" color="light" alternative-text="Button action">
-        <chi-icon icon="atom"></chi-icon>
-      </chi-button>
-  .chi-tabs-panel#html-floating-icon
+      <lux-button type="float" color="secondary" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
+      <lux-button type="float" color="light" alternative-text="Button action">
+        <lux-icon icon="atom"></lux-icon>
+      </lux-button>
+  .lux-tabs-panel#html-floating-icon
     :code(lang="html")
       <!-- For light backgrounds -->
-      <button class="chi-button -float" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -float" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
-      <button class="chi-button -primary -float" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -primary -float" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
-      <button class="chi-button -dark -float" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -dark -float" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
       <!-- For dark backgrounds -->
-      <button class="chi-button -secondary -float" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -secondary -float" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
-      <button class="chi-button -light -float" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -light -float" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
 h3 Close icon button
 .example.-mb--3
   .-p--3
-    chi-button(type='close')
+    lux-button(type='close')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-close-button
+    ul.lux-tabs#examples-close-button
       li.-active
         a(href=`#webcomponent-close-button`) Web Component
       li
         a(href='#html-close-button') HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-close-button
+  .lux-tabs-panel.-active#webcomponent-close-button
     :code(lang="html")
-      <chi-button type="close"></chi-button>
-  .chi-tabs-panel#html-close-button
+      <lux-button type="close"></lux-button>
+  .lux-tabs-panel#html-close-button
     :code(lang="html")
-      <button class="chi-button -icon -close" aria-label="Close">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-x"></i>
+      <button class="lux-button -icon -close" aria-label="Close">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-x"></i>
         </div>
       </button>
 
@@ -413,25 +413,25 @@ p.-text
   | a Danger button may be used.
 .example.-mb--3
   .-p--3
-      chi-button.-mr--2(color='danger')= 'Danger'
-      chi-button.-mr--2(variant='outline', color='danger')= 'Danger'
-      chi-button(variant='flat', color='danger')= 'Danger'
+      lux-button.-mr--2(color='danger')= 'Danger'
+      lux-button.-mr--2(variant='outline', color='danger')= 'Danger'
+      lux-button(variant='flat', color='danger')= 'Danger'
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-danger
+    ul.lux-tabs#examples-danger
       li.-active
         a(href=`#webcomponent-danger`) Web Component
       li
         a(href='#html-danger') HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-danger
+  .lux-tabs-panel.-active#webcomponent-danger
     :code(lang="html")
-      <chi-button color="danger">Danger</chi-button>
-      <chi-button color="danger" variant="outline">Danger</chi-button>
-      <chi-button color="danger" variant="flat">Danger</chi-button>
-  .chi-tabs-panel#html-danger
+      <lux-button color="danger">Danger</lux-button>
+      <lux-button color="danger" variant="outline">Danger</lux-button>
+      <lux-button color="danger" variant="flat">Danger</lux-button>
+  .lux-tabs-panel#html-danger
     :code(lang="html")
-      <button class="chi-button -danger">Danger</button>
-      <button class="chi-button -danger -outline">Danger</button>
-      <button class="chi-button -danger -flat">Danger</button>
+      <button class="lux-button -danger">Danger</button>
+      <button class="lux-button -danger -outline">Danger</button>
+      <button class="lux-button -danger -flat">Danger</button>
 
 h2 Sizes
 p.-text
@@ -440,72 +440,72 @@ p.-text
   .-p--3
     each size in ['sm', 'md', 'lg', 'xl']
       p.-text--bold.-pl--2= size
-      div(class=`chi-col -w--12 -pb--2 -mr--0 -d--flex`)
-        chi-button(size=size)= 'Button'
-        chi-button.-ml--2(size=size, type='icon', alternative-text="Button action")
-          chi-icon(icon='atom')
+      div(class=`lux-col -w--12 -pb--2 -mr--0 -d--flex`)
+        lux-button(size=size)= 'Button'
+        lux-button.-ml--2(size=size, type='icon', alternative-text="Button action")
+          lux-icon(icon='atom')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-sizes
+    ul.lux-tabs#examples-sizes
       li.-active
         a(href=`#webcomponent-sizes`) Web Component
       li
         a(href='#html-sizes') HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes
+  .lux-tabs-panel.-active#webcomponent-sizes
     :code(lang="html")
       <!-- sm -->
-      <chi-button size="sm">Button</chi-button>
-      <chi-button type="icon" size="sm" alternative-text="Button action">
-        <chi-icon icon="atom" />
-      </chi-button>
+      <lux-button size="sm">Button</lux-button>
+      <lux-button type="icon" size="sm" alternative-text="Button action">
+        <lux-icon icon="atom" />
+      </lux-button>
 
       <!-- md -->
-      <chi-button size="md">Button</chi-button>
-      <chi-button type="icon" size="md" alternative-text="Button action">
-        <chi-icon icon="atom" />
-      </chi-button>
+      <lux-button size="md">Button</lux-button>
+      <lux-button type="icon" size="md" alternative-text="Button action">
+        <lux-icon icon="atom" />
+      </lux-button>
 
       <!-- lg -->
-      <chi-button size="lg">Button</chi-button>
-      <chi-button type="icon" size="lg" alternative-text="Button action">
-        <chi-icon icon="atom" />
-      </chi-button>
+      <lux-button size="lg">Button</lux-button>
+      <lux-button type="icon" size="lg" alternative-text="Button action">
+        <lux-icon icon="atom" />
+      </lux-button>
 
       <!-- xl -->
-      <chi-button size="xl">Button</chi-button>
-      <chi-button type="icon" size="xl" alternative-text="Button action">
-        <chi-icon icon="atom" />
-      </chi-button>
-  .chi-tabs-panel#html-sizes
+      <lux-button size="xl">Button</lux-button>
+      <lux-button type="icon" size="xl" alternative-text="Button action">
+        <lux-icon icon="atom" />
+      </lux-button>
+  .lux-tabs-panel#html-sizes
     :code(lang="html")
       <!-- sm -->
-      <button class="chi-button -sm">Button</button>
-      <button class="chi-button -sm -icon" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -sm">Button</button>
+      <button class="lux-button -sm -icon" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
       <!-- md -->
-      <button class="chi-button -md">Button</button>
-      <button class="chi-button -md -icon" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -md">Button</button>
+      <button class="lux-button -md -icon" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
       <!-- lg -->
-      <button class="chi-button -lg">Button</button>
-      <button class="chi-button -lg -icon" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -lg">Button</button>
+      <button class="lux-button -lg -icon" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
       <!-- xl -->
-      <button class="chi-button -xl">Button</button>
-      <button class="chi-button -xl -icon" aria-label="Button action">
-        <div class="chi-button__content">
-          <i class="chi-icon icon-atom"></i>
+      <button class="lux-button -xl">Button</button>
+      <button class="lux-button -xl -icon" aria-label="Button action">
+        <div class="lux-button__content">
+          <i class="lux-icon icon-atom"></i>
         </div>
       </button>
 
@@ -513,6 +513,6 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

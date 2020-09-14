@@ -9,35 +9,35 @@ p.-text
   .-position--relative.-z--0(style='height:20rem;overflow:hidden;')
     .-p--3
       .-d--flex.-align-items--center
-        button.chi-button.-icon#drawer-trigger(aria-label="Toggle drawer")
-          .chi-button__content
-            i.chi-icon.icon-menu.-sm--2
+        button.lux-button.-icon#drawer-trigger(aria-label="Toggle drawer")
+          .lux-button__content
+            i.lux-icon.icon-menu.-sm--2
         b.-ml--2 Click menu button to open Drawer
       each i in [1, 2]
         p.-text.-mb--3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dignissim nisi, gravida pharetra elit. Etiam eu urna orci. Nulla et lorem eleifend, ultrices massa id, molestie urna. Nulla nec quam in turpis fermentum dictum vitae ac nibh. Suspendisse lacus nisi, sollicitudin in commodo quis, euismod id enim. Donec semper nunc et tellus convallis, tristique varius turpis gravida. Quisque hendrerit magna ac bibendum molestie. Nullam scelerisque libero vitae lorem dignissim ullamcorper. Integer mollis auctor enim vel molestie. Etiam id vestibulum augue, vitae dapibus quam. Nunc tincidunt aliquet lacus nec malesuada. Donec ultricies augue non lorem eleifend, eget ullamcorper lacus elementum. Donec condimentum enim nec justo auctor, nec bibendum ipsum dapibus.
-    chi-drawer#interactive-drawer(position="left" backdrop)
+    lux-drawer#interactive-drawer(position="left" backdrop)
       .-px--2.-text Drawer content here
   .example-tabs.-pl--2
-    ul#examples-interaction.chi-tabs
+    ul#examples-interaction.lux-tabs
       li.-active
         a(href='#webcomponent-interaction') Web Component
       li
         a(href='#html-interaction') HTML Blueprint
-  #webcomponent-interaction.chi-tabs-panel.-active
-    .chi-tab__description
-      | Modify the <code>active</code> attribute or property to make the drawer show or hide. The <code>chi-drawer</code>
+  #webcomponent-interaction.lux-tabs-panel.-active
+    .lux-tab__description
+      | Modify the <code>active</code> attribute or property to make the drawer show or hide. The <code>lux-drawer</code>
       | element also has three public methods to interact with it: <code>show()</code>, <code>hide()</code>,
       | <code>toggle()</code>.
     :code(lang="html")
       <!-- Trigger -->
-      <chi-button id="drawer-trigger" type="icon">
-        <chi-icon icon="menu" size="sm--2"></chi-icon>
-      </chi-button>
+      <lux-button id="drawer-trigger" type="icon">
+        <lux-icon icon="menu" size="sm--2"></lux-icon>
+      </lux-button>
 
       <!-- Drawer -->
-      <chi-drawer id="interactive-drawer" position="left" backdrop>
+      <lux-drawer id="interactive-drawer" position="left" backdrop>
         <div class="-px--2 -text">Drawer content here</div>
-      </chi-drawer>
+      </lux-drawer>
 
       <!-- JavaScript -->
       <script>
@@ -48,36 +48,36 @@ p.-text
           // or drawer.active = !drawer.active;
         });
       </script>
-  #html-interaction.chi-tabs-panel
-    .chi-tab__description
+  #html-interaction.lux-tabs-panel
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
       br
       br
-      | Use the function <code>chi.drawer(elem)</code> to instantiate a new drawer component in the DOM
+      | Use the function <code>lux.drawer(elem)</code> to instantiate a new drawer component in the DOM
       | element passed as a parameter. You must use the trigger element as the parameter.
     :code(lang="html")
       <!-- Trigger -->
-      <button id="drawer-trigger-1" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-1" aria-label="Toggle navigation">
-        <div class="chi-button__content">
-          <i class="chi-icon -sm--2 icon-menu"></i>
+      <button id="drawer-trigger-1" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-1" aria-label="Toggle navigation">
+        <div class="lux-button__content">
+          <i class="lux-icon -sm--2 icon-menu"></i>
         </div>
       </button>
 
       <!-- Drawer -->
-      <div class="chi-backdrop -closed">
-        <div class="chi-backdrop__wrapper">
-          <div id="drawer-1" class="chi-drawer -left">
-            <div class="chi-drawer__header">
-              <button class="chi-button -icon -close" aria-label="Close">
-                <div class="chi-button__content">
-                  <i class="chi-icon icon-x"></i>
+      <div class="lux-backdrop -closed">
+        <div class="lux-backdrop__wrapper">
+          <div id="drawer-1" class="lux-drawer -left">
+            <div class="lux-drawer__header">
+              <button class="lux-button -icon -close" aria-label="Close">
+                <div class="lux-button__content">
+                  <i class="lux-icon icon-x"></i>
                 </div>
               </button>
             </div>
-            <div class="chi-drawer__content">
+            <div class="lux-drawer__content">
               <div class="-px--2 -text">Drawer content here</div>
             </div>
           </div>
@@ -85,43 +85,43 @@ p.-text
       </div>
 
       <!-- JavaScript -->
-      <script>chi.drawer(document.getElementById('drawer-trigger-1'));</script>
+      <script>lux.drawer(document.getElementById('drawer-trigger-1'));</script>
 
 h3 Position
-ul#chi-tabs--drawer.chi-tabs
+ul#lux-tabs--drawer.lux-tabs
   li.-active
-    a(href='#chi-tabs--drawer-left') Left
+    a(href='#lux-tabs--drawer-left') Left
   li
-    a(href='#chi-tabs--drawer-right') Right
+    a(href='#lux-tabs--drawer-right') Right
   li
-    a(href='#chi-tabs--drawer-top') Top
+    a(href='#lux-tabs--drawer-top') Top
   li
-    a(href='#chi-tabs--drawer-bottom') Bottom
-#chi-tabs--drawer-left.chi-tabs-panel.-active
+    a(href='#lux-tabs--drawer-bottom') Bottom
+#lux-tabs--drawer-left.lux-tabs-panel.-active
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
       .-p--3
         each i in [1, 2, 3]
           .-text.-mb--1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dignissim nisi, gravida pharetra elit. Etiam eu urna orci. Nulla et lorem eleifend, ultrices massa id, molestie urna. Nulla nec quam in turpis fermentum dictum vitae ac nibh. Suspendisse lacus nisi, sollicitudin in commodo quis, euismod id enim. Donec semper nunc et tellus convallis, tristique varius turpis gravida. Quisque hendrerit magna ac bibendum molestie. Nullam scelerisque libero vitae lorem dignissim ullamcorper. Integer mollis auctor enim vel molestie. Etiam id vestibulum augue, vitae dapibus quam. Nunc tincidunt aliquet lacus nec malesuada. Donec ultricies augue non lorem eleifend, eget ullamcorper lacus elementum. Donec condimentum enim nec justo auctor, nec bibendum ipsum dapibus.
-      chi-drawer(position='left' active prevent-auto-hide)
+      lux-drawer(position='left' active prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-default
+      ul.lux-tabs#examples-default
         li.-active
           a(href=`#webcomponent`) Web Component
         li
           a(href=`#html`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent
+    .lux-tabs-panel.-active#webcomponent
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-2" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-2" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-2" position="left">
+        <lux-drawer id="interactive-drawer-2" position="left">
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -132,62 +132,62 @@ ul#chi-tabs--drawer.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html
-      .chi-tab__description
+    .lux-tabs-panel#html
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-3" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-3" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-3" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-3" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div id="drawer-3" class="chi-drawer -left">
-          <div class="chi-drawer__header">
-            <button class="chi-button -icon -close" aria-label="Close">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-x"></i>
+        <div id="drawer-3" class="lux-drawer -left">
+          <div class="lux-drawer__header">
+            <button class="lux-button -icon -close" aria-label="Close">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-x"></i>
               </div>
             </button>
           </div>
-          <div class="chi-drawer__content">
+          <div class="lux-drawer__content">
             <div class="-px--2 -text">Drawer content here</div>
           </div>
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-3'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-3'));</script>
 
-#chi-tabs--drawer-right.chi-tabs-panel
+#lux-tabs--drawer-right.lux-tabs-panel
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
       .-p--3
         each i in [1, 2, 3]
           .-text.-mb--1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dignissim nisi, gravida pharetra elit. Etiam eu urna orci. Nulla et lorem eleifend, ultrices massa id, molestie urna. Nulla nec quam in turpis fermentum dictum vitae ac nibh. Suspendisse lacus nisi, sollicitudin in commodo quis, euismod id enim. Donec semper nunc et tellus convallis, tristique varius turpis gravida. Quisque hendrerit magna ac bibendum molestie. Nullam scelerisque libero vitae lorem dignissim ullamcorper. Integer mollis auctor enim vel molestie. Etiam id vestibulum augue, vitae dapibus quam. Nunc tincidunt aliquet lacus nec malesuada. Donec ultricies augue non lorem eleifend, eget ullamcorper lacus elementum. Donec condimentum enim nec justo auctor, nec bibendum ipsum dapibus.
-      chi-drawer(position='right' active prevent-auto-hide)
+      lux-drawer(position='right' active prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-default-right
+      ul.lux-tabs#examples-default-right
         li.-active
           a(href=`#webcomponent-right`) Web Component
         li
           a(href=`#html-right`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-right
+    .lux-tabs-panel.-active#webcomponent-right
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-4" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-4" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-4" position="right">
+        <lux-drawer id="interactive-drawer-4" position="right">
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -198,62 +198,62 @@ ul#chi-tabs--drawer.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-right
-      .chi-tab__description
+    .lux-tabs-panel#html-right
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-5" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-5" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-5" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-5" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div id="drawer-5" class="chi-drawer -right">
-          <div class="chi-drawer__header">
-            <button class="chi-button -icon -close" aria-label="Close">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-x"></i>
+        <div id="drawer-5" class="lux-drawer -right">
+          <div class="lux-drawer__header">
+            <button class="lux-button -icon -close" aria-label="Close">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-x"></i>
               </div>
             </button>
           </div>
-          <div class="chi-drawer__content">
+          <div class="lux-drawer__content">
             <div class="-px--2 -text">Drawer content here</div>
           </div>
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-5'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-5'));</script>
 
-#chi-tabs--drawer-top.chi-tabs-panel
+#lux-tabs--drawer-top.lux-tabs-panel
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
       .-p--3
         each i in [1, 2, 3]
           .-text.-mb--1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dignissim nisi, gravida pharetra elit. Etiam eu urna orci. Nulla et lorem eleifend, ultrices massa id, molestie urna. Nulla nec quam in turpis fermentum dictum vitae ac nibh. Suspendisse lacus nisi, sollicitudin in commodo quis, euismod id enim. Donec semper nunc et tellus convallis, tristique varius turpis gravida. Quisque hendrerit magna ac bibendum molestie. Nullam scelerisque libero vitae lorem dignissim ullamcorper. Integer mollis auctor enim vel molestie. Etiam id vestibulum augue, vitae dapibus quam. Nunc tincidunt aliquet lacus nec malesuada. Donec ultricies augue non lorem eleifend, eget ullamcorper lacus elementum. Donec condimentum enim nec justo auctor, nec bibendum ipsum dapibus.
-      chi-drawer(position='top' active prevent-auto-hide)
+      lux-drawer(position='top' active prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-default-top
+      ul.lux-tabs#examples-default-top
         li.-active
           a(href=`#webcomponent-top`) Web Component
         li
           a(href=`#html-top`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-top
+    .lux-tabs-panel.-active#webcomponent-top
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-6" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-6" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-6" position="top">
+        <lux-drawer id="interactive-drawer-6" position="top">
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -264,62 +264,62 @@ ul#chi-tabs--drawer.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-top
-      .chi-tab__description
+    .lux-tabs-panel#html-top
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-7" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-7" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-7" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-7" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div id="drawer-7" class="chi-drawer -top">
-          <div class="chi-drawer__header">
-            <button class="chi-button -icon -close" aria-label="Close">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-x"></i>
+        <div id="drawer-7" class="lux-drawer -top">
+          <div class="lux-drawer__header">
+            <button class="lux-button -icon -close" aria-label="Close">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-x"></i>
               </div>
             </button>
           </div>
-          <div class="chi-drawer__content">
+          <div class="lux-drawer__content">
             <div class="-px--2 -text">Drawer content here</div>
           </div>
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-7'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-7'));</script>
 
-#chi-tabs--drawer-bottom.chi-tabs-panel
+#lux-tabs--drawer-bottom.lux-tabs-panel
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
       .-p--3
         each i in [1, 2, 3]
           .-text.-mb--1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dignissim nisi, gravida pharetra elit. Etiam eu urna orci. Nulla et lorem eleifend, ultrices massa id, molestie urna. Nulla nec quam in turpis fermentum dictum vitae ac nibh. Suspendisse lacus nisi, sollicitudin in commodo quis, euismod id enim. Donec semper nunc et tellus convallis, tristique varius turpis gravida. Quisque hendrerit magna ac bibendum molestie. Nullam scelerisque libero vitae lorem dignissim ullamcorper. Integer mollis auctor enim vel molestie. Etiam id vestibulum augue, vitae dapibus quam. Nunc tincidunt aliquet lacus nec malesuada. Donec ultricies augue non lorem eleifend, eget ullamcorper lacus elementum. Donec condimentum enim nec justo auctor, nec bibendum ipsum dapibus.
-      chi-drawer(position='bottom' active prevent-auto-hide)
+      lux-drawer(position='bottom' active prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-default-bottom
+      ul.lux-tabs#examples-default-bottom
         li.-active
           a(href=`#webcomponent-bottom`) Web Component
         li
           a(href=`#html-bottom`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-bottom
+    .lux-tabs-panel.-active#webcomponent-bottom
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-8" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-8" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-8" position="bottom">
+        <lux-drawer id="interactive-drawer-8" position="bottom">
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -330,61 +330,61 @@ ul#chi-tabs--drawer.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-bottom
-      .chi-tab__description
+    .lux-tabs-panel#html-bottom
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-9" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-9" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-9" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-9" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div id="drawer-9" class="chi-drawer -bottom">
-          <div class="chi-drawer__header">
-            <button class="chi-button -icon -close" aria-label="Close">
-              <div class="chi-button__content">
-                <i class="chi-icon icon-x"></i>
+        <div id="drawer-9" class="lux-drawer -bottom">
+          <div class="lux-drawer__header">
+            <button class="lux-button -icon -close" aria-label="Close">
+              <div class="lux-button__content">
+                <i class="lux-icon icon-x"></i>
               </div>
             </button>
           </div>
-          <div class="chi-drawer__content">
+          <div class="lux-drawer__content">
             <div class="-px--2 -text">Drawer content here</div>
           </div>
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-9'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-9'));</script>
 
 h3 Backdrop
 p.-text
   | An optional backdrop can be added to focus the users attention on drawer content.
 .example.-mb--3(style='overflow:hidden;')
   .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
-    chi-drawer(position='bottom' backdrop active prevent-auto-hide)
+    lux-drawer(position='bottom' backdrop active prevent-auto-hide)
       .-px--2.-text Drawer content here
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-backdrop
+    ul.lux-tabs#examples-backdrop
       li.-active
         a(href=`#webcomponent-backdrop`) Web Component
       li
         a(href=`#html-backdrop`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-backdrop
+  .lux-tabs-panel.-active#webcomponent-backdrop
     :code(lang="html")
       <!-- Trigger -->
-      <chi-button id="drawer-trigger-10" type="icon">
-        <chi-icon icon="menu" size="sm--2"></chi-icon>
-      </chi-button>
+      <lux-button id="drawer-trigger-10" type="icon">
+        <lux-icon icon="menu" size="sm--2"></lux-icon>
+      </lux-button>
 
       <!-- Drawer -->
-      <chi-drawer id="interactive-drawer-10" position="bottom" backdrop>
+      <lux-drawer id="interactive-drawer-10" position="bottom" backdrop>
         <div class="-px--2 -text">Drawer content here</div>
-      </chi-drawer>
+      </lux-drawer>
 
       <!-- JavaScript -->
       <script>
@@ -395,32 +395,32 @@ p.-text
           // or drawer.active = !drawer.active;
         });
       </script>
-  .chi-tabs-panel#html-backdrop
-    .chi-tab__description
+  .lux-tabs-panel#html-backdrop
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
       <!-- Trigger -->
-      <button id="drawer-trigger-11" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-11" aria-label="Toggle navigation">
-        <div class="chi-button__content">
-          <i class="chi-icon -sm--2 icon-menu"></i>
+      <button id="drawer-trigger-11" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-11" aria-label="Toggle navigation">
+        <div class="lux-button__content">
+          <i class="lux-icon -sm--2 icon-menu"></i>
         </div>
       </button>
 
       <!-- Drawer -->
-      <div class="chi-backdrop -closed">
-        <div class="chi-backdrop__wrapper">
-          <div id="drawer-11" class="chi-drawer -bottom">
-            <div class="chi-drawer__header">
-              <button class="chi-button -icon -close" aria-label="Close">
-                <div class="chi-button__content">
-                  <i class="chi-icon icon-x"></i>
+      <div class="lux-backdrop -closed">
+        <div class="lux-backdrop__wrapper">
+          <div id="drawer-11" class="lux-drawer -bottom">
+            <div class="lux-drawer__header">
+              <button class="lux-button -icon -close" aria-label="Close">
+                <div class="lux-button__content">
+                  <i class="lux-icon icon-x"></i>
                 </div>
               </button>
             </div>
-            <div class="chi-drawer__content">
+            <div class="lux-drawer__content">
               <div class="-px--2 -text">Drawer content here</div>
             </div>
           </div>
@@ -428,30 +428,30 @@ p.-text
       </div>
 
       <!-- JavaScript -->
-      <script>chi.drawer(document.getElementById('drawer-trigger-11'));</script>
+      <script>lux.drawer(document.getElementById('drawer-trigger-11'));</script>
 
 h3 Titled
 .example.-mb--3(style='overflow:hidden;')
   .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
-    chi-drawer(position='left' title='Drawer title here' backdrop active prevent-auto-hide)
+    lux-drawer(position='left' title='Drawer title here' backdrop active prevent-auto-hide)
       .-px--2.-text Drawer content here
   .example-tabs.-pl--2
-    ul#examples-titled.chi-tabs
+    ul#examples-titled.lux-tabs
       li.-active
         a(href='#webcomponent-titled') Web Component
       li
         a(href='#html-titled') HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-titled
+  .lux-tabs-panel.-active#webcomponent-titled
     :code(lang="html")
       <!-- Trigger -->
-      <chi-button id="drawer-trigger-12" type="icon">
-        <chi-icon icon="menu" size="sm--2"></chi-icon>
-      </chi-button>
+      <lux-button id="drawer-trigger-12" type="icon">
+        <lux-icon icon="menu" size="sm--2"></lux-icon>
+      </lux-button>
 
       <!-- Drawer -->
-      <chi-drawer id="interactive-drawer-12" position="left" title="Drawer title here" backdrop>
+      <lux-drawer id="interactive-drawer-12" position="left" title="Drawer title here" backdrop>
         <div class="-px--2 -text">Drawer content here</div>
-      </chi-drawer>
+      </lux-drawer>
 
       <!-- JavaScript -->
       <script>
@@ -462,35 +462,35 @@ h3 Titled
           // or drawer.active = !drawer.active;
         });
       </script>
-  .chi-tabs-panel#html-titled
-    .chi-tab__description
+  .lux-tabs-panel#html-titled
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
       <!-- Trigger -->
-      <button id="drawer-trigger-13" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-13" aria-label="Toggle navigation">
-        <div class="chi-button__content">
-          <i class="chi-icon -sm--2 icon-menu"></i>
+      <button id="drawer-trigger-13" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-13" aria-label="Toggle navigation">
+        <div class="lux-button__content">
+          <i class="lux-icon -sm--2 icon-menu"></i>
         </div>
       </button>
 
       <!-- Drawer -->
-      <div class="chi-backdrop -closed">
-        <div class="chi-backdrop__wrapper">
-          <div id="drawer-13" class="chi-drawer -left">
-            <div class="chi-drawer__header">
-              <span class="chi-drawer__title">
+      <div class="lux-backdrop -closed">
+        <div class="lux-backdrop__wrapper">
+          <div id="drawer-13" class="lux-drawer -left">
+            <div class="lux-drawer__header">
+              <span class="lux-drawer__title">
                 Drawer title here
               </span>
-              <button class="chi-button -icon -close" aria-label="Close">
-                <div class="chi-button__content">
-                  <i class="chi-icon icon-x"></i>
+              <button class="lux-button -icon -close" aria-label="Close">
+                <div class="lux-button__content">
+                  <i class="lux-icon icon-x"></i>
                 </div>
               </button>
             </div>
-            <div class="chi-drawer__content">
+            <div class="lux-drawer__content">
               <div class="-px--2 -text">Drawer content here</div>
             </div>
           </div>
@@ -498,40 +498,40 @@ h3 Titled
       </div>
 
       <!-- JavaScript -->
-      <script>chi.drawer(document.getElementById('drawer-trigger-13'));</script>
+      <script>lux.drawer(document.getElementById('drawer-trigger-13'));</script>
 
 h3 Close button
 p.-text
   | Close buttons provide users with a consistent way to exit Drawers.
   | For special cases, such as requiring users to perform a task that
   | auto-closes the Drawer when complete, a close button may be removed.
-ul#chi-tabs--closable.chi-tabs
+ul#lux-tabs--closable.lux-tabs
   li.-active
-    a(href='#chi-tabs--closable-with') Closable
+    a(href='#lux-tabs--closable-with') Closable
   li
-    a(href='#chi-tabs--closable-without') Non closable
-#chi-tabs--closable-with.chi-tabs-panel.-active
+    a(href='#lux-tabs--closable-without') Non closable
+#lux-tabs--closable-with.lux-tabs-panel.-active
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:15rem;overflow:hidden;")
-      chi-drawer(position='left' active backdrop prevent-auto-hide)
+      lux-drawer(position='left' active backdrop prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-closable
+      ul.lux-tabs#examples-closable
         li.-active
           a(href=`#webcomponent-closable`) Web Component
         li
           a(href=`#html-closable`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-closable
+    .lux-tabs-panel.-active#webcomponent-closable
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-14" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-14" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-14" position="left" backdrop>
+        <lux-drawer id="interactive-drawer-14" position="left" backdrop>
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -542,32 +542,32 @@ ul#chi-tabs--closable.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-closable
-      .chi-tab__description
+    .lux-tabs-panel#html-closable
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-15" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-15" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-15" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-15" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div class="chi-backdrop -closed">
-          <div class="chi-backdrop__wrapper">
-            <div id="drawer-15" class="chi-drawer -left">
-              <div class="chi-drawer__header">
-                <button class="chi-button -icon -close" aria-label="Close">
-                  <div class="chi-button__content">
-                    <i class="chi-icon icon-x"></i>
+        <div class="lux-backdrop -closed">
+          <div class="lux-backdrop__wrapper">
+            <div id="drawer-15" class="lux-drawer -left">
+              <div class="lux-drawer__header">
+                <button class="lux-button -icon -close" aria-label="Close">
+                  <div class="lux-button__content">
+                    <i class="lux-icon icon-x"></i>
                   </div>
                 </button>
               </div>
-              <div class="chi-drawer__content">
+              <div class="lux-drawer__content">
                 <div class="-px--2 -text">Drawer content here</div>
               </div>
             </div>
@@ -575,33 +575,33 @@ ul#chi-tabs--closable.chi-tabs
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-15'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-15'));</script>
 
-#chi-tabs--closable-without.chi-tabs-panel
+#lux-tabs--closable-without.lux-tabs-panel
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:15rem;overflow:hidden;")
-      chi-drawer(position='left' active backdrop non-closable prevent-auto-hide)
+      lux-drawer(position='left' active backdrop non-closable prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-nonclosable
+      ul.lux-tabs#examples-nonclosable
         li.-active
           a(href=`#webcomponent-nonclosable`) Web Component
         li
           a(href=`#html-nonclosable`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-nonclosable
-      .chi-tab__description
+    .lux-tabs-panel.-active#webcomponent-nonclosable
+      .lux-tab__description
         | Use the <code>non-closable</code> attribute to render Drawer without a close button
 
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-16" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-16" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-16" position="left" backdrop non-closable>
+        <lux-drawer id="interactive-drawer-16" position="left" backdrop non-closable>
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -612,26 +612,26 @@ ul#chi-tabs--closable.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-nonclosable
-      .chi-tab__description
+    .lux-tabs-panel#html-nonclosable
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-17" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-17" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-17" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-17" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div class="chi-backdrop -closed">
-          <div class="chi-backdrop__wrapper">
-            <div id="drawer-17" class="chi-drawer -left">
-              <div class="chi-drawer__header"></div>
-              <div class="chi-drawer__content">
+        <div class="lux-backdrop -closed">
+          <div class="lux-backdrop__wrapper">
+            <div id="drawer-17" class="lux-drawer -left">
+              <div class="lux-drawer__header"></div>
+              <div class="lux-drawer__content">
                 <div class="-px--2 -text">Drawer content here</div>
               </div>
             </div>
@@ -639,39 +639,39 @@ ul#chi-tabs--closable.chi-tabs
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-17'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-17'));</script>
 
 h3 Header
 p.-text
   | Header markup is optional. Remove it to make the content fill the drawer.
 
-ul#chi-tabs--header.chi-tabs
+ul#lux-tabs--header.lux-tabs
   li.-active
-    a(href='#chi-tabs--header-with') Header
+    a(href='#lux-tabs--header-with') Header
   li
-    a(href='#chi-tabs--header-without') No header
-#chi-tabs--header-with.chi-tabs-panel.-active
+    a(href='#lux-tabs--header-without') No header
+#lux-tabs--header-with.lux-tabs-panel.-active
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:15rem;overflow:hidden;")
-      chi-drawer(position='left' active backdrop prevent-auto-hide)
+      lux-drawer(position='left' active backdrop prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-header
+      ul.lux-tabs#examples-header
         li.-active
           a(href=`#webcomponent-header`) Web Component
         li
           a(href=`#html-header`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-header
+    .lux-tabs-panel.-active#webcomponent-header
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-18" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-18" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-18" position="left" backdrop>
+        <lux-drawer id="interactive-drawer-18" position="left" backdrop>
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -682,32 +682,32 @@ ul#chi-tabs--header.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-header
-      .chi-tab__description
+    .lux-tabs-panel#html-header
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-19" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-19" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-19" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-19" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div class="chi-backdrop -closed">
-          <div class="chi-backdrop__wrapper">
-            <div id="drawer-19" class="chi-drawer -left">
-              <div class="chi-drawer__header">
-                <button class="chi-button -icon -close" aria-label="Close">
-                  <div class="chi-button__content">
-                    <i class="chi-icon icon-x"></i>
+        <div class="lux-backdrop -closed">
+          <div class="lux-backdrop__wrapper">
+            <div id="drawer-19" class="lux-drawer -left">
+              <div class="lux-drawer__header">
+                <button class="lux-button -icon -close" aria-label="Close">
+                  <div class="lux-button__content">
+                    <i class="lux-icon icon-x"></i>
                   </div>
                 </button>
               </div>
-              <div class="chi-drawer__content">
+              <div class="lux-drawer__content">
                 <div class="-px--2 -text">Drawer content here</div>
               </div>
             </div>
@@ -715,30 +715,30 @@ ul#chi-tabs--header.chi-tabs
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-19'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-19'));</script>
 
-#chi-tabs--header-without.chi-tabs-panel
+#lux-tabs--header-without.lux-tabs-panel
   .example.-mb--3(style='overflow:hidden;')
     .-position--relative.-z--0(style="height:15rem;overflow:hidden;")
-      chi-drawer(position='left' active backdrop no-header prevent-auto-hide)
+      lux-drawer(position='left' active backdrop no-header prevent-auto-hide)
         .-px--2.-text Drawer content here
     .example-tabs.-pl--2
-      ul.chi-tabs#examples-headerless
+      ul.lux-tabs#examples-headerless
         li.-active
           a(href=`#webcomponent-headerless`) Web Component
         li
           a(href=`#html-headerless`) HTML Blueprint
-    .chi-tabs-panel.-active#webcomponent-headerless
+    .lux-tabs-panel.-active#webcomponent-headerless
       :code(lang="html")
         <!-- Trigger -->
-        <chi-button id="drawer-trigger-20" type="icon">
-          <chi-icon icon="menu" size="sm--2"></chi-icon>
-        </chi-button>
+        <lux-button id="drawer-trigger-20" type="icon">
+          <lux-icon icon="menu" size="sm--2"></lux-icon>
+        </lux-button>
 
         <!-- Drawer -->
-        <chi-drawer id="interactive-drawer-20" position="left" backdrop no-header>
+        <lux-drawer id="interactive-drawer-20" position="left" backdrop no-header>
           <div class="-px--2 -text">Drawer content here</div>
-        </chi-drawer>
+        </lux-drawer>
 
         <!-- JavaScript -->
         <script>
@@ -749,30 +749,30 @@ ul#chi-tabs--header.chi-tabs
             // or drawer.active = !drawer.active;
           });
         </script>
-    .chi-tabs-panel#html-headerless
-      .chi-tab__description
+    .lux-tabs-panel#html-headerless
+      .lux-tab__description
         span.-text--grey
           | This HTML Blueprint requires JavaScript.
-          | You may use your own solution, or use Chi's vanilla JavaScript solution,
-          | <a href="../../getting-started/installation">Chi.js</a>.
+          | You may use your own solution, or use Lux's vanilla JavaScript solution,
+          | <a href="../../getting-started/installation">Lux.js</a>.
       :code(lang="html")
         <!-- Trigger -->
-        <button id="drawer-trigger-21" class="chi-button -icon chi-drawer__trigger" data-target="#drawer-21" aria-label="Toggle navigation">
-          <div class="chi-button__content">
-            <i class="chi-icon -sm--2 icon-menu"></i>
+        <button id="drawer-trigger-21" class="lux-button -icon lux-drawer__trigger" data-target="#drawer-21" aria-label="Toggle navigation">
+          <div class="lux-button__content">
+            <i class="lux-icon -sm--2 icon-menu"></i>
           </div>
         </button>
 
         <!-- Drawer -->
-        <div class="chi-backdrop -closed">
-          <div class="chi-backdrop__wrapper">
-            <div id="drawer-21" class="chi-drawer -left">
-              <button class="chi-button -icon -close" aria-label="Close">
-                <div class="chi-button__content">
-                  <i class="chi-icon icon-x"></i>
+        <div class="lux-backdrop -closed">
+          <div class="lux-backdrop__wrapper">
+            <div id="drawer-21" class="lux-drawer -left">
+              <button class="lux-button -icon -close" aria-label="Close">
+                <div class="lux-button__content">
+                  <i class="lux-icon icon-x"></i>
                 </div>
               </button>
-              <div class="chi-drawer__content">
+              <div class="lux-drawer__content">
                 <div class="-px--2 -text">Drawer content here</div>
               </div>
             </div>
@@ -780,31 +780,31 @@ ul#chi-tabs--header.chi-tabs
         </div>
 
         <!-- JavaScript -->
-        <script>chi.drawer(document.getElementById('drawer-trigger-21'));</script>
+        <script>lux.drawer(document.getElementById('drawer-trigger-21'));</script>
 
 h3 Portal
 
 .example.-mb--3(style='overflow:hidden;')
   .-position--relative.-z--0(style="height:30rem;overflow:hidden;")
-    chi-drawer(position='bottom' title='Drawer title here' portal active backdrop prevent-auto-hide)
+    lux-drawer(position='bottom' title='Drawer title here' portal active backdrop prevent-auto-hide)
       .-p--2.-text Drawer content here
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-portal
+    ul.lux-tabs#examples-portal
       li.-active
         a(href=`#webcomponent-portal`) Web Component
       li
         a(href=`#html-portal`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-portal
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-portal
+    .lux-tab__description
       | Use the attribute <code>portal</code> to enable portal styling.
     :code(lang="html")
       <!-- Trigger -->
-      <chi-button id="drawer-trigger-22" color="primary">Launch demo drawer</chi-button>
+      <lux-button id="drawer-trigger-22" color="primary">Launch demo drawer</lux-button>
 
       <!-- Drawer -->
-      <chi-drawer id="interactive-drawer-22" position="bottom" title="Drawer title here" portal backdrop prevent-auto-hide>
+      <lux-drawer id="interactive-drawer-22" position="bottom" title="Drawer title here" portal backdrop prevent-auto-hide>
         <div class="-p--2 -text">Drawer content here</div>
-      </chi-drawer>
+      </lux-drawer>
 
       <!-- JavaScript -->
       <script>
@@ -816,28 +816,28 @@ h3 Portal
         });
       </script>
 
-  .chi-tabs-panel#html-portal
-    .chi-tab__description
+  .lux-tabs-panel#html-portal
+    .lux-tab__description
       | Use the class <code>-portal</code> to enable portal styling.
     :code(lang="html")
       <!-- Trigger -->
-      <button id="drawer-trigger-23" class="chi-button -primary chi-drawer__trigger" data-target="#drawer-23">Launch demo drawer</button>
+      <button id="drawer-trigger-23" class="lux-button -primary lux-drawer__trigger" data-target="#drawer-23">Launch demo drawer</button>
 
       <!-- Drawer -->
-      <div class="chi-backdrop -closed">
-        <div class="chi-backdrop__wrapper">
-          <div id="drawer-23" class="chi-drawer -bottom -portal">
-            <div class="chi-drawer__header">
-              <span class="chi-drawer__title">
+      <div class="lux-backdrop -closed">
+        <div class="lux-backdrop__wrapper">
+          <div id="drawer-23" class="lux-drawer -bottom -portal">
+            <div class="lux-drawer__header">
+              <span class="lux-drawer__title">
                 Drawer title here
               </span>
-              <button class="chi-button -icon -close" aria-label="Close">
-                <div class="chi-button__content">
-                  <i class="chi-icon icon-x"></i>
+              <button class="lux-button -icon -close" aria-label="Close">
+                <div class="lux-button__content">
+                  <i class="lux-icon icon-x"></i>
                 </div>
               </button>
             </div>
-            <div class="chi-drawer__content">
+            <div class="lux-drawer__content">
               <div class="-p--2 -text">Drawer content here</div>
             </div>
           </div>
@@ -845,13 +845,13 @@ h3 Portal
       </div>
 
       <!-- JavaScript -->
-      <script>chi.drawer(document.getElementById('drawer-trigger-23'));</script>
+      <script>lux.drawer(document.getElementById('drawer-trigger-23'));</script>
 
 script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
 
       var drawer = document.getElementById('interactive-drawer');
       var drawerTrigger = document.getElementById('drawer-trigger');

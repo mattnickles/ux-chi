@@ -2,7 +2,7 @@ import { Component, Element, Event, EventEmitter, Prop, h } from '@stencil/core'
 import { uuid4 } from '../../utils/utils';
 
 @Component({
-  tag: 'chi-pagination',
+  tag: 'lux-pagination',
   styleUrl: 'pagination.scss',
   scoped: true
 })
@@ -52,11 +52,11 @@ export class Pagination {
   /**
    * Triggered when the user navigates to another page by clicking pagination item buttons or changing value of Page Jumper input
    */
-  @Event() chiPageChange: EventEmitter<string>;
+  @Event() luxPageChange: EventEmitter<string>;
   /**
    * Triggered when the user changes items per page value
    */
-  @Event() chiPageSizeChange: EventEmitter<string>;
+  @Event() luxPageSizeChange: EventEmitter<string>;
 
   _distanceFromCurrent: number;
   _pagesArray = [];
@@ -81,21 +81,21 @@ export class Pagination {
     let pageToGo;
 
     for (let cur = pageChange;
-      cur && !cur.classList.contains('chi-button-group');
+      cur && !cur.classList.contains('lux-button-group');
       cur = cur.parentNode as HTMLElement) {
       if (cur.nodeName === 'BUTTON') {
         pageToGo = cur.getAttribute('data-page');
       }
     }
-    this.chiPageChange.emit(pageToGo);
+    this.luxPageChange.emit(pageToGo);
   }
 
   _jumpToPage(jumpTo: string) {
-    this.chiPageChange.emit(jumpTo);
+    this.luxPageChange.emit(jumpTo);
   }
 
   _pageSizeChange(size: string) {
-    this.chiPageSizeChange.emit(size);
+    this.luxPageSizeChange.emit(size);
   }
 
   componentWillLoad() {
@@ -142,7 +142,7 @@ export class Pagination {
       return <button
         data-page={pageToGo}
         class={
-          `chi-button -flat
+          `lux-button -flat
         ${this.inverse ? '-light' : ''}
         ${!!icon ? '-icon' : ''}
         ${parseInt(page) === this.currentPage ? '-active' : ''}
@@ -157,23 +157,23 @@ export class Pagination {
         aria-disabled={state === 'disabled'}
         disabled={state === 'disabled'}
       >
-        <div class="chi-button__content">
-          {!!icon ? <i class={`chi-icon icon-${icon}`} aria-hidden="true"></i> : page}
+        <div class="lux-button__content">
+          {!!icon ? <i class={`lux-icon icon-${icon}`} aria-hidden="true"></i> : page}
         </div>
       </button>
     };
     const results = this.results > 0 ?
-      <div class={`chi-pagination__results
+      <div class={`lux-pagination__results
         ${this.size ? `-text--${this.size}` : ''}
       `}>
-        <span class="chi-pagination__label">{this.results} results</span>
+        <span class="lux-pagination__label">{this.results} results</span>
       </div>
       : null;
-    const pageSize = this.pageSize ? <div class={`chi-pagination__page-size
+    const pageSize = this.pageSize ? <div class={`lux-pagination__page-size
       ${this.size ? `-text--${this.size}` : ''}
     `}>
       <select
-        class="chi-input"
+        class="lux-input"
         onChange={(ev) => this._pageSizeChange((ev.target as HTMLSelectElement).value)}
         aria-label="Number of result items per page"
       >
@@ -183,13 +183,13 @@ export class Pagination {
         <option value="80">80</option>
         <option value="all">All</option>
       </select>
-      <span class="chi-pagination__label">per page</span>
+      <span class="lux-pagination__label">per page</span>
     </div> : null;
-    const goToPage = this.pageJumper && !this.compact ? <div class={`chi-pagination__jumper
+    const goToPage = this.pageJumper && !this.compact ? <div class={`lux-pagination__jumper
         ${this.size ? `-text--${this.size}` : ''}
     `}>
-      <label class="chi-pagination__label" htmlFor={this._pageJumperUuid}>Go to page:</label>
-      <input class={`chi-input
+      <label class="lux-pagination__label" htmlFor={this._pageJumperUuid}>Go to page:</label>
+      <input class={`lux-input
         ${this.size ? `-${this.size}` : ''}
         `}
          id={this._pageJumperUuid}
@@ -202,16 +202,16 @@ export class Pagination {
     const lastPage = this.firstLast ? addPage('', 'page-last', this.currentPage === this.pages ? 'disabled' : '') : null;
 
     if (this.compact) {
-      const paginationLabel = <div class="chi-pagination__label">
+      const paginationLabel = <div class="lux-pagination__label">
         {!this.pageJumper ? <strong>{this.currentPage}</strong> : null}
         <span>of</span>
         <strong>{this.pages}</strong>
       </div>;
       const compactPages = this.pageJumper ?
-        <div class="chi-pagination__jumper">
+        <div class="lux-pagination__jumper">
           <input
             type="text"
-            class="chi-input"
+            class="lux-input"
             value={this.currentPage}
             onChange={(ev) => this._jumpToPage((ev.target as HTMLInputElement).value)}
             aria-label={`Page ${this.currentPage}`}
@@ -234,8 +234,8 @@ export class Pagination {
           if (pageIndex - this._lastRenderedPage === 2) {
             this._pagesToRender.push(addPage(this._lastRenderedPage + 1));
           } else if (pageIndex - this._lastRenderedPage !== 1) {
-            const truncateDots = <div class={`chi-button -flat -md -disabled ${this.inverse ? '-light' : ''}`} aria-hidden="true"><div
-              class="chi-button__content">...</div></div>;
+            const truncateDots = <div class={`lux-button -flat -md -disabled ${this.inverse ? '-light' : ''}`} aria-hidden="true"><div
+              class="lux-button__content">...</div></div>;
 
             this._pagesToRender.push(truncateDots);
           }
@@ -247,19 +247,19 @@ export class Pagination {
 
     return <nav
       class={`
-        chi-pagination
+        lux-pagination
         ${this.inverse ? '-inverse' : ''}
         ${this.compact ? '-compact' : ''}
       `}
       role="navigation"
       aria-label={this.ariaLabel}>
-      <div class="chi-pagination__content">
-        <div class="chi-pagination__start">
+      <div class="lux-pagination__content">
+        <div class="lux-pagination__start">
           {results}
           {pageSize}
         </div>
-        <div class="chi-pagination__center">
-          <div class="chi-button-group">
+        <div class="lux-pagination__center">
+          <div class="lux-button-group">
             {startPage}
             {addPage('', 'chevron-left', this.currentPage === 1 ? 'disabled' : '')}
             {this._pagesToRender}
@@ -267,7 +267,7 @@ export class Pagination {
             {lastPage}
           </div>
         </div>
-        <div class="chi-pagination__end">
+        <div class="lux-pagination__end">
           {goToPage}
         </div>
       </div>

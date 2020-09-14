@@ -1,0 +1,241 @@
+---
+title: Grid
+---
+.test-flex-cells.-w--100
+  h4 Default Grid
+  .lux-grid.-show
+    .lux-col
+    .lux-col
+    .lux-col
+
+.test-no-gutter.-w--100
+  h4 Default Grid (w/o Gutter)
+  .lux-grid.-no-gutter.-show
+    .lux-col
+    .lux-col
+    .lux-col
+
+h3 Sizing
+
+.test-automatic-column-sizing.-w--100
+  h4 Automatic
+  .lux-grid.-show
+    .lux-col
+  .lux-grid.-show
+    .lux-col
+    .lux-col
+  .lux-grid.-show
+    .lux-col
+    .lux-col
+    .lux-col
+  .lux-grid.-show
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+
+.test-mixed-column-sizing.-w--100
+  h4 Mixed (Automatic and Specific)
+  .lux-grid.-show
+    .lux-col.-w--3
+    .lux-col
+  .lux-grid.-show
+    .lux-col.-w--3
+    .lux-col
+    .lux-col.-w--3
+  .lux-grid.-show
+    .lux-col
+    .lux-col.-w--3
+    .lux-col
+  .lux-grid.-show
+    .lux-col
+    .lux-col.-w--3
+
+.test-specific-column-sizing.-w--100
+  h4 Specific
+  .lux-grid.-show
+    .lux-col.-w--12
+  .lux-grid.-show
+    .lux-col.-w--1
+    .lux-col.-w--11
+  .lux-grid.-show
+    .lux-col.-w--2
+    .lux-col.-w--10
+  .lux-grid.-show
+    .lux-col.-w--3
+    .lux-col.-w--9
+  .lux-grid.-show
+    .lux-col.-w--4
+    .lux-col.-w--8
+  .lux-grid.-show
+    .lux-col.-w--5
+    .lux-col.-w--7
+  .lux-grid.-show
+    .lux-col.-w--6
+    .lux-col.-w--6
+  .lux-grid.-show
+    .lux-col.-w--7
+    .lux-col.-w--5
+  .lux-grid.-show
+    .lux-col.-w--8
+    .lux-col.-w--4
+  .lux-grid.-show
+    .lux-col.-w--9
+    .lux-col.-w--3
+  .lux-grid.-show
+    .lux-col.-w--10
+    .lux-col.-w--2
+  .lux-grid.-show
+    .lux-col.-w--11
+    .lux-col.-w--1
+  .lux-grid.-show
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+    .lux-col.-w--1
+  .lux-grid.-show
+    .lux-col.-w--2
+    .lux-col.-w--2
+    .lux-col.-w--2
+    .lux-col.-w--2
+    .lux-col.-w--2
+    .lux-col.-w--2
+  .lux-grid.-show
+    .lux-col.-w--3
+    .lux-col.-w--3
+    .lux-col.-w--3
+    .lux-col.-w--3
+  .lux-grid.-show
+    .lux-col.-w--4
+    .lux-col.-w--4
+    .lux-col.-w--4
+  .lux-grid.-show
+    .lux-col.-w--6
+    .lux-col.-w--6
+
+h3 Wrapping
+
+.test-wrapping.-w--100
+  .lux-grid.-show
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+    .lux-col
+
+h3 Offsets
+
+.test-offsets.-w--100
+  h4 Offset Sizes
+  .lux-grid.-show
+    .lux-col.-w--11.-o--1
+    .lux-col.-w--10.-o--2
+    .lux-col.-w--9.-o--3
+    .lux-col.-w--8.-o--4
+    .lux-col.-w--7.-o--5
+    .lux-col.-w--6.-o--6
+    .lux-col.-w--5.-o--7
+    .lux-col.-w--4.-o--8
+    .lux-col.-w--3.-o--9
+    .lux-col.-w--2.-o--10
+    .lux-col.-w--1.-o--11
+
+h3 Reordering
+
+.test-reordering.-w--100
+  .lux-grid.-show
+    .lux-col.-n--3
+    .lux-col.-n--1
+    .lux-col.-n--2
+
+h3 Responsive
+
+.test-responsive-column-stacking.-w--100
+  h4 Stacked (XS)
+  .lux-grid.-show
+    .lux-col.-w-sm--2
+    .lux-col.-w-sm--4
+    .lux-col.-w-sm
+  .lux-grid.-show
+    .lux-col.-w-sm
+    .lux-col.-w-sm
+    .lux-col.-w-sm
+  .lux-grid.-show
+    .lux-col.-w-md
+    .lux-col.-w-md
+    .lux-col.-w-md
+  .lux-grid.-show
+    .lux-col.-w-lg
+    .lux-col.-w-lg
+    .lux-col.-w-lg
+  .lux-grid.-show
+    .lux-col.-w-xl
+    .lux-col.-w-xl
+    .lux-col.-w-xl
+
+.test-mixed-responsive-column-sizing.-w--100
+  h4 Mixed
+  .lux-grid.-show
+    .lux-col.-w--12.-w-md--8
+    .lux-col.-w--6.-w-md--4
+  .lux-grid.-show
+    .lux-col.-w--6.-w-md--4
+    .lux-col.-w--6.-w-md--4
+    .lux-col.-w--6.-w-md--4
+  .lux-grid.-show
+    .lux-col.-w--6
+    .lux-col.-w--6
+
+.test-responsive-offsets.-w--100
+  h4 Offsets
+  .lux-grid.-show
+    .lux-col.-w--12.-w-sm--11.-o-sm--1
+    .lux-col.-w--12.-w-md--10.-o-md--2
+    .lux-col.-w--12.-w-lg--9.-o-lg--3
+    .lux-col.-w--12.-w-xl--8.-o-xl--4
+
+h3 Alignment
+
+.test-vertical-alignment-on-container.-w--100
+  h4 Vertical Alignment (Grid Container)
+  h5 .-align--top
+  .lux-grid.-align--top.-show(style = { height: '160px', outline: '1px solid red' })
+    .lux-col
+    .lux-col
+    .lux-col
+  h5 .-align--center
+  .lux-grid.-align--center.-show(style = { height: '160px', outline: '1px solid red' })
+    .lux-col
+    .lux-col
+    .lux-col
+  h5 .-align--bottom
+  .lux-grid.-align--bottom.-show(style = { height: '160px', outline: '1px solid red' })
+    .lux-col
+    .lux-col
+    .lux-col
+
+.test-vertical-alignment-on-column.-w--100
+  h4 Vertical Alignment (Column Specific)
+  .lux-grid.-show(style = { height: '160px', outline: '1px solid red' })
+    .lux-col.-align--top
+    .lux-col.-align--center
+    .lux-col.-align--bottom

@@ -1,0 +1,193 @@
+@import '_variables';
+@import '_mixins';
+
+$sunday-starting-week: (
+  sun: 0,
+  mon: 1,
+  tue: 2,
+  wed: 3,
+  thu: 4,
+  fri: 5,
+  sat: 6
+);
+$monday-starting-week: (
+  mon: 0,
+  tue: 1,
+  wed: 2,
+  thu: 3,
+  fri: 4,
+  sat: 5,
+  sun: 6
+);
+
+.sc-lux-date-picker {
+  &.-disabled {
+    pointer-events: none;
+  }
+
+  lux-popover {
+    display: flex;
+  }
+}
+
+.lux-datepicker {
+  font-size: $font-size-base;
+  width: 14rem;
+
+  &__day {
+    font-weight: $font-weight-normal;
+    line-height: 2rem;
+    text-align: center;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    width: calc(100% / 7);
+
+    &.-active {
+      background-color: $color-background-primary;
+      color: white;
+      font-weight: $font-weight-semi-bold;
+
+      &.-today::after {
+        background-color: white;
+      }
+    }
+
+    &.-inactive {
+      color: rgba($color-grey-90, 0.4);
+      pointer-events: none;
+
+      &.-today::after {
+        background-color: rgba($color-grey-90, 0.4);
+      }
+    }
+
+    &.-today {
+      position: relative;
+
+      &::after {
+        background-color: $color-background-primary;
+        bottom: 3px;
+        content: '';
+        height: 4px;
+        left: calc(50% - 2px);
+        position: absolute;
+        transition: background-color 0.1s ease-in-out;
+        width: 4px;
+      }
+    }
+
+    &:not(.-inactive):not(.-active) {
+      &:hover {
+        background-color: ($color-grey-20);
+      }
+
+      &.-hover {
+        background-color: ($color-grey-20);
+      }
+    }
+
+    &:not(.-inactive) {
+      cursor: pointer;
+    }
+  }
+
+  &__week-day {
+    font-weight: $font-weight-semi-bold;
+    line-height: 2rem;
+    text-align: center;
+    width: calc(100% / 7);
+  }
+
+  &__month {
+    font-weight: $font-weight-semi-bold;
+    margin-left: calc(100% / 7);
+    text-align: center;
+    width: calc(100% * 5 / 7);
+
+    &-row {
+      .prev,
+      .next {
+        text-align: center;
+        width: calc(100% / 7);
+
+        &.-disabled {
+          color: rgba($color-grey-90, 0.2);
+          pointer-events: none;
+        }
+
+        &:not(.-disabled) {
+          color: $color-text-primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .prev + .lux-datepicker__month {
+    margin-left: 0;
+  }
+
+  &__days,
+  &__day-names {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__month-row {
+    align-items: center;
+    display: flex;
+    height: 2.5rem;
+  }
+
+  &.-week-starts-on-sun {
+    @each $week-day, $column-start in $sunday-starting-week {
+      &.-month-starts-on-#{$week-day} {
+
+        .lux-datepicker__day:first-child {
+          margin-left: calc(100% * #{$column-start} / 7);
+        }
+      }
+    }
+  }
+
+  &.-week-starts-on-mon {
+    @each $week-day, $column-start in $monday-starting-week {
+      &.-month-starts-on-#{$week-day} {
+
+        .lux-datepicker__day:first-child {
+          margin-left: calc(100% * #{$column-start} / 7);
+        }
+      }
+    }
+  }
+}
+
+.lux-popover {
+  .lux-datepicker {
+    padding: 0.5rem 1rem;
+  }
+
+  &__datepicker,
+  &__input {
+    &.-no-arrow {
+      &.lux-popover--top,
+      &[x-placement^='top'] {
+        margin-bottom: 1px;
+      }
+
+      &.lux-popover--right,
+      &[x-placement^='right'] {
+        margin-left: 1px;
+      }
+
+      &.lux-popover--bottom,
+      &[x-placement^='bottom'] {
+        margin-top: 1px;
+      }
+
+      &.lux-popover--left,
+      &[x-placement^='left'] {
+        margin-right: 1px;
+      }
+    }
+  }
+}

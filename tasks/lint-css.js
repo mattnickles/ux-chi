@@ -1,7 +1,7 @@
 import path from 'path';
 
 const rootFolder = path.join(__dirname, '..');
-const sources = path.join(rootFolder, '{src,test}', 'chi', '**', '*.scss');
+const sources = path.join(rootFolder, '{src,test}', 'lux', '**', '*.scss');
 
 'use strict';
  

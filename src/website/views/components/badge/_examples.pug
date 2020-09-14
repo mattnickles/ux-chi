@@ -1,210 +1,210 @@
 h2 Examples
 p.-text
-  | Chi includes three badge variants: Solid, Outline, and Flat. Use <code>solid</code>
+  | Lux includes three badge variants: Solid, Outline, and Flat. Use <code>solid</code>
   | badges for high emphasis, base or <code>outline</code> badges for medium
   | emphasis, and <code>flat</code> badges for low emphasis.
 h3 Solid
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12
+  .lux-grid.-no-gutter
+    .lux-col.-w--12
       .-p--2.-text--center
-        chi-badge(class='-m--1')= 'Base'
-        chi-badge(class='-m--1', color='primary')= 'Primary'
-        chi-badge(class='-m--1', color='success')= 'Success'
-        chi-badge(class='-m--1', color='warning')= 'Warning'
-        chi-badge(class='-m--1', color='danger')= 'Danger'
-        chi-badge(class='-m--1', color='dark')= 'Dark'
-        chi-badge(class='-m--1', color='muted')= 'Muted'
-    .chi-col.-w--12
+        lux-badge(class='-m--1')= 'Base'
+        lux-badge(class='-m--1', color='primary')= 'Primary'
+        lux-badge(class='-m--1', color='success')= 'Success'
+        lux-badge(class='-m--1', color='warning')= 'Warning'
+        lux-badge(class='-m--1', color='danger')= 'Danger'
+        lux-badge(class='-m--1', color='dark')= 'Dark'
+        lux-badge(class='-m--1', color='muted')= 'Muted'
+    .lux-col.-w--12
       .-p--2.-bg--black.-text--center
-        chi-badge(class='-m--1', color='secondary')= 'Secondary'
-        chi-badge(class='-m--1', color='light')= 'Light'
+        lux-badge(class='-m--1', color='secondary')= 'Secondary'
+        lux-badge(class='-m--1', color='light')= 'Light'
   .example-tabs.-pl--2
-    ul.chi-tabs#example-solid
+    ul.lux-tabs#example-solid
       li.-active
         a(href=`#webcomponent-solid`) Web Component
       li
         a(href=`#html-solid`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-solid
-    .chi-tab__description
-      | To display a badge, use the tag <code>&lt;chi-badge&gt;</code>.
+  .lux-tabs-panel.-active#webcomponent-solid
+    .lux-tab__description
+      | To display a badge, use the tag <code>&lt;lux-badge&gt;</code>.
       | A contextual color (e.g. <code>primary</code>) can be defined on the <code>color</code> attribute to provide alternate styling.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-badge>Base</chi-badge>
-      <chi-badge color="primary">Primary</chi-badge>
-      <chi-badge color="success">Success</chi-badge>
-      <chi-badge color="warning">Warning</chi-badge>
-      <chi-badge color="danger">Danger</chi-badge>
-      <chi-badge color="dark">Dark</chi-badge>
-      <chi-badge color="muted">Muted</chi-badge>
+      <lux-badge>Base</lux-badge>
+      <lux-badge color="primary">Primary</lux-badge>
+      <lux-badge color="success">Success</lux-badge>
+      <lux-badge color="warning">Warning</lux-badge>
+      <lux-badge color="danger">Danger</lux-badge>
+      <lux-badge color="dark">Dark</lux-badge>
+      <lux-badge color="muted">Muted</lux-badge>
       <!-- For dark backgrounds -->
-      <chi-badge color="secondary">Secondary</chi-badge>
-      <chi-badge color="light">Light</chi-badge>
-  .chi-tabs-panel#html-solid
-    .chi-tab__description
-      | To display a badge, use the class <code>chi-badge</code>.
+      <lux-badge color="secondary">Secondary</lux-badge>
+      <lux-badge color="light">Light</lux-badge>
+  .lux-tabs-panel#html-solid
+    .lux-tab__description
+      | To display a badge, use the class <code>lux-badge</code>.
       | A contextual class (e.g. <code>-primary</code>) can be applied to provide alternate styling.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <div class="chi-badge">
+      <div class="lux-badge">
         <span>Base</span>
       </div>
-      <div class="chi-badge -primary">
+      <div class="lux-badge -primary">
         <span>Primary</span>
       </div>
-      <div class="chi-badge -success">
+      <div class="lux-badge -success">
         <span>Success</span>
       </div>
-      <div class="chi-badge -warning">
+      <div class="lux-badge -warning">
         <span>Warning</span>
       </div>
-      <div class="chi-badge -danger">
+      <div class="lux-badge -danger">
         <span>Danger</span>
       </div>
-      <div class="chi-badge -dark">
+      <div class="lux-badge -dark">
         <span>Dark</span>
       </div>
-      <div class="chi-badge -muted">
+      <div class="lux-badge -muted">
         <span>Muted</span>
       </div>
       <!-- For dark backgrounds -->
-      <div class="chi-badge -secondary">
+      <div class="lux-badge -secondary">
         <span>Secondary</span>
       </div>
-      <div class="chi-badge -light">
+      <div class="lux-badge -light">
         <span>Light</span>
       </div>
 
 h3 Outline
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12
+  .lux-grid.-no-gutter
+    .lux-col.-w--12
       .-p--2.-text--center
-        chi-badge(class='-m--1', color='primary', variant='outline')= 'Primary'
-        chi-badge(class='-m--1', color='success', variant='outline')= 'Success'
-        chi-badge(class='-m--1', color='warning', variant='outline')= 'Warning'
-        chi-badge(class='-m--1', color='danger', variant='outline')= 'Danger'
-        chi-badge(class='-m--1', color='dark', variant='outline')= 'Dark'
-        chi-badge(class='-m--1', color='muted', variant='outline')= 'Muted'
-    .chi-col.-w--12
+        lux-badge(class='-m--1', color='primary', variant='outline')= 'Primary'
+        lux-badge(class='-m--1', color='success', variant='outline')= 'Success'
+        lux-badge(class='-m--1', color='warning', variant='outline')= 'Warning'
+        lux-badge(class='-m--1', color='danger', variant='outline')= 'Danger'
+        lux-badge(class='-m--1', color='dark', variant='outline')= 'Dark'
+        lux-badge(class='-m--1', color='muted', variant='outline')= 'Muted'
+    .lux-col.-w--12
       .-p--2.-bg--black.-text--center
-        chi-badge(class='-m--1', color='secondary', variant='outline')= 'Secondary'
-        chi-badge(class='-m--1', color='light', variant='outline')= 'Light'
+        lux-badge(class='-m--1', color='secondary', variant='outline')= 'Secondary'
+        lux-badge(class='-m--1', color='light', variant='outline')= 'Light'
   .example-tabs.-pl--2
-    ul.chi-tabs#example-outline
+    ul.lux-tabs#example-outline
       li.-active
         a(href=`#webcomponent-outline`) Web Component
       li
         a(href=`#html-outline`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-outline
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-outline
+    .lux-tab__description
       | To remove solid background and keep its colored border, set the <code>variant</code> attribute value to <code>outline</code>.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-badge color="primary" variant="outline">Primary</chi-badge>
-      <chi-badge color="success" variant="outline">Success</chi-badge>
-      <chi-badge color="warning" variant="outline">Warning</chi-badge>
-      <chi-badge color="danger" variant="outline">Danger</chi-badge>
-      <chi-badge color="dark" variant="outline">Dark</chi-badge>
-      <chi-badge color="muted" variant="outline">Muted</chi-badge>
+      <lux-badge color="primary" variant="outline">Primary</lux-badge>
+      <lux-badge color="success" variant="outline">Success</lux-badge>
+      <lux-badge color="warning" variant="outline">Warning</lux-badge>
+      <lux-badge color="danger" variant="outline">Danger</lux-badge>
+      <lux-badge color="dark" variant="outline">Dark</lux-badge>
+      <lux-badge color="muted" variant="outline">Muted</lux-badge>
       <!-- For dark backgrounds -->
-      <chi-badge color="secondary" variant="outline">Secondary</chi-badge>
-      <chi-badge color="light" variant="outline">Light</chi-badge>
-  .chi-tabs-panel#html-outline
-    .chi-tab__description
+      <lux-badge color="secondary" variant="outline">Secondary</lux-badge>
+      <lux-badge color="light" variant="outline">Light</lux-badge>
+  .lux-tabs-panel#html-outline
+    .lux-tab__description
       | To remove solid background and keep its colored border, apply the class <code>-outline</code>.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <div class="chi-badge -primary -outline">
+      <div class="lux-badge -primary -outline">
         <span>Primary</span>
       </div>
-      <div class="chi-badge -success -outline">
+      <div class="lux-badge -success -outline">
         <span>Success</span>
       </div>
-      <div class="chi-badge -warning -outline">
+      <div class="lux-badge -warning -outline">
         <span>Success</span>
       </div>
-      <div class="chi-badge -danger -outline">
+      <div class="lux-badge -danger -outline">
         <span>Danger</span>
       </div>
-      <div class="chi-badge -dark -outline">
+      <div class="lux-badge -dark -outline">
         <span>Dark</span>
       </div>
-      <div class="chi-badge -muted -outline">
+      <div class="lux-badge -muted -outline">
         <span>Muted</span>
       </div>
       <!-- For dark backgrounds -->
-      <div class="chi-badge -secondary -outline">
+      <div class="lux-badge -secondary -outline">
         <span>Secondary</span>
       </div>
-      <div class="chi-badge -light -outline">
+      <div class="lux-badge -light -outline">
         <span>Light</span>
       </div>
 
 h3 Flat
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12
+  .lux-grid.-no-gutter
+    .lux-col.-w--12
       .-p--2.-text--center
-        chi-badge(class='-m--1', color='primary', variant='flat')= 'Primary'
-        chi-badge(class='-m--1', color='success', variant='flat')= 'Success'
-        chi-badge(class='-m--1', color='warning', variant='flat')= 'Warning'
-        chi-badge(class='-m--1', color='danger', variant='flat')= 'Danger'
-        chi-badge(class='-m--1', color='dark', variant='flat')= 'Dark'
-        chi-badge(class='-m--1', color='muted', variant='flat')= 'Muted'
-    .chi-col.-w--12
+        lux-badge(class='-m--1', color='primary', variant='flat')= 'Primary'
+        lux-badge(class='-m--1', color='success', variant='flat')= 'Success'
+        lux-badge(class='-m--1', color='warning', variant='flat')= 'Warning'
+        lux-badge(class='-m--1', color='danger', variant='flat')= 'Danger'
+        lux-badge(class='-m--1', color='dark', variant='flat')= 'Dark'
+        lux-badge(class='-m--1', color='muted', variant='flat')= 'Muted'
+    .lux-col.-w--12
       .-p--2.-bg--black.-text--center
-        chi-badge(class='-m--1', color='secondary', variant='flat')= 'Secondary'
-        chi-badge(class='-m--1', color='light', variant='flat')= 'Light'
+        lux-badge(class='-m--1', color='secondary', variant='flat')= 'Secondary'
+        lux-badge(class='-m--1', color='light', variant='flat')= 'Light'
   .example-tabs.-pl--2
-    ul.chi-tabs#example-flat
+    ul.lux-tabs#example-flat
       li.-active
         a(href=`#webcomponent-flat`) Web Component
       li
         a(href=`#html-flat`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-flat
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-flat
+    .lux-tab__description
       | To render a badge without background and border, set the <code>variant</code> attribute value to <code>flat</code>.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-badge color="primary" variant="flat">Primary</chi-badge>
-      <chi-badge color="success" variant="flat">Success</chi-badge>
-      <chi-badge color="warning" variant="flat">Warning</chi-badge>
-      <chi-badge color="danger" variant="flat">Danger</chi-badge>
-      <chi-badge color="dark" variant="flat">Dark</chi-badge>
-      <chi-badge color="muted" variant="flat">Muted</chi-badge>
+      <lux-badge color="primary" variant="flat">Primary</lux-badge>
+      <lux-badge color="success" variant="flat">Success</lux-badge>
+      <lux-badge color="warning" variant="flat">Warning</lux-badge>
+      <lux-badge color="danger" variant="flat">Danger</lux-badge>
+      <lux-badge color="dark" variant="flat">Dark</lux-badge>
+      <lux-badge color="muted" variant="flat">Muted</lux-badge>
       <!-- For dark backgrounds -->
-      <chi-badge color="secondary" variant="flat">Secondary</chi-badge>
-      <chi-badge color="light" variant="flat">Light</chi-badge>
-  .chi-tabs-panel#html-flat
-    .chi-tab__description
+      <lux-badge color="secondary" variant="flat">Secondary</lux-badge>
+      <lux-badge color="light" variant="flat">Light</lux-badge>
+  .lux-tabs-panel#html-flat
+    .lux-tab__description
       | To render a badge without background and border, apply the class <code>-flat</code>.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <div class="chi-badge -primary -flat">
+      <div class="lux-badge -primary -flat">
         <span>Primary</span>
       </div>
-      <div class="chi-badge -success -flat">
+      <div class="lux-badge -success -flat">
         <span>Success</span>
       </div>
-      <div class="chi-badge -warning -flat">
+      <div class="lux-badge -warning -flat">
         <span>Warning</span>
       </div>
-      <div class="chi-badge -danger -flat">
+      <div class="lux-badge -danger -flat">
         <span>Danger</span>
       </div>
-      <div class="chi-badge -dark -flat">
+      <div class="lux-badge -dark -flat">
         <span>Dark</span>
       </div>
-      <div class="chi-badge -muted -flat">
+      <div class="lux-badge -muted -flat">
         <span>Muted</span>
       </div>
       <!-- For dark backgrounds -->
-      <div class="chi-badge -secondary -flat">
+      <div class="lux-badge -secondary -flat">
         <span>Secondary</span>
       </div>
-      <div class="chi-badge -light -flat">
+      <div class="lux-badge -light -flat">
         <span>Light</span>
       </div>
 
@@ -212,91 +212,91 @@ h2 Icon badges
 p.-text Icons can be placed before, after, or on both sides of text.
 .example.-mb--3
   .-p--2
-    chi-badge(class='-m--1')
-      chi-icon(icon='plus', size='xs')
+    lux-badge(class='-m--1')
+      lux-icon(icon='plus', size='xs')
       span Badge
-    chi-badge(class='-m--1')
+    lux-badge(class='-m--1')
       span Badge
-      chi-icon(icon='x', size='xs')
-    chi-badge(class='-m--1', variant='flat', color='success')
-      chi-icon(icon='circle')
+      lux-icon(icon='x', size='xs')
+    lux-badge(class='-m--1', variant='flat', color='success')
+      lux-icon(icon='circle')
       span Active
-    chi-badge(class='-m--1', variant='flat', color='warning')
-      chi-icon(icon='circle-clock')
+    lux-badge(class='-m--1', variant='flat', color='warning')
+      lux-icon(icon='circle-clock')
       span Away
-    chi-badge(class='-m--1', variant='flat', color='danger')
-      chi-icon(icon='circle-minus')
+    lux-badge(class='-m--1', variant='flat', color='danger')
+      lux-icon(icon='circle-minus')
       span Do not Disturb
-    chi-badge(class='-m--1', variant='flat', color='muted')
-      chi-icon(icon='circle')
+    lux-badge(class='-m--1', variant='flat', color='muted')
+      lux-icon(icon='circle')
       span Offline
   .example-tabs.-pl--2
-    ul.chi-tabs#example-icon-badges
+    ul.lux-tabs#example-icon-badges
       li.-active
         a(href=`#webcomponent-icon-badges`) Web Component
       li
         a(href=`#html-icon-badges`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-icon-badges
+  .lux-tabs-panel.-active#webcomponent-icon-badges
     :code(lang="html")
-      <chi-badge>
-        <chi-icon icon="plus" size="xs"></chi-icon>
+      <lux-badge>
+        <lux-icon icon="plus" size="xs"></lux-icon>
         <span>Badge</Badge>
-      </chi-badge>
-      <chi-badge>
+      </lux-badge>
+      <lux-badge>
         <span>Badge</Badge>
-        <chi-icon icon="x" size="xs"></chi-icon>
-      </chi-badge>
-      <chi-badge variant="flat" color="success">
-        <chi-icon icon="circle"></chi-icon>
+        <lux-icon icon="x" size="xs"></lux-icon>
+      </lux-badge>
+      <lux-badge variant="flat" color="success">
+        <lux-icon icon="circle"></lux-icon>
         <span>Active</Badge>
-      </chi-badge>
-      <chi-badge variant="flat" color="warning">
-        <chi-icon icon="circle-clock"></chi-icon>
+      </lux-badge>
+      <lux-badge variant="flat" color="warning">
+        <lux-icon icon="circle-clock"></lux-icon>
         <span>Away</Badge>
-      </chi-badge>
-      <chi-badge variant="flat" color="danger">
-        <chi-icon icon="circle-minus"></chi-icon>
+      </lux-badge>
+      <lux-badge variant="flat" color="danger">
+        <lux-icon icon="circle-minus"></lux-icon>
         <span>Do not Disturb</Badge>
-      </chi-badge>
-      <chi-badge variant="flat" color="muted">
-        <chi-icon icon="circle"></chi-icon>
+      </lux-badge>
+      <lux-badge variant="flat" color="muted">
+        <lux-icon icon="circle"></lux-icon>
         <span>Offline</Badge>
-      </chi-badge>
-  .chi-tabs-panel#html-icon-badges
+      </lux-badge>
+  .lux-tabs-panel#html-icon-badges
     :code(lang="html")
-      <div class="chi-badge">
-        <div class="chi-badge__content">
-          <i class="chi-icon -xs icon-plus"></i>
+      <div class="lux-badge">
+        <div class="lux-badge__content">
+          <i class="lux-icon -xs icon-plus"></i>
           <span>Badge</span>
         </div>
       </div>
-      <div class="chi-badge">
-        <div class="chi-badge__content">
+      <div class="lux-badge">
+        <div class="lux-badge__content">
           <span>Badge</span>
-          <i class="chi-icon -xs icon-x"></i>
+          <i class="lux-icon -xs icon-x"></i>
         </div>
       </div>
-      <div class="chi-badge -flat -success">
-        <div class="chi-badge__content">
-          <i class="chi-icon icon-circle"></i>
+      <div class="lux-badge -flat -success">
+        <div class="lux-badge__content">
+          <i class="lux-icon icon-circle"></i>
           <span>Active</span>
         </div>
       </div>
-      <div class="chi-badge -flat -warning">
-        <div class="chi-badge__content">
-          <i class="chi-icon icon-circle-clock"></i>
+      <div class="lux-badge -flat -warning">
+        <div class="lux-badge__content">
+          <i class="lux-icon icon-circle-clock"></i>
           <span>Away</span>
         </div>
       </div>
-      <div class="chi-badge -flat -danger">
-        <div class="chi-badge__content">
-          <i class="chi-icon icon-circle-minus"></i>
+      <div class="lux-badge -flat -danger">
+        <div class="lux-badge__content">
+          <i class="lux-icon icon-circle-minus"></i>
           <span>Do not disturb</span>
         </div>
       </div>
-      <div class="chi-badge -flat -muted">
-        <div class="chi-badge__content">
-          <i class="chi-icon icon-circle"></i>
+      <div class="lux-badge -flat -muted">
+        <div class="lux-badge__content">
+          <i class="lux-icon icon-circle"></i>
           <span>Offline</span>
         </div>
       </div>
@@ -305,35 +305,35 @@ h2 Additional Sizes
 h3 Small
 .example.-mb--3
   .-p--2
-    chi-badge(size='sm', class='-m--1')= 'Badge'
-    chi-badge(size='sm', class='-m--1', variant='flat')
-      chi-icon(icon='atom')
+    lux-badge(size='sm', class='-m--1')= 'Badge'
+    lux-badge(size='sm', class='-m--1', variant='flat')
+      lux-icon(icon='atom')
       span Badge
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes-small
+    ul.lux-tabs#example-sizes-small
       li.-active
         a(href=`#webcomponent-sizes-small`) Web Component
       li
         a(href=`#html-sizes-small`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes-small
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-sizes-small
+    .lux-tab__description
       | Set the attribute <code>size</code> to <code>sm</code> to render small badges.
     :code(lang="html")
-      <chi-badge size="sm">Badge</chi-badge>
-      <chi-badge size="sm" variant="flat">
-        <chi-icon icon="atom"></chi-icon>
+      <lux-badge size="sm">Badge</lux-badge>
+      <lux-badge size="sm" variant="flat">
+        <lux-icon icon="atom"></lux-icon>
         <span>Badge</span>
-      </chi-badge>
-  .chi-tabs-panel#html-sizes-small
-    .chi-tab__description
+      </lux-badge>
+  .lux-tabs-panel#html-sizes-small
+    .lux-tab__description
       | Use the <code>-sm</code> modifier class to render small badges.
     :code(lang="html")
-      <div class="chi-badge -sm">
+      <div class="lux-badge -sm">
         <span>Badge</span>
       </div>
-      <div class="chi-badge -flat -sm">
-        <div class="chi-badge__content">
-          <i class="chi-icon icon-atom"></i>
+      <div class="lux-badge -flat -sm">
+        <div class="lux-badge__content">
+          <i class="lux-icon icon-atom"></i>
           <span>Badge</span>
         </div>
       </div>
@@ -341,35 +341,35 @@ h3 Small
 h3 Extra small
 .example.-mb--3
   .-p--2
-    chi-badge(size='xs', class='-m--1')= 'Badge'
-    chi-badge(size='xs', class='-m--1', variant='flat')
-      chi-icon(icon='atom')
+    lux-badge(size='xs', class='-m--1')= 'Badge'
+    lux-badge(size='xs', class='-m--1', variant='flat')
+      lux-icon(icon='atom')
       span Badge
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes-extra-small
+    ul.lux-tabs#example-sizes-extra-small
       li.-active
         a(href=`#webcomponent-sizes-extra-small`) Web Component
       li
         a(href=`#html-sizes-extra-small`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes-extra-small
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-sizes-extra-small
+    .lux-tab__description
       | Set the attribute <code>size</code> to <code>xs</code> to render even smaller badges.
     :code(lang="html")
-      <chi-badge size="xs">Badge</chi-badge>
-      <chi-badge size="xs" variant="flat">
-        <chi-icon icon="atom"></chi-icon>
+      <lux-badge size="xs">Badge</lux-badge>
+      <lux-badge size="xs" variant="flat">
+        <lux-icon icon="atom"></lux-icon>
         <span>Badge</span>
-      </chi-badge>
-  .chi-tabs-panel#html-sizes-extra-small
-    .chi-tab__description
+      </lux-badge>
+  .lux-tabs-panel#html-sizes-extra-small
+    .lux-tab__description
       | Use the <code>-xs</code> modifier class to render even smaller badges.
     :code(lang="html")
-      <div class="chi-badge -xs">
+      <div class="lux-badge -xs">
         <span>Badge</span>
       </div>
-      <div class="chi-badge -flat -xs">
-        <div class="chi-badge__content">
-          <i class="chi-icon icon-atom"></i>
+      <div class="lux-badge -flat -xs">
+        <div class="lux-badge__content">
+          <i class="lux-icon icon-atom"></i>
           <span>Badge</span>
         </div>
       </div>
@@ -377,34 +377,34 @@ h3 Extra small
 h2 Text Transform
 .example.-mb--3
   .-p--2
-    chi-badge(text-transform='uppercase', class='-m--1')= 'Badge'
-    chi-badge(text-transform='lowercase', class='-m--1')= 'BADGE'
-    chi-badge(text-transform='capitalized', class='-m--1')= 'badge'
+    lux-badge(text-transform='uppercase', class='-m--1')= 'Badge'
+    lux-badge(text-transform='lowercase', class='-m--1')= 'BADGE'
+    lux-badge(text-transform='capitalized', class='-m--1')= 'badge'
   .example-tabs.-pl--2
-    ul.chi-tabs#example-text-transformation
+    ul.lux-tabs#example-text-transformation
       li.-active
         a(href=`#webcomponent-text-transformation`) Web Component
       li
         a(href=`#html-text-transformation`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-text-transformation
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-text-transformation
+    .lux-tab__description
       | Set the <code>text-transform</code> attribute to <code>uppercase</code> to render badges in uppercase,
       | <code>lowercase</code> to render badges in lowercase and <code>capitalized</code> to render badges as capitalized.
     :code(lang="html")
-      <chi-badge text-transform="uppercase">Badge</chi-badge>
-      <chi-badge text-transform="lowercase">BADGE</chi-badge>
-      <chi-badge text-transform="capitalized">badge</chi-badge>
-  .chi-tabs-panel#html-text-transformation
-    .chi-tab__description
+      <lux-badge text-transform="uppercase">Badge</lux-badge>
+      <lux-badge text-transform="lowercase">BADGE</lux-badge>
+      <lux-badge text-transform="capitalized">badge</lux-badge>
+  .lux-tabs-panel#html-text-transformation
+    .lux-tab__description
       | Use the <code>-text--uppercase</code> text utility class to render badges in all uppercase. <code>-text--lowercase</code> and <code>-text--capitalized</code> are also supported.
     :code(lang="html")
-      <div class="chi-badge -text--uppercase">
+      <div class="lux-badge -text--uppercase">
         <span>Badge</span>
       </div>
-      <div class="chi-badge -text--lowercase">
+      <div class="lux-badge -text--lowercase">
         <span>Badge</span>
       </div>
-      <div class="chi-badge -text--capitalized">
+      <div class="lux-badge -text--capitalized">
         <span>Badge</span>
       </div>
 
@@ -412,6 +412,6 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

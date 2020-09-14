@@ -1,110 +1,110 @@
 h2 Examples
 p.-text
   | A dropdown must be associated to an activator, commonly a button, which, at the time of being clicked, expands
-  | the dropdown. Activator and dropdown should be contained in a div with a <code>chi-dropdown</code> class, or otherwise, the
+  | the dropdown. Activator and dropdown should be contained in a div with a <code>lux-dropdown</code> class, or otherwise, the
   | activator must reference the dropdown with a <code>data-target</code> attribute.
-  | Use the <code>chi-dropdown__trigger</code> class on your activator button to make the chevron appear.
+  | Use the <code>lux-dropdown__trigger</code> class on your activator button to make the chevron appear.
 h3 Base
 p.-text
   | Trigger and dropdown enclosed in the same div.
 .example.-mb--3
   .-p--3
-    .chi-dropdown
-      button.chi-button.chi-dropdown__trigger#dropdown-1 Dropdown, click me
-      .chi-dropdown__menu
-        a.chi-dropdown__menu-item(href='#') Item 1
-        a.chi-dropdown__menu-item(href='#') Item 2
-        a.chi-dropdown__menu-item(href='#') Item 3
-        a.chi-dropdown__menu-item(href='#') Item 4
+    .lux-dropdown
+      button.lux-button.lux-dropdown__trigger#dropdown-1 Dropdown, click me
+      .lux-dropdown__menu
+        a.lux-dropdown__menu-item(href='#') Item 1
+        a.lux-dropdown__menu-item(href='#') Item 2
+        a.lux-dropdown__menu-item(href='#') Item 3
+        a.lux-dropdown__menu-item(href='#') Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <div class="chi-dropdown">
-        <button id="dropdown-1" class="chi-button chi-dropdown__trigger">Dropdown component</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button id="dropdown-1" class="lux-button lux-dropdown__trigger">Dropdown component</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
 
-      <script>chi.dropdown(document.getElementById('dropdown-1'));</script>
+      <script>lux.dropdown(document.getElementById('dropdown-1'));</script>
 
 h3 Data-target
 p.-text
   | Dropdown referenced by a <code>data-target</code> attribute in the activator.
 .example.-mb--3
   .-p--3
-    button.chi-button.chi-dropdown__trigger(id="dropdown-2" data-target="#dropdown-2-menu") Dropdown component
+    button.lux-button.lux-dropdown__trigger(id="dropdown-2" data-target="#dropdown-2-menu") Dropdown component
     p.-text There is no need for proximity between elements.
-    #dropdown-2-menu.chi-dropdown__menu
-      a.chi-dropdown__menu-item(href='#') Item 1
-      a.chi-dropdown__menu-item(href='#') Item 2
-      a.chi-dropdown__menu-item(href='#') Item 3
-      a.chi-dropdown__menu-item(href='#') Item 4
+    #dropdown-2-menu.lux-dropdown__menu
+      a.lux-dropdown__menu-item(href='#') Item 1
+      a.lux-dropdown__menu-item(href='#') Item 2
+      a.lux-dropdown__menu-item(href='#') Item 3
+      a.lux-dropdown__menu-item(href='#') Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-data-target
+    ul.lux-tabs#example-data-target
       li.-disabled
         a(href=`#webcomponent-data-target`) Web Component
       li.-active
         a(href=`#html-data-target`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-data-target
-  .chi-tabs-panel.-active#html-data-target
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-data-target
+  .lux-tabs-panel.-active#html-data-target
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <button id="dropdown-2" class="chi-button chi-dropdown__trigger" data-target="#dropdown-2-menu">Dropdown component</button>
+      <button id="dropdown-2" class="lux-button lux-dropdown__trigger" data-target="#dropdown-2-menu">Dropdown component</button>
       <p class="-text">There is no need for proximity between elements.</p>
-      <div class="chi-dropdown__menu" id="dropdown-2-menu">
-        <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 3</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 4</a>
+      <div class="lux-dropdown__menu" id="dropdown-2-menu">
+        <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 3</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 4</a>
       </div>
 
-      <script>chi.dropdown(document.getElementById('dropdown-2'));</script>
+      <script>lux.dropdown(document.getElementById('dropdown-2'));</script>
 
 h3 Hover
 p.-text
   | Dropdown on hover is only supported when trigger and dropdown elements are enclosed in the same div. Use the
-  | <code>chi-dropdown__hover</code> class to achieve this.
+  | <code>lux-dropdown__hover</code> class to achieve this.
 .example.-mb--3
   .-p--3
-    .chi-dropdown.chi-dropdown__hover
-      button.chi-button.chi-dropdown__trigger Dropdown component
-      .chi-dropdown__menu
-        a.chi-dropdown__menu-item(href='#') Item 1
-        a.chi-dropdown__menu-item(href='#') Item 2
-        a.chi-dropdown__menu-item(href='#') Item 3
+    .lux-dropdown.lux-dropdown__hover
+      button.lux-button.lux-dropdown__trigger Dropdown component
+      .lux-dropdown__menu
+        a.lux-dropdown__menu-item(href='#') Item 1
+        a.lux-dropdown__menu-item(href='#') Item 2
+        a.lux-dropdown__menu-item(href='#') Item 3
   .example-tabs.-pl--2
-    ul.chi-tabs#example-hover
+    ul.lux-tabs#example-hover
       li.-disabled
         a(href=`#webcomponent-hover`) Web Component
       li.-active
         a(href=`#html-hover`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-hover
-  .chi-tabs-panel.-active#html-hover
+  .lux-tabs-panel#webcomponent-hover
+  .lux-tabs-panel.-active#html-hover
     :code(lang="html")
-      <div class="chi-dropdown chi-dropdown__hover">
-        <button class="chi-button chi-dropdown__trigger">Dropdown component</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown lux-dropdown__hover">
+        <button class="lux-button lux-dropdown__trigger">Dropdown component</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
 
@@ -113,36 +113,36 @@ p.-text
   | Triggers can be animated by applying the <code>-animate</code> class.
 .example.-mb--3
   .-p--3
-    .chi-dropdown
-      button#dropdown-animate.chi-button.chi-dropdown__trigger.-animate Animated dropdown trigger
-      .chi-dropdown__menu
-        a.chi-dropdown__menu-item(href='#') Item 1
-        a.chi-dropdown__menu-item(href='#') Item 2
-        a.chi-dropdown__menu-item(href='#') Item 3
+    .lux-dropdown
+      button#dropdown-animate.lux-button.lux-dropdown__trigger.-animate Animated dropdown trigger
+      .lux-dropdown__menu
+        a.lux-dropdown__menu-item(href='#') Item 1
+        a.lux-dropdown__menu-item(href='#') Item 2
+        a.lux-dropdown__menu-item(href='#') Item 3
   .example-tabs.-pl--2
-    ul.chi-tabs#example-animation
+    ul.lux-tabs#example-animation
       li.-disabled
         a(href=`#webcomponent-animation`) Web Component
       li.-active
         a(href=`#html-animation`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-animation
-  .chi-tabs-panel.-active#html-animation
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-animation
+  .lux-tabs-panel.-active#html-animation
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <div class="chi-dropdown">
-        <button id="dropdown-animate" class="chi-button chi-dropdown__trigger -animate">Animated dropdown trigger</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button id="dropdown-animate" class="lux-button lux-dropdown__trigger -animate">Animated dropdown trigger</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
 
-      <script>chi.dropdown(document.getElementById('dropdown-animate'));</script>
+      <script>lux.dropdown(document.getElementById('dropdown-animate'));</script>
 
 h3 Positioning
 p.-text
@@ -154,223 +154,223 @@ p.-text
 
 .example.-mb--3
   .-p--3.-px-xl--10
-    .chi-grid.-no-gutter.-px-xl--3
-      .chi-col.-w--12.-w-xl--10.-o-xl--1.-d--flex.-justify-content-sm--around.-flex--wrap
+    .lux-grid.-no-gutter.-px-xl--3
+      .lux-col.-w--12.-w-xl--10.-o-xl--1.-d--flex.-justify-content-sm--around.-flex--wrap
         div.-p--1
-          .chi-dropdown
-            button#dropdown-top-start.chi-button.chi-dropdown__trigger(data-position="top-start") Top start
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-top-start.lux-button.lux-dropdown__trigger(data-position="top-start") Top start
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1
-          .chi-dropdown
-            button#dropdown-top.chi-button.chi-dropdown__trigger(data-position="top") Top
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-top.lux-button.lux-dropdown__trigger(data-position="top") Top
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1
-          .chi-dropdown
-            button#dropdown-top-end.chi-button.chi-dropdown__trigger(data-position="top-end") Top end
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
-      .chi-col.-w--12.-w-sm--4.-d--flex.-flex-sm--column.-flex--wrap
+          .lux-dropdown
+            button#dropdown-top-end.lux-button.lux-dropdown__trigger(data-position="top-end") Top end
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
+      .lux-col.-w--12.-w-sm--4.-d--flex.-flex-sm--column.-flex--wrap
         div.-p--1.-py-sm--3
-          .chi-dropdown
-            button#dropdown-left-start.chi-button.chi-dropdown__trigger(data-position="left-start") Left start
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-left-start.lux-button.lux-dropdown__trigger(data-position="left-start") Left start
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1.-py-sm--3
-          .chi-dropdown
-            button#dropdown-left.chi-button.chi-dropdown__trigger(data-position="left") Left
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-left.lux-button.lux-dropdown__trigger(data-position="left") Left
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1.-py-sm--3
-          .chi-dropdown
-            button#dropdown-left-end.chi-button.chi-dropdown__trigger(data-position="left-end") Left end
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
-      .chi-col.-d--none.-w--12.-w-sm--4.-d-sm--flex.-flex-sm--column.-justify-content-sm--center.-align-items-sm--center
+          .lux-dropdown
+            button#dropdown-left-end.lux-button.lux-dropdown__trigger(data-position="left-end") Left end
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
+      .lux-col.-d--none.-w--12.-w-sm--4.-d-sm--flex.-flex-sm--column.-justify-content-sm--center.-align-items-sm--center
         div.-w--75.-text.-text--muted.-text--center.-lh--2 Click buttons to see Dropdown positions
-      .chi-col.-w--12.-w-sm--4.-d--flex.-flex-sm--column.-align-items-sm--end.-flex--wrap
+      .lux-col.-w--12.-w-sm--4.-d--flex.-flex-sm--column.-align-items-sm--end.-flex--wrap
         div.-p--1.-py-sm--3
-          .chi-dropdown
-            button#dropdown-right-start.chi-button.chi-dropdown__trigger(data-position="right-start") Right start
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-right-start.lux-button.lux-dropdown__trigger(data-position="right-start") Right start
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1.-py-sm--3
-          .chi-dropdown
-            button#dropdown-right.chi-button.chi-dropdown__trigger(data-position="right") Right
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-right.lux-button.lux-dropdown__trigger(data-position="right") Right
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1.-py-sm--3
-          .chi-dropdown
-            button#dropdown-right-end.chi-button.chi-dropdown__trigger(data-position="right-end") Right end
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
-      .chi-col.-w--12.-w-xl--10.-o-xl--1.-d--flex.-justify-content-sm--around.-flex--wrap
+          .lux-dropdown
+            button#dropdown-right-end.lux-button.lux-dropdown__trigger(data-position="right-end") Right end
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
+      .lux-col.-w--12.-w-xl--10.-o-xl--1.-d--flex.-justify-content-sm--around.-flex--wrap
         div.-p--1
-          .chi-dropdown
-            button#dropdown-bottom-start.chi-button.chi-dropdown__trigger(data-position="bottom-start") Bottom start
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-bottom-start.lux-button.lux-dropdown__trigger(data-position="bottom-start") Bottom start
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1
-          .chi-dropdown
-            button#dropdown-bottom.chi-button.chi-dropdown__trigger(data-position="bottom") Bottom
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-bottom.lux-button.lux-dropdown__trigger(data-position="bottom") Bottom
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
         div.-p--1
-          .chi-dropdown
-            button#dropdown-bottom-end.chi-button.chi-dropdown__trigger(data-position="bottom-end") Bottom end
-            .chi-dropdown__menu(style="width: 15rem;")
-              a.chi-dropdown__menu-item(href='#') Item 1
-              a.chi-dropdown__menu-item(href='#') Item 2
-              a.chi-dropdown__menu-item(href='#') Item 3
+          .lux-dropdown
+            button#dropdown-bottom-end.lux-button.lux-dropdown__trigger(data-position="bottom-end") Bottom end
+            .lux-dropdown__menu(style="width: 15rem;")
+              a.lux-dropdown__menu-item(href='#') Item 1
+              a.lux-dropdown__menu-item(href='#') Item 2
+              a.lux-dropdown__menu-item(href='#') Item 3
 
   .example-tabs.-pl--2
-    ul.chi-tabs#example-position
+    ul.lux-tabs#example-position
       li.-disabled
         a(href=`#webcomponent-position`) Web Component
       li.-active
         a(href=`#html-position`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-position
-  .chi-tabs-panel.-active#html-position
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-position
+  .lux-tabs-panel.-active#html-position
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
       <!-- Top start -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-top-start" data-position="top-start">Top start</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-top-start" data-position="top-start">Top start</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Top -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-top" data-position="top">Top</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-top" data-position="top">Top</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Top end -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-top-end" data-position="top-end">Top end</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-top-end" data-position="top-end">Top end</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Left start -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-left-start" data-position="left-start">Left start</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-left-start" data-position="left-start">Left start</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Left -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-left" data-position="left">Left</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-left" data-position="left">Left</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Left end -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-left-end" data-position="left-end">Left end</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-left-end" data-position="left-end">Left end</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Right start -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-right-start" data-position="right-start">Right start</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-right-start" data-position="right-start">Right start</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Right -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-right" data-position="right">Right</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-right" data-position="right">Right</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Right end -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-right-end" data-position="right-end">Right end</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-right-end" data-position="right-end">Right end</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Bottom start -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-bottom-start" data-position="bottom-start">Bottom start</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-bottom-start" data-position="bottom-start">Bottom start</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Bottom -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-bottom" data-position="bottom">Bottom</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-bottom" data-position="bottom">Bottom</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
       <!-- Bottom end -->
-      <div class="chi-dropdown">
-        <button class="chi-button chi-dropdown__trigger" id="dropdown-bottom-end" data-position="bottom-end">Bottom end</button>
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+      <div class="lux-dropdown">
+        <button class="lux-button lux-dropdown__trigger" id="dropdown-bottom-end" data-position="bottom-end">Bottom end</button>
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+          <a class="lux-dropdown__menu-item" href="#">Item 3</a>
         </div>
       </div>
 
       <!-- JavaScript -->
-      <script>chi.dropdown(document.querySelectorAll('.chi-dropdown .chi-dropdown__trigger'));</script>
+      <script>lux.dropdown(document.querySelectorAll('.lux-dropdown .lux-dropdown__trigger'));</script>
 
 h2 Menu
 
@@ -380,158 +380,158 @@ p.-text
   | <code>hover</code>.
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
-      .chi-dropdown__menu.-active
-        a.chi-dropdown__menu-item(href='#') Item
-        a.chi-dropdown__menu-item.-active(href='#') Active item
-        a.chi-dropdown__menu-item.-disabled(href='#') Disabled item
-        a.chi-dropdown__menu-item.-hover(href='#') Hovered item
+    .lux-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
+      .lux-dropdown__menu.-active
+        a.lux-dropdown__menu-item(href='#') Item
+        a.lux-dropdown__menu-item.-active(href='#') Active item
+        a.lux-dropdown__menu-item.-disabled(href='#') Disabled item
+        a.lux-dropdown__menu-item.-hover(href='#') Hovered item
   .example-tabs.-pl--2
-    ul.chi-tabs#example-states
+    ul.lux-tabs#example-states
       li.-disabled
         a(href=`#webcomponent-states`) Web Component
       li.-active
         a(href=`#html-states`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-states
-  .chi-tabs-panel.-active#html-states
+  .lux-tabs-panel#webcomponent-states
+  .lux-tabs-panel.-active#html-states
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <a class="chi-dropdown__menu-item" href="#">Item</a>
-        <a class="chi-dropdown__menu-item -active" href="#">Active item</a>
-        <a class="chi-dropdown__menu-item -disabled" href="#">Disabled item</a>
-        <a class="chi-dropdown__menu-item -hover" href="#">Hovered item</a>
+      <div class="lux-dropdown__menu">
+        <a class="lux-dropdown__menu-item" href="#">Item</a>
+        <a class="lux-dropdown__menu-item -active" href="#">Active item</a>
+        <a class="lux-dropdown__menu-item -disabled" href="#">Disabled item</a>
+        <a class="lux-dropdown__menu-item -hover" href="#">Hovered item</a>
       </div>
 
 h3 Description
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
-      .chi-dropdown__menu.-active.-list
-        a.chi-dropdown__menu-item(href='#')
-          span.chi-dropdown__menu-item_title Item
-          span.chi-dropdown__menu-item_text Item description
-        a.chi-dropdown__menu-item.-active(href='#')
-          span.chi-dropdown__menu-item_title Active item
-          span.chi-dropdown__menu-item_text Item description
-        a.chi-dropdown__menu-item.-disabled(href='#')
-          span.chi-dropdown__menu-item_title Disabled item
-          span.chi-dropdown__menu-item_text Item description
-        a.chi-dropdown__menu-item.-hover(href='#')
-          span.chi-dropdown__menu-item_title Hovered item
-          span.chi-dropdown__menu-item_text Item description
+    .lux-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
+      .lux-dropdown__menu.-active.-list
+        a.lux-dropdown__menu-item(href='#')
+          span.lux-dropdown__menu-item_title Item
+          span.lux-dropdown__menu-item_text Item description
+        a.lux-dropdown__menu-item.-active(href='#')
+          span.lux-dropdown__menu-item_title Active item
+          span.lux-dropdown__menu-item_text Item description
+        a.lux-dropdown__menu-item.-disabled(href='#')
+          span.lux-dropdown__menu-item_title Disabled item
+          span.lux-dropdown__menu-item_text Item description
+        a.lux-dropdown__menu-item.-hover(href='#')
+          span.lux-dropdown__menu-item_title Hovered item
+          span.lux-dropdown__menu-item_text Item description
   .example-tabs.-pl--2
-    ul.chi-tabs#example-states
+    ul.lux-tabs#example-states
       li.-disabled
         a(href=`#webcomponent-states`) Web Component
       li.-active
         a(href=`#html-states`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-states
-  .chi-tabs-panel.-active#html-states
+  .lux-tabs-panel#webcomponent-states
+  .lux-tabs-panel.-active#html-states
     :code(lang="html")
-      <div class="chi-dropdown__menu -list">
-        <a class="chi-dropdown__menu-item" href="#">
-          <span class="chi-dropdown__menu-item_title">Item</span>
-          <span class="chi-dropdown__menu-item_text">Item description</span>
+      <div class="lux-dropdown__menu -list">
+        <a class="lux-dropdown__menu-item" href="#">
+          <span class="lux-dropdown__menu-item_title">Item</span>
+          <span class="lux-dropdown__menu-item_text">Item description</span>
         </a>
-        <a class="chi-dropdown__menu-item -active" href="#">
-          <span class="chi-dropdown__menu-item_title">Active item</span>
-          <span class="chi-dropdown__menu-item_text">Item description</span>
+        <a class="lux-dropdown__menu-item -active" href="#">
+          <span class="lux-dropdown__menu-item_title">Active item</span>
+          <span class="lux-dropdown__menu-item_text">Item description</span>
         </a>
-        <a class="chi-dropdown__menu-item -disabled" href="#">
-          <span class="chi-dropdown__menu-item_title">Disabled item</span>
-          <span class="chi-dropdown__menu-item_text">Item description</span>
+        <a class="lux-dropdown__menu-item -disabled" href="#">
+          <span class="lux-dropdown__menu-item_title">Disabled item</span>
+          <span class="lux-dropdown__menu-item_text">Item description</span>
         </a>
-        <a class="chi-dropdown__menu-item -hover" href="#">
-          <span class="chi-dropdown__menu-item_title">Hovered item</span>
-          <span class="chi-dropdown__menu-item_text">Item description</span>
+        <a class="lux-dropdown__menu-item -hover" href="#">
+          <span class="lux-dropdown__menu-item_title">Hovered item</span>
+          <span class="lux-dropdown__menu-item_text">Item description</span>
         </a>
       </div>
 
 h3 Divider
 p.-text
-  | Several menu items can be arranged together by using a divider. Use the <code>chi-divider</code> component.
+  | Several menu items can be arranged together by using a divider. Use the <code>lux-divider</code> component.
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
-      .chi-dropdown__menu.-active
-        a.chi-dropdown__menu-item(href='#') Item 1
-        a.chi-dropdown__menu-item(href='#') Item 2
-        a.chi-dropdown__menu-item(href='#') Item 3
-        .chi-divider
-        a.chi-dropdown__menu-item(href='#') Item 4
+    .lux-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
+      .lux-dropdown__menu.-active
+        a.lux-dropdown__menu-item(href='#') Item 1
+        a.lux-dropdown__menu-item(href='#') Item 2
+        a.lux-dropdown__menu-item(href='#') Item 3
+        .lux-divider
+        a.lux-dropdown__menu-item(href='#') Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-states
+    ul.lux-tabs#example-states
       li.-disabled
         a(href=`#webcomponent-states`) Web Component
       li.-active
         a(href=`#html-states`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-states
-  .chi-tabs-panel.-active#html-states
+  .lux-tabs-panel#webcomponent-states
+  .lux-tabs-panel.-active#html-states
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 3</a>
-        <div class="chi-divider"></div>
-        <a class="chi-dropdown__menu-item" href="#">Item 4</a>
+      <div class="lux-dropdown__menu">
+        <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 3</a>
+        <div class="lux-divider"></div>
+        <a class="lux-dropdown__menu-item" href="#">Item 4</a>
       </div>
 
 h3 Icons
 p.-text
-  | Dropdown component has been developed to support Chi icons in the menu items.
+  | Dropdown component has been developed to support Lux icons in the menu items.
   .example.-mb--3
     .-p--3(style="background-color:#eee;")
-      .chi-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
-        .chi-dropdown__menu.-active
-          a.chi-dropdown__menu-item(href='#')
-            i.chi-icon.icon-file-outline
+      .lux-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
+        .lux-dropdown__menu.-active
+          a.lux-dropdown__menu-item(href='#')
+            i.lux-icon.icon-file-outline
             = "New"
-          a.chi-dropdown__menu-item.-disabled(href='http://www.centurylink.com')
-            i.chi-icon.icon-arrow-to-bottom
+          a.lux-dropdown__menu-item.-disabled(href='http://www.centurylink.com')
+            i.lux-icon.icon-arrow-to-bottom
             = "Save"
-          .chi-divider
-          a.chi-dropdown__menu-item(href='#')
-            i.chi-icon.icon-mail
+          .lux-divider
+          a.lux-dropdown__menu-item(href='#')
+            i.lux-icon.icon-mail
             = "Send"
-          a.chi-dropdown__menu-item.-active(href='#')
-            i.chi-icon.icon-cart
+          a.lux-dropdown__menu-item.-active(href='#')
+            i.lux-icon.icon-cart
             = "Buy"
-          a.chi-dropdown__menu-item(href='#')
-            i.chi-icon.icon-users
+          a.lux-dropdown__menu-item(href='#')
+            i.lux-icon.icon-users
             = "Share"
-          .chi-divider
-          a.chi-dropdown__menu-item(href='#')
-            i.chi-icon.icon-logout
+          .lux-divider
+          a.lux-dropdown__menu-item(href='#')
+            i.lux-icon.icon-logout
             = "Logout"
     .example-tabs.-pl--2
-      ul.chi-tabs#example-states
+      ul.lux-tabs#example-states
         li.-disabled
           a(href=`#webcomponent-states`) Web Component
         li.-active
           a(href=`#html-states`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-states
-    .chi-tabs-panel.-active#html-states
+    .lux-tabs-panel#webcomponent-states
+    .lux-tabs-panel.-active#html-states
       :code(lang="html")
-        <div class="chi-dropdown__menu">
-          <a class="chi-dropdown__menu-item" href="#">
-            <i class="chi-icon icon-file-outline"></i>New
+        <div class="lux-dropdown__menu">
+          <a class="lux-dropdown__menu-item" href="#">
+            <i class="lux-icon icon-file-outline"></i>New
           </a>
-          <a class="chi-dropdown__menu-item -disabled" href="#">
-            <i class="chi-icon icon-arrow-to-bottom"></i>Save
+          <a class="lux-dropdown__menu-item -disabled" href="#">
+            <i class="lux-icon icon-arrow-to-bottom"></i>Save
           </a>
-          <div class="chi-divider"></div>
-          <a class="chi-dropdown__menu-item" href="#">
-            <i class="chi-icon icon-mail"></i>Send
+          <div class="lux-divider"></div>
+          <a class="lux-dropdown__menu-item" href="#">
+            <i class="lux-icon icon-mail"></i>Send
           </a>
-          <a class="chi-dropdown__menu-item -active" href="#">
-            <i class="chi-icon icon-cart"></i>Buy
+          <a class="lux-dropdown__menu-item -active" href="#">
+            <i class="lux-icon icon-cart"></i>Buy
           </a>
-          <a class="chi-dropdown__menu-item" href="#">
-            <i class="chi-icon icon-users"></i>Share
+          <a class="lux-dropdown__menu-item" href="#">
+            <i class="lux-icon icon-users"></i>Share
           </a>
-          <div class="chi-divider"></div>
-          <a class="chi-dropdown__menu-item" href="#">
-            <i class="chi-icon icon-logout"></i>Logout
+          <div class="lux-divider"></div>
+          <a class="lux-dropdown__menu-item" href="#">
+            <i class="lux-icon icon-logout"></i>Logout
           </a>
         </div>
 
@@ -541,89 +541,89 @@ p.-text
   | smaller padding at the sides.
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
-      .chi-dropdown__menu.-active
-        .chi-input__wrapper.-icon--left.chi-dropdown__menu-item(role="search")
-          input(type="text", class="chi-input", placeholder="Search", aria-label="Search")
-          i.chi-icon.icon-search
-        a.chi-dropdown__menu-item(href='#') Item 1
-        a.chi-dropdown__menu-item(href='#') Item 2
-        a.chi-dropdown__menu-item(href='#') Item 3
-        a.chi-dropdown__menu-item(href='#') Item 4
+    .lux-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
+      .lux-dropdown__menu.-active
+        .lux-input__wrapper.-icon--left.lux-dropdown__menu-item(role="search")
+          input(type="text", class="lux-input", placeholder="Search", aria-label="Search")
+          i.lux-icon.icon-search
+        a.lux-dropdown__menu-item(href='#') Item 1
+        a.lux-dropdown__menu-item(href='#') Item 2
+        a.lux-dropdown__menu-item(href='#') Item 3
+        a.lux-dropdown__menu-item(href='#') Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-search
+    ul.lux-tabs#example-search
       li.-disabled
         a(href=`#webcomponent-search`) Web Component
       li.-active
         a(href=`#html-search`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-search
-  .chi-tabs-panel.-active#html-search
+  .lux-tabs-panel#webcomponent-search
+  .lux-tabs-panel.-active#html-search
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <div class="chi-input__wrapper -icon--left chi-dropdown__menu-item" role="search">
-          <input class="chi-input" type="text" placeholder="Search" aria-label="Search">
-          <i class="chi-icon icon-search"></i>
+      <div class="lux-dropdown__menu">
+        <div class="lux-input__wrapper -icon--left lux-dropdown__menu-item" role="search">
+          <input class="lux-input" type="text" placeholder="Search" aria-label="Search">
+          <i class="lux-icon icon-search"></i>
         </div>
-        <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 3</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 4</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 3</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 4</a>
       </div>
 
 h3 Checkboxes
 h4 Base
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
-      .chi-dropdown__menu.-active
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox1")
-            label(for="checkbox1", class="chi-checkbox__label") Item 1
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox2", disabled)
-            label(for="checkbox2", class="chi-checkbox__label") Item 2
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox3", checked)
-            label(for="checkbox3", class="chi-checkbox__label") Item 3
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox4")
-            label(for="checkbox4", class="chi-checkbox__label") Item 4
+    .lux-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
+      .lux-dropdown__menu.-active
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox1")
+            label(for="checkbox1", class="lux-checkbox__label") Item 1
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox2", disabled)
+            label(for="checkbox2", class="lux-checkbox__label") Item 2
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox3", checked)
+            label(for="checkbox3", class="lux-checkbox__label") Item 3
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox4")
+            label(for="checkbox4", class="lux-checkbox__label") Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-checkbox
+    ul.lux-tabs#example-checkbox
       li.-disabled
         a(href=`#webcomponent-checkbox`) Web Component
       li.-active
         a(href=`#html-checkbox`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-checkbox
-  .chi-tabs-panel.-active#html-checkbox
+  .lux-tabs-panel#webcomponent-checkbox
+  .lux-tabs-panel.-active#html-checkbox
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox1">
-            <label class="chi-checkbox__label" for="checkbox1">Item 1</label>
+      <div class="lux-dropdown__menu">
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox1">
+            <label class="lux-checkbox__label" for="checkbox1">Item 1</label>
           </div>
         </div>
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox2" disabled>
-            <label class="chi-checkbox__label" for="checkbox2">Item 2</label>
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox2" disabled>
+            <label class="lux-checkbox__label" for="checkbox2">Item 2</label>
           </div>
         </div>
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox3" checked>
-            <label class="chi-checkbox__label" for="checkbox3">Item 3</label>
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox3" checked>
+            <label class="lux-checkbox__label" for="checkbox3">Item 3</label>
           </div>
         </div>
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox4">
-            <label class="chi-checkbox__label" for="checkbox4">Item 4</label>
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox4">
+            <label class="lux-checkbox__label" for="checkbox4">Item 4</label>
           </div>
         </div>
       </div>
@@ -631,74 +631,74 @@ h4 Base
 h4 With Icons
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--10.-w-sm--6.-w-md--7.-w-lg--5.-w-xl--3
-      .chi-dropdown__menu.-active
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox1b")
-            label(for="checkbox1b", class="chi-checkbox__label")
-              i.chi-icon.icon-logo-centurylink
+    .lux-col.-w--10.-w-sm--6.-w-md--7.-w-lg--5.-w-xl--3
+      .lux-dropdown__menu.-active
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox1b")
+            label(for="checkbox1b", class="lux-checkbox__label")
+              i.lux-icon.icon-logo-centurylink
               | Item 1
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox2b", disabled)
-            label(for="checkbox2b", class="chi-checkbox__label")
-              i.chi-icon.icon-logo-centurylink
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox2b", disabled)
+            label(for="checkbox2b", class="lux-checkbox__label")
+              i.lux-icon.icon-logo-centurylink
               | Item 2
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox3b", checked)
-            label(for="checkbox3b", class="chi-checkbox__label")
-              i.chi-icon.icon-logo-centurylink
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox3b", checked)
+            label(for="checkbox3b", class="lux-checkbox__label")
+              i.lux-icon.icon-logo-centurylink
               | Item 3
-        .chi-dropdown__menu-item
-          .chi-checkbox
-            input(type="checkbox", class="chi-checkbox__input", id="checkbox4b")
-            label(for="checkbox4b", class="chi-checkbox__label")
-              i.chi-icon.icon-logo-centurylink
+        .lux-dropdown__menu-item
+          .lux-checkbox
+            input(type="checkbox", class="lux-checkbox__input", id="checkbox4b")
+            label(for="checkbox4b", class="lux-checkbox__label")
+              i.lux-icon.icon-logo-centurylink
               | Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-checkbox-icons
+    ul.lux-tabs#example-checkbox-icons
       li.-disabled
         a(href=`#webcomponent-checkbox-icons`) Web Component
       li.-active
         a(href=`#html-checkbox-icons`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-checkbox-icons
-  .chi-tabs-panel.-active#html-checkbox-icons
+  .lux-tabs-panel#webcomponent-checkbox-icons
+  .lux-tabs-panel.-active#html-checkbox-icons
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox1">
-            <label class="chi-checkbox__label" for="checkbox1">
-              <i class="chi-icon icon-logo-centurylink"></i>
+      <div class="lux-dropdown__menu">
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox1">
+            <label class="lux-checkbox__label" for="checkbox1">
+              <i class="lux-icon icon-logo-centurylink"></i>
               Item 1
             </label>
           </div>
         </div>
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox2" disabled>
-            <label class="chi-checkbox__label" for="checkbox2">
-              <i class="chi-icon icon-logo-centurylink"></i>
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox2" disabled>
+            <label class="lux-checkbox__label" for="checkbox2">
+              <i class="lux-icon icon-logo-centurylink"></i>
               Item 2
             </label>
           </div>
         </div>
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox3" checked>
-            <label class="chi-checkbox__label" for="checkbox3">
-              <i class="chi-icon icon-logo-centurylink"></i>
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox3" checked>
+            <label class="lux-checkbox__label" for="checkbox3">
+              <i class="lux-icon icon-logo-centurylink"></i>
               Item 3
             </label>
           </div>
         </div>
-        <div class="chi-dropdown__menu-item">
-          <div class="chi-checkbox">
-            <input class="chi-checkbox__input" type="checkbox" id="checkbox4">
-            <label class="chi-checkbox__label" for="checkbox4">
-              <i class="chi-icon icon-logo-centurylink"></i>
+        <div class="lux-dropdown__menu-item">
+          <div class="lux-checkbox">
+            <input class="lux-checkbox__input" type="checkbox" id="checkbox4">
+            <label class="lux-checkbox__label" for="checkbox4">
+              <i class="lux-icon icon-logo-centurylink"></i>
               Item 4
             </label>
           </div>
@@ -708,60 +708,60 @@ h4 With Icons
 h3 Radio Buttons
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
-      .chi-dropdown__menu.-active
+    .lux-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
+      .lux-dropdown__menu.-active
         fieldset
-          legend.chi-dropdown__menu-item Select an option
-          .chi-dropdown__menu-item
-            .chi-radio
-              input(class="chi-radio__input", type="radio", name="radios", id="radio1")
-              label.chi-radio__label(for="radio1") Radio Button 1
-          .chi-dropdown__menu-item
-            .chi-radio
-              input(class="chi-radio__input", type="radio", name="radios", id="radio2", disabled)
-              label.chi-radio__label(for="radio2") Disabled Radio Button 2
-          .chi-dropdown__menu-item
-            .chi-radio
-              input(class="chi-radio__input", type="radio", name="radios", id="radio3")
-              label.chi-radio__label(for="radio3") Radio Button 3
-          .chi-dropdown__menu-item
-            .chi-radio
-              input(class="chi-radio__input", type="radio", name="radios", id="radio4")
-              label.chi-radio__label(for="radio4") Radio Button 4
+          legend.lux-dropdown__menu-item Select an option
+          .lux-dropdown__menu-item
+            .lux-radio
+              input(class="lux-radio__input", type="radio", name="radios", id="radio1")
+              label.lux-radio__label(for="radio1") Radio Button 1
+          .lux-dropdown__menu-item
+            .lux-radio
+              input(class="lux-radio__input", type="radio", name="radios", id="radio2", disabled)
+              label.lux-radio__label(for="radio2") Disabled Radio Button 2
+          .lux-dropdown__menu-item
+            .lux-radio
+              input(class="lux-radio__input", type="radio", name="radios", id="radio3")
+              label.lux-radio__label(for="radio3") Radio Button 3
+          .lux-dropdown__menu-item
+            .lux-radio
+              input(class="lux-radio__input", type="radio", name="radios", id="radio4")
+              label.lux-radio__label(for="radio4") Radio Button 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-radio
+    ul.lux-tabs#example-radio
       li.-disabled
         a(href=`#webcomponent-radio`) Web Component
       li.-active
         a(href=`#html-radio`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-radio
-  .chi-tabs-panel.-active#html-radio
+  .lux-tabs-panel#webcomponent-radio
+  .lux-tabs-panel.-active#html-radio
     :code(lang="html")
-      <div class="chi-dropdown__menu">
+      <div class="lux-dropdown__menu">
         <fieldset>
-          <legend class="chi-dropdown__menu-item">Select an option</legend>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-radio">
-              <input class="chi-radio__input" type="radio" name="radios" id="radio1">
-              <label class="chi-radio__label" for="radio1">Radio Button 1</label>
+          <legend class="lux-dropdown__menu-item">Select an option</legend>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-radio">
+              <input class="lux-radio__input" type="radio" name="radios" id="radio1">
+              <label class="lux-radio__label" for="radio1">Radio Button 1</label>
             </div>
           </div>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-radio">
-              <input class="chi-radio__input" type="radio" name="radios" id="radio2" disabled>
-              <label class="chi-radio__label" for="radio2">Disabled Radio Button 2</label>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-radio">
+              <input class="lux-radio__input" type="radio" name="radios" id="radio2" disabled>
+              <label class="lux-radio__label" for="radio2">Disabled Radio Button 2</label>
             </div>
           </div>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-radio">
-              <input class="chi-radio__input" type="radio" name="radios" id="radio3">
-              <label class="chi-radio__label" for="radio3">Radio Button 3</label>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-radio">
+              <input class="lux-radio__input" type="radio" name="radios" id="radio3">
+              <label class="lux-radio__label" for="radio3">Radio Button 3</label>
             </div>
           </div>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-radio">
-              <input class="chi-radio__input" type="radio" name="radios" id="radio4">
-              <label class="chi-radio__label" for="radio4">Radio Button 4</label>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-radio">
+              <input class="lux-radio__input" type="radio" name="radios" id="radio4">
+              <label class="lux-radio__label" for="radio4">Radio Button 4</label>
             </div>
           </div>
         </fieldset>
@@ -770,107 +770,107 @@ h3 Radio Buttons
 h3 Range Input
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
-      .chi-dropdown__menu.-active
-        .chi-dropdown__menu-item
+    .lux-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
+      .lux-dropdown__menu.-active
+        .lux-dropdown__menu-item
           span.-text.-mr--2 200GB
-          input.chi-input(type="range", aria-label="Range description")
+          input.lux-input(type="range", aria-label="Range description")
           span.-text.-ml--2 5TB
-        .chi-divider
-        legend.chi-dropdown__menu-item Select range
-        .chi-dropdown__menu-item
-          input.chi-input(type="range", aria-label="Range description")
+        .lux-divider
+        legend.lux-dropdown__menu-item Select range
+        .lux-dropdown__menu-item
+          input.lux-input(type="range", aria-label="Range description")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-range
+    ul.lux-tabs#example-range
       li.-disabled
         a(href=`#webcomponent-range`) Web Component
       li.-active
         a(href=`#html-range`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-range
-  .chi-tabs-panel.-active#html-range
+  .lux-tabs-panel#webcomponent-range
+  .lux-tabs-panel.-active#html-range
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <div class="chi-dropdown__menu-item">
+      <div class="lux-dropdown__menu">
+        <div class="lux-dropdown__menu-item">
           <span class="-text -mr--2">200GB</span>
-          <input class="chi-input" type="range" aria-label="Range description">
+          <input class="lux-input" type="range" aria-label="Range description">
           <span class="-text -ml--2">5TB</span>
         </div>
-        <div class="chi-divider"></div>
-        <legend class="chi-dropdown__menu-item">Select range</legend>
-        <div class="chi-dropdown__menu-item">
-          <input class="chi-input" type="range" aria-label="Range description">
+        <div class="lux-divider"></div>
+        <legend class="lux-dropdown__menu-item">Select range</legend>
+        <div class="lux-dropdown__menu-item">
+          <input class="lux-input" type="range" aria-label="Range description">
         </div>
       </div>
 
 h3 Toggle Switch
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
-      .chi-dropdown__menu.-active
-        legend.chi-dropdown__menu-item Configure options
-        .chi-dropdown__menu-item
-          .chi-form__item
-            label.chi-switch(for="toggle-mail")
-              input(type="checkbox", class="chi-switch__input", id="toggle-mail")
-              span(class="chi-switch__content")
-                span.chi-switch__thumb
-              span.chi-switch__label Email notifications
-        .chi-dropdown__menu-item
-          .chi-form__item
-            label.chi-switch(for="toggle-tlf")
-              input(type="checkbox", class="chi-switch__input", id="toggle-tlf")
-              span(class="chi-switch__content")
-                span.chi-switch__thumb
-              span.chi-switch__label Phone notifications
-        .chi-dropdown__menu-item
-          .chi-form__item
-            label.chi-switch(for="toggle-app")
-              input(type="checkbox", class="chi-switch__input", id="toggle-app")
-              span(class="chi-switch__content")
-                span.chi-switch__thumb
-              span.chi-switch__label App notifications
+    .lux-col.-w--12.-w-sm--7.-w-md--8.-w-lg--6.-w-xl--4
+      .lux-dropdown__menu.-active
+        legend.lux-dropdown__menu-item Configure options
+        .lux-dropdown__menu-item
+          .lux-form__item
+            label.lux-switch(for="toggle-mail")
+              input(type="checkbox", class="lux-switch__input", id="toggle-mail")
+              span(class="lux-switch__content")
+                span.lux-switch__thumb
+              span.lux-switch__label Email notifications
+        .lux-dropdown__menu-item
+          .lux-form__item
+            label.lux-switch(for="toggle-tlf")
+              input(type="checkbox", class="lux-switch__input", id="toggle-tlf")
+              span(class="lux-switch__content")
+                span.lux-switch__thumb
+              span.lux-switch__label Phone notifications
+        .lux-dropdown__menu-item
+          .lux-form__item
+            label.lux-switch(for="toggle-app")
+              input(type="checkbox", class="lux-switch__input", id="toggle-app")
+              span(class="lux-switch__content")
+                span.lux-switch__thumb
+              span.lux-switch__label App notifications
   .example-tabs.-pl--2
-    ul.chi-tabs#example-switch
+    ul.lux-tabs#example-switch
       li.-disabled
         a(href=`#webcomponent-switch`) Web Component
       li.-active
         a(href=`#html-switch`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-switch
-  .chi-tabs-panel.-active#html-switch
+  .lux-tabs-panel#webcomponent-switch
+  .lux-tabs-panel.-active#html-switch
     :code(lang="html")
-      <div class="chi-dropdown__menu">
+      <div class="lux-dropdown__menu">
         <fieldset>
-          <legend class="chi-dropdown__menu-item">Configure options</legend>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-form__item">
-              <label class="chi-switch" for="toggle-mail">
-                <input type="checkbox" class="chi-switch__input" id="toggle-mail">
-                <span class="chi-switch__content">
-                  <span class="chi-switch__thumb"></span>
+          <legend class="lux-dropdown__menu-item">Configure options</legend>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-form__item">
+              <label class="lux-switch" for="toggle-mail">
+                <input type="checkbox" class="lux-switch__input" id="toggle-mail">
+                <span class="lux-switch__content">
+                  <span class="lux-switch__thumb"></span>
                 </span>
-                <span class="chi-switch__label">Email notifications</span>
+                <span class="lux-switch__label">Email notifications</span>
               </label>
             </div>
           </div>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-form__item">
-              <label class="chi-switch" for="toggle-tlf">
-                <input type="checkbox" class="chi-switch__input" id="toggle-tlf">
-                <span class="chi-switch__content">
-                  <span class="chi-switch__thumb"></span>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-form__item">
+              <label class="lux-switch" for="toggle-tlf">
+                <input type="checkbox" class="lux-switch__input" id="toggle-tlf">
+                <span class="lux-switch__content">
+                  <span class="lux-switch__thumb"></span>
                 </span>
-                <span class="chi-switch__label">Phone notifications</span>
+                <span class="lux-switch__label">Phone notifications</span>
               </label>
             </div>
           </div>
-          <div class="chi-dropdown__menu-item">
-            <div class="chi-form__item">
-              <label class="chi-switch" for="toggle-app">
-                <input type="checkbox" class="chi-switch__input" id="toggle-mail">
-                <span class="chi-switch__content">
-                  <span class="chi-switch__thumb"></span>
+          <div class="lux-dropdown__menu-item">
+            <div class="lux-form__item">
+              <label class="lux-switch" for="toggle-app">
+                <input type="checkbox" class="lux-switch__input" id="toggle-mail">
+                <span class="lux-switch__content">
+                  <span class="lux-switch__thumb"></span>
                 </span>
-                <span class="chi-switch__label">Email notifications</span>
+                <span class="lux-switch__label">Email notifications</span>
               </label>
             </div>
           </div>
@@ -881,26 +881,26 @@ h3 Plain Text
 p.-text Use a <code>span</code> tag to include text without rendering as a link.
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
-      .chi-dropdown__menu.-active
-        span.chi-dropdown__menu-item Text 1
-        span.chi-dropdown__menu-item Text 2
-        span.chi-dropdown__menu-item Text 3
-        span.chi-dropdown__menu-item Text 4
+    .lux-col.-w--7.-w-sm--4.-w-md--5.-w-lg--3
+      .lux-dropdown__menu.-active
+        span.lux-dropdown__menu-item Text 1
+        span.lux-dropdown__menu-item Text 2
+        span.lux-dropdown__menu-item Text 3
+        span.lux-dropdown__menu-item Text 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-text
+    ul.lux-tabs#example-text
       li.-disabled
         a(href=`#webcomponent-text`) Web Component
       li.-active
         a(href=`#html-text`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-text
-  .chi-tabs-panel.-active#html-text
+  .lux-tabs-panel#webcomponent-text
+  .lux-tabs-panel.-active#html-text
     :code(lang="html")
-      <div class="chi-dropdown__menu">
-        <span class="chi-dropdown__menu-item">Text 1</span>
-        <span class="chi-dropdown__menu-item">Text 2</span>
-        <span class="chi-dropdown__menu-item">Text 3</span>
-        <span class="chi-dropdown__menu-item">Text 4</span>
+      <div class="lux-dropdown__menu">
+        <span class="lux-dropdown__menu-item">Text 1</span>
+        <span class="lux-dropdown__menu-item">Text 2</span>
+        <span class="lux-dropdown__menu-item">Text 3</span>
+        <span class="lux-dropdown__menu-item">Text 4</span>
       </div>
 
 h3 Helpers
@@ -909,59 +909,59 @@ p.-text
   | Wrap the menu-item content in a div with the class <code>-flex--ellipsis</code> to truncate long strings.
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-dropdown__menu.-active(style="width:10rem")
-      a.chi-dropdown__menu-item(href='#') Item 1
-      a.chi-dropdown__menu-item(href='#') Item 2
-      a.chi-dropdown__menu-item(href='#')
+    .lux-dropdown__menu.-active(style="width:10rem")
+      a.lux-dropdown__menu-item(href='#') Item 1
+      a.lux-dropdown__menu-item(href='#') Item 2
+      a.lux-dropdown__menu-item(href='#')
         .-flex--ellipsis Item 3 with truncated longer text
-      a.chi-dropdown__menu-item(href='#') Item 4
+      a.lux-dropdown__menu-item(href='#') Item 4
   .example-tabs.-pl--2
-    ul.chi-tabs#example-truncate
+    ul.lux-tabs#example-truncate
       li.-disabled
         a(href=`#webcomponent-truncate`) Web Component
       li.-active
         a(href=`#html-truncate`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-truncate
-  .chi-tabs-panel.-active#html-truncate
+  .lux-tabs-panel#webcomponent-truncate
+  .lux-tabs-panel.-active#html-truncate
     :code(lang="html")
-      <div class="chi-dropdown__menu" style="width:10rem">
-        <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-        <a class="chi-dropdown__menu-item" href="#">Item 2</a>
-        <a class="chi-dropdown__menu-item" href="#">
+      <div class="lux-dropdown__menu" style="width:10rem">
+        <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 2</a>
+        <a class="lux-dropdown__menu-item" href="#">
           <div class="-flex--ellipsis">Item 3 with truncated longer text</div>
         </a>
-        <a class="chi-dropdown__menu-item" href="#">Item 4</a>
+        <a class="lux-dropdown__menu-item" href="#">Item 4</a>
       </div>
 
 h4 Flexible height
 p.-text Add the class <code>-h--auto</code> to set menu item height to auto.
 .example.-mb--3
   .-p--3(style="background-color:#eee;")
-    .chi-dropdown__menu.-active(style="width:10rem")
-      a.chi-dropdown__menu-item(href="#") Item 1
-      .chi-dropdown__menu-item.-h--auto.-py--1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      a.chi-dropdown__menu-item(href="#") Item 2
+    .lux-dropdown__menu.-active(style="width:10rem")
+      a.lux-dropdown__menu-item(href="#") Item 1
+      .lux-dropdown__menu-item.-h--auto.-py--1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      a.lux-dropdown__menu-item(href="#") Item 2
   .example-tabs.-pl--2
-    ul.chi-tabs#example-flexheight
+    ul.lux-tabs#example-flexheight
       li.-disabled
         a(href=`#webcomponent-flexheight`) Web Component
       li.-active
         a(href=`#html-flexheight`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-flexheight
-  .chi-tabs-panel.-active#html-flexheight
+  .lux-tabs-panel#webcomponent-flexheight
+  .lux-tabs-panel.-active#html-flexheight
     :code(lang="html")
-      <div class="chi-dropdown__menu" style="width:10rem">
-        <a class="chi-dropdown__menu-item" href="#">Item 1</a>
-        <div class="chi-dropdown__menu-item -h--auto -py--1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-        <a class="chi-dropdown__menu-item" href="#">Item 2</a>
+      <div class="lux-dropdown__menu" style="width:10rem">
+        <a class="lux-dropdown__menu-item" href="#">Item 1</a>
+        <div class="lux-dropdown__menu-item -h--auto -py--1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <a class="lux-dropdown__menu-item" href="#">Item 2</a>
       </div>
 
 script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
-      chi.dropdown(document.querySelectorAll('.chi-dropdown .chi-button'))
-      chi.dropdown(document.getElementById('dropdown-2'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
+      lux.dropdown(document.querySelectorAll('.lux-dropdown .lux-button'))
+      lux.dropdown(document.getElementById('dropdown-2'));
     }
   );

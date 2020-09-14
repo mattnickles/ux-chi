@@ -1,0 +1,60 @@
+@import '_mixins';
+@import '_variables';
+
+.lux-backdrop {
+  background-color: rgba($color-black, 0.65);
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 0.5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $zindex-backdrop;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem auto;
+    max-width: 45rem;
+    min-height: calc(100% - 2rem);
+  }
+
+  &.-center {
+    .lux-backdrop__wrapper {
+      justify-content: center;
+    }
+  }
+
+  &.-animated {
+    transition: background-color 0.5s cubic-bezier(0.38, 0.52, 0.37, 1);
+
+    &.-closed {
+      background-color: rgba($color-black, 0);
+    }
+  }
+
+  &.-inverse {
+    background-color: rgba($color-white, 0.8);
+  }
+
+  &.-closed {
+    display: none;
+
+    &.-transitioning {
+      display: block;
+    }
+  }
+}
+
+/* IE11 CSS hack */
+@media all and (-ms-high-contrast: none) {
+  .lux-backdrop {
+    &__wrapper {
+      height: calc(100% - 2rem);
+    }
+  }
+}

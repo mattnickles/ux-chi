@@ -1,4 +1,4 @@
-:host(chi-alert) {
+:host(lux-alert) {
   @import '../../global/styles/common';
   @import 'components/alert/_alert-common';
   @import 'components/alert/_banner';
@@ -12,11 +12,11 @@
     }
   }
 
-  chi-button {
+  lux-button {
     align-self: flex-start;
   }
 }
 
-::slotted(chi-icon) {
+::slotted(lux-icon) {
   align-self: flex-start;
 }

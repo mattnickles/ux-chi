@@ -14,7 +14,7 @@ import { CLASSES } from '../../constants/constants';
 const WEEK_CLASS_PART = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
 @Component({
-  tag: 'chi-date',
+  tag: 'lux-date',
   styleUrl: 'date.scss',
   scoped: true
 })
@@ -136,7 +136,7 @@ export class Date {
   /**
    * Date change value event
    */
-  @Event({ eventName: 'chiDateChange' }) eventChange: EventEmitter;
+  @Event({ eventName: 'luxDateChange' }) eventChange: EventEmitter;
 
   _vm: {
     date: Dayjs;
@@ -252,11 +252,11 @@ export class Date {
 
     return (
       <div
-        class={`chi-datepicker ${this._vm.weekStartClass} ${
+        class={`lux-datepicker ${this._vm.weekStartClass} ${
           this._vm.monthStartClass
         }`}
       >
-        <div class="chi-datepicker__month-row">
+        <div class="lux-datepicker__month-row">
           <div
             class={`prev ${
               this._vm.min && endOfLastMonth.isBefore(this._vm.min)
@@ -265,9 +265,9 @@ export class Date {
             }`}
             onClick={() => this.prevMonth()}
           >
-            <chi-icon icon="chevron-left" size="sm" />
+            <lux-icon icon="chevron-left" size="sm" />
           </div>
-          <div class="chi-datepicker__month">
+          <div class="lux-datepicker__month">
             {`${this.viewMonth.format('MMMM')}
               ${this.viewMonth.format('YYYY')}`}
           </div>
@@ -279,20 +279,20 @@ export class Date {
             }`}
             onClick={() => this.nextMonth()}
           >
-            <chi-icon icon="chevron-right" size="sm" />
+            <lux-icon icon="chevron-right" size="sm" />
           </div>
         </div>
-        <div class="chi-datepicker__day-names">
+        <div class="lux-datepicker__day-names">
           {this._vm.weekDays.map(weekDay => (
-            <div class="chi-datepicker__week-day">
+            <div class="lux-datepicker__week-day">
               {weekDay.format('dddd').substr(0, 1)}
             </div>
           ))}
         </div>
-        <div class="chi-datepicker__days">
+        <div class="lux-datepicker__days">
           {this._vm.monthDays.map(day => (
             <div
-              class={`chi-datepicker__day
+              class={`lux-datepicker__day
               ${
                 (this._vm.min && day.isBefore(this._vm.min)) ||
                 (this._vm.max && day.isAfter(this._vm.max)) ||

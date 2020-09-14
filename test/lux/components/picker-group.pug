@@ -1,0 +1,93 @@
+---
+title: Picker group
+---
+
+- var sizes = ['sm', 'md', 'lg', 'xl'];
+
+.test-base
+  h3 Base
+  .lux-picker-group
+    each type in ['Radio1','Radio2','Radio3']
+      input.lux-picker__input(type="radio", name='box', id=`i-${type}`)
+      label(for=`i-${type}`)
+        = type
+.test-base-checked
+  h3 Base checked
+  .lux-picker-group
+    each type in ['Radio1','Radio2','Radio3']
+      input.lux-picker__input(type="radio", name='box', id=`ia-${type}`, checked=(type==='Radio2'))
+      label(for=`ia-${type}`)
+        = type
+.test-with-texts-and-icons
+  h3 Texts and icons
+  .lux-picker-group
+    input.lux-picker__input(type="radio", name='radios', id=`ib-radio1`)
+    label(for=`ib-radio1`)
+      i.lux-icon.icon-atom.-sm
+      span Radio1
+    input.lux-picker__input(type="radio", name='radios', id=`ib-radio2`)
+    label(for=`ib-radio2`)
+      span Radio2
+      i.lux-icon.icon-atom.-sm
+    input.lux-picker__input(type="radio", name='radios', id=`ib-radio3`)
+    label(for=`ib-radio3`)
+      i.lux-icon.icon-atom.-sm
+      span Radio3
+      i.lux-icon.icon-atom.-sm
+
+.test-with-icons
+  h3 Icons
+  .example
+    .lux-picker-group
+      each type in ['Radio1','Radio2','Radio3']
+        input.lux-picker__input(type="radio", name='radios', id=`ic-${type}`)
+        label(for=`ic-${type}`)
+          span.-sr--only Button action
+          i.lux-icon.icon-atom.-sm
+
+.test-fluid(style='width: 700px;')
+  h3 Fluid
+  .lux-picker-group.-fluid
+    each type in ['Radio1','Radio2','Radio3']
+      input.lux-picker__input(type="radio", name='box', id=`id-${type}`)
+      label(for=`id-${type}`)
+        = type
+.test-alignment(style='width: 700px;')
+  h3 Alignment
+  .lux-picker-group.-fluid
+      input.lux-picker__input(type="radio", name='box', id='ie-Radio1')
+      label.-align--left(for='ie-Radio1') Radio1
+      input.lux-picker__input(type="radio", name='box', id='ie-Radio2')
+      label.-align--center(for='ie-Radio2') Radio2
+      input.lux-picker__input(type="radio", name='box', id='ie-Radio3')
+      label.-align--right(for='ie-Radio3') Radio3
+.test-disable-fluidity(style='width: 700px;')
+  h3 Disable Fluidity
+  .lux-picker-group.-fluid
+      input.lux-picker__input(type="radio", name='box', id='if-Radio1')
+      label(for='if-Radio1') Radio1
+      input.lux-picker__input(type="radio", name='box', id='if-Radio2')
+      label.-no-fluid(for='if-Radio2') Radio2
+      input.lux-picker__input(type="radio", name='box', id='if-Radio3')
+      label(for='if-Radio3') Radio3
+
+
+.example
+  each size in ['sm', 'md', 'lg', 'xl']
+    div(class=`test-${size}`)
+      div.-text--h4= 'Picker group size -' + size
+      .-d--flex.-flex--wrap
+        .lux-picker-group.-mr--2
+          each type in ['Radio1','Radio2','Radio3']
+            input.lux-picker__input(type="radio", name='radios', id=`ig-${type}-${size}`)
+            label(for=`ig-${type}-${size}`, class=`-${size}`)
+                = type
+        .lux-picker-group
+          each type in ['Radio1','Radio2','Radio3']
+            input.lux-picker__input(type="radio", name='radios', id=`ig-i-${type}-${size}`)
+            label(for=`ig-i-${type}-${size}`, class=`-${size}`)
+              span.-sr--only Button action
+              if size === 'sm'
+                i.lux-icon.icon-atom.-xs
+              else
+                i.lux-icon.icon-atom.-sm

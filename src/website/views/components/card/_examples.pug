@@ -1,26 +1,26 @@
 h2 Examples
 p.-text
-  | To display a card, use the class <code>chi-card</code>.
+  | To display a card, use the class <code>lux-card</code>.
 
 h3 Base
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | This is a card
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">This is a card</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">This is a card</div>
         </div>
       </div>
 
@@ -29,22 +29,22 @@ p.-text
   | Render an active state card with the class <code>-active</code>.
 .example.-mb--3
   .-p--3
-    .chi-card.-active(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card.-active(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | This is an active card
   .example-tabs.-pl--2
-    ul.chi-tabs#example-active
+    ul.lux-tabs#example-active
       li.-disabled
         a(href=`#webcomponent-active`) Web Component
       li.-active
         a(href=`#html-active`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-active
-  .chi-tabs-panel.-active#html-active
+  .lux-tabs-panel#webcomponent-active
+  .lux-tabs-panel.-active#html-active
     :code(lang="html")
-      <div class="chi-card -active">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">This is an active card</div>
+      <div class="lux-card -active">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">This is an active card</div>
         </div>
       </div>
 
@@ -53,22 +53,22 @@ p.-text
   | Render a card without a border using the class <code>-no-border</code>.
 .example.-mb--3
   .-p--3
-    .chi-card.-no-border(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card.-no-border(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | This is a card with no border
   .example-tabs.-pl--2
-    ul.chi-tabs#example-no-border
+    ul.lux-tabs#example-no-border
       li.-disabled
         a(href=`#webcomponent-no-border`) Web Component
       li.-active
         a(href=`#html-no-border`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-no-border
-  .chi-tabs-panel.-active#html-no-border
+  .lux-tabs-panel#webcomponent-no-border
+  .lux-tabs-panel.-active#html-no-border
     :code(lang="html")
-      <div class="chi-card -no-border">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">This is a card with no border</div>
+      <div class="lux-card -no-border">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">This is a card with no border</div>
         </div>
       </div>
 
@@ -77,47 +77,47 @@ p.-text
   | Render an empty state card with the class <code>-empty</code>.
 .example.-mb--3
   .-p--3
-    .chi-card.-empty(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card.-empty(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | This is an empty card
   .example-tabs.-pl--2
-    ul.chi-tabs#example-empty
+    ul.lux-tabs#example-empty
       li.-disabled
         a(href=`#webcomponent-empty`) Web Component
       li.-active
         a(href=`#html-empty`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-empty
-  .chi-tabs-panel.-active#html-empty
+  .lux-tabs-panel#webcomponent-empty
+  .lux-tabs-panel.-active#html-empty
     :code(lang="html")
-      <div class="chi-card -empty">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">This is an empty card</div>
+      <div class="lux-card -empty">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">This is an empty card</div>
         </div>
       </div>
 
 h3 Titled
 p.-text
-  | Add a title to a card by applying the class <code>chi-card__title</code>.
+  | Add a title to a card by applying the class <code>lux-card__title</code>.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__title Title
-        .chi-card__caption This is a titled card
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__title Title
+        .lux-card__caption This is a titled card
   .example-tabs.-pl--2
-    ul.chi-tabs#example-titled
+    ul.lux-tabs#example-titled
       li.-disabled
         a(href=`#webcomponent-titled`) Web Component
       li.-active
         a(href=`#html-titled`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-titled
-  .chi-tabs-panel.-active#html-titled
+  .lux-tabs-panel#webcomponent-titled
+  .lux-tabs-panel.-active#html-titled
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__title">Title</div>
-          <div class="chi-card__caption">This is a titled card</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__title">Title</div>
+          <div class="lux-card__caption">This is a titled card</div>
         </div>
       </div>
 
@@ -126,77 +126,77 @@ p.-text
   | Center align a card by applying the class <code>-align--center</code>.
 .example.-mb--3
   .-p--3
-    .chi-card.-align--center(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__title Title
-        .chi-card__caption
+    .lux-card.-align--center(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__title Title
+        .lux-card__caption
           | This is a center aligned card
-        .chi-card__actions
-          button.chi-button.-primary Action
+        .lux-card__actions
+          button.lux-button.-primary Action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-align-center
+    ul.lux-tabs#example-align-center
       li.-disabled
         a(href=`#webcomponent-align-center`) Web Component
       li.-active
         a(href=`#html-align-center`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-align-center
-  .chi-tabs-panel.-active#html-align-center
+  .lux-tabs-panel#webcomponent-align-center
+  .lux-tabs-panel.-active#html-align-center
     :code(lang="html")
-      <div class="chi-card -align--center">
-        <div class="chi-card__content">
-          <div class="chi-card__title">Title</div>
-          <div class="chi-card__caption">This is a center aligned card</div>
-          <div class="chi-card__actions">
-            <button class="chi-button -primary">Action</button>
+      <div class="lux-card -align--center">
+        <div class="lux-card__content">
+          <div class="lux-card__title">Title</div>
+          <div class="lux-card__caption">This is a center aligned card</div>
+          <div class="lux-card__actions">
+            <button class="lux-button -primary">Action</button>
           </div>
         </div>
       </div>
 
 h3 Titled with content and icon
 .example.-mb--3
-  .-p--3.chi-grid
-    .chi-col.-w--6.-w-md--4.-w-lg--3
-      .chi-card.-align--center
-        .chi-card__content
-          .chi-card__title Title
-          i.chi-icon.chi-card__icon.-sm--3(class="icon-atom")
-          .chi-card__caption
+  .-p--3.lux-grid
+    .lux-col.-w--6.-w-md--4.-w-lg--3
+      .lux-card.-align--center
+        .lux-card__content
+          .lux-card__title Title
+          i.lux-icon.lux-card__icon.-sm--3(class="icon-atom")
+          .lux-card__caption
             span.-text--sm Meta Label
             span.-text--xs.-text--grey Sublabel
-    .chi-col.-w--6.-w-md--4.-w-lg--3
-      .chi-card.-active.-align--center
-        .chi-card__content
-          .chi-card__title Title
-          i.chi-icon.chi-card__icon.-sm--3.chi-card__icon(class="icon-atom")
-          .chi-card__caption
+    .lux-col.-w--6.-w-md--4.-w-lg--3
+      .lux-card.-active.-align--center
+        .lux-card__content
+          .lux-card__title Title
+          i.lux-icon.lux-card__icon.-sm--3.lux-card__icon(class="icon-atom")
+          .lux-card__caption
             span.-text--sm Meta Label
             span.-text--xs.-text--grey Sublabel
   .example-tabs.-pl--2
-    ul.chi-tabs#example-titled-content
+    ul.lux-tabs#example-titled-content
       li.-disabled
         a(href=`#webcomponent-titled-content`) Web Component
       li.-active
         a(href=`#html-titled-content`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-titled-content
-  .chi-tabs-panel.-active#html-titled-content
+  .lux-tabs-panel#webcomponent-titled-content
+  .lux-tabs-panel.-active#html-titled-content
     :code(lang="html")
       <!-- Base -->
-      <div class="chi-card -align--center">
-        <div class="chi-card__content">
-          <div class="chi-card__title">Title</div>
-          <i class="chi-card__icon chi-icon icon-atom -sm--3"></i>
-          <div class="chi-card__caption">
+      <div class="lux-card -align--center">
+        <div class="lux-card__content">
+          <div class="lux-card__title">Title</div>
+          <i class="lux-card__icon lux-icon icon-atom -sm--3"></i>
+          <div class="lux-card__caption">
             <span class="-text--sm">Meta Label</span>
             <span class="-text--xs -text--grey">Sublabel</span>
           </div>
         </div>
       </div>
       <!-- Active -->
-      <div class="chi-card -active -align--center">
-        <div class="chi-card__content">
-          <div class="chi-card__title">Title</div>
-          <i class="chi-card__icon chi-icon icon-atom -sm--3"></i>
-          <div class="chi-card__caption">
+      <div class="lux-card -active -align--center">
+        <div class="lux-card__content">
+          <div class="lux-card__title">Title</div>
+          <i class="lux-card__icon lux-icon icon-atom -sm--3"></i>
+          <div class="lux-card__caption">
             <span class="-text--sm">Meta Label</span>
             <span class="-text--xs -text--grey">Sublabel</span>
           </div>
@@ -207,65 +207,65 @@ h3 Animate on Hover
 p.-text
   | Animate a card on hover by applying the class <code>-hover--animate</code>.
 .example.-mb--3
-  .-p--3.chi-grid
-    .chi-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
-      .chi-card.-align--center.-hover--animate
-        .chi-card__content
-          .chi-card__title Title
-          i.chi-icon.chi-card__icon.-sm--3(class="icon-atom")
-          .chi-card__caption
+  .-p--3.lux-grid
+    .lux-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
+      .lux-card.-align--center.-hover--animate
+        .lux-card__content
+          .lux-card__title Title
+          i.lux-icon.lux-card__icon.-sm--3(class="icon-atom")
+          .lux-card__caption
             span.-text--sm Meta Label
             span.-text--xs.-text--grey Sublabel
-    .chi-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
-      .chi-card.-align--center.-hover--animate
-        .chi-card__content
-          .chi-card__title Title
-          i.chi-icon.chi-card__icon.-sm--3(class="icon-atom")
-          .chi-card__caption
+    .lux-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
+      .lux-card.-align--center.-hover--animate
+        .lux-card__content
+          .lux-card__title Title
+          i.lux-icon.lux-card__icon.-sm--3(class="icon-atom")
+          .lux-card__caption
             span.-text--sm Meta Label
             span.-text--xs.-text--grey Sublabel
-    .chi-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
-      .chi-card.-align--center.-hover--animate
-        .chi-card__content
-          .chi-card__title Title
-          i.chi-icon.chi-card__icon.-sm--3(class="icon-atom")
-          .chi-card__caption
+    .lux-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
+      .lux-card.-align--center.-hover--animate
+        .lux-card__content
+          .lux-card__title Title
+          i.lux-icon.lux-card__icon.-sm--3(class="icon-atom")
+          .lux-card__caption
             span.-text--sm Meta Label
             span.-text--xs.-text--grey Sublabel
-    .chi-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
-      .chi-card.-active.-align--center.-hover--animate
-        .chi-card__content
-          .chi-card__title Title
-          i.chi-icon.chi-card__icon.-sm--3.chi-card__icon(class="icon-atom")
-          .chi-card__caption
+    .lux-col.-w--6.-w-md--4.-w-lg--3.-mb--3.-mb-lg--0
+      .lux-card.-active.-align--center.-hover--animate
+        .lux-card__content
+          .lux-card__title Title
+          i.lux-icon.lux-card__icon.-sm--3.lux-card__icon(class="icon-atom")
+          .lux-card__caption
             span.-text--sm Meta Label
             span.-text--xs.-text--grey Sublabel
   .example-tabs.-pl--2
-    ul.chi-tabs#example-animate-hover
+    ul.lux-tabs#example-animate-hover
       li.-disabled
         a(href=`#webcomponent-animate-hover`) Web Component
       li.-active
         a(href=`#html-animate-hover`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-animate-hover
-  .chi-tabs-panel.-active#html-animate-hover
+  .lux-tabs-panel#webcomponent-animate-hover
+  .lux-tabs-panel.-active#html-animate-hover
     :code(lang="html")
       <!-- Base -->
-      <div class="chi-card -align--center -hover--animate">
-        <div class="chi-card__content">
-          <div class="chi-card__title">Title</div>
-          <i class="chi-card__icon chi-icon icon-atom -sm--3"></i>
-          <div class="chi-card__caption">
+      <div class="lux-card -align--center -hover--animate">
+        <div class="lux-card__content">
+          <div class="lux-card__title">Title</div>
+          <i class="lux-card__icon lux-icon icon-atom -sm--3"></i>
+          <div class="lux-card__caption">
             <span class="-text--sm">Meta Label</span>
             <span class="-text--xs -text--grey">Sublabel</span>
           </div>
         </div>
       </div>
       <!-- Active -->
-      <div class="chi-card -active -align--center -hover--animate">
-        <div class="chi-card__content">
-          <div class="chi-card__title">Title</div>
-          <i class="chi-card__icon chi-icon icon-atom -sm--3"></i>
-          <div class="chi-card__caption">
+      <div class="lux-card -active -align--center -hover--animate">
+        <div class="lux-card__content">
+          <div class="lux-card__title">Title</div>
+          <i class="lux-card__icon lux-icon icon-atom -sm--3"></i>
+          <div class="lux-card__caption">
             <span class="-text--sm">Meta Label</span>
             <span class="-text--xs -text--grey">Sublabel</span>
           </div>
@@ -274,327 +274,327 @@ p.-text
 
 h3 Hero
 p.-text
-  | Add a full width image or banner to the top of a card by applying the class <code>chi-card__hero</code>.
+  | Add a full width image or banner to the top of a card by applying the class <code>lux-card__hero</code>.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__hero.-text--inverse(style="width:100%;background:rgba(0,0,0,0.8);")
+    .lux-card(style="max-width:20rem;")
+      .lux-card__hero.-text--inverse(style="width:100%;background:rgba(0,0,0,0.8);")
         p.-text.-p--6.-text--center Hero Image
-      .chi-card__content
-        .chi-card__caption
+      .lux-card__content
+        .lux-card__caption
           | This is a hero card
   .example-tabs.-pl--2
-    ul.chi-tabs#example-hero
+    ul.lux-tabs#example-hero
       li.-disabled
         a(href=`#webcomponent-hero`) Web Component
       li.-active
         a(href=`#html-hero`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-hero
-  .chi-tabs-panel.-active#html-hero
+  .lux-tabs-panel#webcomponent-hero
+  .lux-tabs-panel.-active#html-hero
     :code(lang="html")
-      <div class="chi-card">
-        <img class="chi-card__hero" src="..." alt="Card Image">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">This is a hero card</div>
+      <div class="lux-card">
+        <img class="lux-card__hero" src="..." alt="Card Image">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">This is a hero card</div>
         </div>
       </div>
 
 h3 Footer
-p.-text Apply the class <code>chi-card__footer</code> to include a footer section to the card.
+p.-text Apply the class <code>lux-card__footer</code> to include a footer section to the card.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer
-        button.chi-button.-primary Action 1
-        button.chi-button Action 2
+      .lux-card__footer
+        button.lux-button.-primary Action 1
+        button.lux-button Action 2
   .example-tabs.-pl--2
-    ul.chi-tabs#example-footer
+    ul.lux-tabs#example-footer
       li.-disabled
         a(href=`#webcomponent-footer`) Web Component
       li.-active
         a(href=`#html-footer`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-footer
-  .chi-tabs-panel.-active#html-footer
+  .lux-tabs-panel#webcomponent-footer
+  .lux-tabs-panel.-active#html-footer
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer">
-          <button class="chi-button -primary">Action 1</button>
-          <button class="chi-button">Action 2</button>
+        <div class="lux-card__footer">
+          <button class="lux-button -primary">Action 1</button>
+          <button class="lux-button">Action 2</button>
         </div>
       </div>
 
 h3 Footer Right Aligned
-p.-text Apply the class <code>-align--right</code> on <code>chi-card__footer</code> to right align its contents.
+p.-text Apply the class <code>-align--right</code> on <code>lux-card__footer</code> to right align its contents.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer.-align--right
-        button.chi-button Action 2
-        button.chi-button.-primary Action 1
+      .lux-card__footer.-align--right
+        button.lux-button Action 2
+        button.lux-button.-primary Action 1
   .example-tabs.-pl--2
-    ul.chi-tabs#example-footer-right
+    ul.lux-tabs#example-footer-right
       li.-disabled
         a(href=`#webcomponent-footer-right`) Web Component
       li.-active
         a(href=`#html-footer-right`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-footer-right
-  .chi-tabs-panel.-active#html-footer-right
+  .lux-tabs-panel#webcomponent-footer-right
+  .lux-tabs-panel.-active#html-footer-right
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer -align--right">
-          <button class="chi-button">Action 2</button>
-          <button class="chi-button -primary">Action 1</button>
+        <div class="lux-card__footer -align--right">
+          <button class="lux-button">Action 2</button>
+          <button class="lux-button -primary">Action 1</button>
         </div>
       </div>
 
 h3 Footer Center Aligned
-p.-text Apply the class <code>-align--center</code> on <code>chi-card__footer</code> to center align its contents.
+p.-text Apply the class <code>-align--center</code> on <code>lux-card__footer</code> to center align its contents.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer.-align--center
-        button.chi-button.-primary Action
+      .lux-card__footer.-align--center
+        button.lux-button.-primary Action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-footer-center
+    ul.lux-tabs#example-footer-center
       li.-disabled
         a(href=`#webcomponent-footer-center`) Web Component
       li.-active
         a(href=`#html-footer-center`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-footer-center
-  .chi-tabs-panel.-active#html-footer-center
+  .lux-tabs-panel#webcomponent-footer-center
+  .lux-tabs-panel.-active#html-footer-center
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer -align--center">
-          <button class="chi-button -primary">Action</button>
+        <div class="lux-card__footer -align--center">
+          <button class="lux-button -primary">Action</button>
         </div>
       </div>
 
 h3 Footer No Border
-p.-text Apply the class <code>-no-border</code> on <code>chi-card__footer</code> to remove the default border.
+p.-text Apply the class <code>-no-border</code> on <code>lux-card__footer</code> to remove the default border.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer.-no-border
-        button.chi-button.-primary Action
+      .lux-card__footer.-no-border
+        button.lux-button.-primary Action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-footer-noborder
+    ul.lux-tabs#example-footer-noborder
       li.-disabled
         a(href=`#webcomponent-footer-noborder`) Web Component
       li.-active
         a(href=`#html-footer-noborder`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-footer-noborder
-  .chi-tabs-panel.-active#html-footer-noborder
+  .lux-tabs-panel#webcomponent-footer-noborder
+  .lux-tabs-panel.-active#html-footer-noborder
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer -no-border">
-          <button class="chi-button -primary">Action</button>
+        <div class="lux-card__footer -no-border">
+          <button class="lux-button -primary">Action</button>
         </div>
       </div>
 
 h3 Footer Small
-p.-text Apply the class <code>-sm</code> on <code>chi-card__footer</code> to reduce its padding.
+p.-text Apply the class <code>-sm</code> on <code>lux-card__footer</code> to reduce its padding.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer.-sm
+      .lux-card__footer.-sm
         a.-text(href="#") Action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-footer-small
+    ul.lux-tabs#example-footer-small
       li.-disabled
         a(href=`#webcomponent-footer-small`) Web Component
       li.-active
         a(href=`#html-footer-small`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-footer-small
-  .chi-tabs-panel.-active#html-footer-small
+  .lux-tabs-panel#webcomponent-footer-small
+  .lux-tabs-panel.-active#html-footer-small
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+      <div class="lux-card">
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer -sm">
+        <div class="lux-card__footer -sm">
           <a class="-text" href="#">Action</a>
         </div>
       </div>
 
 h3 Header
-p.-text Apply the class <code>chi-card__header</code> to include a header section to the card.
+p.-text Apply the class <code>lux-card__header</code> to include a header section to the card.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__header
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__header
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-header
+    ul.lux-tabs#example-header
       li.-disabled
         a(href=`#webcomponent-header`) Web Component
       li.-active
         a(href=`#html-header`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-header
-  .chi-tabs-panel.-active#html-header
+  .lux-tabs-panel#webcomponent-header
+  .lux-tabs-panel.-active#html-header
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__header">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card">
+        <div class="lux-card__header">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
 h3 Header Center Aligned
-p.-text Apply the class <code>-align--center</code> on <code>chi-card__header</code> to center align its contents.
+p.-text Apply the class <code>-align--center</code> on <code>lux-card__header</code> to center align its contents.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__header.-align--center
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__header.-align--center
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-header-center
+    ul.lux-tabs#example-header-center
       li.-disabled
         a(href=`#webcomponent-header-center`) Web Component
       li.-active
         a(href=`#html-header-center`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-header-center
-  .chi-tabs-panel.-active#html-header-center
+  .lux-tabs-panel#webcomponent-header-center
+  .lux-tabs-panel.-active#html-header-center
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__header -align--center">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card">
+        <div class="lux-card__header -align--center">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
 h3 Header No Border
-p.-text Apply the class <code>-no-border</code> on <code>chi-card__header</code> to remove the default border.
+p.-text Apply the class <code>-no-border</code> on <code>lux-card__header</code> to remove the default border.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__header.-no-border
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__header.-no-border
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-header-noborder
+    ul.lux-tabs#example-header-noborder
       li.-disabled
         a(href=`#webcomponent-header-noborder`) Web Component
       li.-active
         a(href=`#html-header-noborder`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-header-noborder
-  .chi-tabs-panel.-active#html-header-noborder
+  .lux-tabs-panel#webcomponent-header-noborder
+  .lux-tabs-panel.-active#html-header-noborder
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__header -no-border">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card">
+        <div class="lux-card__header -no-border">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
 h3 Header Small
-p.-text Apply the class <code>-sm</code> on <code>chi-card__header</code> to reduce its padding.
+p.-text Apply the class <code>-sm</code> on <code>lux-card__header</code> to reduce its padding.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__header.-sm
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__header.-sm
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-header-small
+    ul.lux-tabs#example-header-small
       li.-disabled
         a(href=`#webcomponent-header-small`) Web Component
       li.-active
         a(href=`#html-header-small`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-header-small
-  .chi-tabs-panel.-active#html-header-small
+  .lux-tabs-panel#webcomponent-header-small
+  .lux-tabs-panel.-active#html-header-small
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__header -sm">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card">
+        <div class="lux-card__header -sm">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
 h3 Header + Footer
-p.-text Further customize cards by adding both headers <code>chi-card__header</code> and footers <code>chi-card__footer</code>.
+p.-text Further customize cards by adding both headers <code>lux-card__header</code> and footers <code>lux-card__footer</code>.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__header
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__header
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer
-        button.chi-button.-primary Action
+      .lux-card__footer
+        button.lux-button.-primary Action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-header-footer
+    ul.lux-tabs#example-header-footer
       li.-disabled
         a(href=`#webcomponent-header-footer`) Web Component
       li.-active
         a(href=`#html-header-footer`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-header-footer
-  .chi-tabs-panel.-active#html-header-footer
+  .lux-tabs-panel#webcomponent-header-footer
+  .lux-tabs-panel.-active#html-header-footer
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__header">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card">
+        <div class="lux-card__header">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer">
-          <button class="chi-button -primary">Action</button>
+        <div class="lux-card__footer">
+          <button class="lux-button -primary">Action</button>
         </div>
       </div>
 
@@ -602,32 +602,32 @@ h3 Header Small + Footer Small
 p.-text Reduce the size of the header and footer by applying the class <code>-sm</code> to each element.
 .example.-mb--3
   .-p--3
-    .chi-card(style="max-width:20rem;")
-      .chi-card__header.-sm
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card(style="max-width:20rem;")
+      .lux-card__header.-sm
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
-      .chi-card__footer.-sm
+      .lux-card__footer.-sm
         a.-text(href="#") Action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-header-footer-small
+    ul.lux-tabs#example-header-footer-small
       li.-disabled
         a(href=`#webcomponent-header-footer-small`) Web Component
       li.-active
         a(href=`#html-header-footer-small`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-header-footer-small
-  .chi-tabs-panel.-active#html-header-footer-small
+  .lux-tabs-panel#webcomponent-header-footer-small
+  .lux-tabs-panel.-active#html-header-footer-small
     :code(lang="html")
-      <div class="chi-card">
-        <div class="chi-card__header -sm">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card">
+        <div class="lux-card__header -sm">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
-        <div class="chi-card__footer -sm">
+        <div class="lux-card__footer -sm">
           <a class="-text" href="#">Action</a>
         </div>
       </div>
@@ -637,56 +637,56 @@ p.-text Use portal themed cards for displaying content in Enterprise Portals. In
 h4 Base
 .example.-mb--3
   .-p--3
-    .chi-card.-portal(style="max-width:20rem;")
-      .chi-card__header.-sm
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card.-portal(style="max-width:20rem;")
+      .lux-card__header.-sm
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-portal-base
+    ul.lux-tabs#example-portal-base
       li.-disabled
         a(href=`#webcomponent-portal-base`) Web Component
       li.-active
         a(href=`#html-portal-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-portal-base
-  .chi-tabs-panel.-active#html-portal-base
+  .lux-tabs-panel#webcomponent-portal-base
+  .lux-tabs-panel.-active#html-portal-base
     :code(lang="html")
-      <div class="chi-card -portal">
-        <div class="chi-card__header -sm">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card -portal">
+        <div class="lux-card__header -sm">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
 h4 Highlight
 .example.-mb--3
   .-p--3
-    .chi-card.-portal.-highlight(style="max-width:20rem;")
-      .chi-card__header.-sm
-        .chi-card__title Title
-      .chi-card__content
-        .chi-card__caption
+    .lux-card.-portal.-highlight(style="max-width:20rem;")
+      .lux-card__header.-sm
+        .lux-card__title Title
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-portal-base
+    ul.lux-tabs#example-portal-base
       li.-disabled
         a(href=`#webcomponent-portal-base`) Web Component
       li.-active
         a(href=`#html-portal-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-portal-base
-  .chi-tabs-panel.-active#html-portal-base
+  .lux-tabs-panel#webcomponent-portal-base
+  .lux-tabs-panel.-active#html-portal-base
     :code(lang="html")
-      <div class="chi-card -portal -highlight">
-        <div class="chi-card__header -sm">
-          <div class="chi-card__title">Title</div>
+      <div class="lux-card -portal -highlight">
+        <div class="lux-card__header -sm">
+          <div class="lux-card__title">Title</div>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
@@ -694,31 +694,31 @@ h3 Portal with tabs
 p.-text Use portal themed cards with tabs for organizing Enterprise Portal card content into separate but related views.
 .example.-mb--3
   .-p--3
-    .chi-card.-portal(style="max-width:20rem;")
-      .chi-card__tabs
-        ul.chi-tabs.-sm
+    .lux-card.-portal(style="max-width:20rem;")
+      .lux-card__tabs
+        ul.lux-tabs.-sm
           li.-active
             a(href='#') Active Tab
           li
             a(href='#') Tab Link
           li
             a(href='#') Tab Link
-      .chi-card__content
-        .chi-card__caption
+      .lux-card__content
+        .lux-card__caption
           | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
           | Ut felis magna, facilisis ut malesuada nec.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-portal-tabs
+    ul.lux-tabs#example-portal-tabs
       li.-disabled
         a(href=`#webcomponent-portal-tabs`) Web Component
       li.-active
         a(href=`#html-portal-tabs`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-portal-tabs
-  .chi-tabs-panel.-active#html-portal-tabs
+  .lux-tabs-panel#webcomponent-portal-tabs
+  .lux-tabs-panel.-active#html-portal-tabs
     :code(lang="html")
-      <div class="chi-card -portal">
-        <div class="chi-card__tabs">
-          <ul class="chi-tabs -sm">
+      <div class="lux-card -portal">
+        <div class="lux-card__tabs">
+          <ul class="lux-tabs -sm">
             <li class="-active">
               <a href="#">Active Tab</a>
             </li>
@@ -730,8 +730,8 @@ p.-text Use portal themed cards with tabs for organizing Enterprise Portal card 
             </li>
           </ul>
         </div>
-        <div class="chi-card__content">
-          <div class="chi-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
+        <div class="lux-card__content">
+          <div class="lux-card__caption">Aenean pretium massa sed vehicula porta. Phasellus id metus felis. Ut felis magna, facilisis ut malesuada nec.</div>
         </div>
       </div>
 
@@ -739,6 +739,6 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

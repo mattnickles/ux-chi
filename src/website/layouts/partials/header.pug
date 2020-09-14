@@ -1,4 +1,4 @@
-header.chi-header.docs-header.-z--20
+header.lux-header.docs-header.-z--20
   #version-check.-w--100
   script.
     function versionCompare(v1, v2) {
@@ -22,26 +22,26 @@ header.chi-header.docs-header.-z--20
       return false;
     }
 
-    if (localStorage.getItem("chiVersions") !== null) {
-      if (versionCompare(window.chiCurrentVersion, JSON.parse(localStorage.getItem("chiVersions"))[0])) {
-        var chiVersions = JSON.parse(localStorage.getItem("chiVersions"));
+    if (localStorage.getItem("luxVersions") !== null) {
+      if (versionCompare(window.luxCurrentVersion, JSON.parse(localStorage.getItem("luxVersions"))[0])) {
+        var luxVersions = JSON.parse(localStorage.getItem("luxVersions"));
         var docsContainerSelector = document.getElementById('docs-container');
-        var chiVersionCheckSelector = document.getElementById('version-check');
+        var luxVersionCheckSelector = document.getElementById('version-check');
         var newVersionMessage = document.createElement('div');
 
-        newVersionMessage.setAttribute("class", "chi-alert -banner -center -info -w--100");
+        newVersionMessage.setAttribute("class", "lux-alert -banner -center -info -w--100");
         newVersionMessage.setAttribute("role", "alert");
-        newVersionMessage.innerHTML = '<i class="chi-icon chi-alert__icon icon-circle-info -icon--info"></i><div class="chi-alert__content"><p class="chi-alert__text">A new version of Chi is available! &nbsp;<a href="https://assets.ctl.io/chi/'+chiVersions[0]+'">Learn more &#8250;</a></p>';
-        chiVersionCheckSelector.appendChild(newVersionMessage, chiVersionCheckSelector.childNodes[0]);
+        newVersionMessage.innerHTML = '<i class="lux-icon lux-alert__icon icon-circle-info -icon--info"></i><div class="lux-alert__content"><p class="lux-alert__text">A new version of Lux is available! &nbsp;<a href="https://assets.ctl.io/lux/'+luxVersions[0]+'">Learn more &#8250;</a></p>';
+        luxVersionCheckSelector.appendChild(newVersionMessage, luxVersionCheckSelector.childNodes[0]);
         docsContainerSelector.classList.add("outdated-version");
       }
     }
-  nav.chi-header__content
-    .chi-header__brand
-      button#drawer-trigger-1.chi-button.-icon.-flat.-mr-md--2.-d--flex.-d-lg--none.chi-drawer__trigger(data-target='#drawer-sidenav', aria-label="Toggle documentation navigation")
-        .chi-button__content
-          i.chi-icon.-sm--2.icon-menu
-      a.chi-brand.docs-header__logo(href=`${rootPath}`, aria-label='Lumen')
+  nav.lux-header__content
+    .lux-header__brand
+      button#drawer-trigger-1.lux-button.-icon.-flat.-mr-md--2.-d--flex.-d-lg--none.lux-drawer__trigger(data-target='#drawer-sidenav', aria-label="Toggle documentation navigation")
+        .lux-button__content
+          i.lux-icon.-sm--2.icon-menu
+      a.lux-brand.docs-header__logo(href=`${rootPath}`, aria-label='Lumen')
         svg(viewBox='0 0 140 20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true')
           path(fill='#000', d='M.27396667 2.00213333V17.8541333c0 .9566667.558 1.395 1.634 1.395H16.8916333c1.0363334 0 1.634-.4383333 1.634-1.395 0-.9163333-.5976666-1.3946666-1.634-1.3946666H4.01996667c-.518 0-.71733334-.239-.71733334-.7173334V2.00213333c0-.797-.59766666-1.39466666-1.51433333-1.39466666-.87666667 0-1.51433333.59766666-1.51433333 1.39466666')
           path(fill='#000', d='M26.0176333 12.2995V2.00216667c0-.797-.5976666-1.395-1.5143333-1.395-.9166667 0-1.5143333.598-1.5143333 1.395V12.5785c0 6.416 3.985 7.1486667 10.8793333 7.1486667 6.894 0 10.8793333-.7326667 10.8793333-7.1486667V2.00216667c0-.797-.598-1.395-1.5143333-1.395-.9166667 0-1.5143333.598-1.5143333 1.395V12.2995c0 5.2203333-2.7896667 4.5186667-7.8506667 4.5186667s-7.8506667.622-7.8506667-4.5186667')
@@ -50,34 +50,34 @@ header.chi-header.docs-header.-z--20
           path(fill='#000', d='M85.4348 8.71616667v9.13800003c0 .9563333.558 1.3946666 1.634 1.3946666h15.303c1.035667 0 1.593667-.4383333 1.593667-1.3946666 0-.9166667-.558-1.3946667-1.593667-1.3946667h-13.191c-.5176667 0-.7173333-.2393333-.7173333-.7173333V11.5425h9.963c1.0756666 0 1.6336663-.4783333 1.6336663-1.395 0-.87666667-.5579997-1.39466667-1.6336663-1.39466667L85.4348 8.71616667z')
           path(fill='#000', d='M132.8176 17.6948667V2.0022c0-.797-.637667-1.395-1.514667-1.395-.916666 0-1.514333.598-1.514333 1.395v12.704L114.804933 2.12153333C113.773267 1.2562 113.1996.6072 112.214267.6072c-1.080667 0-1.792667.71733333-1.792667 2.07233333V18.0935333c0 .797.637333 1.3946667 1.514 1.3946667.916667 0 1.514333-.5976667 1.514333-1.3946667V5.11053333L128.274267 17.8542c.993333.8433333 1.681666 1.634 2.710333 1.634 1.037 0 1.833-.7573333 1.833-1.7933333')
           path(fill='#000', d='M137.447467 3.0801c.316333 0 .495333-.165.495333-.399 0-.26166667-.179-.39933333-.495333-.39933333h-.591667V3.0801h.591667zm-1.06-1.211h1.101333c.536667 0 .936.26133333.936.77066667 0 .399-.234333.64666666-.564667.743l.647.922h-.564333l-.578-.83933334h-.509v.83933334h-.468333V1.8691zm3.055333 1.266v-.01366667c0-1.17-.908-2.133-2.119333-2.133-1.197334 0-2.119334.977-2.119334 2.14666667v.014c0 1.16966667.908 2.133 2.119334 2.133 1.197333 0 2.119333-.97733333 2.119333-2.147zm-4.514.014v-.014c0-1.30733333 1.06-2.40833333 2.394667-2.40833333 1.349 0 2.394666 1.08733333 2.394666 2.39466666V3.1351c0 1.30733333-1.059333 2.40866667-2.394666 2.40866667-1.348667 0-2.394667-1.08766667-2.394667-2.39466667z')
-      span.chi-header__title.-d--none.-d-lg--flex
-        | Chi Design System
-    .chi-header__start
-      form.-chi-search
-        .chi-input__wrapper.-icon--right.-flex--grow1
-          label.chi-label.-d--none(for="chi-docs-search") Search Chi documentation
-          input.chi-input.searchbox(id="chi-docs-search", type="text", placeholder="Search")
-          i.chi-icon.icon-search
-    .chi-header__end
-      .chi-dropdown
-        button.chi-button.-flat.-px--1.chi-dropdown__trigger.-animate(data-position='bottom-end', id='version-dropdown', aria-label="Toggle Chi version") v3.0.0
-        .chi-dropdown__menu(style='width:10rem;')#versionDropdown
-          a.chi-dropdown__menu-item.-active(href='https://assets.ctl.io/chi/3.0.0') v3.0.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.7.0') v2.7.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.6.0') v2.6.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.5.1') v2.5.1
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.5.0') v2.5.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.4.1') v2.4.1
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.4.0') v2.4.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.3.0') v2.3.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.2.0') v2.2.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.1.0') v2.1.0
-          a.chi-dropdown__menu-item(href='https://assets.ctl.io/chi/2.0.0') v2.0.0
+      span.lux-header__title.-d--none.-d-lg--flex
+        | Lux Design System
+    .lux-header__start
+      form.-lux-search
+        .lux-input__wrapper.-icon--right.-flex--grow1
+          label.lux-label.-d--none(for="lux-docs-search") Search Lux documentation
+          input.lux-input.searchbox(id="lux-docs-search", type="text", placeholder="Search")
+          i.lux-icon.icon-search
+    .lux-header__end
+      .lux-dropdown
+        button.lux-button.-flat.-px--1.lux-dropdown__trigger.-animate(data-position='bottom-end', id='version-dropdown', aria-label="Toggle Lux version") v3.0.0
+        .lux-dropdown__menu(style='width:10rem;')#versionDropdown
+          a.lux-dropdown__menu-item.-active(href='https://assets.ctl.io/lux/3.0.0') v3.0.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.7.0') v2.7.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.6.0') v2.6.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.5.1') v2.5.1
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.5.0') v2.5.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.4.1') v2.4.1
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.4.0') v2.4.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.3.0') v2.3.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.2.0') v2.2.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.1.0') v2.1.0
+          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.0.0') v2.0.0
       script.
-        if (localStorage.getItem("chiVersions") !== null) {
-          if (versionCompare(window.chiCurrentVersion, JSON.parse(localStorage.getItem("chiVersions"))[0])) {
+        if (localStorage.getItem("luxVersions") !== null) {
+          if (versionCompare(window.luxCurrentVersion, JSON.parse(localStorage.getItem("luxVersions"))[0])) {
             var drop = document.getElementById('versionDropdown');
-            var versions = JSON.parse(localStorage.getItem("chiVersions"));
+            var versions = JSON.parse(localStorage.getItem("luxVersions"));
             var docsContainerSelector = document.getElementById('docs-container');
 
             while (drop.childNodes.length > 0) {
@@ -87,10 +87,10 @@ header.chi-header.docs-header.-z--20
             for (let version in versions.slice(0, 4)) {
               var versionAnchor = document.createElement('a');
 
-              versionAnchor.setAttribute("href", "https://assets.ctl.io/chi/"+versions[version]);
-              versionAnchor.setAttribute("class", "chi-dropdown__menu-item");
+              versionAnchor.setAttribute("href", "https://assets.ctl.io/lux/"+versions[version]);
+              versionAnchor.setAttribute("class", "lux-dropdown__menu-item");
               versionAnchor.innerText = "v" + versions[version];
-              if (window.chiCurrentVersion === versions[version]) {
+              if (window.luxCurrentVersion === versions[version]) {
                 versionAnchor.classList.add('-active');
               }
               drop.appendChild(versionAnchor);
@@ -99,23 +99,23 @@ header.chi-header.docs-header.-z--20
             docsContainerSelector.classList.add("outdated-version");
           }
         }
-      .chi-dropdown
-        button.chi-button.-flat.-px--1.-ml--1.chi-dropdown__trigger.-animate(data-position='bottom-end', id='support') Support
-        .chi-dropdown__menu(style='width:14rem;')
-          a.chi-dropdown__menu-item(id='contact', href='mailto:chi.support@centurylink.com') Email Support
-          a.chi-dropdown__menu-item(id='teams', href='https://teams.microsoft.com/l/channel/19%253aa08fdfde482543ea80f81ce484cea21b%2540thread.skype/CHI?groupId=8631295d-43fc-4e40-93e5-dc8c9ab4d127&tenantId=72b17115-9915-42c0-9f1b-4f98e5a4bcd2', target='_blank', rel="noopener")
-            | Talk #Chi on Microsoft Teams
-      a.chi-button.-icon.-flat.-ml--1(href='https://github.com/CenturyLinkCloud/ux-chi', rel="noopener", aria-label="GitHub")
-        .chi-button__content
-          i.chi-icon.icon-logo-github
+      .lux-dropdown
+        button.lux-button.-flat.-px--1.-ml--1.lux-dropdown__trigger.-animate(data-position='bottom-end', id='support') Support
+        .lux-dropdown__menu(style='width:14rem;')
+          a.lux-dropdown__menu-item(id='contact', href='mailto:lux.support@centurylink.com') Email Support
+          a.lux-dropdown__menu-item(id='teams', href='https://teams.microsoft.com/l/channel/19%253aa08fdfde482543ea80f81ce484cea21b%2540thread.skype/LUX?groupId=8631295d-43fc-4e40-93e5-dc8c9ab4d127&tenantId=72b17115-9915-42c0-9f1b-4f98e5a4bcd2', target='_blank', rel="noopener")
+            | Talk #Lux on Microsoft Teams
+      a.lux-button.-icon.-flat.-ml--1(href='https://github.com/CenturyLinkCloud/ux-lux', rel="noopener", aria-label="GitHub")
+        .lux-button__content
+          i.lux-icon.icon-logo-github
 
-.chi-backdrop.-closed
-  .chi-backdrop__wrapper
-    div#drawer-sidenav.chi-drawer.-left.-menu.-position--absolute
-      button(class='chi-button -icon -close', aria-label='Close')
-        .chi-button__content
-          i.chi-icon.icon-x
-      .chi-drawer__content
+.lux-backdrop.-closed
+  .lux-backdrop__wrapper
+    div#drawer-sidenav.lux-drawer.-left.-menu.-position--absolute
+      button(class='lux-button -icon -close', aria-label='Close')
+        .lux-button__content
+          i.lux-icon.icon-x
+      .lux-drawer__content
         .-py--2
           include sidenav
 
@@ -124,9 +124,9 @@ script.
     'DOMContentLoaded',
     function() {
       Array.prototype.forEach.call(
-        document.getElementsByClassName("chi-drawer__trigger"),
+        document.getElementsByClassName("lux-drawer__trigger"),
         function (el) {
-          chi.drawer(el);
+          lux.drawer(el);
         }
       );
     },

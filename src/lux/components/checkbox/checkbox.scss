@@ -1,0 +1,136 @@
+@import '_variables';
+@import '_mixins';
+
+.lux-checkbox {
+  line-height: $line-height;
+  position: relative;
+
+  input {
+    &[type='checkbox'] {
+      &.lux-input,
+      &.lux-checkbox__input {
+        & + label {
+          &.lux-checkbox__label {
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            line-height: $line-height;
+            margin-bottom: 0;
+            margin-right: 0;
+            padding-left: 1.5rem;
+
+            &::before {
+              left: 0;
+              position: absolute;
+              top: 0.125rem;
+            }
+
+            &::after {
+              left: 0.1875rem;
+              position: absolute;
+              top: 0.3125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+input {
+  &[type='checkbox'] {
+    &.lux-input,
+    &.lux-checkbox__input {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      pointer-events: auto;
+      position: absolute;
+      width: 1px;
+
+      & + label {
+        & {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          line-height: $line-height-sm;
+          margin-right: 0.5rem;
+          position: relative;
+        }
+
+        &::before {
+          background-color: $color-background-white;
+          border: 0.0625rem solid $color-grey-40;
+          content: '';
+          display: block;
+          height: 1rem;
+          transition: background-color 0.2s ease-in-out;
+          width: 1rem;
+        }
+
+        &::after {
+          background-image: url('icon-check--hover.svg');
+          content: '';
+          display: block;
+          height: 0.625rem;
+          left: 0.1875rem;
+          position: absolute;
+          top: calc(50% - 0.3125rem);
+          transform: scale(0);
+          transition: background-image 0.2s ease-in-out, transform 0.2s ease-in-out;
+          width: 0.625rem;
+        }
+
+        &:hover,
+        &.-hover {
+          &::after {
+            transform: scale(1);
+          }
+        }
+      }
+
+      &:checked {
+        &:not(.-toggle) {
+          & + label {
+            &::before {
+              background-color: $color-background-primary;
+              border-color: $color-border-primary;
+            }
+
+            &::after {
+              background-image: url('icon-check.svg');
+              transform: scale(1);
+            }
+          }
+
+          &:focus,
+          &.-focus {
+            & + label::before {
+              border-color: $color-border-primary;
+            }
+          }
+        }
+      }
+
+      &[disabled] {
+        & ~ label {
+          color: $color-grey-70;
+        }
+
+        & + label {
+          opacity: 0.6;
+          pointer-events: none;
+        }
+      }
+
+      &:focus,
+      &.-focus {
+        & + label::before {
+          outline: 0.125rem solid $focus-color;
+          outline-offset: 0.0625rem;
+        }
+      }
+    }
+  }
+}

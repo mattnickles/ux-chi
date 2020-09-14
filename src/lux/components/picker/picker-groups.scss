@@ -1,0 +1,155 @@
+@import '_horizontal-picker-groups';
+
+.lux-picker-group {
+  input {
+    &.lux-picker__input {
+      &:first-of-type {
+        &:focus {
+          &:not(:checked) {
+            & ~ label {
+              &:first-of-type {
+                background-color: $color-grey-10;
+              }
+            }
+          }
+        }
+      }
+
+      &:last-of-type {
+        &:focus {
+          &:not(:checked) {
+            & ~ label {
+              &:last-of-type {
+                background-color: $color-grey-10;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.-fluid {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(md) {
+      flex-direction: row;
+    }
+
+    input {
+      &[type='radio'] {
+        &.lux-picker__input {
+          & + label {
+            border-bottom-width: 0;
+            border-right-width: 0.0625rem;
+            display: flex;
+            flex: 1 0 auto;
+            justify-content: center;
+            width: 100%;
+
+            @include respond-to(md) {
+              border-bottom-width: 0.0625rem;
+              border-right-width: 0;
+              flex: 1 0 0;
+              white-space: nowrap;
+            }
+
+            &:first-of-type {
+              border-bottom-left-radius: 0;
+              border-top-left-radius: $border-radius;
+              border-top-right-radius: $border-radius;
+
+              @include respond-to(md) {
+                border-bottom-left-radius: $border-radius;
+                border-top-right-radius: 0;
+              }
+            }
+
+            &:last-of-type {
+              border-bottom-left-radius: $border-radius;
+              border-bottom-right-radius: $border-radius;
+              border-bottom-width: 0.0625rem;
+              border-top-right-radius: 0;
+
+              @include respond-to(md) {
+                border-bottom-left-radius: 0;
+                border-right-width: 0.0625rem;
+                border-top-right-radius: $border-radius;
+              }
+            }
+
+            &.-no-fluid {
+              flex: 0 1 auto;
+
+              @include respond-to(md) {
+                width: auto;
+              }
+            }
+
+            &.-align--left {
+              justify-content: flex-start;
+            }
+
+            &.-align--center {
+              justify-content: center;
+            }
+
+            &.-align--right {
+              justify-content: flex-end;
+            }
+          }
+        }
+
+        &:checked {
+          &.lux-picker__input {
+            & + label {
+              border: solid 0.0625rem $color-border-primary;
+              color: $color-text-primary;
+              padding-right: 1rem;
+
+
+              @include respond-to(md) {
+                padding-right: 0.9375rem;
+              }
+
+              @each $type in map-keys($sizes) {
+                &.-#{$type} {
+                  padding-right: map-get(map-get($sizes, $type), padding_checked);
+                }
+              }
+
+              &:last-of-type {
+                padding-right: 1rem;
+
+                @each $type in map-keys($sizes) {
+                  &.-#{$type} {
+                    padding-right: map-get(map-get($sizes, $type), padding_checked);
+                  }
+                }
+              }
+
+              & + input + label {
+                border-left-width: 0.0625rem;
+                border-top-width: 0;
+                padding-left: 0.9375rem;
+
+                @each $type in map-keys($sizes) {
+                  &.-#{$type} {
+                    padding-left: map-get(map-get($sizes, $type), padding_hover);
+                  }
+                }
+
+                @include respond-to(md) {
+                  border-left-width: 0;
+                  border-top-width: 0.0625rem;
+                  padding-left: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

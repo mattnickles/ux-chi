@@ -1,12 +1,12 @@
-ul.chi-tabs.-vertical.-lg.-animated
+ul.lux-tabs.-vertical.-lg.-animated
   each collection, key in collections
     if utils.hasActiveSections(collection)
       if utils.isCurrentCollection(collection, path)
         li.-active
-          .chi-collection__title
+          .lux-collection__title
             =key
           if utils.hasSections(collection)
-            ul.chi-tabs__subtabs
+            ul.lux-tabs__subtabs
               each section in collection
                 if section.disabled
                   //- li
@@ -18,10 +18,10 @@ ul.chi-tabs.-vertical.-lg.-animated
                         .-sr--only component
       else
         li
-          .chi-collection__title
+          .lux-collection__title
             =key
           if utils.hasSections(collection)
-            ul.chi-tabs__subtabs
+            ul.lux-tabs__subtabs
               each section in collection
                 if section.disabled
                   //- li

@@ -2,74 +2,74 @@
 
 h2 Examples
 p.-text
-  | To display steps, apply the class <code>chi-steps</code> to a unordered list <code>ul</code>
+  | To display steps, apply the class <code>lux-steps</code> to a unordered list <code>ul</code>
   | and indicate the active link with the class <code>-active</code> in the corresponding li tag.
 
 h3 Base
 .example.-mb--3
   .-p--3
-    ul.chi-steps.-px--0.-pb--2.-p-sm--6
+    ul.lux-steps.-px--0.-pb--2.-p-sm--6
       each step in steps
         if step == 'Step 1'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 2'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 3'
           li.-active
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 5'
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
         else
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
     :code(lang="html")
-      <ul class="chi-steps">
+      <ul class="lux-steps">
         <li class="-completed">
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 1</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-completed">
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 2</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-active">
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 3</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 4</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 5</a>
           </div>
         </li>
@@ -83,64 +83,64 @@ p.-text
 
 .example.-mb--3
   .-p--3
-    ul.chi-steps.-horizontal-label.-labels-sm--hide.-px--0.-p-sm--5
+    ul.lux-steps.-horizontal-label.-labels-sm--hide.-px--0.-p-sm--5
       each step in steps
         if step == 'Step 1'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 2'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 3'
           li.-active
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 5'
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
         else
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
   .example-tabs.-pl--2
-    ul.chi-tabs#example-horizontal-labels
+    ul.lux-tabs#example-horizontal-labels
       li.-disabled
         a(href=`#webcomponent-horizontal-labels`) Web Component
       li.-active
         a(href=`#html-horizontal-labels`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-horizontal-labels
-  .chi-tabs-panel.-active#html-horizontal-labels
+  .lux-tabs-panel#webcomponent-horizontal-labels
+  .lux-tabs-panel.-active#html-horizontal-labels
     :code(lang="html")
-      <ul class="chi-steps -horizontal-label">
+      <ul class="lux-steps -horizontal-label">
         <li class="-completed">
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 1</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-completed">
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 2</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-active">
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 3</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 4</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 5</a>
         </li>
       </ul>
@@ -153,127 +153,127 @@ p.-text
 
 .example.-mb--3
   .-p--3
-    ul.chi-steps.-labels-md--hide.-p-sm--5
+    ul.lux-steps.-labels-md--hide.-p-sm--5
       each step in steps
         if step == 'Step 1'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 2'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 3'
           li.-active
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 5'
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
         else
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
               a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
     p.-text--center
      | -labels-md--hide
-    ul.chi-steps.-horizontal-label.-labels-lg--hide.-pt--2.-p-sm--4
+    ul.lux-steps.-horizontal-label.-labels-lg--hide.-pt--2.-p-sm--4
       each step in steps
         if step == 'Step 1'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 2'
           li.-completed
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 3'
           li.-active
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
         else if step == 'Step 5'
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
         else
           li
-            div.chi-steps__icon
+            div.lux-steps__icon
             a(href='#')= `${step}`
-            div.chi-steps__line
+            div.lux-steps__line
     p.-text--center
       | -labels-lg--hide
   .example-tabs.-pl--2
-    ul.chi-tabs#example-responsive
+    ul.lux-tabs#example-responsive
       li.-disabled
         a(href=`#webcomponent-responsive`) Web Component
       li.-active
         a(href=`#html-responsive`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-responsive
-  .chi-tabs-panel.-active#html-responsive
+  .lux-tabs-panel#webcomponent-responsive
+  .lux-tabs-panel.-active#html-responsive
     :code(lang="html")
       <!-- Visible labels from md breakpoint -->
-      <ul class="chi-steps -labels-md--hide">
+      <ul class="lux-steps -labels-md--hide">
         <li class="-completed">
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 1</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-completed">
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 2</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-active">
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 3</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 4</a>
           </div>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon">
+          <div class="lux-steps__icon">
             <a href="#">Step 5</a>
           </div>
         </li>
       </ul>
       <!-- Visible labels from lg breakpoint -->
-      <ul class="chi-steps -horizontal-label -labels-lg--hide">
+      <ul class="lux-steps -horizontal-label -labels-lg--hide">
         <li class="-completed">
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 1</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-completed">
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 2</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li class="-active">
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 3</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 4</a>
-          <div class="chi-steps__line"></div>
+          <div class="lux-steps__line"></div>
         </li>
         <li>
-          <div class="chi-steps__icon"></div>
+          <div class="lux-steps__icon"></div>
           <a href="#">Step 5</a>
         </li>
       </ul>
@@ -282,6 +282,6 @@ script.
     document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

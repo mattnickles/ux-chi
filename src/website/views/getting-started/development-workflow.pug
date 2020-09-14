@@ -4,7 +4,7 @@ order: 3
 ---
 h2 Setup
 p.-text
-  | Set up your Chi development environment with Docker. First make sure you have Docker installed, then run
+  | Set up your Lux development environment with Docker. First make sure you have Docker installed, then run
   | the command:
 
 .-mb--2
@@ -16,12 +16,12 @@ p.-text Now your environment is set up. To start development run:
 
 .-mb--2
   :code(lang='bash')
-    $ chi start
+    $ lux start
 
 p.-text
-  | Once the container has been bootstrapped and the Chi project has started, connect to
+  | Once the container has been bootstrapped and the Lux project has started, connect to
   | <a href="http://localhost:8000/">http://localhost:8000/</a>
-  | in your browser to load Chi. While running, any changes to the Chi source will be automatically reloaded in your
+  | in your browser to load Lux. While running, any changes to the Lux source will be automatically reloaded in your
   | browser.
 
 h2 Testing
@@ -31,25 +31,25 @@ p.-text
   | <a target="_blank" href="https://www.cypress.io" rel="noopener">Cypress</a> is used for end-to-end testing. Tests are located in the
   | <code>cypress/integration</code> folder. To make them run:
 :code(lang='bash')
-  $ chi test-e2e
+  $ lux test-e2e
 
 p.-text
   | You can run end-to-end tests interactively by launching the <code>start</code> command and opening a local version of
-  | the Cypress application. Then select the ux-chi root folder as the project folder.
+  | the Cypress application. Then select the ux-lux root folder as the project folder.
 
 h3 Visual regression tests
 p.-text
-  | Chi has visual regression tests build for each component that are implemented in
+  | Lux has visual regression tests build for each component that are implemented in
   | <a target="_blank" href="https://github.com/garris/BackstopJS" rel="noopener">BackstopJS</a>. Each Custom Element
-  | component MUST have a Custom Element version for the same test files that are implemented in the normal version of Chi.
+  | component MUST have a Custom Element version for the same test files that are implemented in the normal version of Lux.
   | These tests are configured in the <code>backstop-non-responsive-ce.json</code> file.
 p.-text
-  | E.g. <code>test/chi/custom-elements/icons.pug</code> will be compared to <code>test/chi/components/icons.pug</code>
+  | E.g. <code>test/lux/custom-elements/icons.pug</code> will be compared to <code>test/lux/components/icons.pug</code>
   | to ensure both components are rendered in the same way.
 p.-text
   | This tests are run by the common test command
 :code(lang='bash')
-  $ chi test
+  $ lux test
 p.-text Reports are available in the <code>reports/html_report/non_responsive_ce/</code> folder.
 
 h2 Style guide
@@ -90,11 +90,11 @@ p.-text
   | Additionally, web components are required to contain a "-" dash within the tag name, so using the
   | first section to namespace your components is a natural fit.
 
-p.-text Tag prefix must be <code>chi</code>:
+p.-text Tag prefix must be <code>lux</code>:
 
 :code(lang="html")
-  <chi-button>
-  <chi-header>
+  <lux-button>
+  <lux-header>
 
 h4 NAME
 
@@ -108,21 +108,21 @@ p.-text
   | When several components are related and/or coupled, it is a good practice to use common naming with different
   | modifiers, for example:
 :code(lang="html")
-  <chi-card>
-  <chi-card-header>
-  <chi-card-content>
+  <lux-card>
+  <lux-card-header>
+  <lux-card-content>
 
 h3 Component (TS class)
 p.-text The name of the ES6 class of the component SHOULD NOT have a prefix since classes are scoped. There is no risk of collision.
 
 :code(lang="javascript")
   @Component({
-    tag: 'chi-button'
+    tag: 'lux-button'
   })
   export class Button { ... }
 
   @Component({
-    tag: 'chi-icon'
+    tag: 'lux-icon'
   })
   export class Icon { ... }
 
@@ -147,7 +147,7 @@ p.-text Method decorator should be multi-line
 
 p.-text Use private variables and methods as much as possible; they are useful to detect dead code and enforce encapsulation. Note that this is a feature which TypeScript provides to help hardening your code, but using private, public or protected does not make a difference in the actual JavaScript output.
 
-p.-text Code with Method/Prop/Event/Component decorators should have <code>jsdocs</code>; this allows documentation generation and for a better user experience in an editor that has TypeScript intellisense. <em>Stencil auto-generated documentation will be included in the Chi documentation pages. </em>
+p.-text Code with Method/Prop/Event/Component decorators should have <code>jsdocs</code>; this allows documentation generation and for a better user experience in an editor that has TypeScript intellisense. <em>Stencil auto-generated documentation will be included in the Lux documentation pages. </em>
 
 h3 Properties
 
@@ -181,28 +181,28 @@ p.-text Other times a function with a @Watch decorator is necessary:
 h2 Styling
 
 p.-text
-  | Chi components will have scoped CSS, to prevent collisions when using in non-chi compatible environments.
+  | Lux components will have scoped CSS, to prevent collisions when using in non-lux compatible environments.
 :code(lang="javascript")
   @Component({
-    tag: 'chi-icon',
+    tag: 'lux-icon',
     styleUrl: 'icon.scss',
     scoped: true
   })
 
 p.-text
   | As of now, there is no support for per-version scoped CSS. This means that rules from two different
-  | versions of chi components will collide, so it should be avoided.
+  | versions of lux components will collide, so it should be avoided.
 
 h3 Rules
 
 ul.-text
   li Components MIGHT have a *.scss file that will import the necessary files from the project
-  li All rules but font-face ones MUST be wrapped inside a <code>:host</code> rule to override a possible Chi default stylesheet
+  li All rules but font-face ones MUST be wrapped inside a <code>:host</code> rule to override a possible Lux default stylesheet
   li The default display for Custom Elements is <code>inline</code> so the developer MUST take care of this.
 
 :code(lang="css")
   @import 'components/icons/webfont-font-face';
-  :host(chi-icon) {
+  :host(lux-icon) {
   @import '../../global/styles/common';
   @extend %root-typography;
   @import 'components/icons/icons';

@@ -1,0 +1,273 @@
+@import '_variables';
+@import '_mixins';
+
+$states: (
+  success: (
+    border-left-color: $color-icon-success,
+    color: $color-icon-success,
+    background-color: $color-background-success-light,
+    title-color: $color-text-success
+  ),
+  danger: (
+    border-left-color: $color-icon-danger,
+    color: $color-icon-danger,
+    background-color: $color-background-danger-light,
+    title-color: $color-text-danger
+  ),
+  warning: (
+    border-left-color: $color-icon-warning,
+    color: $color-icon-warning,
+    background-color: $color-background-warning-light,
+    title-color: $color-text-warning
+  ),
+  info: (
+    border-left-color: $color-icon-info,
+    color: $color-icon-info,
+    background-color: $color-background-info-light,
+    title-color: $color-text-primary
+  ),
+  muted: (
+    border-left-color: $color-icon-muted,
+    color: $color-icon-muted,
+    background-color: $color-background-muted-light,
+    title-color: $color-text-muted
+  )
+);
+
+.lux-alert {
+  background-color: $color-background-white;
+  border-color: $color-border-base-dark;
+  border-style: solid;
+  border-width: 0.0625rem;
+  box-shadow: map-get($shadow, 1);
+  color: $color-text-base;
+  display: flex;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height;
+  padding: 0.8125rem 1.5rem;
+  position: relative;
+  text-align: left;
+
+  &:not(.-banner) {
+    &::before {
+      background-color: $color-text-base;
+      content: '';
+      height: 100%;
+      left: -0.0625rem;
+      position: absolute;
+      top: 0;
+      width: 0.25rem;
+    }
+  }
+
+  &.-center {
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      height: 0.125rem;
+      left: 0;
+      top: -0.0625rem;
+      width: 100%;
+    }
+
+    .lux-alert__content {
+      flex-grow: 0;
+    }
+  }
+
+  > .lux-icon,
+  > lux-icon .lux-icon,
+  .lux-alert__icon {
+    &:not(.icon-x) {
+      flex-shrink: 0;
+      font-size: 1rem;
+      height: 1rem;
+      margin-bottom: 0.125rem;
+      margin-right: 1rem;
+      margin-top: 0.125rem;
+      width: 1rem;
+    }
+  }
+
+  .lux-alert__text,
+  p,
+  .-text {
+    font-size: $font-size-base;
+    line-height: $line-height;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  @each $state in map-keys($states) {
+    &.-#{$state} {
+      color: $color-text-base;
+
+      &:not(.-banner) {
+        &::before {
+          background-color: map-get(map-get($states, $state), border-left-color);
+        }
+      }
+
+      &.-banner {
+        background-color: map-get(map-get($states, $state), background-color);
+      }
+
+      .lux-alert__icon,
+      > lux-icon .lux-icon {
+        color: map-get(map-get($states, $state), color);
+      }
+
+      .lux-alert__title {
+        color: map-get(map-get($states, $state), title-color);
+      }
+    }
+  }
+
+  &.-close {
+    padding-right: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .lux-alert__title {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semi-bold;
+      line-height: $line-height;
+      margin-bottom: 0;
+      margin-top: 0;
+      word-break: break-word;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+
+      + .lux-alert__text {
+        margin-top: 0.25rem;
+      }
+    }
+
+    .lux-alert__actions {
+      padding-top: 0.75rem;
+
+      > .lux-button {
+        margin-right: 0.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  > .lux-button,
+  > lux-button .lux-button {
+    &.-close,
+    &.lux-alert__close-button {
+      align-self: flex-start;
+      margin-left: 1rem;
+      padding: 0.1875rem;
+      transform: initial;
+
+      .lux-icon {
+        font-size: 0.75rem;
+        height: 0.75rem;
+        line-height: 0.75rem;
+        width: 0.75rem;
+      }
+    }
+  }
+
+  &.-lg {
+    padding: 1.0625rem 1.5rem;
+
+    > i.lux-icon,
+    > lux-icon .lux-icon,
+    .lux-alert__icon {
+      &:not(.icon-x) {
+        font-size: 1.25rem;
+        height: 1.25rem;
+        line-height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+
+    > .lux-button,
+    > lux-button .lux-button {
+      &.-close,
+      &.lux-alert__close-button {
+        padding: 0;
+
+        .lux-icon {
+          font-size: 1rem;
+          height: 1rem;
+          line-height: 1rem;
+          width: 1rem;
+        }
+      }
+    }
+
+    .lux-alert__content {
+      .lux-alert__title {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semi-bold;
+        line-height: $line-height-lg;
+        margin-bottom: 0;
+
+        + .lux-alert__text {
+          margin-top: 0.375rem;
+        }
+      }
+
+      .lux-alert__text {
+        padding-top: 0.125rem;
+      }
+
+      .lux-alert__actions {
+        padding-top: 1rem;
+
+        > .lux-button,
+        > lux-button {
+          margin-right: 1rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.-sm {
+    padding: 0.5625rem 1.5rem;
+
+    .lux-alert__content {
+      .lux-alert__title {
+        margin-bottom: 0;
+
+        + .lux-alert__text {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+
+      .lux-alert__text {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+        padding-top: 0.125rem;
+      }
+
+      .lux-alert__actions {
+        padding-top: 0.5rem;
+      }
+    }
+
+    &.-close {
+      padding-right: 1rem;
+    }
+  }
+}

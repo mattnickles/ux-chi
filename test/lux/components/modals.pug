@@ -1,0 +1,212 @@
+---
+title: Modals
+background: 969696
+---
+
+h3 backdrops
+
+.test-backdrops
+  table(cellpadding="0", cellspacing="16px")
+    tr
+      td
+        h4 backdrop
+        .lux-backdrop(style={
+          position: 'relative',
+          height: '12rem',
+          width: '12rem',
+          top: 'initial',
+          left: 'initial'
+        })
+      td
+        h4 backdrop / inverse
+        .lux-backdrop.-inverse(style={
+          position: 'relative',
+          height: '12rem',
+          width: '12rem',
+          top: 'initial',
+          left: 'initial'
+        })
+
+h3 Window base
+.test-window-base(style={
+  width: '100%'
+})
+  h4 window base
+  .lux-modal(style={
+    'height': '10rem'
+  })
+
+  h4 window portal base
+  .lux-modal.-portal(style={
+    'height': '10rem'
+  })
+
+h3 Headers
+.test-headers(style={
+    width: '100%'
+  })
+  h4 header
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-bottom-left-radius': 0,
+    'border-bottom-right-radius': 0
+  })
+    .lux-modal__header
+
+  h4 header / title
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-bottom-left-radius': 0,
+    'border-bottom-right-radius': 0
+  })
+    .lux-modal__header
+      h1.lux-modal__title Modal alert title
+
+  h4 header / subtitle
+    .lux-modal(style={
+      'box-shadow': 'none',
+      'border-bottom-left-radius': 0,
+      'border-bottom-right-radius': 0
+    })
+      .lux-modal__header
+        h1.lux-modal__title Modal alert title
+        p.lux-modal__subtitle Modal alert subtitle
+
+  h4 header / title / close
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-bottom-left-radius': 0,
+    'border-bottom-right-radius': 0
+  })
+    .lux-modal__header
+      h1.lux-modal__title Modal alert title
+      button(class='lux-button -icon -close', aria-label='Close')
+        .lux-button__content
+          i.lux-icon.icon-x
+
+  h4 header / title / no border / close
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-bottom-left-radius': 0,
+    'border-bottom-right-radius': 0
+  })
+    .lux-modal__header.-no-border
+      h1.lux-modal__title Modal alert title
+      button(class='lux-button -icon -close', aria-label='Close')
+        .lux-button__content
+          i.lux-icon.icon-x
+
+  h4 header / title / centered / close
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-bottom-left-radius': 0,
+    'border-bottom-right-radius': 0
+  })
+    .lux-modal__header
+      h1.lux-modal__title.-centered Modal alert title
+      button(class='lux-button -icon -close', aria-label='Close')
+        .lux-button__content
+          i.lux-icon.icon-x
+
+  h4 header / title / centered / back/ close
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-bottom-left-radius': 0,
+    'border-bottom-right-radius': 0
+  })
+    .lux-modal__header
+      h1.lux-modal__title.-centered Modal alert title
+      button.lux-modal__back
+      button(class='lux-button -icon -close', aria-label='Close')
+        .lux-button__content
+          i.lux-icon.icon-x
+
+  h4 header / subtitle / centered / back/ close
+    .lux-modal(style={
+      'box-shadow': 'none',
+      'border-bottom-left-radius': 0,
+      'border-bottom-right-radius': 0
+    })
+      .lux-modal__header
+        h1.lux-modal__title.-centered Modal alert title
+        p.lux-modal__subtitle.-centered Modal alert subtitle
+        button.lux-modal__back
+        button(class='lux-button -icon -close', aria-label='Close')
+          .lux-button__content
+            i.lux-icon.icon-x
+
+    h4 header / portal
+    .lux-modal.-portal(style={
+      'box-shadow': 'none'
+    })
+      .lux-modal__header
+
+    h4 header / title / portal
+    .lux-modal.-portal(style={
+      'box-shadow': 'none'
+    })
+      .lux-modal__header
+        h1.lux-modal__title Modal alert title
+
+    h4 header / title / close / portal
+    .lux-modal.-portal(style={
+      'box-shadow': 'none'
+    })
+      .lux-modal__header
+        h1.lux-modal__title Modal alert title
+        button(class='lux-button -icon -close', aria-label='Close')
+          .lux-button__content
+            i.lux-icon.icon-x
+
+h3 Footers
+
+.test-footers(style={
+    width: '100%'
+  })
+  h4 footer
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-top-left-radius': 0,
+    'border-top-right-radius': 0
+  })
+    .lux-modal__footer
+
+  h4 footer / no border
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-top-left-radius': 0,
+    'border-top-right-radius': 0
+  })
+    .lux-modal__footer.-no-border
+
+  h4 footer / save
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-top-left-radius': 0,
+    'border-top-right-radius': 0
+  })
+    .lux-modal__footer
+      button.lux-button.-primary Save
+
+  h4 footer / cancel / save
+  .lux-modal(style={
+    'box-shadow': 'none',
+    'border-top-left-radius': 0,
+    'border-top-right-radius': 0
+  })
+    .lux-modal__footer
+      button.lux-button Cancel
+      button.lux-button.-primary Save
+
+  h4 footer / portal
+  .lux-modal.-portal(style={
+    'box-shadow': 'none'
+  })
+    .lux-modal__footer
+
+  h4 footer / save / portal
+  .lux-modal.-portal(style={
+    'box-shadow': 'none'
+  })
+    .lux-modal__footer
+      button.lux-button.-primary.-lg Save

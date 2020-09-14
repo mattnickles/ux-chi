@@ -2,51 +2,51 @@ h2 Examples
 h3 Base
 p.-text
   | To render a tooltip, apply the <code>data-tooltip</code> attribute to an element. Then
-  | initialize it with the chi.tooltip factory method.
+  | initialize it with the lux.tooltip factory method.
 .example.-mb--3
   .-p--3
-    button(data-tooltip='Your tooltip text on a button').chi-button Tooltip
+    button(data-tooltip='Your tooltip text on a button').lux-button Tooltip
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <button id="tooltip-1" class="chi-button" data-tooltip="Your tooltip text on a button">Tooltip</button>
+      <button id="tooltip-1" class="lux-button" data-tooltip="Your tooltip text on a button">Tooltip</button>
 
-      <script>chi.tooltip(document.getElementById('tooltip-1'));</script>
+      <script>lux.tooltip(document.getElementById('tooltip-1'));</script>
 
 h3 Light
 p.-text
   | Use light tooltips for rendering tooltips on dark backgrounds. To use, apply the <code>data-tooltip-color="light"</code> attribute to the Tooltip trigger element.
 .example.-bg--black.-mb--3
   .-p--3
-    button.-outline.-light(data-tooltip='Your tooltip text on a button' data-tooltip-color='light').chi-button Tooltip
+    button.-outline.-light(data-tooltip='Your tooltip text on a button' data-tooltip-color='light').lux-button Tooltip
   .example-tabs.-pl--2
-    ul.chi-tabs#example-light
+    ul.lux-tabs#example-light
       li.-disabled
         a(href=`#webcomponent-light`) Web Component
       li.-active
         a(href=`#html-light`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-light
-  .chi-tabs-panel.-active#html-light
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-light
+  .lux-tabs-panel.-active#html-light
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <button id="tooltip-2" class="chi-button -outline -light" data-tooltip="Your tooltip text on a button" data-tooltip-color="light">Tooltip</button>
+      <button id="tooltip-2" class="lux-button -outline -light" data-tooltip="Your tooltip text on a button" data-tooltip-color="light">Tooltip</button>
 
-      <script>chi.tooltip(document.getElementById('tooltip-2'));</script>
+      <script>lux.tooltip(document.getElementById('tooltip-2'));</script>
 
 h3 Positioning
 p.-text
@@ -56,30 +56,30 @@ p.-text
   | of Elements and initialize all at once.
 .example.-mb--3
   .-p--3
-    button(data-tooltip='Your top tooltip text').chi-button.-mr--2.-mb--2.-mb-md--0 Top Tooltip
-    button(data-tooltip='Your right tooltip text', data-position='right').chi-button.-mr--2.-mb--2.-mb-md--0 Right Tooltip
-    button(data-tooltip='Your bottom tooltip text', data-position='bottom').chi-button.-mr--2.-mb--2.-mb-md--0 Bottom Tooltip
-    button(data-tooltip='Your left tooltip text', data-position='left').chi-button.-mr--2.-mb--2.-mb-md--0 Left Tooltip
+    button(data-tooltip='Your top tooltip text').lux-button.-mr--2.-mb--2.-mb-md--0 Top Tooltip
+    button(data-tooltip='Your right tooltip text', data-position='right').lux-button.-mr--2.-mb--2.-mb-md--0 Right Tooltip
+    button(data-tooltip='Your bottom tooltip text', data-position='bottom').lux-button.-mr--2.-mb--2.-mb-md--0 Bottom Tooltip
+    button(data-tooltip='Your left tooltip text', data-position='left').lux-button.-mr--2.-mb--2.-mb-md--0 Left Tooltip
   .example-tabs.-pl--2
-    ul.chi-tabs#example-positioning
+    ul.lux-tabs#example-positioning
       li.-disabled
         a(href=`#webcomponent-positioning`) Web Component
       li.-active
         a(href=`#html-positioning`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-positioning
-  .chi-tabs-panel.-active#html-positioning
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-positioning
+  .lux-tabs-panel.-active#html-positioning
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <button class="chi-button" data-tooltip="Your top tooltip text">Top Tooltip</button>
-      <button class="chi-button" data-tooltip="Your right tooltip text" data-position="right">Right Tooltip</button>
-      <button class="chi-button" data-tooltip="Your bottom tooltip text" data-position="bottom">Bottom Tooltip</button>
-      <button class="chi-button" data-tooltip="Your left tooltip text" data-position="left">Left Tooltip</button>
+      <button class="lux-button" data-tooltip="Your top tooltip text">Top Tooltip</button>
+      <button class="lux-button" data-tooltip="Your right tooltip text" data-position="right">Right Tooltip</button>
+      <button class="lux-button" data-tooltip="Your bottom tooltip text" data-position="bottom">Bottom Tooltip</button>
+      <button class="lux-button" data-tooltip="Your left tooltip text" data-position="left">Left Tooltip</button>
 
-      <script>chi.tooltip(document.querySelectorAll('[data-tooltip]'));</script>
+      <script>lux.tooltip(document.querySelectorAll('[data-tooltip]'));</script>
 
 h3 Long Tooltips
 p.-text
@@ -89,30 +89,30 @@ p.-text
   .-p--3
     button(data-tooltip='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et interdum purus. ' +
     'Curabitur varius libero, vel hendrerit enim tincidunt sit amet. Ut eros purus, semper nec ipsum et, ' +
-    'maximus faucibus suscipit nibh.').chi-button.-mr--2.-mb--2.-mb-md--0 Long Tooltip
+    'maximus faucibus suscipit nibh.').lux-button.-mr--2.-mb--2.-mb-md--0 Long Tooltip
   .example-tabs.-pl--2
-    ul.chi-tabs#example-long
+    ul.lux-tabs#example-long
       li.-disabled
         a(href=`#webcomponent-long`) Web Component
       li.-active
         a(href=`#html-long`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-long
-  .chi-tabs-panel.-active#html-long
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-long
+  .lux-tabs-panel.-active#html-long
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <button class="chi-button" data-tooltip="Lorem ipsum...">Long Tooltip</button>
+      <button class="lux-button" data-tooltip="Lorem ipsum...">Long Tooltip</button>
 
-      <script>chi.tooltip(document.querySelectorAll('[data-tooltip]'));</script>
+      <script>lux.tooltip(document.querySelectorAll('[data-tooltip]'));</script>
 
 script.
   document.addEventListener(
           'DOMContentLoaded',
           function() {
-            chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
-            chi.tooltip(document.querySelectorAll('[data-tooltip]'));
+            lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
+            lux.tooltip(document.querySelectorAll('[data-tooltip]'));
           }
   );

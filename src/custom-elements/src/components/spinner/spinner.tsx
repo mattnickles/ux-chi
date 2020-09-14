@@ -4,7 +4,7 @@ import { ICON_SIZES } from '../../constants/size';
 const SPINNER_COLORS = ['primary', 'dark', 'success', 'warning', 'danger', 'muted', 'secondary', 'light'];
 
 @Component({
-  tag: 'chi-spinner',
+  tag: 'lux-spinner',
   styleUrl: 'spinner.scss',
   scoped: true
 })
@@ -53,7 +53,7 @@ export class Spinner {
 
   render() {
     const spinner = (
-      <svg class={`chi-spinner
+      <svg class={`lux-spinner
         ${this.color ? `-icon--${this.color}` : ''}
         ${this.size ? `-${this.size}` : ''}`} viewBox="0 0 66 66"
       >
@@ -64,8 +64,8 @@ export class Spinner {
 
     if (this.backdrop || this.backdrop === '') {
       return (
-        <div class={`chi-backdrop -center ${this.backdrop === 'inverse' && '-inverse'}`}>
-          <div class="chi-backdrop__wrapper">
+        <div class={`lux-backdrop -center ${this.backdrop === 'inverse' && '-inverse'}`}>
+          <div class="lux-backdrop__wrapper">
             {spinner}
           </div>
         </div>

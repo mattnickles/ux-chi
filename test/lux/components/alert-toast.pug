@@ -1,0 +1,35 @@
+---
+title: Alert Toasts
+---
+- const sizes = ['h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
+
+each size in ['default', 'sm', 'lg']
+  h4 Default / #{size}
+  div(class=`test-toast-${size}`)
+    each val, type in {base:'icon-circle-info', success:'icon-circle-check', danger:'icon-circle-warning', warning:'icon-warning', info:'icon-circle-info', muted:'icon-circle-info'}
+      .lux-alert.-toast.-m--2(class=`-${type} ${size === 'default' ? '' : '-' + size}`)
+        div(class=`lux-alert__icon lux-icon -icon--${type}`)
+          svg
+            use(xlink:href=`#${val}`)
+        .lux-alert__content
+            p.lux-alert__text=`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
+        button(class='lux-alert__close-button lux-button -icon -close', aria-label='Close')
+          .lux-button__content
+            .lux-icon
+              svg
+                use(xlink:href='#icon-x')
+  h4 Titled / #{size}
+  div(class=`test-toast-titled-${size}`)
+    each val, type in {base:'icon-circle-info', success:'icon-circle-check', danger:'icon-circle-warning', warning:'icon-warning', info:'icon-circle-info', muted:'icon-circle-info'}
+      .lux-alert.-toast.-m--2(class=`-${type} ${size === 'default' ? '' : '-' + size}`)
+        div(class=`lux-alert__icon lux-icon -icon--${type}`)
+          svg
+            use(xlink:href=`#${val}`)
+        .lux-alert__content
+            p.lux-alert__title= type
+            p.lux-alert__text=`This is ${type === 'info' ? 'an' : 'a'} ${type} toast alert`
+        button(class='lux-alert__close-button lux-button -icon -close', aria-label='Close')
+          .lux-button__content
+            .lux-icon
+              svg
+                use(xlink:href='#icon-x')

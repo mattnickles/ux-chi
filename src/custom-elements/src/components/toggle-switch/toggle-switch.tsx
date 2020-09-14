@@ -1,7 +1,7 @@
 import { Component, Element, Event, EventEmitter, Prop, Watch, h } from '@stencil/core';
 
 @Component({
-  tag: 'chi-switch',
+  tag: 'lux-switch',
   styleUrl: 'toggle-switch.scss',
   scoped: true
 })
@@ -60,20 +60,20 @@ export class ToggleSwitch {
   render() {
     return (
       <label htmlFor={`${this.el.id}-control`}
-            class={`chi-switch
+            class={`lux-switch
               ${this.size ? `-${this.size}` : ''}
               ${this.hideLabel ? '-label--hide' : ''}`}>
         <input type="checkbox"
-               class={`chi-switch__input ${this.extraClass ? this.extraClass : ''}`}
+               class={`lux-switch__input ${this.extraClass ? this.extraClass : ''}`}
                id={`${this.el.id}-control`}
                disabled={this.disabled}
                checked={this.checked}
                onClick={() => this._toggle()}
         />
-        <span class="chi-switch__content">
-          <span class="chi-switch__thumb"></span>
+        <span class="lux-switch__content">
+          <span class="lux-switch__thumb"></span>
         </span>
-        <span class="chi-switch__label">{this.label}</span>
+        <span class="lux-switch__label">{this.label}</span>
       </label>
     );
   }

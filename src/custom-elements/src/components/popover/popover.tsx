@@ -19,7 +19,7 @@ import {
 import Popper, { Placement } from 'popper.js';
 
 @Component({
-  tag: 'chi-popover',
+  tag: 'lux-popover',
   styleUrl: 'popover.scss',
   scoped: true
 })
@@ -174,19 +174,19 @@ export class Popover {
   /**
    * Popover show method has executed, but the showing animation has not started yet
    */
-  @Event({ eventName: 'chiPopoverShow' }) eventShow: EventEmitter;
+  @Event({ eventName: 'luxPopoverShow' }) eventShow: EventEmitter;
   /**
    * Popover hide method has executed, but the closing animation has not started yet
    */
-  @Event({ eventName: 'chiPopoverHide' }) eventHide: EventEmitter;
+  @Event({ eventName: 'luxPopoverHide' }) eventHide: EventEmitter;
   /**
    * Popover has been shown to the user and is fully visible. The animation has completed.
    */
-  @Event({ eventName: 'chiPopoverShown' }) eventShown: EventEmitter;
+  @Event({ eventName: 'luxPopoverShown' }) eventShown: EventEmitter;
   /**
    * Popover has been hidden to the user. The animation has completed.
    */
-  @Event({ eventName: 'chiPopoverHidden' }) eventHidden: EventEmitter;
+  @Event({ eventName: 'luxPopoverHidden' }) eventHidden: EventEmitter;
 
   private _resetPopperPosition(): void {
     this._popper.update();
@@ -281,7 +281,7 @@ export class Popover {
     this._popper = new Popper(this._reference, this._popoverElement, {
       modifiers: {
         applyStyle: { enabled: true },
-        applyChiStyle: {
+        applyLuxStyle: {
           enabled: true,
           fn: savePopperData,
           // Set order to run after popper applyStyle modifier
@@ -289,7 +289,7 @@ export class Popover {
           order: 875
         },
         arrow: {
-          element: '.chi-popover__arrow',
+          element: '.lux-popover__arrow',
           enabled: this.arrow
         }
       },
@@ -345,7 +345,7 @@ export class Popover {
       this.popoverTitle = this.el.getAttribute('title');
     }
 
-    if (Array.from(this.el.querySelectorAll("[slot=chi-popover__footer]")).length > 0) {
+    if (Array.from(this.el.querySelectorAll("[slot=lux-popover__footer]")).length > 0) {
       this.popoverFooter = true;
     }
   }
@@ -402,18 +402,18 @@ export class Popover {
   }
 
   render() {
-    const popoverHeader = this.popoverTitle && <header class="chi-popover__header"><h2 class="chi-popover__title">{this.popoverTitle}</h2></header>;
-    const slot = this.variant && this.variant === 'text' ? <p class="chi-popover__text"><slot /></p> : <slot />;
-    const chiFooter = this.popoverFooter && <div class="chi-popover__footer"><slot name="chi-popover__footer"></slot></div>;
+    const popoverHeader = this.popoverTitle && <header class="lux-popover__header"><h2 class="lux-popover__title">{this.popoverTitle}</h2></header>;
+    const slot = this.variant && this.variant === 'text' ? <p class="lux-popover__text"><slot /></p> : <slot />;
+    const luxFooter = this.popoverFooter && <div class="lux-popover__footer"><slot name="lux-popover__footer"></slot></div>;
 
     return (
       <section
-        class={`chi-popover
+        class={`lux-popover
           ${CLASSES.ANIMATED}
-          ${this.position ? `chi-popover--${this.position}` : ''}
+          ${this.position ? `lux-popover--${this.position}` : ''}
           ${this.arrow ? '' : '-no-arrow'}
           ${this._animationClasses}
-          ${this._reference && this._reference.classList.contains('chi-input') ? 'chi-popover__input' : ''}
+          ${this._reference && this._reference.classList.contains('lux-input') ? 'lux-popover__input' : ''}
         `}
         ref={el => (this._popoverElement = el as HTMLElement)}
         onClick={() => this.preventAutoClose()}
@@ -423,11 +423,11 @@ export class Popover {
         aria-hidden={!this.active}
       >
         {popoverHeader}
-        <div class="chi-popover__content">
+        <div class="lux-popover__content">
           {slot}
         </div>
-        {chiFooter}
-        {this.arrow && <div class="chi-popover__arrow" />}
+        {luxFooter}
+        {this.arrow && <div class="lux-popover__arrow" />}
       </section>
     );
   }

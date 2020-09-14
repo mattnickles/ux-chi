@@ -1,5 +1,5 @@
-script(type='module' src='../../js/ce/ux-chi-ce/ux-chi-ce.esm.js')
-script(nomodule='' src='../../js/ce/ux-chi-ce/ux-chi-ce.js')
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
 
 h2 Examples
 
@@ -7,29 +7,29 @@ h3 Backdrop
 h4 Base
 .example.-mb--3
   .-p--6(style="position:relative;height:25rem;")
-    chi-spinner(color='light', backdrop)
+    lux-spinner(color='light', backdrop)
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-default
+    ul.lux-tabs#examples-default
       li.-active
         a(href=`#webcomponent`) Web Component
       li
         a(href=`#html`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent
-    .chi-tab__description
-      | To render a spinner, use the tag <code>&lt;chi-spinner&gt;</code>.
+  .lux-tabs-panel.-active#webcomponent
+    .lux-tab__description
+      | To render a spinner, use the tag <code>&lt;lux-spinner&gt;</code>.
       br
       | An optional backdrop can be added to focus the user's attention on a spinner. To set a backdrop, use the <code>backdrop</code> attribute.
     :code(lang="html")
-      <chi-spinner color="light" backdrop></chi-spinner>
-  .chi-tabs-panel#html
-    .chi-tab__description
-      | To render a spinner, use the class <code>chi-spinner</code>.
+      <lux-spinner color="light" backdrop></lux-spinner>
+  .lux-tabs-panel#html
+    .lux-tab__description
+      | To render a spinner, use the class <code>lux-spinner</code>.
       br
-      | Wrap spinners in <code>chi-backdrop</code> to overlay content similar to a modal, and add <code>-center</code> class to position it in the middle of the page.
+      | Wrap spinners in <code>lux-backdrop</code> to overlay content similar to a modal, and add <code>-center</code> class to position it in the middle of the page.
     :code(lang="html")
-      <div class="chi-backdrop -center">
-        <div class="chi-backdrop__wrapper">
-          <svg class="chi-spinner -icon--light" viewBox="0 0 66 66">
+      <div class="lux-backdrop -center">
+        <div class="lux-backdrop__wrapper">
+          <svg class="lux-spinner -icon--light" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
@@ -39,25 +39,25 @@ h4 Base
 h4 Inverse
 .example.-mb--3
   .-p--6(style="position:relative;height:25rem;")
-    chi-spinner(color='primary', backdrop='inverse')
+    lux-spinner(color='primary', backdrop='inverse')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-inverse
+    ul.lux-tabs#examples-inverse
       li.-active
         a(href=`#webcomponent-inverse`) Web Component
       li
         a(href=`#html-inverse`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-inverse
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-inverse
+    .lux-tab__description
       | Set the <code>backdrop</code> value to <code>inverse</code> to render spinners on light backgrounds.
     :code(lang="html")
-      <chi-spinner color="primary" backdrop="inverse"></chi-spinner>
-  .chi-tabs-panel#html-inverse
-    .chi-tab__description
+      <lux-spinner color="primary" backdrop="inverse"></lux-spinner>
+  .lux-tabs-panel#html-inverse
+    .lux-tab__description
       | Apply the class <code>-inverse</code> to render spinners on light backgrounds.
     :code(lang="html")
-      <div class="chi-backdrop -center -inverse">
-        <div class="chi-backdrop__wrapper">
-          <svg class="chi-spinner -icon--primary" viewBox="0 0 66 66">
+      <div class="lux-backdrop -center -inverse">
+        <div class="lux-backdrop__wrapper">
+          <svg class="lux-spinner -icon--primary" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
@@ -69,61 +69,61 @@ h3 Contextual
 h4 Spinners in Buttons
 .example.-mb--3
   .-p--3
-    chi-button(class='-mr--3')
+    lux-button(class='-mr--3')
       span= 'Button'
-      chi-spinner(color='muted')
-    chi-button(class='-mr--3', size='sm')
+      lux-spinner(color='muted')
+    lux-button(class='-mr--3', size='sm')
       span= 'Small'
-      chi-spinner(color='muted', size='xs')
-    chi-button(class='-mr--3', size='lg')
+      lux-spinner(color='muted', size='xs')
+    lux-button(class='-mr--3', size='lg')
       span= 'Large'
-      chi-spinner(color='muted', size='sm--2')
+      lux-spinner(color='muted', size='sm--2')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-contextual
+    ul.lux-tabs#examples-contextual
       li.-active
         a(href=`#webcomponent-contextual`) Web Component
       li
         a(href=`#html-contextual`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-contextual
+  .lux-tabs-panel.-active#webcomponent-contextual
     :code(lang="html")
-      <chi-button>
+      <lux-button>
         <span>Button</span>
-        <chi-spinner color="muted"></chi-spinner>
-      </chi-button>
-      <chi-button size="sm">
+        <lux-spinner color="muted"></lux-spinner>
+      </lux-button>
+      <lux-button size="sm">
         <span>Small</span>
-        <chi-spinner color="muted" size="xs"></chi-spinner>
-      </chi-button>
-      <chi-button size="lg">
+        <lux-spinner color="muted" size="xs"></lux-spinner>
+      </lux-button>
+      <lux-button size="lg">
         <span>Large</span>
-        <chi-spinner color="muted" size="sm--2"></chi-spinner>
-      </chi-button>
-  .chi-tabs-panel#html-contextual
+        <lux-spinner color="muted" size="sm--2"></lux-spinner>
+      </lux-button>
+  .lux-tabs-panel#html-contextual
     :code(lang="html")
-      <button class="chi-button">
-        <div class="chi-button__content">
+      <button class="lux-button">
+        <div class="lux-button__content">
           <span>Button</span>
-          <svg class="chi-spinner -icon--muted" viewBox="0 0 66 66">
+          <svg class="lux-spinner -icon--muted" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
           </div>
         </div>
       </button>
-      <button class="chi-button">
-        <div class="chi-button__content">
+      <button class="lux-button">
+        <div class="lux-button__content">
           <span>Small</span>
-          <svg class="chi-spinner -icon--muted -xs" viewBox="0 0 66 66">
+          <svg class="lux-spinner -icon--muted -xs" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
           </div>
         </div>
       </button>
-      <button class="chi-button">
-        <div class="chi-button__content">
+      <button class="lux-button">
+        <div class="lux-button__content">
           <span>Large</span>
-          <svg class="chi-spinner -icon--muted -sm--2" viewBox="0 0 66 66">
+          <svg class="lux-spinner -icon--muted -sm--2" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
@@ -134,64 +134,64 @@ h4 Spinners in Buttons
 h4 Spinners in Text Inputs
 .example.-mb--3
   .-p--3
-    .chi-form__item.-mb--2(style="max-width:20rem")
-      label.chi-label(for="spinner-input-01") Label
-      .chi-input__wrapper
-        input(type="text", class="chi-input", placeholder="Placeholder", value="Sample Text" id="spinner-input-01")
-        svg(class=`chi-spinner -icon--muted`,viewBox=`0 0 66 66`)
+    .lux-form__item.-mb--2(style="max-width:20rem")
+      label.lux-label(for="spinner-input-01") Label
+      .lux-input__wrapper
+        input(type="text", class="lux-input", placeholder="Placeholder", value="Sample Text" id="spinner-input-01")
+        svg(class=`lux-spinner -icon--muted`,viewBox=`0 0 66 66`)
           title Loading
           circle(class=`path`,cx=`33`,cy=`33`,r=`30`,fill=`none`,stroke-width=`6`)
-    .chi-form__item.-mb--2(style="max-width:20rem")
-      label.chi-label(for="spinner-input-02") Label
-      .chi-input__wrapper
-        input(type="text", class="chi-input -sm", placeholder="Placeholder", value="Sample Text", id="spinner-input-02")
-        svg(class=`chi-spinner -icon--muted -xs`,viewBox=`0 0 66 66`)
+    .lux-form__item.-mb--2(style="max-width:20rem")
+      label.lux-label(for="spinner-input-02") Label
+      .lux-input__wrapper
+        input(type="text", class="lux-input -sm", placeholder="Placeholder", value="Sample Text", id="spinner-input-02")
+        svg(class=`lux-spinner -icon--muted -xs`,viewBox=`0 0 66 66`)
           title Loading
           circle(class=`path`,cx=`33`,cy=`33`,r=`30`,fill=`none`,stroke-width=`6`)
-    .chi-form__item.-mb--2(style="max-width:20rem")
-      label.chi-label(for="spinner-input-03") Label
-      .chi-input__wrapper
-        input(type="text", class="chi-input -lg", placeholder="Placeholder", value="Sample Text", id="spinner-input-03")
-        svg(class=`chi-spinner -icon--muted -sm--2`,viewBox=`0 0 66 66`)
+    .lux-form__item.-mb--2(style="max-width:20rem")
+      label.lux-label(for="spinner-input-03") Label
+      .lux-input__wrapper
+        input(type="text", class="lux-input -lg", placeholder="Placeholder", value="Sample Text", id="spinner-input-03")
+        svg(class=`lux-spinner -icon--muted -sm--2`,viewBox=`0 0 66 66`)
           title Loading
           circle(class=`path`,cx=`33`,cy=`33`,r=`30`,fill=`none`,stroke-width=`6`)
   .example-tabs.-pl--2
-    ul.chi-tabs#example-spinner-text
+    ul.lux-tabs#example-spinner-text
       li.-disabled
         a(href=`#webcomponent-spinner-text`) Web Component
       li.-active
         a(href=`#html-spinner-text`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-spinner-text
-  .chi-tabs-panel.-active#html-spinner-text
+  .lux-tabs-panel#webcomponent-spinner-text
+  .lux-tabs-panel.-active#html-spinner-text
     :code(lang="html")
       <!-- Medium (Base) -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="spinner-input-01">Label</label>
-        <div class="chi-input__wrapper">
-          <input type="text" class="chi-input" placeholder="Placeholder" value="Sample text" id="spinner-input-01">
-          <svg class="chi-spinner -icon--muted" viewBox="0 0 66 66">
+      <div class="lux-form__item">
+        <label class="lux-label" for="spinner-input-01">Label</label>
+        <div class="lux-input__wrapper">
+          <input type="text" class="lux-input" placeholder="Placeholder" value="Sample text" id="spinner-input-01">
+          <svg class="lux-spinner -icon--muted" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
         </div>
       </div>
       <!-- Small -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="spinner-input-02">Label</label>
-        <div class="chi-input__wrapper">
-          <input type="text" class="chi-input -sm" placeholder="Placeholder" value="Sample text" id="spinner-input-02">
-          <svg class="chi-spinner -icon--muted -xs" viewBox="0 0 66 66">
+      <div class="lux-form__item">
+        <label class="lux-label" for="spinner-input-02">Label</label>
+        <div class="lux-input__wrapper">
+          <input type="text" class="lux-input -sm" placeholder="Placeholder" value="Sample text" id="spinner-input-02">
+          <svg class="lux-spinner -icon--muted -xs" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
         </div>
       </div>
       <!-- Large -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="spinner-input-03">Label</label>
-        <div class="chi-input__wrapper">
-          <input type="text" class="chi-input -lg" placeholder="Placeholder" value="Sample text" id="spinner-input-03">
-          <svg class="chi-spinner -icon--muted -sm--2" viewBox="0 0 66 66">
+      <div class="lux-form__item">
+        <label class="lux-label" for="spinner-input-03">Label</label>
+        <div class="lux-input__wrapper">
+          <input type="text" class="lux-input -lg" placeholder="Placeholder" value="Sample text" id="spinner-input-03">
+          <svg class="lux-spinner -icon--muted -sm--2" viewBox="0 0 66 66">
             <title>Loading</title>
             <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
           </svg>
@@ -202,83 +202,83 @@ h4 Spinners in Text Inputs
 h3 Sizes
 .example.-mb--3
   .-p--3
-    .chi-grid.-align-items--end
+    .lux-grid.-align-items--end
       each size in ['xs', 'sm', 'sm--2', 'sm--3', 'md', 'lg', 'xl', 'xxl']
         div.-p--2
-          chi-spinner(size=size, class='-m--1')
+          lux-spinner(size=size, class='-m--1')
           p.-text.-text--center= size
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-sizes
+    ul.lux-tabs#examples-sizes
       li.-active
         a(href=`#webcomponent-sizes`) Web Component
       li
         a(href=`#html-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-sizes
+    .lux-tab__description
       | By default, spinners are rendered at 16x16px (<code>sm</code>).
       | Set <code>size</code> attribute to render spinners larger or smaller: <code>xs</code>,
       | <code>sm</code>, <code>sm--2</code>, <code>sm--3</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>.
     :code(lang="html")
       <!-- xs : 12x12px -->
-      <chi-spinner size="xs"></chi-spinner>
+      <lux-spinner size="xs"></lux-spinner>
       <!-- sm : 16x16px -->
-      <chi-spinner size="sm"></chi-spinner>
+      <lux-spinner size="sm"></lux-spinner>
       <!-- sm--2 : 20x20px -->
-      <chi-spinner size="sm--2"></chi-spinner>
+      <lux-spinner size="sm--2"></lux-spinner>
       <!-- sm--3 : 24x24px -->
-      <chi-spinner size="sm--3"></chi-spinner>
+      <lux-spinner size="sm--3"></lux-spinner>
       <!-- md : 32x32px -->
-      <chi-spinner size="md"></chi-spinner>
+      <lux-spinner size="md"></lux-spinner>
       <!-- lg : 64x64px -->
-      <chi-spinner size="lg"></chi-spinner>
+      <lux-spinner size="lg"></lux-spinner>
       <!-- xl : 96x96px -->
-      <chi-spinner size="xl"></chi-spinner>
+      <lux-spinner size="xl"></lux-spinner>
       <!-- xxl : 128x128px -->
-      <chi-spinner size="xxl"></chi-spinner>
-  .chi-tabs-panel#html-sizes
-    .chi-tab__description
+      <lux-spinner size="xxl"></lux-spinner>
+  .lux-tabs-panel#html-sizes
+    .lux-tab__description
       | By default, spinners render at 16x16px (<code>-sm</code>).
       | Apply size classes to render spinners larger or smaller: <code>-xs</code>,
       | <code>-sm</code>, <code>-sm--2</code>, <code>-sm--3</code>, <code>-md</code>, <code>-lg</code>, <code>-xl</code>, <code>-xxl</code>.
     :code(lang="html")
       <!-- -xs : 12x12px -->
-      <svg class="chi-spinner -xs" viewBox="0 0 66 66">
+      <svg class="lux-spinner -xs" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- -sm : 16x16px -->
-      <svg class="chi-spinner -sm" viewBox="0 0 66 66">
+      <svg class="lux-spinner -sm" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- -sm--2 : 20x20px -->
-      <svg class="chi-spinner -sm--2" viewBox="0 0 66 66">
+      <svg class="lux-spinner -sm--2" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- -sm--3 : 24x24px -->
-      <svg class="chi-spinner -sm--3" viewBox="0 0 66 66">
+      <svg class="lux-spinner -sm--3" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- -md : 32x32px -->
-      <svg class="chi-spinner -md" viewBox="0 0 66 66">
+      <svg class="lux-spinner -md" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- -lg : 64x64px -->
-      <svg class="chi-spinner -lg" viewBox="0 0 66 66">
+      <svg class="lux-spinner -lg" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- -xl : 96x96px -->
-      <svg class="chi-spinner -xl" viewBox="0 0 66 66">
+      <svg class="lux-spinner -xl" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       </div>
       <!-- -xxl : 128x128px -->
-      <svg class="chi-spinner -xxl" viewBox="0 0 66 66">
+      <svg class="lux-spinner -xxl" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
@@ -291,51 +291,51 @@ h4 Brand
 p.-text
   | Brand spinner colors reinforce Lumen's brand. Use primary or dark for light themes and secondary or light for dark themes.
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6.-p--1.-d--flex.-justify-content--center
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6.-p--1.-d--flex.-justify-content--center
       each color in ['primary', 'dark']
         div.-p--2.-text--center
-          chi-spinner(color=color, class='-m--1', size='md')
-    .chi-col.-w--12.-w-md--6.-bg--black.-p--1.-d--flex.-justify-content--center
+          lux-spinner(color=color, class='-m--1', size='md')
+    .lux-col.-w--12.-w-md--6.-bg--black.-p--1.-d--flex.-justify-content--center
       each color in ['secondary', 'light']
         div.-p--2.-text--center
-          chi-spinner(color=color, class='-m--1', size='md')
+          lux-spinner(color=color, class='-m--1', size='md')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-colors
+    ul.lux-tabs#examples-colors
       li.-active
         a(href=`#webcomponent-colors`) Web Component
       li
         a(href=`#html-colors`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-colors
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-colors
+    .lux-tab__description
       | Use the <code>color</code> attribute to change a spinners color.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <chi-spinner color="primary"></chi-spinner>
-      <chi-spinner color="dark"></chi-spinner>
+      <lux-spinner color="primary"></lux-spinner>
+      <lux-spinner color="dark"></lux-spinner>
       <!-- For dark backgrounds -->
-      <chi-spinner color="secondary"></chi-spinner>
-      <chi-spinner color="light"></chi-spinner>
-  .chi-tabs-panel#html-colors
-    .chi-tab__description
+      <lux-spinner color="secondary"></lux-spinner>
+      <lux-spinner color="light"></lux-spinner>
+  .lux-tabs-panel#html-colors
+    .lux-tab__description
       | Use <a href="../../utilities/color">icon color utilities</a> such as <code>-icon--primary</code>
       | and <code>-icon--secondary</code> to change the color of any spinner.
     :code(lang="html")
       <!-- For light backgrounds -->
-      <svg class="chi-spinner -icon--primary" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--primary" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
-      <svg class="chi-spinner -icon--dark" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--dark" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
       <!-- For dark backgrounds -->
-      <svg class="chi-spinner -icon--secondary" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--secondary" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
-      <svg class="chi-spinner -icon--light" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--light" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
@@ -346,43 +346,43 @@ p.-text
   | red (danger) for negative, yellow (warning) for needs attention, and grey (muted)
   | for neutral. Semantic colors should never be used for decorative purposes.
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-d--flex.-flex--row.-justify-content--center.-flex--wrap
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-d--flex.-flex--row.-justify-content--center.-flex--wrap
       each color in ['success', 'warning', 'danger', 'muted']
         div.-p--2.-text--center
-          chi-spinner(color=color, class='-m--3', size='md')
+          lux-spinner(color=color, class='-m--3', size='md')
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-colors-semantic
+    ul.lux-tabs#examples-colors-semantic
       li.-active
         a(href=`#webcomponent-colors-semantic`) Web Component
       li
         a(href=`#html-colors-semantic`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-colors-semantic
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-colors-semantic
+    .lux-tab__description
       | Use the <code>color</code> attribute to change a spinners color.
     :code(lang="html")
-      <chi-spinner color="success"></chi-spinner>
-      <chi-spinner color="warning"></chi-spinner>
-      <chi-spinner color="danger"></chi-spinner>
-      <chi-spinner color="muted"></chi-spinner>
-  .chi-tabs-panel#html-colors-semantic
-    .chi-tab__description
+      <lux-spinner color="success"></lux-spinner>
+      <lux-spinner color="warning"></lux-spinner>
+      <lux-spinner color="danger"></lux-spinner>
+      <lux-spinner color="muted"></lux-spinner>
+  .lux-tabs-panel#html-colors-semantic
+    .lux-tab__description
       | Use <a href="../../utilities/color">icon color utilities</a> such as <code>-icon--success</code>
       | and <code>-icon--danger</code> to change the color of any spinner.
     :code(lang="html")
-      <svg class="chi-spinner -icon--success" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--success" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
-      <svg class="chi-spinner -icon--warning" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--warning" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
-      <svg class="chi-spinner -icon--danger" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--danger" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
-      <svg class="chi-spinner -icon--muted" viewBox="0 0 66 66">
+      <svg class="lux-spinner -icon--muted" viewBox="0 0 66 66">
         <title>Loading</title>
         <circle class="path" cx="33" cy="33" r="30" fill="none" stroke-width="6"></circle>
       </svg>
@@ -391,6 +391,6 @@ script.
     document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

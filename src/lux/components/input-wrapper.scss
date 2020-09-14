@@ -1,0 +1,72 @@
+@import '_variables';
+@import '_mixins';
+
+$border: 0.0625rem;
+
+.lux-input__wrapper {
+  position: relative;
+}
+
+.lux-form__item {
+  display: flex;
+  flex-direction: column;
+
+  & label:not(.lux-label) {
+    font-weight: $font-weight-normal;
+  }
+
+  &.-row {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    & label {
+      margin-bottom: 0;
+    }
+  }
+
+  &.-inline {
+    display: inline-flex;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.-list {
+    border: $border solid $color-border-base-dark;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+
+    & li {
+      border-bottom: $border solid $color-border-base-light;
+      flex: 1 0 auto;
+      line-height: 1rem;
+      padding: (0.5rem - $border) (1rem - $border);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  & .lux-label__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.25rem;
+
+    label,
+    .lux-label {
+      margin-bottom: 0;
+    }
+
+    .lux-icon {
+      margin-left: 0.5rem;
+    }
+  }
+}

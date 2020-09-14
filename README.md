@@ -1,32 +1,32 @@
-# Welcome to Chi
+# Welcome to Lux
 
-Chi is Lumen's design system for building consistent digital products and experiences.
+Lux is Lumen's design system for building consistent digital products and experiences.
 
 ## Getting Started
 
-Integrating Chi with your project is as simple as loading the Chi stylesheet from the [Lumen Assets Server](https://assets.ctl.io). Not only is this a great way to get started with Chi, it is also a highly available and performant option for loading the required assets into your project.
+Integrating Lux with your project is as simple as loading the Lux stylesheet from the [Lumen Assets Server](https://assets.ctl.io). Not only is this a great way to get started with Lux, it is also a highly available and performant option for loading the required assets into your project.
 
-Begin by adding the Chi stylesheet to your project's layout template, replacing `VERSION` with the most recent release of Chi:
+Begin by adding the Lux stylesheet to your project's layout template, replacing `VERSION` with the most recent release of Lux:
 
 ``` html
-<link rel="stylesheet" href="https://assets.ctl.io/chi/VERSION/chi.css">
+<link rel="stylesheet" href="https://assets.ctl.io/lux/VERSION/lux.css">
 ```
 
-Next, add the `chi` CSS class to the `<html>` tag of your document to properly scope the styles. This allows Chi to override any existing styles that have been defined by legacy markup.
+Next, add the `lux` CSS class to the `<html>` tag of your document to properly scope the styles. This allows Lux to override any existing styles that have been defined by legacy markup.
 
 ``` html
 <!DOCTYPE html>
 
-<html class="chi">
+<html class="lux">
   ...
 </html>
 ```
 
-At this point you will be able to target the styles available in Chi by referencing its [documentation](https://assets.ctl.io/chi).
+At this point you will be able to target the styles available in Lux by referencing its [documentation](https://assets.ctl.io/lux).
 
 ## Development Workflow
 
-Set up your Chi development environment with Docker. First make sure you have Docker installed, then run the command:
+Set up your Lux development environment with Docker. First make sure you have Docker installed, then run the command:
 
 ``` sh
 $ scripts/docker.sh alias
@@ -36,10 +36,10 @@ $ source ~/.bash_profile
 Now your environment is set up. To start development run:
 
 ``` sh
-$ chi start
+$ lux start
 ```
 
-Once the container has been bootstrapped and the Chi project has started, connect to [http://localhost:8000](http://localhost:8000) in your browser to load Chi. While running, any changes to the Chi source will automatically be reloaded in your browser.
+Once the container has been bootstrapped and the Lux project has started, connect to [http://localhost:8000](http://localhost:8000) in your browser to load Lux. While running, any changes to the Lux source will automatically be reloaded in your browser.
 
 The project has been configured to run inside a Docker container so it won't work as a regular node application.
 
@@ -48,7 +48,7 @@ The project has been configured to run inside a Docker container so it won't wor
 We use [BackstopJS](https://garris.github.io/BackstopJS) for visual regression testing of our CSS components. In order to account for differences in development environments we always run these tests in a consistent Docker container. To execute the test suite, run the following command:
 
 ``` sh
-$ chi test
+$ lux test
 ```
 
 A report containing the results of the test will be created under `reports/html_report`. If there were failures, you will need to visually examine the changes and act appropriately based on the anticipated results.
@@ -56,7 +56,7 @@ A report containing the results of the test will be created under `reports/html_
 If you receive a test failure and you've made changes that you know are correct, you will need to override the test references with your new changes by running the `approve` command on BackstopJS:
 
 ``` sh
-$ chi approve
+$ lux approve
 ```
 
 Once you have approved the changes, commit the new reference files with your changes.
@@ -66,14 +66,14 @@ Once you have approved the changes, commit the new reference files with your cha
 Use the build command to make a ready-to-production build:
 
 ``` sh
-$ chi build
+$ lux build
 ```
 
 ## License
 
-Chi and its documentation are released under the terms of the [MIT license](LICENSE).
+Lux and its documentation are released under the terms of the [MIT license](LICENSE).
 
-In addition, Chi uses several 3rd-party libraries, a list of which can be viewed in the [package.json](package.json) file. Please review each of their license and user agreements, as well.
+In addition, Lux uses several 3rd-party libraries, a list of which can be viewed in the [package.json](package.json) file. Please review each of their license and user agreements, as well.
 
 ## Contribution Notice
 

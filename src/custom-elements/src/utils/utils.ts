@@ -61,5 +61,5 @@ let idCounter = 0;
 const idDomain = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10);
 
 export function getNewUniqueId(): string {
-  return `chi-${idDomain}-${idCounter++}`;
+  return `lux-${idDomain}-${idCounter++}`;
 }

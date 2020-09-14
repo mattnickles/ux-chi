@@ -1,4 +1,4 @@
-# chi-date
+# lux-date
 
 
 
@@ -20,7 +20,7 @@
 
 | Event           | Description             | Type                |
 | --------------- | ----------------------- | ------------------- |
-| `chiDateChange` | Date change value event | `CustomEvent<void>` |
+| `luxDateChange` | Date change value event | `CustomEvent<void>` |
 
 
 ## Methods

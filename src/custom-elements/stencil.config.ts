@@ -3,7 +3,7 @@ import { sass } from '@stencil/sass';
 import { JsonDocs } from './docs/docs';
 
 export const config: Config = {
-  namespace: 'ux-chi-ce',
+  namespace: 'ux-lux-ce',
   devServer: {
     openBrowser: false
   },
@@ -12,12 +12,12 @@ export const config: Config = {
       {
         // @ts-ignore
         includePaths: [
-          '../chi/'
+          '../lux/'
         ],
         injectGlobalPaths: [
-          '../chi/_variables.scss',
-          '../chi/_mixins.scss',
-          '../chi/foundations/typography/root-typography.scss'
+          '../lux/_variables.scss',
+          '../lux/_mixins.scss',
+          '../lux/foundations/typography/root-typography.scss'
         ]
       }
     )
@@ -101,29 +101,29 @@ export const config: Config = {
           required: false
         };
 
-        docs['components'].find(x => x.tag === 'chi-alert')['props'].push(alertTitleProp);
-        docs['components'].find(x => x.tag === 'chi-alert')['props'].sort((a, b) => {
+        docs['components'].find(x => x.tag === 'lux-alert')['props'].push(alertTitleProp);
+        docs['components'].find(x => x.tag === 'lux-alert')['props'].sort((a, b) => {
           if (a.name > b.name) return 1
           else if (a.name < b.name) return -1
           return 0
         });
 
-        docs['components'].find(x => x.tag === 'chi-popover')['props'].push(popoverTitleProp);
-        docs['components'].find(x => x.tag === 'chi-popover')['props'].sort((a, b) => {
+        docs['components'].find(x => x.tag === 'lux-popover')['props'].push(popoverTitleProp);
+        docs['components'].find(x => x.tag === 'lux-popover')['props'].sort((a, b) => {
           if (a.name > b.name) return 1
           else if (a.name < b.name) return -1
           return 0
         });
 
-        docs['components'].find(x => x.tag === 'chi-drawer')['props'].push(drawerTitleProp);
-        docs['components'].find(x => x.tag === 'chi-drawer')['props'].sort((a, b) => {
+        docs['components'].find(x => x.tag === 'lux-drawer')['props'].push(drawerTitleProp);
+        docs['components'].find(x => x.tag === 'lux-drawer')['props'].sort((a, b) => {
           if (a.name > b.name) return 1
           else if (a.name < b.name) return -1
           return 0
         });
 
-        docs['components'].find(x => x.tag === 'chi-expansion-panel')['props'].push(epanelTitleProp);
-        docs['components'].find(x => x.tag === 'chi-expansion-panel')['props'].sort((a, b) => {
+        docs['components'].find(x => x.tag === 'lux-expansion-panel')['props'].push(epanelTitleProp);
+        docs['components'].find(x => x.tag === 'lux-expansion-panel')['props'].sort((a, b) => {
           if (a.name > b.name) return 1
           else if (a.name < b.name) return -1
           return 0

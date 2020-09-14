@@ -1,4 +1,4 @@
-# chi-date-picker
+# lux-date-picker
 
 
 

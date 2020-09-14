@@ -1,0 +1,12 @@
+.lux-alert {
+  &.-toast {
+    box-shadow: map-get($shadow, 2);
+    max-width: 20rem;
+    min-width: 16rem;
+    padding-right: 1rem;
+
+    &.-lg {
+      padding-right: 1.5rem;
+    }
+  }
+}

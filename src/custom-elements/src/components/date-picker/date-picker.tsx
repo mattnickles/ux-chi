@@ -4,7 +4,7 @@ import { ESCAPE_KEYCODE } from '../../constants/constants';
 import dayjs, { Dayjs } from 'dayjs';
 
 @Component({
-  tag: 'chi-date-picker',
+  tag: 'lux-date-picker',
   scoped: true
 })
 export class DatePicker {
@@ -34,7 +34,7 @@ export class DatePicker {
   @Prop({ reflect: true }) format = 'MM/DD/YYYY';
 
   /**
-   *  to disable chi-date-picker.
+   *  to disable lux-date-picker.
    */
   @Prop({ reflect: true }) disabled = false;
 
@@ -85,7 +85,7 @@ export class DatePicker {
     if (
       e.target !== document.body &&
       e.target !== null &&
-      !(new RegExp('(\\s|^)' + 'chi-datepicker__day' + '(\\s|$)').test(e.target.getAttribute('class')))
+      !(new RegExp('(\\s|^)' + 'lux-datepicker__day' + '(\\s|$)').test(e.target.getAttribute('class')))
       // This hack is necessary because currently IE11 doesn't support .classList on SVG elements
     ) {
       this.active = contains(this.el, e.target);
@@ -163,7 +163,7 @@ export class DatePicker {
     return Promise.resolve(this.value);
   }
 
-  @Listen('chiDateChange')
+  @Listen('luxDateChange')
   handleDateChange(ev) {
     ev.stopPropagation();
     this._input.value = ev.detail;
@@ -194,15 +194,15 @@ export class DatePicker {
   }
 
   render() {
-    const chiPopover = (
-      <chi-popover
+    const luxPopover = (
+      <lux-popover
         id="example-4-be-popover"
         position="bottom"
         reference={`#${this._uuid}-control`}
         prevent-auto-hide
         active={this.active}
       >
-        <chi-date
+        <lux-date
           min={this.min}
           max={this.max}
           locale={this.locale}
@@ -211,19 +211,19 @@ export class DatePicker {
           excluded-weekdays={this.excludedWeekdays}
           excluded-dates={this.excludedDates}
         />
-      </chi-popover>
+      </lux-popover>
     );
 
     return [
-      // TODO: This input should be chi-input in the future and will pass through
+      // TODO: This input should be lux-input in the future and will pass through
       // some of its configuration attributes.
       <div class={this.disabled ? '-disabled' : ''}>
         <div
-          class="chi-input__wrapper -icon--right"
+          class="lux-input__wrapper -icon--right"
         >
           <input
             id={`${this._uuid}-control`}
-            class={`chi-input
+            class={`lux-input
               ${this.active ? '-focus' : ''}`}
             type={`text`}
             placeholder={`MM/DD/YYYY`}
@@ -234,9 +234,9 @@ export class DatePicker {
             }}
             disabled={this.disabled}
           />
-          <chi-icon icon="date" color="muted"></chi-icon>
+          <lux-icon icon="date" color="muted"></lux-icon>
         </div>
-        {!this.disabled && chiPopover}
+        {!this.disabled && luxPopover}
       </div>
     ];
   }

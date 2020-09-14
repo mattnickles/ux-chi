@@ -1,4 +1,4 @@
-# chi-icon
+# lux-icon
 
 
 

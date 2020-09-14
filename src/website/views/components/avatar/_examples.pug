@@ -6,47 +6,47 @@
 h2 Examples
 
 p.-text
-  | To render an avatar, apply the class <code>chi-avatar</code> to a div element and place an image inside.
+  | To render an avatar, apply the class <code>lux-avatar</code> to a div element and place an image inside.
 h3 Base
 .example.-mb--3
   .-p--3
-    .chi-avatar
+    .lux-avatar
       img(src='../../assets/images/avatar.jpg', alt="avatar")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
     :code(lang="html")
-      <div class="chi-avatar">
+      <div class="lux-avatar">
         <img src="path/to/image.jpg" alt="avatar">
       </div>
 
 h3 Icon Avatars
 p.-text
   | Icon avatars can be used when an image is not available.
-  | To use, wrap any <a href="../icon/">Chi icon</a> with <code>chi-avatar</code>.
+  | To use, wrap any <a href="../icon/">Lux icon</a> with <code>lux-avatar</code>.
 .example.-mb--3
   .-p--3
-    .chi-grid
+    .lux-grid
       each icon in iconExamples
-        .chi-col.-w--2.-w-sm--1
-          .chi-avatar
-            i(class=`chi-icon icon-${icon}`)
+        .lux-col.-w--2.-w-sm--1
+          .lux-avatar
+            i(class=`lux-icon icon-${icon}`)
   .example-tabs.-pl--2
-    ul.chi-tabs#example-icon
+    ul.lux-tabs#example-icon
       li.-disabled
         a(href=`#webcomponent-icon`) Web Component
       li.-active
         a(href=`#html-icon`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-icon
-  .chi-tabs-panel.-active#html-icon
+  .lux-tabs-panel#webcomponent-icon
+  .lux-tabs-panel.-active#html-icon
     :code(lang="html")
-      <div class="chi-avatar">
-        <i class="chi-icon icon-user"></i>
+      <div class="lux-avatar">
+        <i class="lux-icon icon-user"></i>
       </div>
 
 h3 Initial avatars
@@ -56,125 +56,125 @@ p.-text
   | Text utility classes such as <code>-text--uppercase</code>, <code>-text--lowercase</code>,
   | and <code>-text--capitalized</code> can be applied to force specific casing.
 .example.-mb--3
-  .-p--3.chi-grid
-    .chi-col.-w--2.-w-sm--1
-      .chi-avatar AA
-    .chi-col.-w--2.-w-sm--1
-      .chi-avatar M
+  .-p--3.lux-grid
+    .lux-col.-w--2.-w-sm--1
+      .lux-avatar AA
+    .lux-col.-w--2.-w-sm--1
+      .lux-avatar M
   .example-tabs.-pl--2
-    ul.chi-tabs#example-initial
+    ul.lux-tabs#example-initial
       li.-disabled
         a(href=`#webcomponent-initial`) Web Component
       li.-active
         a(href=`#html-initial`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-initial
-  .chi-tabs-panel.-active#html-initial
+  .lux-tabs-panel#webcomponent-initial
+  .lux-tabs-panel.-active#html-initial
     :code(lang="html")
-      <div class="chi-avatar">AA</div>
+      <div class="lux-avatar">AA</div>
 
 h2 Customizations
 
 h3 Color
 p.-text
-  | Both icon and initial avatars support <a href="../../foundations/color/">Chi colors</a>.
+  | Both icon and initial avatars support <a href="../../foundations/color/">Lux colors</a>.
   | To color an icon, apply any of the following color classes: <code>-grey</code>, <code>-red</code>,
   | <code>-pink</code>, <code>-purple</code>, <code>-indigo</code>, <code>-navy</code>, <code>-blue</code>,
   | <code>-teal</code>, <code>-green</code>, <code>-yellow</code>, <code>-orange</code>,
   | <code>-secondary</code>, <code>-primary</code>
 
-ul#chi-tabs--colors.chi-tabs
+ul#lux-tabs--colors.lux-tabs
   li.-active
    a(href="#coloredInitials") Initial
   li
     a(href="#coloredIcons") Icon
 .example.-mb--3
-  #coloredInitials.chi-tabs-panel.-active
+  #coloredInitials.lux-tabs-panel.-active
     .-p--3
-      .chi-grid.-align-items--end
+      .lux-grid.-align-items--end
         each color in colors
           if (color !== 'secondary')
-            .chi-col.-w--2.-text--center
-              div(class=`chi-avatar -${color}`) AA
+            .lux-col.-w--2.-text--center
+              div(class=`lux-avatar -${color}`) AA
               p.-text= color
     .example-tabs.-pl--2
-      ul.chi-tabs#example-color-initial
+      ul.lux-tabs#example-color-initial
         li.-disabled
           a(href=`#webcomponent-color-initial`) Web Component
         li.-active
           a(href=`#html-color-initial`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-color-initial
-    .chi-tabs-panel.-active#html-color-initial
+    .lux-tabs-panel#webcomponent-color-initial
+    .lux-tabs-panel.-active#html-color-initial
       :code(lang="html")
-        <div class="chi-avatar -grey">AA</div>
-        <div class="chi-avatar -red">AA</div>
-        <div class="chi-avatar -pink">AA</div>
-        <div class="chi-avatar -purple">AA</div>
-        <div class="chi-avatar -indigo">AA</div>
-        <div class="chi-avatar -navy">AA</div>
-        <div class="chi-avatar -blue">AA</div>
-        <div class="chi-avatar -cyan">AA</div>
-        <div class="chi-avatar -teal">AA</div>
-        <div class="chi-avatar -green">AA</div>
-        <div class="chi-avatar -yellow">AA</div>
-        <div class="chi-avatar -orange">AA</div>
-        <div class="chi-avatar -primary">AA</div>
+        <div class="lux-avatar -grey">AA</div>
+        <div class="lux-avatar -red">AA</div>
+        <div class="lux-avatar -pink">AA</div>
+        <div class="lux-avatar -purple">AA</div>
+        <div class="lux-avatar -indigo">AA</div>
+        <div class="lux-avatar -navy">AA</div>
+        <div class="lux-avatar -blue">AA</div>
+        <div class="lux-avatar -cyan">AA</div>
+        <div class="lux-avatar -teal">AA</div>
+        <div class="lux-avatar -green">AA</div>
+        <div class="lux-avatar -yellow">AA</div>
+        <div class="lux-avatar -orange">AA</div>
+        <div class="lux-avatar -primary">AA</div>
 
-  #coloredIcons.chi-tabs-panel
+  #coloredIcons.lux-tabs-panel
     .-p--3
-      .chi-grid.-align-items--end
+      .lux-grid.-align-items--end
         each color in colors
           if (color !== 'secondary')
-            .chi-col.-w--2.-text--center
-              div(class=`chi-avatar -${color}`)
-                i.chi-icon.icon-user
+            .lux-col.-w--2.-text--center
+              div(class=`lux-avatar -${color}`)
+                i.lux-icon.icon-user
               p.-text= color
     .example-tabs.-pl--2
-      ul.chi-tabs#example-icon-color
+      ul.lux-tabs#example-icon-color
         li.-disabled
           a(href=`#webcomponent-icon-color`) Web Component
         li.-active
           a(href=`#html-icon-color`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-icon-color
-    .chi-tabs-panel.-active#html-icon-color
+    .lux-tabs-panel#webcomponent-icon-color
+    .lux-tabs-panel.-active#html-icon-color
       :code(lang="html")
-        <div class="chi-avatar -grey">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -grey">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -red">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -red">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -pink">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -pink">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -purple">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -purple">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -indigo">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -indigo">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -navy">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -navy">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -blue">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -blue">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -cyan">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -cyan">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -teal">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -teal">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -green">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -green">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -yellow">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -yellow">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -orange">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -orange">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -primary">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -primary">
+          <i class="lux-icon icon-user"></i>
         </div>
 
 h3 Light and transparent background
@@ -182,34 +182,34 @@ p.-text
   | Both icon and initial avatars support light and transparent versions for dark backgrounds.
 .example.-mb--3
   .-p--3.-bg--black
-    .chi-grid.-align-items--end
-      .chi-col.-w--3.-text--center
-        div.chi-avatar.-light AA
-      .chi-col.-w--3.-text--center
-        div.chi-avatar.-secondary.-transparent AA
-      .chi-col.-w--3.-text--center
-        div.chi-avatar.-light
-          i.chi-icon.icon-user
-      .chi-col.-w--3.-text--center
-        div.chi-avatar.-secondary.-transparent
-          i.chi-icon.icon-user
+    .lux-grid.-align-items--end
+      .lux-col.-w--3.-text--center
+        div.lux-avatar.-light AA
+      .lux-col.-w--3.-text--center
+        div.lux-avatar.-secondary.-transparent AA
+      .lux-col.-w--3.-text--center
+        div.lux-avatar.-light
+          i.lux-icon.icon-user
+      .lux-col.-w--3.-text--center
+        div.lux-avatar.-secondary.-transparent
+          i.lux-icon.icon-user
   .example-tabs.-pl--2
-    ul.chi-tabs#example-transparent
+    ul.lux-tabs#example-transparent
       li.-disabled
         a(href=`#webcomponent-transparent`) Web Component
       li.-active
         a(href=`#html-transparent`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-transparent
-  .chi-tabs-panel.-active#html-transparent
+  .lux-tabs-panel#webcomponent-transparent
+  .lux-tabs-panel.-active#html-transparent
     :code(lang="html")
       <div class="-bg--black">
-        <div class="chi-avatar -light">AA</div>
-        <div class="chi-avatar -secondary -transparent">AA</div>
-        <div class="chi-avatar -light">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -light">AA</div>
+        <div class="lux-avatar -secondary -transparent">AA</div>
+        <div class="lux-avatar -light">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -secondary -transparent">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -secondary -transparent">
+          <i class="lux-icon icon-user"></i>
         </div>
       </div>
 
@@ -218,7 +218,7 @@ p.-text
   | All three avatar styles support a full spectrum of sizes: <code>-xs</code>, <code>-sm</code>,
   | <code>-sm--2</code>, <code>-sm--3</code>, <code>-md</code>, <code>-lg</code>, <code>-xl</code>, <code>-xxl</code>.
   | <code>-md</code> is the default size.
-ul#chi-tabs--sizes.chi-tabs
+ul#lux-tabs--sizes.lux-tabs
   li.-active
     a(href="#sizedInitials") Initial
   li
@@ -227,143 +227,143 @@ ul#chi-tabs--sizes.chi-tabs
     a(href="#sizedImages") Image
 
 .example.-mb--3
-  #sizedInitials.chi-tabs-panel.-active
+  #sizedInitials.lux-tabs-panel.-active
     .-p--3
-      .chi-grid.-align-items--end
+      .lux-grid.-align-items--end
         each size in sizes
-          div(class=`chi-col -w--${columnWidths[size][0]} -w-lg--${columnWidths[size][1]} -w-xl--${columnWidths[size][2]} -text--center`)
-            div(class=`chi-avatar -${size}`) AA
+          div(class=`lux-col -w--${columnWidths[size][0]} -w-lg--${columnWidths[size][1]} -w-xl--${columnWidths[size][2]} -text--center`)
+            div(class=`lux-avatar -${size}`) AA
             p.-text= size
     .example-tabs.-pl--2
-      ul.chi-tabs#example-size-initial
+      ul.lux-tabs#example-size-initial
         li.-disabled
           a(href=`#webcomponent-size-initial`) Web Component
         li.-active
           a(href=`#html-size-initial`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-size-initial
-    .chi-tabs-panel.-active#html-size-initial
+    .lux-tabs-panel#webcomponent-size-initial
+    .lux-tabs-panel.-active#html-size-initial
       :code(lang="html")
-        <div class="chi-avatar -xs">AA</div>
-        <div class="chi-avatar -sm">AA</div>
-        <div class="chi-avatar -sm--2">AA</div>
-        <div class="chi-avatar -sm--3">AA</div>
-        <div class="chi-avatar -md">AA</div>
-        <div class="chi-avatar -lg">AA</div>
-        <div class="chi-avatar -xl">AA</div>
-        <div class="chi-avatar -xxl">AA</div>
+        <div class="lux-avatar -xs">AA</div>
+        <div class="lux-avatar -sm">AA</div>
+        <div class="lux-avatar -sm--2">AA</div>
+        <div class="lux-avatar -sm--3">AA</div>
+        <div class="lux-avatar -md">AA</div>
+        <div class="lux-avatar -lg">AA</div>
+        <div class="lux-avatar -xl">AA</div>
+        <div class="lux-avatar -xxl">AA</div>
 
-  #sizedIcons.chi-tabs-panel
+  #sizedIcons.lux-tabs-panel
     .-p--3
-      .chi-grid.-align-items--end
+      .lux-grid.-align-items--end
         each size in sizes
-          div(class=`chi-col -w--${columnWidths[size][0]} -w-lg--${columnWidths[size][1]} -w-xl--${columnWidths[size][2]} -text--center`)
-            div(class=`chi-avatar -${size}`)
-              i.chi-icon.icon-user
+          div(class=`lux-col -w--${columnWidths[size][0]} -w-lg--${columnWidths[size][1]} -w-xl--${columnWidths[size][2]} -text--center`)
+            div(class=`lux-avatar -${size}`)
+              i.lux-icon.icon-user
             p.-text= size
     .example-tabs.-pl--2
-      ul.chi-tabs#example-size-icon
+      ul.lux-tabs#example-size-icon
         li.-disabled
           a(href=`#webcomponent-size-icon`) Web Component
         li.-active
           a(href=`#html-size-icon`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-size-icon
-    .chi-tabs-panel.-active#html-size-icon
+    .lux-tabs-panel#webcomponent-size-icon
+    .lux-tabs-panel.-active#html-size-icon
       :code(lang="html")
-        <div class="chi-avatar -xs">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -xs">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -sm">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -sm">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -sm--2">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -sm--2">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -sm--3">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -sm--3">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -md">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -md">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -lg">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -lg">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -xl">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -xl">
+          <i class="lux-icon icon-user"></i>
         </div>
-        <div class="chi-avatar -xxl">
-          <i class="chi-icon icon-user"></i>
+        <div class="lux-avatar -xxl">
+          <i class="lux-icon icon-user"></i>
         </div>
-  #sizedImages.chi-tabs-panel
+  #sizedImages.lux-tabs-panel
     .-p--3
-      .chi-grid.-align-items--end
+      .lux-grid.-align-items--end
         each size in sizes
-          div(class=`chi-col -w--${columnWidths[size][0]} -w-lg--${columnWidths[size][1]} -w-xl--${columnWidths[size][2]} -text--center`)
-            div(class=`chi-avatar -${size}`)
+          div(class=`lux-col -w--${columnWidths[size][0]} -w-lg--${columnWidths[size][1]} -w-xl--${columnWidths[size][2]} -text--center`)
+            div(class=`lux-avatar -${size}`)
               img(src='../../assets/images/avatar.jpg', alt="avatar")
             p.-text= size
     .example-tabs.-pl--2
-      ul.chi-tabs#example-size-image
+      ul.lux-tabs#example-size-image
         li.-disabled
           a(href=`#webcomponent-size-image`) Web Component
         li.-active
           a(href=`#html-size-image`) HTML Blueprint
-    .chi-tabs-panel#webcomponent-size-image
-    .chi-tabs-panel.-active#html-size-image
+    .lux-tabs-panel#webcomponent-size-image
+    .lux-tabs-panel.-active#html-size-image
       :code(lang="html")
-        <div class="chi-avatar -xs">
+        <div class="lux-avatar -xs">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -sm">
+        <div class="lux-avatar -sm">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -sm--2">
+        <div class="lux-avatar -sm--2">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -sm--3">
+        <div class="lux-avatar -sm--3">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -md">
+        <div class="lux-avatar -md">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -lg">
+        <div class="lux-avatar -lg">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -xl">
+        <div class="lux-avatar -xl">
           <img src="path/to/image.jpg">
         </div>
-        <div class="chi-avatar -xxl">
+        <div class="lux-avatar -xxl">
           <img src="path/to/image.jpg">
         </div>
 
 h3 Avatar Groups
 p.-text
   | Use avatar groups to group multiple avatars or add descriptive text such as a users name.
-  | Render an avatar group by wrapping an avatar in the class <code>chi-avatar-group</code>.
+  | Render an avatar group by wrapping an avatar in the class <code>lux-avatar-group</code>.
 .example.-mb--3
-  .-p--3.chi-grid
+  .-p--3.lux-grid
     each color in colors
       if (color !== 'secondary')
-        .-mb--1.chi-col.-w--6.-w-sm--4.-w-md--6.-w-lg--4.-w-xl--3
-          .chi-avatar-group
-            div(class=`chi-avatar -${color}`) L
+        .-mb--1.lux-col.-w--6.-w-sm--4.-w-md--6.-w-lg--4.-w-xl--3
+          .lux-avatar-group
+            div(class=`lux-avatar -${color}`) L
             = `Label ${color}`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-avatar-groups
+    ul.lux-tabs#example-avatar-groups
       li.-disabled
         a(href=`#webcomponent-avatar-groups`) Web Component
       li.-active
         a(href=`#html-avatar-groups`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-avatar-groups
-  .chi-tabs-panel.-active#html-avatar-groups
+  .lux-tabs-panel#webcomponent-avatar-groups
+  .lux-tabs-panel.-active#html-avatar-groups
     :code(lang="html")
-      <div class="chi-avatar-group">
-        <div class="chi-avatar">L</div>Label text
+      <div class="lux-avatar-group">
+        <div class="lux-avatar">L</div>Label text
       </div>
 
 script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

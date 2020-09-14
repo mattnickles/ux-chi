@@ -4,20 +4,20 @@ p.-text
   | and object data. You must call this method when you want to remove the component.
 :code(lang="javascript")
   var elem = document.getElementById('tooltip');
-  var tooltip = chi.tooltip(elem);
+  var tooltip = lux.tooltip(elem);
   // do stuff
   tooltip.dispose();
 
 p.-text
-  span.chi-badge.-dark.-sm.-mr--1
+  span.lux-badge.-dark.-sm.-mr--1
     span Tip
   | It is safe to call the <code>tooltip</code> method more than once, as it will return any previously created tooltip component
   | associated to the element.
 :code(lang="javascript")
   var elem = document.getElementById('tooltip-1');
-  var tooltip = chi.tooltip(elem);
+  var tooltip = lux.tooltip(elem);
   var elem2 = document.getElementById('tooltip-1');
-  var tooltip2 = chi.tooltip(elem2);
+  var tooltip2 = lux.tooltip(elem2);
   tooltip === tooltip2; // returns true
 
   tooltip.dispose(); // Only have to do it once.

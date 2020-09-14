@@ -1,0 +1,69 @@
+@import '_variables';
+@import '_mixins';
+
+$sizes: (
+  xs: (
+    font-size: $font-size-xs,
+    line-height: $line-height-sm,
+  ),
+  sm: (
+    font-size: $font-size-sm,
+    line-height: $line-height,
+  ),
+  md: (
+    font-size: $font-size-base,
+    line-height: $line-height,
+  ),
+  lg: (
+    font-size: $font-size-lg,
+    line-height: $line-height-lg,
+  ),
+  xl: (
+    font-size: $font-size-xl,
+    line-height: $line-height-xl,
+  ),
+);
+
+label,
+.lux-label {
+  display: flex;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semi-bold;
+  line-height: $line-height;
+  margin-bottom: 0.25rem;
+
+  @each $type in map-keys($sizes) {
+    &.-#{$type} {
+      font-size: map-get(map-get($sizes, $type), font-size);
+      line-height: map-get(map-get($sizes, $type), line-height);
+    }
+  }
+
+  &.-status {
+    font-weight: $font-weight-normal;
+    margin-top: 0.25rem;
+  }
+
+  &.-danger {
+    color: $color-text-danger;
+  }
+
+  &.-success {
+    color: $color-text-success;
+  }
+
+
+  .lux-label__required,
+  .lux-label__optional {
+    margin-left: 0.25rem;
+    text-decoration: none;
+  }
+
+  .lux-label__required {
+    color: $color-icon-danger;
+  }
+
+  .lux-label__optional {
+    font-weight: $font-weight-normal;
+  }
+}

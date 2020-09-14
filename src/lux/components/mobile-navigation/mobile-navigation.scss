@@ -1,0 +1,318 @@
+@import '_mixins';
+@import '_variables';
+
+.lux-mobile-nav {
+  .lux-drawer {
+    background-color: $color-background-base-darker;
+
+    .lux-mobile-nav__first-level-content {
+      left: 0;
+      position: absolute;
+      transition-duration: 0.3s;
+
+      &.-second-level-shown {
+        left: -23rem;
+      }
+    }
+
+    &.-left,
+    &.-right {
+      width: 23rem;
+    }
+
+    &.-left {
+      &.-animated {
+        &:not(.-active) {
+          transform: translate(-23rem, 0);
+        }
+      }
+    }
+
+    .lux-mobile-nav__header {
+      align-items: center;
+      background-color: $color-background-base;
+      display: flex;
+      justify-content: center;
+      min-height: 3.5rem;
+      padding: 0.75rem 3rem 0.5rem;
+
+      .lux-mobile-nav__header-title {
+        font-size: 1rem;
+        font-weight: $font-weight-semi-bold;
+        line-height: 1.5rem;
+        margin: 0;
+      }
+
+      .-close,
+      .-back {
+        top: 0.75rem;
+      }
+
+      .-back {
+        left: 1rem;
+        position: fixed;
+        z-index: 50;
+      }
+    }
+
+    .lux-mobile-nav__content {
+      .lux-tabs {
+        &.-vertical {
+          &.-icons {
+            > li {
+              a {
+                padding: 0.75rem 0 0.75rem 3.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .lux-mobile-nav__dropdown {
+      position: relative;
+      width: 100%;
+
+      &-content {
+        position: absolute;
+        width: 100%;
+        z-index: 50;
+      }
+    }
+
+    .lux-mobile-nav__user {
+      align-items: center;
+      background-color: $color-background-base;
+      border-top: 0.125rem solid $color-border-base;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.25rem 1rem;
+
+      &-name {
+        & > span {
+          font-size: 0.875rem;
+        }
+
+        .lux-icon {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .lux-mobile-nav__logout {
+      color: $color-text-primary;
+      padding: 0.25rem 1rem;
+
+      & > span {
+        font-size: 0.875rem;
+        font-weight: $font-weight-semi-bold;
+      }
+
+      .lux-icon {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .lux-mobile-nav__list {
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-left: 0;
+
+      > li {
+        line-height: 1.25rem;
+
+        > a {
+          color: $color-text-base;
+          display: block;
+          padding-bottom: 0.625rem;
+          padding-left: 1.5rem;
+          padding-top: 0.625rem;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &.-active {
+          &,
+          &.-unselected {
+            & > a {
+              color: $color-text-primary;
+
+              .lux-mobile-nav__list-title {
+                font-weight: $font-weight-semi-bold;
+              }
+            }
+          }
+        }
+
+        &.-expanded {
+          & > a {
+            color: $color-text-primary;
+
+            .lux-mobile-nav__list-title {
+              font-weight: $font-weight-semi-bold;
+            }
+          }
+
+          .lux-mobile-nav__list-item-list {
+            display: block;
+          }
+        }
+      }
+
+      &-title {
+        align-items: center;
+        display: flex;
+        font-size: 0.875rem;
+        font-weight: $font-weight-normal;
+      }
+
+      &-item-list {
+        display: none;
+        overflow: hidden;
+        transition: height 0.075s ease-out;
+
+        &.-transitioning {
+          display: block;
+        }
+
+        .lux-tabs {
+          &.-sm {
+            li {
+              a {
+                &.lux-mobile-nav-item-tab {
+                  font-size: 0.8125rem;
+                  font-weight: $font-weight-normal;
+                  line-height: 1.25rem;
+                  padding-bottom: 0.625rem;
+                  padding-left: 3rem;
+                  padding-top: 0.625rem;
+
+                  &.-active {
+                    color: $color-text-primary;
+                    font-weight: $font-weight-semi-bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.lux-mobile-nav__first-level {
+      .lux-drawer__content {
+        ul {
+          &.lux-tabs {
+            li {
+              a {
+                &.lux-drawer__subitem-list-trigger {
+                  padding-right: 3rem;
+                  position: relative;
+
+                  &::after {
+                    content: '\e920';
+                    display: block;
+                    font-family: 'lux';
+                    font-size: 0.75rem;
+                    font-weight: normal;
+                    height: 1rem;
+                    line-height: 1.2rem;
+                    position: absolute;
+                    right: 1.5rem;
+                    top: 0.75rem;
+                    transition: 0.2s;
+                    width: 0.75rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lux-mobile-nav__drawers {
+    .lux-drawer {
+      display: block;
+      left: 23rem;
+      transition-duration: 0.3s;
+      z-index: 50;
+
+      &.-active {
+        left: 0;
+      }
+
+      .lux-drawer__content {
+        ul {
+          &.lux-mobile-nav__list {
+            li {
+              a {
+                &.lux-drawer__subitem-list-trigger {
+                  padding-right: 3rem;
+                  position: relative;
+
+                  &::after {
+                    content: '\e91e';
+                    display: block;
+                    font-family: 'lux';
+                    font-size: 0.75rem;
+                    font-weight: normal;
+                    height: 1rem;
+                    line-height: 1.2rem;
+                    position: absolute;
+                    right: 1.5rem;
+                    top: 0.75rem;
+                    transition: 0.2s;
+                    width: 0.75rem;
+                  }
+                }
+              }
+
+              &.-expanded {
+                a {
+                  &.lux-drawer__subitem-list-trigger {
+                    &::after {
+                      transform: rotate(180deg);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* IE11 CSS hack */
+@media all and (-ms-high-contrast: none) {
+  .lux-mobile-nav {
+    .lux-drawer {
+      .lux-mobile-nav__header {
+        button {
+          &.-back {
+            position: absolute;
+          }
+
+          &.-back,
+          &.-close {
+            top: 0.6125rem;
+          }
+        }
+      }
+    }
+
+    .lux-mobile-nav__drawers {
+      .lux-drawer {
+        .lux-mobile-nav__header {
+          padding: 0.75rem 3rem;
+        }
+      }
+    }
+  }
+}

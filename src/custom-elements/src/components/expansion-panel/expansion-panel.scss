@@ -1,10 +1,10 @@
 @import 'components/icons/webfont-font-face';
-:host(chi-expansion-panel) {
+:host(lux-expansion-panel) {
     @import '../../global/styles/common';
     @import 'components/expansion-panel/expansion-panel';
 
     &:not(:last-child) {
-        .chi-epanel:not(.-bordered) {
+        .lux-epanel:not(.-bordered) {
             border-bottom: 0.0625rem solid $color-border-base;
         }
     }

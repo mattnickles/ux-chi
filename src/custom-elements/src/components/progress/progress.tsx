@@ -2,7 +2,7 @@ import { Component, Prop, Watch, h } from '@stencil/core';
 import { SEMANTIC_COLORS } from '../../constants/color';
 
 @Component({
-  tag: 'chi-progress',
+  tag: 'lux-progress',
   styleUrl: 'progress.scss',
   scoped: true
 })

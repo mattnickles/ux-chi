@@ -1,0 +1,119 @@
+---
+title: Enterprise Global Navigation - sidenav component example
+---
+script(src='/js/lux.js')
+
+.enterprise-nav-menu.lux(style=`height: 35rem;`)
+  aside#enterprise-sidenav.-h--100.lux-sidenav.-inverse.-flex--shrink0
+    .lux-sidenav__content
+      nav
+        ul.lux-sidenav__list
+          li.-active
+            a(href='#enterprise-drawer-0')
+              .lux-icon
+                svg
+                  svg
+                    use(xlink:href='#icon-user')
+              span NoChanges
+          li
+            a(href='#enterprise-drawer-1')
+              .lux-icon
+                svg
+                  svg
+                    use(xlink:href='#icon-user')
+              span Changes
+          li
+            a(href='#enterprise-drawer-2')
+              .lux-icon
+                svg
+                  svg
+                    use(xlink:href='#icon-logo-centurylink')
+              span DeepLink
+          li
+            a(href='#home')
+              .lux-icon
+                svg
+                  svg
+                    use(xlink:href='#icon-home')
+              span Home
+    .lux-sidenav__drawers
+      .enterprise-nav-menu-drawer
+        #enterprise-drawer-0.lux-drawer.-animated.-left
+          .lux-drawer__header
+            span.lux-drawer__title NoChanges
+            button.lux-button.-icon.-close(aria-label='Close')
+              .lux-button__content
+                i.lux-icon.icon-x
+          .lux-drawer__content
+            ul.lux-sidenav__drawer-list
+              li
+                a(href='#enterprise-drawer-list-0')
+                  span.lux-sidenav__title Home
+                .enterprise-nav-menu-drawer-list
+                  .lux-sidenav__drawer-item-list
+                    ul.lux-tabs.-vertical.-sm
+                      li
+                        a.lux-sidenav__drawer-item-tab(href='javascript:void(0)')
+                          span Reports
+                      li
+                        a.lux-sidenav__drawer-item-tab(href='javascript:void(0)')
+                          span Locations
+              li
+                a(href='javascript:void(0)')
+                  span.lux-sidenav__title Locations
+      .enterprise-nav-menu-drawer
+        #enterprise-drawer-1.lux-drawer.-animated.-left
+          .lux-drawer__header
+            span.lux-drawer__title Changes
+            button.lux-button.-icon.-close(aria-label='Close')
+              .lux-button__content
+                i.lux-icon.icon-x
+          .lux-drawer__content
+            ul.lux-sidenav__drawer-list
+              li
+                a(href='javascript:void(0)')
+                  span.lux-sidenav__title Same Option
+              li
+                a(href='javascript:void(0)')
+                  span.lux-sidenav__title Old Option
+              li
+                a(href='javascript:void(0)')
+                  span.lux-sidenav__title Change Url
+              li
+                a(href='javascript:void(0)')
+                  span.lux-sidenav__title New Option
+      .enterprise-nav-menu-drawer
+        #enterprise-drawer-2.lux-drawer.-animated.-left
+          .lux-drawer__header
+            span.lux-drawer__title DeepLink
+            button.lux-button.-icon.-close(aria-label='Close')
+              .lux-button__content
+                i.lux-icon.icon-x
+          .lux-drawer__content
+            ul.lux-sidenav__drawer-list
+              li
+                a(href='#enterprise-drawer-list-0')
+                  span.lux-sidenav__title Option
+                .enterprise-nav-menu-drawer-list
+                  .lux-sidenav__drawer-item-list
+                    ul.lux-tabs.-vertical.-sm
+                      li
+                        a.lux-sidenav__drawer-item-tab(href='javascript:void(0)')
+                          span Same Option
+                      li
+                        a.lux-sidenav__drawer-item-tab(href='javascript:void(0)')
+                          span Old Option
+                      li
+                        a.lux-sidenav__drawer-item-tab(href='javascript:void(0)')
+                          span Change Url
+                      li
+                        a.lux-sidenav__drawer-item-tab(href='javascript:void(0)')
+                          span New Option
+
+script.
+  document.addEventListener(
+    'DOMContentLoaded',
+    function() {
+      lux.sidenav(document.getElementById('enterprise-sidenav'));
+    }
+  );

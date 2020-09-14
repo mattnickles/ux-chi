@@ -1,17 +1,17 @@
-@import '../../../chi/_variables';
-@import '../../../chi/_mixins';
+@import '../../../lux/_variables';
+@import '../../../lux/_mixins';
 
-.chi {
+.lux {
   .docs-container {
     display: flex;
     flex-direction: column;
     height: 100%;
 
-    .chi-drawer {
+    .lux-drawer {
       ul {
-        &.chi-tabs {
+        &.lux-tabs {
           li {
-            .chi-collection__title {
+            .lux-collection__title {
               font-size: $font-size-base;
               font-weight: $font-weight-semi-bold;
               line-height: $line-height-lg;
@@ -19,7 +19,7 @@
             }
 
             &.-active {
-              .chi-collection__title {
+              .lux-collection__title {
                 color: $color-text-primary;
               }
             }
@@ -68,11 +68,11 @@
         }
 
         ul {
-          &.chi-tabs {
+          &.lux-tabs {
             margin-bottom: 1rem;
 
             li {
-              .chi-collection__title {
+              .lux-collection__title {
                 font-size: $font-size-base;
                 font-weight: $font-weight-semi-bold;
                 line-height: $line-height-lg;
@@ -80,12 +80,12 @@
               }
 
               &.-active {
-                .chi-collection__title {
+                .lux-collection__title {
                   color: $color-text-primary;
                 }
               }
 
-              .chi-tabs__subtabs {
+              .lux-tabs__subtabs {
                 li {
                   a {
                     transition: background-color 0.12s ease-in, color 0.12s ease-in;
@@ -131,10 +131,10 @@
             padding: 3rem 0 0;
           }
 
-          .chi-grid__container {
+          .lux-grid__container {
             width: calc(100% - 2rem);
 
-            + .chi-grid__container {
+            + .lux-grid__container {
               @include respond-to(lg) {
                 margin-top: -1rem;
               }
@@ -228,7 +228,7 @@
                   margin: 3rem 0;
                 }
 
-                .chi-button {
+                .lux-button {
                   display: flex;
                   justify-content: center;
                   width: 80%;
@@ -327,7 +327,7 @@
           }
         }
 
-        .chi-grid__container {
+        .lux-grid__container {
           @include respond-to(lg) {
             margin: 0 40px;
           }
@@ -340,9 +340,9 @@
 
           >,
           .changelog__version >,
-          .chi-tabs-panel >,
-          > .chi-grid .chi-col,
-          > .chi-epanel {
+          .lux-tabs-panel >,
+          > .lux-grid .lux-col,
+          > .lux-epanel {
             h1,
             h2,
             h3,
@@ -410,8 +410,8 @@
             margin: 0;
           }
 
-          .chi-tabs-panel {
-            .chi-tab__description {
+          .lux-tabs-panel {
+            .lux-tab__description {
               background-color: $color-grey-15;
               font-size: $font-size-base;
               line-height: $line-height;

@@ -2,152 +2,152 @@ h2 Examples
 h3 Base
 .example.-mb--3
   .-p--3
-    chi-label(for="input-1") Label
+    lux-label(for="input-1") Label
     input#input-1-control.-sr--only
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-active
         a(href='#webcomponent-base') Web Component
       li
         a(href='#html-base') HTML Blueprint
-  #webcomponent-base.chi-tabs-panel.-active
+  #webcomponent-base.lux-tabs-panel.-active
     :code(lang="html")
-      <chi-label>Label</chi-label>
-  #html-base.chi-tabs-panel
+      <lux-label>Label</lux-label>
+  #html-base.lux-tabs-panel
     :code(lang="html")
-      <label class="chi-label">Label</label>
+      <label class="lux-label">Label</label>
 
 h3 Required / Optional
 
 .example.-mb--3
   .-p--3
-    chi-label(for="input-2", required) Label
+    lux-label(for="input-2", required) Label
     input#input-2-control.-sr--only
-    chi-label(for="input-3", optional) Label
+    lux-label(for="input-3", optional) Label
     input#input-3-control.-sr--only
   .example-tabs.-pl--2
-    ul.chi-tabs#example-required
+    ul.lux-tabs#example-required
       li.-active
         a(href='#webcomponent-required') Web Component
       li
         a(href='#html-required') HTML Blueprint
-  #webcomponent-required.chi-tabs-panel.-active
-    .chi-tab__description
+  #webcomponent-required.lux-tabs-panel.-active
+    .lux-tab__description
       | Use attribute <code>required</code> or <code>optional</code> if you need to indicate required / optional fields.
     :code(lang="html")
       <!-- Required -->
-      <chi-label required>Label</chi-label>
+      <lux-label required>Label</lux-label>
 
       <!-- Optional -->
-      <chi-label optional>Label</chi-label>
+      <lux-label optional>Label</lux-label>
 
-  #html-required.chi-tabs-panel
+  #html-required.lux-tabs-panel
     :code(lang="html")
       <!-- Required -->
-      <label class="chi-label">
+      <label class="lux-label">
         Label
-        <abbr class="chi-label__required" title="Required field">*</abbr>
+        <abbr class="lux-label__required" title="Required field">*</abbr>
       </label>
 
       <!-- Optional -->
-      <label class="chi-label">
+      <label class="lux-label">
         Label
-        <abbr class="chi-label__optional" title="Optional field">(optional)</abbr>
+        <abbr class="lux-label__optional" title="Optional field">(optional)</abbr>
       </label>
 
 h2 Sizes
 p.-text Label supports the following sizes: <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>. The default size is <code>md</code>.
 .example.-mb--3
   .-p--3
-    chi-label(for="input-4", size='xs') Label
+    lux-label(for="input-4", size='xs') Label
     input#input-4-control.-sr--only
-    chi-label(for="input-5", size='sm') Label
+    lux-label(for="input-5", size='sm') Label
     input#input-5-control.-sr--only
-    chi-label(for="input-6", size='md') Label
+    lux-label(for="input-6", size='md') Label
     input#input-6-control.-sr--only
-    chi-label(for="input-7", size='lg') Label
+    lux-label(for="input-7", size='lg') Label
     input#input-7-control.-sr--only
-    chi-label(for="input-8", size='xl') Label
+    lux-label(for="input-8", size='xl') Label
     input#input-8-control.-sr--only
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes
+    ul.lux-tabs#example-sizes
       li.-active
         a(href='#webcomponent-sizes') Web Component
       li
         a(href='#html-sizes') HTML Blueprint
-  #webcomponent-sizes.chi-tabs-panel.-active
+  #webcomponent-sizes.lux-tabs-panel.-active
     :code(lang="html")
       <!-- xs -->
-      <chi-label size="xs">Label</chi-label>
+      <lux-label size="xs">Label</lux-label>
 
       <!-- sm -->
-      <chi-label size="sm">Label</chi-label>
+      <lux-label size="sm">Label</lux-label>
 
       <!-- md -->
-      <chi-label size="md">Label</chi-label>
+      <lux-label size="md">Label</lux-label>
 
       <!-- lg -->
-      <chi-label size="lg">Label</chi-label>
+      <lux-label size="lg">Label</lux-label>
 
       <!-- xl -->
-      <chi-label size="xl">Label</chi-label>
-  #html-sizes.chi-tabs-panel
+      <lux-label size="xl">Label</lux-label>
+  #html-sizes.lux-tabs-panel
     :code(lang="html")
       <!-- xs -->
-      <label class="chi-label -xs">Label</label>
+      <label class="lux-label -xs">Label</label>
 
       <!-- sm -->
-      <label class="chi-label -sm">Label</label>
+      <label class="lux-label -sm">Label</label>
 
       <!-- md -->
-      <label class="chi-label -md">Label</label>
+      <label class="lux-label -md">Label</label>
 
       <!-- lg -->
-      <label class="chi-label -lg">Label</label>
+      <label class="lux-label -lg">Label</label>
 
       <!-- xl -->
-      <label class="chi-label -xl">Label</label>
+      <label class="lux-label -xl">Label</label>
 
 h2 Associate label with form elements
 p.-text Label is important for accessibility of form elements.
 
 .example.-mb--3
   .-p--3(style="max-width: 17rem;")
-    chi-label(for='number-input') Label
-    chi-number-input#number-input
-    chi-label.-mt--1(for='chi-date-picker') Label
-    chi-date-picker#chi-date-picker
+    lux-label(for='number-input') Label
+    lux-number-input#number-input
+    lux-label.-mt--1(for='lux-date-picker') Label
+    lux-date-picker#lux-date-picker
   .example-tabs.-pl--2
-    ul.chi-tabs#example-associating
+    ul.lux-tabs#example-associating
       li.-active
         a(href='#webcomponent-associating') Web Component
       li
         a(href='#html-associating') HTML Blueprint
-  #webcomponent-associating.chi-tabs-panel.-active
-    .chi-tab__description
-      | Associate <code>chi-label</code> with supported form-control web components
+  #webcomponent-associating.lux-tabs-panel.-active
+    .lux-tab__description
+      | Associate <code>lux-label</code> with supported form-control web components
     :code(lang="html")
-      <chi-label for="number-input">Label</chi-label>
-      <chi-number-input id="number-input"></chi-number-input>
+      <lux-label for="number-input">Label</lux-label>
+      <lux-number-input id="number-input"></lux-number-input>
 
-      <chi-label for="chi-date-picker">Label</chi-label>
-      <chi-date-picker id="chi-date-picker"></chi-date-picker>
-  #html-associating.chi-tabs-panel
+      <lux-label for="lux-date-picker">Label</lux-label>
+      <lux-date-picker id="lux-date-picker"></lux-date-picker>
+  #html-associating.lux-tabs-panel
     :code(lang="html")
-      <div class="chi-form__item">
-        <label for="number-input" class="chi-label">Label</label>
-        <div class="chi-number-input">
-          <input id="number-input" type="number" class="chi-input" value="0" aria-label="Input Label">
+      <div class="lux-form__item">
+        <label for="number-input" class="lux-label">Label</label>
+        <div class="lux-number-input">
+          <input id="number-input" type="number" class="lux-input" value="0" aria-label="Input Label">
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
 
-      <div class="chi-form__item">
-        <label class="chi-label" for="datepicker-1">Date</label>
-        <div class="chi-input__wrapper -icon--right">
-          <input id="datepicker-1" type="text" class="chi-input" placeholder="MM/DD/YYYY">
-          <i class="chi-icon icon-date -icon--muted"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="datepicker-1">Date</label>
+        <div class="lux-input__wrapper -icon--right">
+          <input id="datepicker-1" type="text" class="lux-input" placeholder="MM/DD/YYYY">
+          <i class="lux-icon icon-date -icon--muted"></i>
         </div>
       </div>
 
@@ -155,9 +155,9 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.getElementById('example-base'));
-      chi.tab(document.getElementById('example-required'));
-      chi.tab(document.getElementById('example-sizes'));
-      chi.tab(document.getElementById('example-associating'));
+      lux.tab(document.getElementById('example-base'));
+      lux.tab(document.getElementById('example-required'));
+      lux.tab(document.getElementById('example-sizes'));
+      lux.tab(document.getElementById('example-associating'));
     }
   );

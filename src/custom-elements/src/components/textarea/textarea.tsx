@@ -1,20 +1,20 @@
 import { Component, Element, Event, EventEmitter, Prop, Watch, h } from '@stencil/core';
-import { CHI_STATES, ChiStates } from '../../constants/states';
+import { LUX_STATES, LuxStates } from '../../constants/states';
 import { ICON_COLORS, IconColors } from '../../constants/color';
 import { TEXT_INPUT_SIZES, TextInputSizes } from '../../constants/size';
 
 @Component({
-  tag: 'chi-textarea',
+  tag: 'lux-textarea',
   styleUrl: 'textarea.scss',
   scoped: true
 })
 
 export class Textarea {
-  @Element() el: HTMLChiTextareaElement;
+  @Element() el: HTMLLuxTextareaElement;
   /**
    * To define state color of Textarea
    */
-  @Prop({ reflect: true }) state: ChiStates;
+  @Prop({ reflect: true }) state: LuxStates;
   /**
    * To add a left positioned icon
    */
@@ -54,25 +54,25 @@ export class Textarea {
   /**
    * Triggered when an alteration to the element's value is committed by the user
    */
-  @Event({ eventName: 'chiChange' }) eventChange: EventEmitter<string>;
+  @Event({ eventName: 'luxChange' }) eventChange: EventEmitter<string>;
   /**
    * Triggered when the user changed the element's value but did not commit the change yet
    */
-  @Event({ eventName: 'chiInput' }) eventInput: EventEmitter<string>;
+  @Event({ eventName: 'luxInput' }) eventInput: EventEmitter<string>;
   /**
    * Triggered when the user sets focus on the element.
    */
-  @Event({ eventName: 'chiFocus' }) eventFocus: EventEmitter;
+  @Event({ eventName: 'luxFocus' }) eventFocus: EventEmitter;
   /**
    * Triggered when the element has lost focus.
    */
-  @Event({ eventName: 'chiBlur' }) eventBlur: EventEmitter;
+  @Event({ eventName: 'luxBlur' }) eventBlur: EventEmitter;
 
   @Watch('state')
-  stateValidation(newValue: ChiStates) {
-    const validValues = CHI_STATES.join(', ');
+  stateValidation(newValue: LuxStates) {
+    const validValues = LUX_STATES.join(', ');
 
-    if (newValue && !CHI_STATES.includes(newValue)) {
+    if (newValue && !LUX_STATES.includes(newValue)) {
       throw new Error(`${newValue} is not a valid state for textarea. If provided, valid values are: ${validValues}. `);
     }
   }
@@ -124,7 +124,7 @@ export class Textarea {
   render() {
     const textareaElement = <textarea
       class={
-        `chi-input
+        `lux-input
         ${this.state ? `-${this.state}` : ''}
         ${this.size ? `-${this.size}` : ''}
         ${this._status ? `-${this._status}` : ''}
@@ -141,11 +141,11 @@ export class Textarea {
       ${this.iconLeft ? '-icon--left' : ''}
       ${this.iconRight ? '-icon--right' : ''}
     `;
-    const iconLeft = this.iconLeft && <chi-icon color={this.iconLeftColor || null} icon={this.iconLeft} />;
-    const iconRight = this.iconRight && <chi-icon color={this.iconRightColor || null} icon={this.iconRight} />;
+    const iconLeft = this.iconLeft && <lux-icon color={this.iconLeftColor || null} icon={this.iconLeft} />;
+    const iconRight = this.iconRight && <lux-icon color={this.iconRightColor || null} icon={this.iconRight} />;
 
     const textarea = this.iconLeft || this.iconRight ?
-      <div class={`chi-input__wrapper ${iconClasses}`}>
+      <div class={`lux-input__wrapper ${iconClasses}`}>
         {textareaElement}
         {iconLeft}
         {iconRight}

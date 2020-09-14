@@ -1,12 +1,12 @@
 h2 Web Component
-:stencilDoc(name='chi-expansion-panel')
+:stencilDoc(name='lux-expansion-panel')
 
 h2 JavaScript
 h3 Actions
 p.-text
-  | You can bind actions to activators inside the expansion panel with the <code>data-chi-epanel-action</code> attribute.
+  | You can bind actions to activators inside the expansion panel with the <code>data-lux-epanel-action</code> attribute.
 
-table.chi-table.chi-table__options.-bordered
+table.lux-table.lux-table__options.-bordered
   thead
     tr
       th Action
@@ -52,16 +52,16 @@ table.chi-table.chi-table__options.-bordered
       td Sets the previous panel in <code>active</code> status.
 
 p.-text
-  | You can freely add, remove or change the <code>data-chi-epanel-action</code> attribute on the fly, as is the main
-  | element with the <code>chi-epanel</code> class, the one which listens for the events.
+  | You can freely add, remove or change the <code>data-lux-epanel-action</code> attribute on the fly, as is the main
+  | element with the <code>lux-epanel</code> class, the one which listens for the events.
 
 h3 Preventing memory leaks
 p.-text
   | Expansion panel components have a dispose function to free all resources attached to the element, such as event
   | listeners and object data. You should call this method when you want to remove the component.
 :code(lang="javascript")
-  var elemArray = document.querySelectorAll('[data-chi-epanel-group="groupName"]');
-  var expansionPanelsArray = chi.expansionPanel(elemArray);
+  var elemArray = document.querySelectorAll('[data-lux-epanel-group="groupName"]');
+  var expansionPanelsArray = lux.expansionPanel(elemArray);
   // do stuff
   expansionPanelsArray.forEach(function (expansionPanel) {
     expansionPanel.dispose();
@@ -72,9 +72,9 @@ p.-text
   | expansion panel component associated to the element.
 :code(lang="javascript")
   var elem = document.getElementById('expansion-panel-1');
-  var expansionPanelComponent = chi.expansionPanel(elem);
+  var expansionPanelComponent = lux.expansionPanel(elem);
   var elem2 = document.getElementById('expansion-panel-1');
-  var expansionPanelComponent2 = chi.expansionPanel(elem2);
+  var expansionPanelComponent2 = lux.expansionPanel(elem2);
   expansionPanelComponent === expansionPanelComponent2; // returns true
 
   expansionPanelComponent.dispose(); // Only have to do it once.

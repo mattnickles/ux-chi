@@ -12,12 +12,12 @@ const publicFolder = 'dist/tests';
 const rootFolder = path.join(__dirname, '..');
 
 function buildTestStyles () {
-  return gulp.src(path.join(rootFolder, 'test', 'chi', '**', '*.scss'))
+  return gulp.src(path.join(rootFolder, 'test', 'lux', '**', '*.scss'))
     .pipe(plumber())
     .pipe(sass({
       includePaths: [
         'node_modules',
-        path.join(rootFolder, 'src', 'chi')
+        path.join(rootFolder, 'src', 'lux')
       ],
       outputStyle: 'compressed'
     })

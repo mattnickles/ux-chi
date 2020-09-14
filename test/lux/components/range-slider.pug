@@ -1,0 +1,97 @@
+---
+title: Range slider
+---
+
+h4 States
+
+.test-states
+  .-mb--1
+    h5.test-base Base
+    input(type="range", class="lux-input", value="30")
+
+  .-mb--1
+    h5.test-zero Zero
+    input(type="range", class="lux-input -zero", value="0")
+
+  .-mb--1
+    h5.test-zero Focus
+    input(type="range", class="lux-input -focus", value="80")
+
+  .-mb--1
+    h5.test-disabled Disabled
+    input(type="range", class="lux-input", value="20", disabled)
+
+  .-mb--1
+    h5.test-lateral-labels With lateral labels
+    .lux-form__item.-row
+      label.-text.-mr--2 200GB
+      input(type="range", class="lux-input")
+      label.-text.-ml--2 5TB
+
+  .-mb--1
+    h5.test-track-lables With labels
+    .lux-input__wrapper
+      input(class='lux-input', type='range', min='0', max='4', step='1')
+      .lux-input__tick-bar
+        div
+          .lux-input__tick
+          .lux-input__tick-label Monthly
+        div
+          .lux-input__tick
+          .lux-input__tick-label 1 year
+        div
+          .lux-input__tick
+          .lux-input__tick-label 2 years
+        div
+          .lux-input__tick
+          .lux-input__tick-label 3 years
+        div
+          .lux-input__tick
+          .lux-input__tick-label > 3 years
+
+  .-mb--1
+    h5.test-interoperability-base Base consistent rendering
+    .lux-input__wrapper
+      input(class="lux-input", type="range")
+      .lux-input__progress
+      .lux-input__thumb
+
+  .-mb--1
+    h5.test-interoperability-disabled Disabled consistent rendering
+    .lux-input__wrapper
+      input(class="lux-input", type="range", disabled)
+      .lux-input__progress
+      .lux-input__thumb
+
+  .-mb--1
+    h5.test-interoperability-lateral-lables With lateral labels consistent rendering
+    .lux-form__item.-row
+      label.-text.-mr--2 200GB
+      .lux-input__wrapper.-w--100
+        input(type="range", class="lux-input")
+        .lux-input__progress
+        .lux-input__thumb
+      label.-text.-ml--2 5TB
+
+  .-mb--1
+    h5.test-interoperability-track-labels With track labels
+    .lux-input__wrapper
+      input(class='lux-input', type='range', min='0', max='4', step='1')
+      .lux-input__tick-bar
+        div
+          .lux-input__tick
+          .lux-input__tick-label Monthly
+        div
+          .lux-input__tick
+          .lux-input__tick-label 1 year
+        div
+          .lux-input__tick
+          .lux-input__tick-label 2 years
+        div
+          .lux-input__tick
+          .lux-input__tick-label 3 years
+        div
+          .lux-input__tick
+          .lux-input__tick-label > 3 years
+      .lux-input__progress
+      .lux-input__thumb

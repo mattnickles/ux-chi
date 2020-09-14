@@ -5,22 +5,22 @@ const watchOptions = { };
 export const serveAndWatch = gulp.parallel(
   'serve',
   () => gulp.watch(
-    'src/chi/**/*.scss',
+    'src/lux/**/*.scss',
     watchOptions,
     gulp.series(
       'serve:notify:start',
-      gulp.parallel('lint:css', 'build:chi:styles'),
+      gulp.parallel('lint:css', 'build:lux:styles'),
       'serve:notify:end'
     )
   ),
   () => gulp.watch(
-    'src/chi/**/*.js',
+    'src/lux/**/*.js',
     watchOptions,
     gulp.series(
       'serve:notify:start',
-      'build:chi:scripts',
-      'build:chi:scriptsES6',
-      'build:chi:scriptsAMD',
+      'build:lux:scripts',
+      'build:lux:scriptsES6',
+      'build:lux:scriptsAMD',
       'serve:notify:end',
       'serve:reload'
     )

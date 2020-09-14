@@ -13,7 +13,7 @@ const rootFolder = path.join(__dirname, '..');
 function buildTestFixtures () {
   const promise = new Promise((resolve, reject) => {
     metalsmith(rootFolder)
-      .source('test/chi')
+      .source('test/lux')
       .destination(publicFolder)
       .clean(false)
       .use(metalsmithPug({

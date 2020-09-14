@@ -83,13 +83,13 @@ function buildWebsiteViews () {
             const lang = getLang(options.lang);
 
             return `
-              <div class="chi-example -mb--4">
-                <ul class="chi-tabs -base -sm -border -mb--2">
+              <div class="lux-example -mb--4">
+                <ul class="lux-tabs -base -sm -border -mb--2">
                   <li class="-active"><a href="#">HTML</a></li>
                   <li><a href="#">Code</a></li>
                 </ul>
-                <div class="chi-example__html">${text}</div>
-                <div class="chi-example__code -hidden">
+                <div class="lux-example__html">${text}</div>
+                <div class="lux-example__code -hidden">
                   ${highlightCode(text, lang)}
                 </div>
               </div>`;

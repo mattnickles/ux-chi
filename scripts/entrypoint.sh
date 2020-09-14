@@ -1,28 +1,28 @@
 #!/bin/bash
 
-mount -o bind /tmp/chi/node_modules /chi/node_modules
-mount -o bind /tmp/custom-elements/node_modules /chi/src/custom-elements/node_modules
+mount -o bind /tmp/lux/node_modules /lux/node_modules
+mount -o bind /tmp/custom-elements/node_modules /lux/src/custom-elements/node_modules
 
-mount -t tmpfs tmpfs /chi/src/custom-elements/.stencil
+mount -t tmpfs tmpfs /lux/src/custom-elements/.stencil
 #mkdir /tmp/dist
-#mount -o bind /tmp/dist /chi/dist
-#mount -t tmpfs tmpfs /chi/dist
+#mount -o bind /tmp/dist /lux/dist
+#mount -t tmpfs tmpfs /lux/dist
 
 RED='\E[0;31m'
 GREEN='\E[0;32m'
 NC='\E[0m' # No Color
 
-if [ ! -h /chi/src/custom-elements/dist ]; then
-    if [ -d /chi/src/custom-elements/dist ]; then
+if [ ! -h /lux/src/custom-elements/dist ]; then
+    if [ -d /lux/src/custom-elements/dist ]; then
         echo -e "${RED}src/custom-elements/dist is a directory. Please, remove it${NC}";
         exit 1;
     fi
-    ln -s /chi/dist/js/ce /chi/src/custom-elements/dist || ( echo "Cannot create symbolic link from src/custom-elements/dist to dist/js/ce"; exit 1 )
+    ln -s /lux/dist/js/ce /lux/src/custom-elements/dist || ( echo "Cannot create symbolic link from src/custom-elements/dist to dist/js/ce"; exit 1 )
 fi
 
-addheader_chi() {
+addheader_lux() {
     while IFS= read -r line; do
-        echo -e "${RED}[CHI]${NC} $line "
+        echo -e "${RED}[LUX]${NC} $line "
     done
     tput sgr0
 }
@@ -34,30 +34,30 @@ addheader_custom_elements() {
 }
 
 start() {
-    cd /chi
-    unbuffer npm run start 2>&1 | addheader_chi &
+    cd /lux
+    unbuffer npm run start 2>&1 | addheader_lux &
 
-    cd /chi/src/custom-elements
-    while [ ! -d /chi/dist/js/ce ]; do sleep 1; done
+    cd /lux/src/custom-elements
+    while [ ! -d /lux/dist/js/ce ]; do sleep 1; done
     unbuffer npm run start 2>&1 | addheader_custom_elements
 }
 
 build() {
-    cd /chi
-    unbuffer npm run build 2>&1 | addheader_chi
-    cd /chi/src/custom-elements
+    cd /lux
+    unbuffer npm run build 2>&1 | addheader_lux
+    cd /lux/src/custom-elements
     unbuffer npm run build 2>&1 | addheader_custom_elements
 }
 
 test() {
-    rm -rf /chi/reports /chi/test/bitmaps_test
-    mkdir -p /chi/reports/html_report/non_responsive{,_ce}
-    mkdir -p /chi/reports/html_report/responsive
-    cp -a /chi/config/backstop_data/bitmaps_reference/non_responsive /chi/reports/html_report/non_responsive_ce/bitmaps_reference
-    cp -a /chi/config/backstop_data/bitmaps_reference/non_responsive /chi/reports/html_report/non_responsive/bitmaps_reference
-    cp -a /chi/config/backstop_data/bitmaps_reference/responsive /chi/reports/html_report/responsive/bitmaps_reference
+    rm -rf /lux/reports /lux/test/bitmaps_test
+    mkdir -p /lux/reports/html_report/non_responsive{,_ce}
+    mkdir -p /lux/reports/html_report/responsive
+    cp -a /lux/config/backstop_data/bitmaps_reference/non_responsive /lux/reports/html_report/non_responsive_ce/bitmaps_reference
+    cp -a /lux/config/backstop_data/bitmaps_reference/non_responsive /lux/reports/html_report/non_responsive/bitmaps_reference
+    cp -a /lux/config/backstop_data/bitmaps_reference/responsive /lux/reports/html_report/responsive/bitmaps_reference
 
-    cd /chi
+    cd /lux
     npm run test
 }
 
@@ -68,29 +68,29 @@ fi
 
 case ${OPTION} in
     start)
-        mount -t tmpfs tmpfs /chi/dist
+        mount -t tmpfs tmpfs /lux/dist
         start
         ;;
     build)
         build
         ;;
     test)
-        mount -t tmpfs tmpfs /chi/dist
+        mount -t tmpfs tmpfs /lux/dist
         build
         test
         ;;
     test-e2e)
-        mount -t tmpfs tmpfs /chi/dist
+        mount -t tmpfs tmpfs /lux/dist
         build
-        cd /chi
+        cd /lux
         npx gulp serve 2>&1 >/dev/null &
         ./node_modules/.bin/cypress run
         npx gulp serve:stop
         ;;
     approve)
-        cd /chi
-        mount -o bind /chi/config/backstop_data/bitmaps_reference/non_responsive /chi/reports/html_report/non_responsive/bitmaps_reference
-        mount -o bind /chi/config/backstop_data/bitmaps_reference/responsive /chi/reports/html_report/responsive/bitmaps_reference
+        cd /lux
+        mount -o bind /lux/config/backstop_data/bitmaps_reference/non_responsive /lux/reports/html_report/non_responsive/bitmaps_reference
+        mount -o bind /lux/config/backstop_data/bitmaps_reference/responsive /lux/reports/html_report/responsive/bitmaps_reference
         npm run approve
         ;;
     *)

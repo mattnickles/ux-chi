@@ -8,29 +8,29 @@ h4 Base
 .example.-mb--3
   .-p--4
     fieldset
-      legend.chi-label Legend
+      legend.lux-label Legend
       each type in ['Checkbox1','Checkbox2']
-        .chi-picker
-          input(type="checkbox", class="chi-picker__input", name=`checkbox-base`, id=`i-${type}`, checked=(type === 'Checkbox1'))
+        .lux-picker
+          input(type="checkbox", class="lux-picker__input", name=`checkbox-base`, id=`i-${type}`, checked=(type === 'Checkbox1'))
           label(for=`i-${type}`)
             = type
   .example-tabs.-pl--2
-    ul.chi-tabs#example-multi-select-base
+    ul.lux-tabs#example-multi-select-base
       li.-disabled
         a(href=`#webcomponent-multi-select-base`) Web Component
       li.-active
         a(href=`#html-multi-select-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-multi-select-base
-  .chi-tabs-panel.-active#html-multi-select-base
+  .lux-tabs-panel#webcomponent-multi-select-base
+  .lux-tabs-panel.-active#html-multi-select-base
     :code(lang="html")
       <fieldset>
-        <legend class="chi-label">Legend</legend>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="checkbox-base" type="checkbox" id="checkbox1">
+        <legend class="lux-label">Legend</legend>
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="checkbox-base" type="checkbox" id="checkbox1">
           <label for="checkbox1">Checkbox1</label>
         </div>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="checkbox-base" type="checkbox" id="checkbox2">
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="checkbox-base" type="checkbox" id="checkbox2">
           <label for="checkbox2">Checkbox2</label>
         </div>
       </fieldset>
@@ -39,41 +39,41 @@ h4 Checkbox
 .example.-mb--3
   .-p--4
     fieldset
-      legend.chi-label Legend
+      legend.lux-label Legend
       each type in ['Checkbox1','Checkbox2']
-        .chi-picker
-          input(type="checkbox", class="chi-picker__input", name=`checkbox-with-checkbox`, id=`ic-${type}`, checked=(type === 'Checkbox1'))
+        .lux-picker
+          input(type="checkbox", class="lux-picker__input", name=`checkbox-with-checkbox`, id=`ic-${type}`, checked=(type === 'Checkbox1'))
           label(for=`ic-${type}`)
-            div.chi-form__item.-row
-              span.chi-picker__checkbox
-              span.chi-picker__label
+            div.lux-form__item.-row
+              span.lux-picker__checkbox
+              span.lux-picker__label
                 =type
   .example-tabs.-pl--2
-    ul.chi-tabs#example-multi-select-checkbox
+    ul.lux-tabs#example-multi-select-checkbox
       li.-disabled
         a(href=`#webcomponent-multi-select-checkbox`) Web Component
       li.-active
         a(href=`#html-multi-select-checkbox`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-multi-select-checkbox
-  .chi-tabs-panel.-active#html-multi-select-checkbox
+  .lux-tabs-panel#webcomponent-multi-select-checkbox
+  .lux-tabs-panel.-active#html-multi-select-checkbox
     :code(lang="html")
       <fieldset>
-        <legend class="chi-label">Legend</legend>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="checkbox-with-checkbox" type="checkbox" id="ic-Checkbox1" />
+        <legend class="lux-label">Legend</legend>
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="checkbox-with-checkbox" type="checkbox" id="ic-Checkbox1" />
           <label for="ic-Checkbox1">
-            <div class="chi-form__item -row">
-              <span class="chi-picker__checkbox"></span>
-              <span class="chi-picker__label">Checkbox1</span>
+            <div class="lux-form__item -row">
+              <span class="lux-picker__checkbox"></span>
+              <span class="lux-picker__label">Checkbox1</span>
             </div>
           </label>
         </div>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="checkbox-with-checkbox" type="checkbox" id="ic-Checkbox2" />
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="checkbox-with-checkbox" type="checkbox" id="ic-Checkbox2" />
           <label for="ic-Checkbox2">
-            <div class="chi-form__item -row">
-              <span class="chi-picker__checkbox"></span>
-              <span class="chi-picker__label">Checkbox2</span>
+            <div class="lux-form__item -row">
+              <span class="lux-picker__checkbox"></span>
+              <span class="lux-picker__label">Checkbox2</span>
             </div>
           </label>
         </div>
@@ -83,50 +83,50 @@ h4 Checkbox and description
 .example.-mb--3
   .-p--4
     fieldset
-      legend.chi-label Legend
+      legend.lux-label Legend
       each type in ['Checkbox1','Checkbox2']
-        .chi-picker
-          input(type="checkbox", class="chi-picker__input", name=`checkbox-with-checkbox-description`, id=`id-${type}`, checked=(type === 'Checkbox1'))
+        .lux-picker
+          input(type="checkbox", class="lux-picker__input", name=`checkbox-with-checkbox-description`, id=`id-${type}`, checked=(type === 'Checkbox1'))
           label(for=`id-${type}`)
-            .chi-picker__content--start
-              div.chi-form__item.-row
-                span.chi-picker__checkbox
-                span.chi-picker__label
+            .lux-picker__content--start
+              div.lux-form__item.-row
+                span.lux-picker__checkbox
+                span.lux-picker__label
                   =type
-              div.chi-picker__description
+              div.lux-picker__description
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-multi-select-description
+    ul.lux-tabs#example-multi-select-description
       li.-disabled
         a(href=`#webcomponent-multi-select-description`) Web Component
       li.-active
         a(href=`#html-multi-select-description`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-multi-select-description
-  .chi-tabs-panel.-active#html-multi-select-description
+  .lux-tabs-panel#webcomponent-multi-select-description
+  .lux-tabs-panel.-active#html-multi-select-description
     :code(lang="html")
       <fieldset>
-        <legend class="chi-label">Legend</legend>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="checkbox-with-checkbox-description" type="checkbox" id="id-Checkbox1" />
+        <legend class="lux-label">Legend</legend>
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="checkbox-with-checkbox-description" type="checkbox" id="id-Checkbox1" />
           <label for="id-Checkbox1">
-            <div class="chi-picker__content--start">
-              <div class="chi-form__item -row">
-                <span class="chi-picker__checkbox"></span>
-                <span class="chi-picker__label">Checkbox1</span>
+            <div class="lux-picker__content--start">
+              <div class="lux-form__item -row">
+                <span class="lux-picker__checkbox"></span>
+                <span class="lux-picker__label">Checkbox1</span>
               </div>
-              <div class="chi-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
+              <div class="lux-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
             </div>
           </label>
         </div>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="checkbox-with-checkbox-description" type="checkbox" id="id-Checkbox2" />
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="checkbox-with-checkbox-description" type="checkbox" id="id-Checkbox2" />
           <label for="id-Checkbox2">
-            <div class="chi-picker__content--start">
-              <div class="chi-form__item -row">
-                <span class="chi-picker__checkbox"></span>
-                <span class="chi-picker__label">Checkbox2</span>
+            <div class="lux-picker__content--start">
+              <div class="lux-form__item -row">
+                <span class="lux-picker__checkbox"></span>
+                <span class="lux-picker__label">Checkbox2</span>
               </div>
-              <div class="chi-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
+              <div class="lux-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
             </div>
           </label>
         </div>
@@ -139,29 +139,29 @@ h4 Base
 .example.-mb--3
   .-p--4
     fieldset
-      legend.chi-label Legend
+      legend.lux-label Legend
       each type in ['Radio1','Radio2']
-        .chi-picker
-          input(type="radio", class="chi-picker__input", name='radio-base', id=`ei-${type}`, checked=(type === 'Radio1'))
+        .lux-picker
+          input(type="radio", class="lux-picker__input", name='radio-base', id=`ei-${type}`, checked=(type === 'Radio1'))
           label(for=`ei-${type}`)
             = type
   .example-tabs.-pl--2
-    ul.chi-tabs#example-single-select-base
+    ul.lux-tabs#example-single-select-base
       li.-disabled
         a(href=`#webcomponent-single-select-base`) Web Component
       li.-active
         a(href=`#html-single-select-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-single-select-base
-  .chi-tabs-panel.-active#html-single-select-base
+  .lux-tabs-panel#webcomponent-single-select-base
+  .lux-tabs-panel.-active#html-single-select-base
     :code(lang="html")
       <fieldset>
-        <legend class="chi-label">Legend</legend>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="radio-base" type="radio" id="ei-Radio1" />
+        <legend class="lux-label">Legend</legend>
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="radio-base" type="radio" id="ei-Radio1" />
           <label for="ei-Radio1">Radio1</label>
         </div>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="radio-base" type="radio" id="ei-Radio2" />
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="radio-base" type="radio" id="ei-Radio2" />
           <label for="ei-Radio2">Radio2</label>
         </div>
       </fieldset>
@@ -170,41 +170,41 @@ h4 Radio button
 .example.-mb--3
   .-p--4
     fieldset
-      legend.chi-label Legend
+      legend.lux-label Legend
       each type in ['Radio1','Radio2']
-        .chi-picker
-          input(type="radio", class="chi-picker__input", name='with-radio', id=`ri-${type}`, checked=(type === 'Radio1'))
+        .lux-picker
+          input(type="radio", class="lux-picker__input", name='with-radio', id=`ri-${type}`, checked=(type === 'Radio1'))
           label(for=`ri-${type}`)
-            div.chi-form__item.-row
-              span.chi-picker__radio
-              span.chi-picker__label(for=`ri-${type}`)
+            div.lux-form__item.-row
+              span.lux-picker__radio
+              span.lux-picker__label(for=`ri-${type}`)
                 = type
   .example-tabs.-pl--2
-    ul.chi-tabs#example-single-select-radio
+    ul.lux-tabs#example-single-select-radio
       li.-disabled
         a(href=`#webcomponent-single-select-radio`) Web Component
       li.-active
         a(href=`#html-single-select-radio`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-single-select-radio
-  .chi-tabs-panel.-active#html-single-select-radio
+  .lux-tabs-panel#webcomponent-single-select-radio
+  .lux-tabs-panel.-active#html-single-select-radio
     :code(lang="html")
       <fieldset>
-        <legend class="chi-label">Legend</legend>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="with-radio" type="radio" id="ri-Radio1" />
+        <legend class="lux-label">Legend</legend>
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="with-radio" type="radio" id="ri-Radio1" />
           <label for="ri-Radio1">
-            <div class="chi-form__item -row">
-              <span class="chi-picker__radio"></span>
-              <span class="chi-picker__label" for="ri-Radio1">Radio1</span>
+            <div class="lux-form__item -row">
+              <span class="lux-picker__radio"></span>
+              <span class="lux-picker__label" for="ri-Radio1">Radio1</span>
             </div>
           </label>
         </div>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="with-radio" type="radio" id="ri-Radio2" />
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="with-radio" type="radio" id="ri-Radio2" />
           <label for="ri-Radio2">
-            <div class="chi-form__item -row">
-              <span class="chi-picker__radio"></span>
-              <span class="chi-picker__label" for="ri-Radio2">Radio2</span>
+            <div class="lux-form__item -row">
+              <span class="lux-picker__radio"></span>
+              <span class="lux-picker__label" for="ri-Radio2">Radio2</span>
             </div>
           </label>
         </div>
@@ -214,50 +214,50 @@ h4 Radio button and description
 .example.-mb--3
   .-p--4
     fieldset
-      legend.chi-label Legend
+      legend.lux-label Legend
       each type in ['Radio1','Radio2']
-        .chi-picker
-          input(type="radio", class="chi-picker__input", name='with-radio-description', id=`ide-${type}`, checked=(type === 'Radio1'))
+        .lux-picker
+          input(type="radio", class="lux-picker__input", name='with-radio-description', id=`ide-${type}`, checked=(type === 'Radio1'))
           label(for=`ide-${type}`)
-            .chi-picker__content--start
-              div.chi-form__item.-row
-                span.chi-picker__radio
-                span.chi-picker__label(for=`ri-${type}`)
+            .lux-picker__content--start
+              div.lux-form__item.-row
+                span.lux-picker__radio
+                span.lux-picker__label(for=`ri-${type}`)
                   = type
-              div.chi-picker__description
+              div.lux-picker__description
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.
   .example-tabs.-pl--2
-    ul.chi-tabs#example-single-select-description
+    ul.lux-tabs#example-single-select-description
       li.-disabled
         a(href=`#webcomponent-single-select-description`) Web Component
       li.-active
         a(href=`#html-single-select-description`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-single-select-description
-  .chi-tabs-panel.-active#html-single-select-description
+  .lux-tabs-panel#webcomponent-single-select-description
+  .lux-tabs-panel.-active#html-single-select-description
     :code(lang="html")
       <fieldset>
-        <legend class="chi-label">Legend</legend>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="with-radio-description" type="radio" id="ide-Radio1" />
+        <legend class="lux-label">Legend</legend>
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="with-radio-description" type="radio" id="ide-Radio1" />
           <label for="ide-Radio1">
-              <div class="chi-picker__content--start">
-                <div class="chi-form__item -row">
-                  <span class="chi-picker__radio"></span>
-                  <span class="chi-picker__label" for="ri-Radio1">Radio1</span>
+              <div class="lux-picker__content--start">
+                <div class="lux-form__item -row">
+                  <span class="lux-picker__radio"></span>
+                  <span class="lux-picker__label" for="ri-Radio1">Radio1</span>
                 </div>
-                <div class="chi-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
+                <div class="lux-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
               </div>
           </label>
         </div>
-        <div class="chi-picker">
-          <input class="chi-picker__input" name="with-radio-description" type="radio" id="ide-Radio2" />
+        <div class="lux-picker">
+          <input class="lux-picker__input" name="with-radio-description" type="radio" id="ide-Radio2" />
           <label for="ide-Radio2">
-            <div class="chi-picker__content--start">
-              <div class="chi-form__item -row">
-                <span class="chi-picker__radio"></span>
-                <span class="chi-picker__label" for="ri-Radio2">Radio2</span>
+            <div class="lux-picker__content--start">
+              <div class="lux-form__item -row">
+                <span class="lux-picker__radio"></span>
+                <span class="lux-picker__label" for="ri-Radio2">Radio2</span>
               </div>
-              <div class="chi-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
+              <div class="lux-picker__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula placerat iaculis. Ut rutrum pulvinar velit vitae molestie. Phasellus accumsan pharetra ex. Nulla iaculis velit sed velit vehicula dictum. Donec ut ultrices tortor. Vivamus sit amet lorem augue.</div>
             </div>
           </label>
         </div>
@@ -267,6 +267,6 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

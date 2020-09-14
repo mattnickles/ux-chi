@@ -1,266 +1,266 @@
 h2 Examples
 p.-text
-  | To render a text input, apply the class <code>chi-input</code> to an <code>input type="text"</code>,
+  | To render a text input, apply the class <code>lux-input</code> to an <code>input type="text"</code>,
   | <code>input type="password"</code>, <code>input type="email"</code>, etc.
 
 h3 Base
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__base") Label
-      chi-text-input(id="example__base" placeholder="Placeholder")
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__base") Label
+      lux-text-input(id="example__base" placeholder="Placeholder")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-active
         a(href=`#webcomponent-base`) Web Component
       li
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-base
+  .lux-tabs-panel.-active#webcomponent-base
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__base">Label</chi-label>
-        <chi-text-input id="example__base" placeholder="Placeholder"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__base">Label</lux-label>
+        <lux-text-input id="example__base" placeholder="Placeholder"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-base
+  .lux-tabs-panel#html-base
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__base">Label</label>
-        <input type="text" class="chi-input" placeholder="Placeholder" id="example__base">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__base">Label</label>
+        <input type="text" class="lux-input" placeholder="Placeholder" id="example__base">
       </div>
 
 h3 Disabled
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__disabled") Label
-      chi-text-input(id="example__disabled" placeholder="Placeholder" disabled)
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__disabled") Label
+      lux-text-input(id="example__disabled" placeholder="Placeholder" disabled)
   .example-tabs.-pl--2
-    ul.chi-tabs#example-disabled
+    ul.lux-tabs#example-disabled
       li.-active
         a(href=`#webcomponent-disabled`) Web Component
       li
         a(href=`#html-disabled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-disabled
+  .lux-tabs-panel.-active#webcomponent-disabled
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__disabled">Label</chi-label>
-        <chi-text-input id="example__disabled" placeholder="Placeholder" disabled></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__disabled">Label</lux-label>
+        <lux-text-input id="example__disabled" placeholder="Placeholder" disabled></lux-text-input>
       </div>
-  .chi-tabs-panel#html-disabled
+  .lux-tabs-panel#html-disabled
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__disabled">Label</label>
-        <input type="text" class="chi-input" value="Sample Text" id="example__disabled" disabled>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__disabled">Label</label>
+        <input type="text" class="lux-input" value="Sample Text" id="example__disabled" disabled>
       </div>
 
 h3 Invalid
-p.-text Text inputs support Chi's semantic class modifier <code>-danger</code> for indicating an invalid input.
+p.-text Text inputs support Lux's semantic class modifier <code>-danger</code> for indicating an invalid input.
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__danger") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__danger") Label
+      lux-text-input(
         id="example__danger"
         state="danger"
         icon-right='circle-warning'
         icon-right-color='danger'
         value="Sample Text"
         )
-      .chi-label.-status.-danger This is an invalid label
+      .lux-label.-status.-danger This is an invalid label
   .example-tabs.-pl--2
-    ul.chi-tabs#example-invalid
+    ul.lux-tabs#example-invalid
       li.-active
         a(href=`#webcomponent-invalid`) Web Component
       li
         a(href=`#html-invalid`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-invalid
+  .lux-tabs-panel.-active#webcomponent-invalid
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__danger">Label</chi-label>
-        <chi-text-input id="example__danger" state="danger" icon-right="circle-warning" icon-right-color="danger" value="Sample Text"></chi-text-input>
-        <div class="chi-label -status -danger">This is an invalid label</div>
+      <div class="lux-form__item">
+        <lux-label for="example__danger">Label</lux-label>
+        <lux-text-input id="example__danger" state="danger" icon-right="circle-warning" icon-right-color="danger" value="Sample Text"></lux-text-input>
+        <div class="lux-label -status -danger">This is an invalid label</div>
       </div>
-  .chi-tabs-panel#html-invalid
+  .lux-tabs-panel#html-invalid
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__danger">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <input type="text" class="chi-input -danger" value="Sample Text" id="example__danger">
-          <i class="chi-icon icon-circle-warning -icon--danger"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__danger">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <input type="text" class="lux-input -danger" value="Sample Text" id="example__danger">
+          <i class="lux-icon icon-circle-warning -icon--danger"></i>
         </div>
-        <div class="chi-label -status -danger">This is an invalid label</div>
+        <div class="lux-label -status -danger">This is an invalid label</div>
       </div>
 
 h3 Label with icon
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      .chi-label__wrapper
-        chi-label(for='example__label-with-icon') Label
-        chi-icon(icon='circle-info-outline' color='muted')
-      chi-text-input(id='example__label-with-icon', placeholder="Placeholder")
+    .lux-form__item(style="max-width:20rem")
+      .lux-label__wrapper
+        lux-label(for='example__label-with-icon') Label
+        lux-icon(icon='circle-info-outline' color='muted')
+      lux-text-input(id='example__label-with-icon', placeholder="Placeholder")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-label-icon
+    ul.lux-tabs#example-label-icon
       li.-active
         a(href=`#webcomponent-label-icon`) Web Component
       li
         a(href=`#html-label-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-label-icon
+  .lux-tabs-panel.-active#webcomponent-label-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <div class="chi-label__wrapper">
-          <chi-label for="example__label-with-icon">Label</chi-label>
-          <chi-icon icon="circle-info-outline" color="muted"></chi-icon>
+      <div class="lux-form__item">
+        <div class="lux-label__wrapper">
+          <lux-label for="example__label-with-icon">Label</lux-label>
+          <lux-icon icon="circle-info-outline" color="muted"></lux-icon>
         </div>
-        <chi-text-input id="example__label-with-icon" placeholder="Placeholder"></chi-text-input>
+        <lux-text-input id="example__label-with-icon" placeholder="Placeholder"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-label-icon
+  .lux-tabs-panel#html-label-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <div class="chi-label__wrapper">
-          <label class="chi-label" for="example__label-with-icon">Label</label>
-          <i class="chi-icon icon-circle-info-outline -icon--muted"></i>
+      <div class="lux-form__item">
+        <div class="lux-label__wrapper">
+          <label class="lux-label" for="example__label-with-icon">Label</label>
+          <i class="lux-icon icon-circle-info-outline -icon--muted"></i>
         </div>
-        <input class="chi-input" id="example__label-with-icon" type="text" placeholder="Placeholder">
+        <input class="lux-input" id="example__label-with-icon" type="text" placeholder="Placeholder">
       </div>
 
 h3 Inline Label
 .example.-mb--3
   .-p--3
-    .chi-form__item.-row(style="max-width:20rem")
-      chi-label.-mr--2(for='example__inline-label') Label
-      chi-text-input(id='example__inline-label', placeholder="Placeholder")
+    .lux-form__item.-row(style="max-width:20rem")
+      lux-label.-mr--2(for='example__inline-label') Label
+      lux-text-input(id='example__inline-label', placeholder="Placeholder")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-inline-label
+    ul.lux-tabs#example-inline-label
       li.-active
         a(href=`#webcomponent-inline-label`) Web Component
       li
         a(href=`#html-inline-label`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-inline-label
+  .lux-tabs-panel.-active#webcomponent-inline-label
     :code(lang="html")
-      <div class="chi-form__item -row">
-        <chi-label class="-mr--2" for="example__inline-label">Label</chi-label>
-        <chi-text-input id="example__inline-label" placeholder="Placeholder"></chi-text-input>
+      <div class="lux-form__item -row">
+        <lux-label class="-mr--2" for="example__inline-label">Label</lux-label>
+        <lux-text-input id="example__inline-label" placeholder="Placeholder"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-inline-label
+  .lux-tabs-panel#html-inline-label
     :code(lang="html")
-      <div class="chi-form__item -row">
-        <label class="chi-label -mr--2" for="example__inline-label">Label</label>
-        <input class="chi-input" type="text" id="example__inline-label" placeholder="Placeholder">
+      <div class="lux-form__item -row">
+        <label class="lux-label -mr--2" for="example__inline-label">Label</label>
+        <input class="lux-input" type="text" id="example__inline-label" placeholder="Placeholder">
       </div>
 
 h3 Inline Label - width controlled using percent
 .example.-mb--3
   .-p--3
-    .chi-form__item.-row
-      chi-label.-w--50(for='example__inline-label-percent') Label width 50%
+    .lux-form__item.-row
+      lux-label.-w--50(for='example__inline-label-percent') Label width 50%
       .-w--50
-        chi-text-input(id='example__inline-label-percent', placeholder="Placeholder")
+        lux-text-input(id='example__inline-label-percent', placeholder="Placeholder")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-inline-label-percent
+    ul.lux-tabs#example-inline-label-percent
       li.-active
         a(href=`#webcomponent-inline-label-percent`) Web Component
       li
         a(href=`#html-inline-label-percent`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-inline-label-percent
+  .lux-tabs-panel.-active#webcomponent-inline-label-percent
     :code(lang="html")
-      <div class="chi-form__item -row">
-        <chi-label class="-w--50" for="example__inline-label-percent">Label width 50%</chi-label>
+      <div class="lux-form__item -row">
+        <lux-label class="-w--50" for="example__inline-label-percent">Label width 50%</lux-label>
         <div class="-w--50">
-            <chi-text-input id="example__inline-label-percent" placeholder="Placeholder"></chi-text-input>
+            <lux-text-input id="example__inline-label-percent" placeholder="Placeholder"></lux-text-input>
         </div>
       </div>
-  .chi-tabs-panel#html-inline-label-percent
+  .lux-tabs-panel#html-inline-label-percent
     :code(lang="html")
-      <div class="chi-form__item -row">
-        <label class="chi-label -w--50" for="example__inline-label-percent">Label</label>
+      <div class="lux-form__item -row">
+        <label class="lux-label -w--50" for="example__inline-label-percent">Label</label>
         <div class="-w--50">
-          <input class="chi-input" type="text" id="example__inline-label-percent" placeholder="Placeholder">
+          <input class="lux-input" type="text" id="example__inline-label-percent" placeholder="Placeholder">
         </div>
       </div>
 
 h3 Inline Label - width controlled using grid
 .example.-mb--3
   .-p--3
-    .chi-form__item.-row.chi-grid.-no-gutter
-      chi-label.chi-col.-w--3(for='example__inline-label-grid') Label width 3 columns
-      .chi-col.-w--9
-        chi-text-input(id='example__inline-label-grid', placeholder="Placeholder")
+    .lux-form__item.-row.lux-grid.-no-gutter
+      lux-label.lux-col.-w--3(for='example__inline-label-grid') Label width 3 columns
+      .lux-col.-w--9
+        lux-text-input(id='example__inline-label-grid', placeholder="Placeholder")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-inline-label-grid
+    ul.lux-tabs#example-inline-label-grid
       li.-active
         a(href=`#webcomponent-inline-label-grid`) Web Component
       li
         a(href=`#html-inline-label-grid`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-inline-label-grid
+  .lux-tabs-panel.-active#webcomponent-inline-label-grid
     :code(lang="html")
-      <div class="chi-form__item -row chi-grid -no-gutter">
-        <chi-label class="chi-col -w--3" for="example__inline-label-grid">Label width 3 columns</chi-label>
-        <div class="chi-col -w--9">
-          <chi-text-input id="example__inline-label-grid" placeholder="Placeholder"></chi-text-input>
+      <div class="lux-form__item -row lux-grid -no-gutter">
+        <lux-label class="lux-col -w--3" for="example__inline-label-grid">Label width 3 columns</lux-label>
+        <div class="lux-col -w--9">
+          <lux-text-input id="example__inline-label-grid" placeholder="Placeholder"></lux-text-input>
         </div>
       </div>
-  .chi-tabs-panel#html-inline-label-grid
+  .lux-tabs-panel#html-inline-label-grid
     :code(lang="html")
-      <div class="chi-form__item -row chi-grid -no-gutter">
-        <label class="chi-label chi-col -w--3" for="example__inline-label-grid">Label</label>
-        <div class="chi-col -w--9">
-          <input class="chi-input" type="text" id="example__inline-label-grid" placeholder="Placeholder">
+      <div class="lux-form__item -row lux-grid -no-gutter">
+        <label class="lux-label lux-col -w--3" for="example__inline-label-grid">Label</label>
+        <div class="lux-col -w--9">
+          <input class="lux-input" type="text" id="example__inline-label-grid" placeholder="Placeholder">
         </div>
       </div>
 
 h3 Inline Inputs
 .example.-mb--3
   .-p--3.-d--flex
-    .chi-form__item.-inline.-flex--grow1
-      chi-label(for='example__inline-input01') Label
-      chi-text-input(id='example__inline-input01', placeholder="Placeholder")
-    .chi-form__item.-inline.-flex--grow1
-      chi-label(for='example__inline-input02') Label
-      chi-text-input(id='example__inline-input02', placeholder="Placeholder")
+    .lux-form__item.-inline.-flex--grow1
+      lux-label(for='example__inline-input01') Label
+      lux-text-input(id='example__inline-input01', placeholder="Placeholder")
+    .lux-form__item.-inline.-flex--grow1
+      lux-label(for='example__inline-input02') Label
+      lux-text-input(id='example__inline-input02', placeholder="Placeholder")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-inline-input
+    ul.lux-tabs#example-inline-input
       li.-active
         a(href=`#webcomponent-inline-input`) Web Component
       li
         a(href=`#html-inline-input`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-inline-input
+  .lux-tabs-panel.-active#webcomponent-inline-input
     :code(lang="html")
       <div class="-d--flex">
-        <div class="chi-form__item -inline -flex--grow1">
-          <chi-label for="example__inline-input01">Label</chi-label>
-          <chi-text-input id="example__inline-input01" placeholder="Placeholder"></chi-text-input>
+        <div class="lux-form__item -inline -flex--grow1">
+          <lux-label for="example__inline-input01">Label</lux-label>
+          <lux-text-input id="example__inline-input01" placeholder="Placeholder"></lux-text-input>
         </div>
-        <div class="chi-form__item -inline -flex--grow1">
-          <chi-label for="example__inline-input02">Label</chi-label>
-          <chi-text-input id="example__inline-input02" placeholder="Placeholder"></chi-text-input>
+        <div class="lux-form__item -inline -flex--grow1">
+          <lux-label for="example__inline-input02">Label</lux-label>
+          <lux-text-input id="example__inline-input02" placeholder="Placeholder"></lux-text-input>
         </div>
       </div>
-  .chi-tabs-panel#html-inline-input
+  .lux-tabs-panel#html-inline-input
     :code(lang="html")
       <div class="-d--flex">
-        <div class="chi-form__item -inline -flex--grow1">
-          <label class="chi-label" for="example__inline-input01">Label</label>
-          <input class="chi-input" type="text" id="example__inline-input01" placeholder="Placeholder">
+        <div class="lux-form__item -inline -flex--grow1">
+          <label class="lux-label" for="example__inline-input01">Label</label>
+          <input class="lux-input" type="text" id="example__inline-input01" placeholder="Placeholder">
         </div>
-        <div class="chi-form__item -inline -flex--grow1">
-          <label class="chi-label" for="example__inline-input02">Label</label>
-          <input class="chi-input" type="text" id="example__inline-input02" placeholder="Placeholder">
+        <div class="lux-form__item -inline -flex--grow1">
+          <label class="lux-label" for="example__inline-input02">Label</label>
+          <input class="lux-input" type="text" id="example__inline-input02" placeholder="Placeholder">
         </div>
       </div>
 
 h2 Icons
 p.-text
   | To add icons to a text input, wrap the input in a <code>div</code> using the class
-  | <code>chi-input__wrapper</code>. Next, add the icon as a sibling of the <code>input</code> and utilize
+  | <code>lux-input__wrapper</code>. Next, add the icon as a sibling of the <code>input</code> and utilize
   | an icon alignment utility class (e.g. <code>-icon--left</code>) to specify where it should be placed.
 
 h3 Left Aligned
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__icon-left-aligned") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__icon-left-aligned") Label
+      lux-text-input(
         icon-left='search',
         icon-left-color='muted',
         placeholder="Placeholder",
@@ -268,24 +268,24 @@ h3 Left Aligned
         id="example__icon-left-aligned"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-icon-left
+    ul.lux-tabs#example-input-icon-left
       li.-active
         a(href=`#webcomponent-input-icon-left`) Web Component
       li
         a(href=`#html-input-icon-left`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-icon-left
+  .lux-tabs-panel.-active#webcomponent-input-icon-left
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__icon-left-aligned">Label</chi-label>
-        <chi-text-input icon-left="search" icon-left-color="muted" placeholder="Placeholder" value="Sample Text" id="example__icon-left-aligned"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__icon-left-aligned">Label</lux-label>
+        <lux-text-input icon-left="search" icon-left-color="muted" placeholder="Placeholder" value="Sample Text" id="example__icon-left-aligned"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-icon-left
+  .lux-tabs-panel#html-input-icon-left
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__icon-left-aligned">Label</label>
-        <div class="chi-input__wrapper -icon--left">
-          <input type="text" class="chi-input" placeholder="Placeholder" value="Sample text" id="example__icon-left-aligned">
-          <i class="chi-icon icon-search -icon--muted"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__icon-left-aligned">Label</label>
+        <div class="lux-input__wrapper -icon--left">
+          <input type="text" class="lux-input" placeholder="Placeholder" value="Sample text" id="example__icon-left-aligned">
+          <i class="lux-icon icon-search -icon--muted"></i>
           </div>
         </div>
       </div>
@@ -293,9 +293,9 @@ h3 Left Aligned
 h3 Right Aligned
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__icon-right-aligned") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__icon-right-aligned") Label
+      lux-text-input(
         icon-right='search',
         icon-right-color='muted',
         placeholder="Placeholder",
@@ -303,33 +303,33 @@ h3 Right Aligned
         id="example__icon-right-aligned"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-icon-right
+    ul.lux-tabs#example-input-icon-right
       li.-active
         a(href=`#webcomponent-input-icon-right`) Web Component
       li
         a(href=`#html-input-icon-right`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-icon-right
+  .lux-tabs-panel.-active#webcomponent-input-icon-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__icon-right-aligned">Label</chi-label>
-        <chi-text-input icon-right="search" icon-right-color="muted" placeholder="Placeholder" value="Sample Text" id="example__icon-right-aligned"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__icon-right-aligned">Label</lux-label>
+        <lux-text-input icon-right="search" icon-right-color="muted" placeholder="Placeholder" value="Sample Text" id="example__icon-right-aligned"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-icon-right
+  .lux-tabs-panel#html-input-icon-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__icon-right-aligned">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <input type="text" class="chi-input" placeholder="Placeholder" value="Sample text" id="example__icon-right-aligned">
-          <i class="chi-icon icon-search -icon--muted"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__icon-right-aligned">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <input type="text" class="lux-input" placeholder="Placeholder" value="Sample text" id="example__icon-right-aligned">
+          <i class="lux-icon icon-search -icon--muted"></i>
         </div>
       </div>
 
 h3 Left + Right Aligned
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__icon-left-right-aligned") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__icon-left-right-aligned") Label
+      lux-text-input(
         icon-left='search',
         icon-left-color='muted',
         icon-right='check',
@@ -339,25 +339,25 @@ h3 Left + Right Aligned
         id="example__icon-left-right-aligned"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-icon-left-right
+    ul.lux-tabs#example-input-icon-left-right
       li.-active
         a(href=`#webcomponent-input-icon-left-right`) Web Component
       li
         a(href=`#html-input-icon-left-right`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-icon-left-right
+  .lux-tabs-panel.-active#webcomponent-input-icon-left-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__icon-left-right-aligned">Label</chi-label>
-        <chi-text-input icon-left="search" icon-left-color="muted" icon-right="check" icon-right-color="muted" placeholder="Placeholder" value="Sample Text" id="example__icon-left-right-aligned"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__icon-left-right-aligned">Label</lux-label>
+        <lux-text-input icon-left="search" icon-left-color="muted" icon-right="check" icon-right-color="muted" placeholder="Placeholder" value="Sample Text" id="example__icon-left-right-aligned"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-icon-left-right
+  .lux-tabs-panel#html-input-icon-left-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__icon-left-right-aligned">Label</label>
-        <div class="chi-input__wrapper -icon--left -icon--right">
-          <input type="text" class="chi-input" placeholder="Placeholder" value="Sample text" id="example__icon-left-right-aligned">
-          <i class="chi-icon icon-search -icon--muted"></i>
-          <i class="chi-icon icon-check -icon--success"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__icon-left-right-aligned">Label</label>
+        <div class="lux-input__wrapper -icon--left -icon--right">
+          <input type="text" class="lux-input" placeholder="Placeholder" value="Sample text" id="example__icon-left-right-aligned">
+          <i class="lux-icon icon-search -icon--muted"></i>
+          <i class="lux-icon icon-check -icon--success"></i>
         </div>
       </div>
 
@@ -368,38 +368,38 @@ p.-text
 h3 Success
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__state-success") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__state-success") Label
+      lux-text-input(
         state="success",
         placeholder="Placeholder",
         value="Sample Text",
         id="example__state-success"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-state-success
+    ul.lux-tabs#example-input-state-success
       li.-active
         a(href=`#webcomponent-input-state-success`) Web Component
       li
         a(href=`#html-input-state-success`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-state-success
+  .lux-tabs-panel.-active#webcomponent-input-state-success
     :code(lang="hmtl")
-      <div class="chi-form__item">
-        <chi-label for="example__state-success">Label</chi-label>
-        <chi-text-input state="success" placeholder="Placeholder" value="Sample Text" id="example__state-success"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__state-success">Label</lux-label>
+        <lux-text-input state="success" placeholder="Placeholder" value="Sample Text" id="example__state-success"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-state-success
+  .lux-tabs-panel#html-input-state-success
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__state-success">Label</label>
-        <input type="text" class="chi-input -success" placeholder="Placeholder" value="Sample Text" id="example__state-success">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__state-success">Label</label>
+        <input type="text" class="lux-input -success" placeholder="Placeholder" value="Sample Text" id="example__state-success">
       </div>
 
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__state-success-with-icon") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__state-success-with-icon") Label
+      lux-text-input(
         state="success",
         icon-right='check',
         icon-right-color='success',
@@ -408,57 +408,57 @@ h3 Success
         id="example__state-success-with-icon"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-state-success-icon
+    ul.lux-tabs#example-input-state-success-icon
       li.-active
         a(href=`#webcomponent-input-state-success-icon`) Web Component
       li
         a(href=`#html-input-state-success-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-state-success-icon
+  .lux-tabs-panel.-active#webcomponent-input-state-success-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__state-success-with-icon">Label</chi-label>
-        <chi-text-input state="success" icon-right="check" icon-right-color="success" placeholder="Placeholder" value="Sample Text" id="example__state-success-with-icon"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__state-success-with-icon">Label</lux-label>
+        <lux-text-input state="success" icon-right="check" icon-right-color="success" placeholder="Placeholder" value="Sample Text" id="example__state-success-with-icon"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-state-success-icon
+  .lux-tabs-panel#html-input-state-success-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__state-success-with-icon">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <input type="text" class="chi-input -success" placeholder="Placeholder" value="Sample Text" id="example__state-success-with-icon">
-          <i class="chi-icon icon-check -icon--success"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__state-success-with-icon">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <input type="text" class="lux-input -success" placeholder="Placeholder" value="Sample Text" id="example__state-success-with-icon">
+          <i class="lux-icon icon-check -icon--success"></i>
         </div>
       </div>
 
 h3 Warning
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__state-warning") Label
-      chi-text-input(state="warning", placeholder="Placeholder", value="Sample Text", id="example__state-warning")
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__state-warning") Label
+      lux-text-input(state="warning", placeholder="Placeholder", value="Sample Text", id="example__state-warning")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-state-warning
+    ul.lux-tabs#example-input-state-warning
       li.-active
         a(href=`#webcomponent-input-state-warning`) Web Component
       li
         a(href=`#html-input-state-warning`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-state-warning
+  .lux-tabs-panel.-active#webcomponent-input-state-warning
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__state-warning">Label</chi-label>
-        <chi-text-input state="warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__state-warning">Label</lux-label>
+        <lux-text-input state="warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-state-warning
+  .lux-tabs-panel#html-input-state-warning
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__state-warning">Label</label>
-        <input type="text" class="chi-input -warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__state-warning">Label</label>
+        <input type="text" class="lux-input -warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning">
       </div>
 
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__state-warning-with-icon") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__state-warning-with-icon") Label
+      lux-text-input(
         state="warning",
         icon-right='warning',
         icon-right-color='warning',
@@ -467,57 +467,57 @@ h3 Warning
         id="example__state-warning-with-icon"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-state-warning-icon
+    ul.lux-tabs#example-input-state-warning-icon
       li.-active
         a(href=`#webcomponent-input-state-warning-icon`) Web Component
       li
         a(href=`#html-input-state-warning-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-state-warning-icon
+  .lux-tabs-panel.-active#webcomponent-input-state-warning-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__state-warning-with-icon">Label</chi-label>
-        <chi-text-input state="warning" icon-right="warning" icon-right-color="warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning-with-icon"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__state-warning-with-icon">Label</lux-label>
+        <lux-text-input state="warning" icon-right="warning" icon-right-color="warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning-with-icon"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-state-warning-icon
+  .lux-tabs-panel#html-input-state-warning-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__state-warning-with-icon">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <input type="text" class="chi-input -warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning-with-icon">
-          <i class="chi-icon icon-warning -icon--warning"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__state-warning-with-icon">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <input type="text" class="lux-input -warning" placeholder="Placeholder" value="Sample Text" id="example__state-warning-with-icon">
+          <i class="lux-icon icon-warning -icon--warning"></i>
         </div>
       </div>
 
 h3 Danger
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__state-danger") Label
-      chi-text-input(state="danger", placeholder="Placeholder", value="Sample Text", id="example__state-danger")
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__state-danger") Label
+      lux-text-input(state="danger", placeholder="Placeholder", value="Sample Text", id="example__state-danger")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-state-danger
+    ul.lux-tabs#example-input-state-danger
       li.-active
         a(href=`#webcomponent-input-state-danger`) Web Component
       li
         a(href=`#html-input-state-danger`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-state-danger
+  .lux-tabs-panel.-active#webcomponent-input-state-danger
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__state-danger">Label</chi-label>
-        <chi-text-input state="danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__state-danger">Label</lux-label>
+        <lux-text-input state="danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-state-danger
+  .lux-tabs-panel#html-input-state-danger
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__state-danger">Label</label>
-        <input type="text" class="chi-input -danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__state-danger">Label</label>
+        <input type="text" class="lux-input -danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger">
       </div>
 
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:20rem")
-      chi-label(for="example__state-danger-with-icon") Label
-      chi-text-input(
+    .lux-form__item(style="max-width:20rem")
+      lux-label(for="example__state-danger-with-icon") Label
+      lux-text-input(
         state="danger",
         icon-right='circle-warning',
         icon-right-color='danger',
@@ -526,24 +526,24 @@ h3 Danger
         id="example__state-danger-with-icon"
       )
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-state-danger-icon
+    ul.lux-tabs#example-input-state-danger-icon
       li.-active
         a(href=`#webcomponent-input-state-danger-icon`) Web Component
       li
         a(href=`#html-input-state-danger-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-state-danger-icon
+  .lux-tabs-panel.-active#webcomponent-input-state-danger-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__state-danger-with-icon">Label</chi-label>
-        <chi-text-input state="danger" icon-right="circle-warning" icon-right-color="danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger-with-icon"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__state-danger-with-icon">Label</lux-label>
+        <lux-text-input state="danger" icon-right="circle-warning" icon-right-color="danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger-with-icon"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-state-danger-icon
+  .lux-tabs-panel#html-input-state-danger-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__state-danger-with-icon">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <input type="text" class="chi-input -danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger-with-icon">
-          <i class="chi-icon icon-circle-warning -icon--danger"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__state-danger-with-icon">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <input type="text" class="lux-input -danger" placeholder="Placeholder" value="Sample Text" id="example__state-danger-with-icon">
+          <i class="lux-icon icon-circle-warning -icon--danger"></i>
         </div>
       </div>
 
@@ -555,109 +555,109 @@ p.-text
 .example.-mb--3
   .-p--3
     .-p--2
-      .chi-form__item(style="max-width:20rem")
-        chi-label(for="example__size-sm") Label
-        chi-text-input(size="sm", placeholder="Sample Text", id="example__size-sm")
+      .lux-form__item(style="max-width:20rem")
+        lux-label(for="example__size-sm") Label
+        lux-text-input(size="sm", placeholder="Sample Text", id="example__size-sm")
     .-p--2
-      .chi-form__item(style="max-width:20rem")
-        chi-label(for="example__size-md") Label
-        chi-text-input(size="md", placeholder="Sample Text", id="example__size-md")
+      .lux-form__item(style="max-width:20rem")
+        lux-label(for="example__size-md") Label
+        lux-text-input(size="md", placeholder="Sample Text", id="example__size-md")
     .-p--2
-      .chi-form__item(style="max-width:20rem")
-        chi-label(for="example__size-lg") Label
-        chi-text-input(size="lg", placeholder="Sample Text", id="example__size-lg")
+      .lux-form__item(style="max-width:20rem")
+        lux-label(for="example__size-lg") Label
+        lux-text-input(size="lg", placeholder="Sample Text", id="example__size-lg")
     .-p--2
-      .chi-form__item(style="max-width:20rem")
-        chi-label(for="example__size-xl") Label
-        chi-text-input(size="xl", placeholder="Sample Text", id="example__size-xl")
+      .lux-form__item(style="max-width:20rem")
+        lux-label(for="example__size-xl") Label
+        lux-text-input(size="xl", placeholder="Sample Text", id="example__size-xl")
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-sizes
+    ul.lux-tabs#example-input-sizes
       li.-active
         a(href=`#webcomponent-input-sizes`) Web Component
       li
         a(href=`#html-input-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-input-sizes
+  .lux-tabs-panel.-active#webcomponent-input-sizes
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__size-sm">Label</chi-label>
-        <chi-text-input size="sm" placeholder="Sample Text" id="example__size-sm"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__size-sm">Label</lux-label>
+        <lux-text-input size="sm" placeholder="Sample Text" id="example__size-sm"></lux-text-input>
       </div>
-      <div class="chi-form__item">
-        <chi-label for="example__size-md">Label</chi-label>
-        <chi-text-input size="md" placeholder="Sample Text" id="example__size-md"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__size-md">Label</lux-label>
+        <lux-text-input size="md" placeholder="Sample Text" id="example__size-md"></lux-text-input>
       </div>
-      <div class="chi-form__item">
-        <chi-label for="example__size-lg">Label</chi-label>
-        <chi-text-input size="lg" placeholder="Sample Text" id="example__size-lg"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__size-lg">Label</lux-label>
+        <lux-text-input size="lg" placeholder="Sample Text" id="example__size-lg"></lux-text-input>
       </div>
-      <div class="chi-form__item">
-        <chi-label for="example__size-xl">Label</chi-label>
-        <chi-text-input size="xl" placeholder="Sample Text" id="example__size-xl"></chi-text-input>
+      <div class="lux-form__item">
+        <lux-label for="example__size-xl">Label</lux-label>
+        <lux-text-input size="xl" placeholder="Sample Text" id="example__size-xl"></lux-text-input>
       </div>
-  .chi-tabs-panel#html-input-sizes
+  .lux-tabs-panel#html-input-sizes
     :code(lang='html')
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__size-sm">Label</label>
-        <input type="text" class="chi-input -sm" placeholder="Sample Text" id="example__size-sm">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__size-sm">Label</label>
+        <input type="text" class="lux-input -sm" placeholder="Sample Text" id="example__size-sm">
       </div>
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__size-md">Label</label>
-        <input type="text" class="chi-input -md" placeholder="Sample Text" id="example__size-md">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__size-md">Label</label>
+        <input type="text" class="lux-input -md" placeholder="Sample Text" id="example__size-md">
       </div>
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__size-lg">Label</label>
-        <input type="text" class="chi-input -lg" placeholder="Sample Text" id="example__size-lg">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__size-lg">Label</label>
+        <input type="text" class="lux-input -lg" placeholder="Sample Text" id="example__size-lg">
       </div>
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__size-xl">Label</label>
-        <input type="text" class="chi-input -xl" placeholder="Sample Text" id="example__size-xl">
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__size-xl">Label</label>
+        <input type="text" class="lux-input -xl" placeholder="Sample Text" id="example__size-xl">
       </div>
 
 h3 Floating labels
 p.-text
   | Floating labels are a solution to keep the placeholder visible when no label is attached to the input.
-  | Chi only supports floating labels on <code>-lg</code> and <code>-xl</code> inputs.
+  | Lux only supports floating labels on <code>-lg</code> and <code>-xl</code> inputs.
 
 .example.-mb--3
   .-p--3
     each size in ['lg', 'xl']
-      div(class=`chi-col -w--12 -p--2`)
-        .chi-input__wrapper.-floating-label(style="max-width:20rem")
-          input(type="text", class=`chi-input -${size} -mr--3`, id=`floating-label-${size}`)
+      div(class=`lux-col -w--12 -p--2`)
+        .lux-input__wrapper.-floating-label(style="max-width:20rem")
+          input(type="text", class=`lux-input -${size} -mr--3`, id=`floating-label-${size}`)
           label(for=`floating-label-${size}`) Placeholder text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-input-floating-label
+    ul.lux-tabs#example-input-floating-label
       li.-disabled
         a(href=`#webcomponent-input-floating-label`) Web Component
       li.-active
         a(href=`#html-input-floating-label`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-input-floating-label
-  .chi-tabs-panel.-active#html-input-floating-label
-    .chi-tab__description
+  .lux-tabs-panel#webcomponent-input-floating-label
+  .lux-tabs-panel.-active#html-input-floating-label
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang='html')
-      <div class="chi-input__wrapper -floating-label">
-        <input class="chi-input -lg" type="text" id="floating-label-lg">
+      <div class="lux-input__wrapper -floating-label">
+        <input class="lux-input -lg" type="text" id="floating-label-lg">
         <label for="floating-label-lg">Placeholder text</label>
       </div>
 
-      <div class="chi-input__wrapper -floating-label">
-        <input class="chi-input -xl" type="text" id="floating-label-xl">
+      <div class="lux-input__wrapper -floating-label">
+        <input class="lux-input -xl" type="text" id="floating-label-xl">
         <label for="floating-label-xl">Placeholder text</label>
       </div>
 
       <script>
-        chi.floatingLabel(document.querySelectorAll('.-floating-label'));
+        lux.floatingLabel(document.querySelectorAll('.-floating-label'));
       </script>
 
 script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
-      chi.floatingLabel(document.querySelectorAll('.-floating-label'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
+      lux.floatingLabel(document.querySelectorAll('.-floating-label'));
     }
   );

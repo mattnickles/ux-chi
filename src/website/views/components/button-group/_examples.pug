@@ -1,48 +1,48 @@
 h2 Examples
 h3 Base
-p.-text To render a button group, wrap a series of buttons in a div and apply the class <code>chi-button-group</code>.
+p.-text To render a button group, wrap a series of buttons in a div and apply the class <code>lux-button-group</code>.
 .example.-mb--3
   .-p--3
-    .chi-button-group
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
+    .lux-button-group
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-disabled
         a(href=`#webcomponent-base`) Web Component
       li.-active
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-base
-  .chi-tabs-panel.-active#html-base
+  .lux-tabs-panel#webcomponent-base
+  .lux-tabs-panel.-active#html-base
     :code(lang='html')
-      <div class="chi-button-group">
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
+      <div class="lux-button-group">
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
       </div>
 
 h3 Vertical
 p.-text To render a series of buttons vertically, apply the class modifier <code>-vertical</code>.
 .example.-mb--3
   .-p--3
-    .chi-button-group.-vertical
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
+    .lux-button-group.-vertical
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-vertical
+    ul.lux-tabs#example-vertical
       li.-disabled
         a(href=`#webcomponent-vertical`) Web Component
       li.-active
         a(href=`#html-vertical`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-vertical
-  .chi-tabs-panel.-active#html-vertical
+  .lux-tabs-panel#webcomponent-vertical
+  .lux-tabs-panel.-active#html-vertical
     :code(lang='html')
-      <div class="chi-button-group -vertical">
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
+      <div class="lux-button-group -vertical">
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
       </div>
 
 h2 Fluid buttons
@@ -50,45 +50,45 @@ p.-text Button groups can be expanded to fill the parent space by applying the c
 h3 Horizontal
 .example.-mb--3
   .-p--3
-    .chi-button-group.-fluid(style="width:100%")
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
+    .lux-button-group.-fluid(style="width:100%")
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-fluid
+    ul.lux-tabs#example-fluid
       li.-disabled
         a(href=`#webcomponent-fluid`) Web Component
       li.-active
         a(href=`#html-fluid`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-fluid
-  .chi-tabs-panel.-active#html-fluid
+  .lux-tabs-panel#webcomponent-fluid
+  .lux-tabs-panel.-active#html-fluid
     :code(lang='html')
-      <div class="chi-button-group -fluid">
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
+      <div class="lux-button-group -fluid">
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
       </div>
 
 h3 Vertical
 .example.-mb--3
   .-p--3
-    .chi-button-group.-vertical.-fluid(style="width:12rem")
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
-      button(class=`chi-button`) Button
+    .lux-button-group.-vertical.-fluid(style="width:12rem")
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
+      button(class=`lux-button`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-fluid-vertical
+    ul.lux-tabs#example-fluid-vertical
       li.-disabled
         a(href=`#webcomponent-fluid-vertical`) Web Component
       li.-active
         a(href=`#html-fluid-vertical`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-fluid-vertical
-  .chi-tabs-panel.-active#html-fluid-vertical
+  .lux-tabs-panel#webcomponent-fluid-vertical
+  .lux-tabs-panel.-active#html-fluid-vertical
     :code(lang='html')
-      <div class="chi-button-group -vertical -fluid">
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
-        <button class="chi-button">Button</button>
+      <div class="lux-button-group -vertical -fluid">
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
+        <button class="lux-button">Button</button>
       </div>
 
 h3 Alignment
@@ -97,23 +97,23 @@ p.-text
   | <code>-align--left</code> or <code>-align--right</code>.
 .example.-mb--3
   .-p--3
-    .chi-button-group.-fluid(style="width:100%")
-      button(class=`chi-button -align--left`) Button
-      button(class=`chi-button`) Button
-      button(class=`chi-button -align--right`) Button
+    .lux-button-group.-fluid(style="width:100%")
+      button(class=`lux-button -align--left`) Button
+      button(class=`lux-button`) Button
+      button(class=`lux-button -align--right`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-alignment
+    ul.lux-tabs#example-alignment
       li.-disabled
         a(href=`#webcomponent-alignment`) Web Component
       li.-active
         a(href=`#html-alignment`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-alignment
-  .chi-tabs-panel.-active#html-alignment
+  .lux-tabs-panel#webcomponent-alignment
+  .lux-tabs-panel.-active#html-alignment
     :code(lang='html')
-      <div class="chi-button-group -fluid">
-        <button class="chi-button -align--left">Button</button>
-        <button class="chi-button">Button</button>
-        <button class="chi-button -align--right">Button</button>
+      <div class="lux-button-group -fluid">
+        <button class="lux-button -align--left">Button</button>
+        <button class="lux-button">Button</button>
+        <button class="lux-button -align--right">Button</button>
       </div>
 
 h3 Disable Fluidity
@@ -121,23 +121,23 @@ p.-text
   | To disable the fluidity of a specific button in a fluid button group, apply the class <code>-no-fluid</code> to the button.
 .example.-mb--3
   .-p--3
-    .chi-button-group.-fluid(style="width:100%")
-      button(class=`chi-button`) Button
-      button(class=`chi-button -no-fluid`) Button
-      button(class=`chi-button`) Button
+    .lux-button-group.-fluid(style="width:100%")
+      button(class=`lux-button`) Button
+      button(class=`lux-button -no-fluid`) Button
+      button(class=`lux-button`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-no-fluid
+    ul.lux-tabs#example-no-fluid
       li.-disabled
         a(href=`#webcomponent-no-fluid`) Web Component
       li.-active
         a(href=`#html-no-fluid`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-no-fluid
-  .chi-tabs-panel.-active#html-no-fluid
+  .lux-tabs-panel#webcomponent-no-fluid
+  .lux-tabs-panel.-active#html-no-fluid
     :code(lang='html')
-      <div class="chi-button-group -fluid">
-        <button class="chi-button">Button</button>
-        <button class="chi-button -no-fluid">Button</button>
-        <button class="chi-button">Button</button>
+      <div class="lux-button-group -fluid">
+        <button class="lux-button">Button</button>
+        <button class="lux-button -no-fluid">Button</button>
+        <button class="lux-button">Button</button>
       </div>
 
 h2 Sizes
@@ -152,42 +152,42 @@ h3 Horizontal
     each size in ['sm', 'md', 'lg', 'xl']
       p.-text--bold= '-' + size
       .-d--flex.-flex--wrap
-        .chi-button-group
-          button(class=`chi-button -${size}`) Button
-          button(class=`chi-button -${size}`) Button
-          button(class=`chi-button -${size}`) Button
+        .lux-button-group
+          button(class=`lux-button -${size}`) Button
+          button(class=`lux-button -${size}`) Button
+          button(class=`lux-button -${size}`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-horizontal
+    ul.lux-tabs#example-size-horizontal
       li.-disabled
         a(href=`#webcomponent-size-horizontal`) Web Component
       li.-active
         a(href=`#html-size-horizontal`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-horizontal
-  .chi-tabs-panel.-active#html-size-horizontal
+  .lux-tabs-panel#webcomponent-size-horizontal
+  .lux-tabs-panel.-active#html-size-horizontal
     :code(lang='html')
       <!-- sm -->
-      <div class="chi-button-group">
-        <button class="chi-button -sm">Button</button>
-        <button class="chi-button -sm">Button</button>
-        <button class="chi-button -sm">Button</button>
+      <div class="lux-button-group">
+        <button class="lux-button -sm">Button</button>
+        <button class="lux-button -sm">Button</button>
+        <button class="lux-button -sm">Button</button>
       </div>
       <!-- md -->
-      <div class="chi-button-group">
-        <button class="chi-button -md">Button</button>
-        <button class="chi-button -md">Button</button>
-        <button class="chi-button -md">Button</button>
+      <div class="lux-button-group">
+        <button class="lux-button -md">Button</button>
+        <button class="lux-button -md">Button</button>
+        <button class="lux-button -md">Button</button>
       </div>
       <!-- lg -->
-      <div class="chi-button-group">
-        <button class="chi-button -lg">Button</button>
-        <button class="chi-button -lg">Button</button>
-        <button class="chi-button -lg">Button</button>
+      <div class="lux-button-group">
+        <button class="lux-button -lg">Button</button>
+        <button class="lux-button -lg">Button</button>
+        <button class="lux-button -lg">Button</button>
       </div>
       <!-- xl -->
-      <div class="chi-button-group">
-        <button class="chi-button -xl">Button</button>
-        <button class="chi-button -xl">Button</button>
-        <button class="chi-button -xl">Button</button>
+      <div class="lux-button-group">
+        <button class="lux-button -xl">Button</button>
+        <button class="lux-button -xl">Button</button>
+        <button class="lux-button -xl">Button</button>
       </div>
 
 h3 Vertical
@@ -196,42 +196,42 @@ h3 Vertical
     each size in ['sm', 'md', 'lg', 'xl']
       p.-text--bold= '-' + size
       .-d--flex.-flex--wrap
-        .chi-button-group.-vertical.-fluid(style="width:12rem")
-          button(class=`chi-button -${size}`) Button
-          button(class=`chi-button -${size}`) Button
-          button(class=`chi-button -${size}`) Button
+        .lux-button-group.-vertical.-fluid(style="width:12rem")
+          button(class=`lux-button -${size}`) Button
+          button(class=`lux-button -${size}`) Button
+          button(class=`lux-button -${size}`) Button
   .example-tabs.-pl--2
-    ul.chi-tabs#example-size-vertical
+    ul.lux-tabs#example-size-vertical
       li.-disabled
         a(href=`#webcomponent-size-vertical`) Web Component
       li.-active
         a(href=`#html-size-vertical`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-size-vertical
-  .chi-tabs-panel.-active#html-size-vertical
+  .lux-tabs-panel#webcomponent-size-vertical
+  .lux-tabs-panel.-active#html-size-vertical
     :code(lang="html")
       <!-- sm -->
-      <div class="chi-button-group -vertical -fluid">
-        <button class="chi-button -sm">Button</button>
-        <button class="chi-button -sm">Button</button>
-        <button class="chi-button -sm">Button</button>
+      <div class="lux-button-group -vertical -fluid">
+        <button class="lux-button -sm">Button</button>
+        <button class="lux-button -sm">Button</button>
+        <button class="lux-button -sm">Button</button>
       </div>
       <!-- md -->
-      <div class="chi-button-group -vertical -fluid">
-        <button class="chi-button -md">Button</button>
-        <button class="chi-button -md">Button</button>
-        <button class="chi-button -md">Button</button>
+      <div class="lux-button-group -vertical -fluid">
+        <button class="lux-button -md">Button</button>
+        <button class="lux-button -md">Button</button>
+        <button class="lux-button -md">Button</button>
       </div>
       <!-- lg -->
-      <div class="chi-button-group -vertical -fluid">
-        <button class="chi-button -lg">Button</button>
-        <button class="chi-button -lg">Button</button>
-        <button class="chi-button -lg">Button</button>
+      <div class="lux-button-group -vertical -fluid">
+        <button class="lux-button -lg">Button</button>
+        <button class="lux-button -lg">Button</button>
+        <button class="lux-button -lg">Button</button>
       </div>
       <!-- xl -->
-      <div class="chi-button-group -vertical -fluid">
-        <button class="chi-button -xl">Button</button>
-        <button class="chi-button -xl">Button</button>
-        <button class="chi-button -xl">Button</button>
+      <div class="lux-button-group -vertical -fluid">
+        <button class="lux-button -xl">Button</button>
+        <button class="lux-button -xl">Button</button>
+        <button class="lux-button -xl">Button</button>
       </div>
 
 h2 Hybrid buttons
@@ -240,25 +240,25 @@ p.-text
   | Mix and match text and icons to form a hybrid button group.
 .example.-mb--3
   .-p--3
-    .chi-button-group
-      button(class=`chi-button`) Button
-      button(class=`chi-button -icon`, aria-label="Button action")
-        .chi-button__content
-          i.chi-icon.icon-atom
+    .lux-button-group
+      button(class=`lux-button`) Button
+      button(class=`lux-button -icon`, aria-label="Button action")
+        .lux-button__content
+          i.lux-icon.icon-atom
   .example-tabs.-pl--2
-    ul.chi-tabs#example-hybrid
+    ul.lux-tabs#example-hybrid
       li.-disabled
         a(href=`#webcomponent-hybrid`) Web Component
       li.-active
         a(href=`#html-hybrid`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-hybrid
-  .chi-tabs-panel.-active#html-hybrid
+  .lux-tabs-panel#webcomponent-hybrid
+  .lux-tabs-panel.-active#html-hybrid
     :code(lang='html')
-      <div class="chi-button-group">
-        <button class="chi-button">Button</button>
-        <button class="chi-button -icon" aria-label="Button action">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-atom"></i>
+      <div class="lux-button-group">
+        <button class="lux-button">Button</button>
+        <button class="lux-button -icon" aria-label="Button action">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-atom"></i>
           </div>
         </button>
       </div>
@@ -268,25 +268,25 @@ p.-text
 
 .example.-mb--3
   .-p--3
-    .chi-button-group.-fluid
-      button(class=`chi-button`) Button
-      button(class=`chi-button -icon -no-fluid`, aria-label="Button action")
-        .chi-button__content
-          i.chi-icon.icon-atom
+    .lux-button-group.-fluid
+      button(class=`lux-button`) Button
+      button(class=`lux-button -icon -no-fluid`, aria-label="Button action")
+        .lux-button__content
+          i.lux-icon.icon-atom
   .example-tabs.-pl--2
-    ul.chi-tabs#example-hybrid-fluid
+    ul.lux-tabs#example-hybrid-fluid
       li.-disabled
         a(href=`#webcomponent-hybrid-fluid`) Web Component
       li.-active
         a(href=`#html-hybrid-fluid`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-hybrid-fluid
-  .chi-tabs-panel.-active#html-hybrid-fluid
+  .lux-tabs-panel#webcomponent-hybrid-fluid
+  .lux-tabs-panel.-active#html-hybrid-fluid
     :code(lang='html')
-      <div class="chi-button-group -fluid">
-        <button class="chi-button">Button</button>
-        <button class="chi-button -icon -no-fluid" aria-label="Button action">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-atom"></i>
+      <div class="lux-button-group -fluid">
+        <button class="lux-button">Button</button>
+        <button class="lux-button -icon -no-fluid" aria-label="Button action">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-atom"></i>
           </div>
         </button>
       </div>
@@ -299,53 +299,53 @@ p.-text
 .example.-mb--3
   .-p--2
     each size in ['sm', 'md', 'lg', 'xl']
-      .chi-button-group.-m--1
-        button(class=`chi-button -${size}`) Button
-        button(class=`chi-button -${size} -icon`, aria-label="Button action")
-          .chi-button__content
-            i.chi-icon.icon-atom
+      .lux-button-group.-m--1
+        button(class=`lux-button -${size}`) Button
+        button(class=`lux-button -${size} -icon`, aria-label="Button action")
+          .lux-button__content
+            i.lux-icon.icon-atom
   .example-tabs.-pl--2
-    ul.chi-tabs#example-hybrid-sizes
+    ul.lux-tabs#example-hybrid-sizes
       li.-disabled
         a(href=`#webcomponent-hybrid-sizes`) Web Component
       li.-active
         a(href=`#html-hybrid-sizes`) HTML Blueprint
-  .chi-tabs-panel#webcomponent-hybrid-sizes
-  .chi-tabs-panel.-active#html-hybrid-sizes
+  .lux-tabs-panel#webcomponent-hybrid-sizes
+  .lux-tabs-panel.-active#html-hybrid-sizes
     :code(lang='html')
       <!-- sm -->
-      <div class="chi-button-group">
-        <button class="chi-button -sm">Button</button>
-        <button class="chi-button -sm -icon" aria-label="Button action">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-atom"></i>
+      <div class="lux-button-group">
+        <button class="lux-button -sm">Button</button>
+        <button class="lux-button -sm -icon" aria-label="Button action">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-atom"></i>
           </div>
         </button>
       </div>
       <!-- md -->
-      <div class="chi-button-group">
-        <button class="chi-button -md">Button</button>
-        <button class="chi-button -md -icon" aria-label="Button action">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-atom"></i>
+      <div class="lux-button-group">
+        <button class="lux-button -md">Button</button>
+        <button class="lux-button -md -icon" aria-label="Button action">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-atom"></i>
           </div>
         </button>
       </div>
       <!-- lg -->
-      <div class="chi-button-group">
-        <button class="chi-button -lg">Button</button>
-        <button class="chi-button -lg -icon" aria-label="Button action">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-atom"></i>
+      <div class="lux-button-group">
+        <button class="lux-button -lg">Button</button>
+        <button class="lux-button -lg -icon" aria-label="Button action">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-atom"></i>
           </div>
         </button>
       </div>
       <!-- xl -->
-      <div class="chi-button-group">
-        <button class="chi-button -xl">Button</button>
-        <button class="chi-button -xl -icon" aria-label="Button action">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-atom"></i>
+      <div class="lux-button-group">
+        <button class="lux-button -xl">Button</button>
+        <button class="lux-button -xl -icon" aria-label="Button action">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-atom"></i>
           </div>
         </button>
       </div>
@@ -354,6 +354,6 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     }
   );

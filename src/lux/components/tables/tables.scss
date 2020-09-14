@@ -1,0 +1,488 @@
+@import '_mixins';
+@import '_variables';
+
+$sizes: (
+  xs: (
+    padding: 0.5rem,
+  ),
+  sm: (
+    padding: 0.75rem,
+  ),
+  md: (
+    padding: 1rem,
+  ),
+  lg: (
+    padding: 1.25rem,
+  ),
+  xl: (
+    padding: 1.5rem,
+  )
+);
+
+$vertical-alignments: (top, bottom, middle);
+
+th {
+  text-align: left;
+}
+
+.lux-table {
+  border-spacing: 0;
+  font-size: $font-size-base;
+  line-height: $line-height-sm;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @each $type in map-keys($sizes) {
+    &.-#{$type} {
+
+      & th {
+        padding: map-get(map-get($sizes, $type), padding);
+      }
+
+      & td {
+        padding: map-get(map-get($sizes, $type), padding);
+      }
+    }
+  }
+
+  table {
+    border-spacing: 0;
+    font-size: $font-size-base;
+    line-height: $line-height-sm;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  tr {
+    background-color: $color-background-white;
+
+    & th {
+      border-bottom: 0.0625rem solid $color-border-base-dark;
+      padding: 1rem;
+    }
+
+    & td {
+      border-bottom: 0.0625rem solid $color-border-base-light;
+      padding: 1rem;
+    }
+
+    @each $type in map-keys($sizes) {
+      &.-#{$type} {
+
+        & th {
+          padding: map-get(map-get($sizes, $type), padding) !important;
+        }
+
+        & td {
+          padding: map-get(map-get($sizes, $type), padding) !important;
+        }
+      }
+    }
+  }
+
+  th {
+    border-bottom: 0.0625rem solid $color-border-base-dark;
+    font-weight: $font-weight-semi-bold;
+
+    &.-sorted {
+      div {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+
+        &::after {
+          background-image: none;
+          content: '\e921';
+          font-family: 'lux';
+          font-size: $font-size-xs;
+          font-weight: $font-weight-normal;
+          height: 1rem;
+          margin-left: 0.5rem;
+          opacity: 0;
+          width: 0.75rem;
+        }
+      }
+
+      & i {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &.-ascending {
+      div::after {
+        opacity: 1;
+      }
+    }
+
+    &.-descending {
+      div::after {
+        opacity: 1;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & tbody {
+    tr {
+      &.-row--success {
+        background-color: $color-background-success-light !important;
+      }
+
+      &.-row--warning {
+        background-color: $color-background-warning-light !important;
+      }
+
+      &.-row--danger {
+        background-color: $color-background-danger-light !important;
+      }
+
+      &.-row--info {
+        background-color: $color-background-info-light !important;
+      }
+
+      &[disabled] {
+        color: rgba($color-grey-90, 0.4) !important;
+      }
+
+      &.-active {
+        td {
+          background-color: $color-background-info-light;
+
+          &:first-child {
+            border-left: 0.25rem solid $color-border-primary;
+            padding-left: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.-portal {
+    tr {
+      th {
+        background-color: $color-background-base-darker;
+        border-bottom: 0.0625rem solid $color-border-base-dark;
+      }
+
+      &.-xs {
+        th,
+        td {
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      &.-sm {
+        th,
+        td {
+          padding: 0.75rem 1rem;
+        }
+      }
+    }
+
+    &.-xs {
+      th,
+      td {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &.-sm {
+      th,
+      td {
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    thead {
+      tr {
+        &:last-child {
+          th {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: $color-background-primary-lighter;
+        }
+
+        &.-active {
+          td {
+            background-color: $color-background-primary-light;
+          }
+        }
+
+        &:hover,
+        &.-hover {
+          background-color: $color-background-primary-light;
+        }
+
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &.-striped {
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: $color-background-primary-lighter;
+          }
+
+          &:nth-child(odd) {
+            background-color: $color-background-white;
+          }
+        }
+      }
+    }
+  }
+
+  &.-hover {
+    &:not(.-portal):not(.-inverse) {
+      tbody {
+        tr {
+          &:hover,
+          &.-hover {
+            background-color: $color-grey-10;
+          }
+        }
+      }
+    }
+  }
+
+  &.-striped {
+    tbody {
+      tr:nth-child(odd) {
+        background-color: $color-grey-10;
+      }
+    }
+  }
+
+  &.-no-border {
+    &::before {
+      border: 0;
+    }
+
+    tr {
+      & th {
+        border: 0;
+      }
+
+      & td {
+        border: 0;
+      }
+    }
+  }
+
+  &.-bordered {
+    &,
+    &.-portal {
+      &::before {
+        border: 0.0625rem solid $color-border-base-dark;
+        border-bottom-width: 0;
+        border-left-width: 0;
+      }
+
+      thead {
+        tr {
+          &:last-child {
+            th {
+              border-bottom: 0.0625rem solid $color-border-base-dark;
+            }
+          }
+        }
+      }
+
+      tr {
+        & th {
+          border: 0.0625rem solid $color-border-base-dark;
+          border-bottom-width: 0;
+          border-right-width: 0;
+
+          &:last-of-type {
+            border-right-width: 0.0625rem;
+          }
+        }
+
+        & td {
+          border: 0.0625rem solid $color-border-base-dark;
+          border-right-width: 0;
+          border-top-width: 0;
+
+          &:last-of-type {
+            border-right-width: 0.0625rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.-fixed--header {
+    padding-top: 3rem;
+    position: relative;
+
+    &::before {
+      background-color: $color-background-white;
+      content: '';
+      display: block;
+      height: 3rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    & > div {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    tr {
+      height: 0;
+    }
+
+    th {
+      height: 0;
+      padding: 0;
+
+      div {
+        padding: 1rem;
+        position: absolute;
+        text-align: start;
+        top: 0;
+        vertical-align: middle;
+      }
+
+      &.-sorted {
+        div {
+          align-items: center;
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+
+          &::after {
+            background-image: url('icon-chevron-thin-up.svg');
+            content: '';
+            display: block;
+            height: 0.75rem;
+            margin-left: 0.5rem;
+            opacity: 0;
+            width: 0.75rem;
+          }
+        }
+      }
+
+      &.-ascending {
+        div::after {
+          opacity: 1;
+        }
+      }
+
+      &.-descending {
+        div::after {
+          opacity: 1;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    td {
+      border-bottom: 0.0625rem solid $color-border-base-light;
+      padding: 1rem;
+      padding-bottom: 0.9375rem;
+      text-align: start;
+      vertical-align: middle;
+    }
+
+    &.-hover {
+      tbody {
+        tr {
+          &:hover,
+          &.-hover {
+            background-color: $color-grey-10;
+          }
+        }
+      }
+    }
+
+    &.-striped {
+      tbody {
+        tr:nth-child(odd) {
+          background-color: $color-grey-10;
+        }
+      }
+    }
+
+    &.-no-border {
+      &::before {
+        border: 0;
+      }
+
+      td {
+        border: 0;
+        padding: 1rem;
+      }
+    }
+
+    &.-bordered {
+      &::before {
+        border: 0.0625rem solid $color-border-base-light;
+        border-left-width: 0;
+      }
+
+      th {
+        border: 0;
+      }
+
+      th > div {
+        border-left: 0.0625rem solid $color-border-base-light;
+        padding-left: 0.9375rem;
+      }
+
+      td {
+        border: 0.0625rem solid $color-border-base-light;
+        border-right-width: 0;
+        border-top-width: 0;
+        padding: 1rem 1rem 0.9375rem 0.9375rem;
+
+        &:last-of-type {
+          border-right-width: 0.0625rem;
+          padding-right: 0.9375rem;
+        }
+      }
+    }
+  }
+
+  .-valign--top {
+    vertical-align: top;
+  }
+
+  .-valign--middle {
+    vertical-align: middle;
+  }
+
+  .-valign--bottom {
+    vertical-align: bottom;
+  }
+
+  @each $screen-size in $screen-sizes {
+    @include respond-to($screen-size) {
+      @each $type in $vertical-alignments {
+        .-valign-#{$screen-size}--#{$type} {
+
+          vertical-align: #{$type};
+        }
+      }
+    }
+  }
+}

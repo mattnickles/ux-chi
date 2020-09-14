@@ -2,7 +2,7 @@ import { Component, Element, Event, EventEmitter, Prop, State, h } from '@stenci
 import { CallbackQueue } from '../../utils/CallbackQueue';
 
 @Component({
-  tag: 'chi-number-input',
+  tag: 'lux-number-input',
   styleUrl: 'number-input.scss',
   scoped: true
 })
@@ -69,7 +69,7 @@ export class NumberInput {
 
   @Element() el: HTMLElement;
 
-  @Event() chiChange: EventEmitter<string>;
+  @Event() luxChange: EventEmitter<string>;
 
   connectedCallback() {
     this.initialValue = this.value;
@@ -90,10 +90,10 @@ export class NumberInput {
     if (!this.preventValueMutation) {
       this.value = newValue;
       this._didUpdateCallBackOnceQueue.push(() => {
-        this.chiChange.emit(newValue);
+        this.luxChange.emit(newValue);
       });
     } else {
-      this.chiChange.emit(newValue);
+      this.luxChange.emit(newValue);
     }
   }
 
@@ -137,7 +137,7 @@ export class NumberInput {
     if (newValue <= this.max) {
       this.value = newValue.toString();
       this._didUpdateCallBackOnceQueue.push(() => {
-        this.chiChange.emit(this.value);
+        this.luxChange.emit(this.value);
       });
     }
   }
@@ -149,7 +149,7 @@ export class NumberInput {
     if (newValue >= this.min) {
       this.value = newValue.toString();
       this._didUpdateCallBackOnceQueue.push(() => {
-        this.chiChange.emit(this.value);
+        this.luxChange.emit(this.value);
       });
     }
   }
@@ -158,7 +158,7 @@ export class NumberInput {
     const input = (
       <input
         type="number"
-        class={`chi-input ${this.inputstyle ? `-${this.inputstyle}` : ''} ${
+        class={`lux-input ${this.inputstyle ? `-${this.inputstyle}` : ''} ${
           this.state ? `-${this.state}` : ''}`}
         disabled={this.disabled}
         step={this.step}
@@ -172,7 +172,7 @@ export class NumberInput {
 
     const base = (
       <div
-        class={`chi-number-input ${this.size ? `-${this.size}` : ''}`}
+        class={`lux-number-input ${this.size ? `-${this.size}` : ''}`}
       >
         {input}
         <button
@@ -190,27 +190,27 @@ export class NumberInput {
 
     const expanded = (
       <div
-        class={`chi-number-input -expanded ${this.size ? `-${this.size}` : ''}`}
+        class={`lux-number-input -expanded ${this.size ? `-${this.size}` : ''}`}
       >
         {input}
         <button
-          class="chi-button -icon"
+          class="lux-button -icon"
           disabled={+this.value - this.step < this.min}
           onClick={() => this.decrement()}
           aria-label="Decrease"
         >
-          <div class="chi-button__content">
-            <chi-icon icon="minus" />
+          <div class="lux-button__content">
+            <lux-icon icon="minus" />
           </div>
         </button>
         <button
-          class="chi-button -icon"
+          class="lux-button -icon"
           disabled={+this.value + this.step > this.max}
           onClick={() => this.increment()}
           aria-label="Increase"
         >
-          <div class="chi-button__content">
-            <chi-icon icon="plus" />
+          <div class="lux-button__content">
+            <lux-icon icon="plus" />
           </div>
         </button>
       </div>

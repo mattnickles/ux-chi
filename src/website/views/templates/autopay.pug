@@ -9,109 +9,109 @@ disabled: true
 
 h2 Base
 .example.-mb--3.-bg--grey-10
-  .chi-app.-p--3#autopayBase
-    .chi-card.-p--3
-      .chi-grid.-no-gutter
+  .lux-app.-p--3#autopayBase
+    .lux-card.-p--3
+      .lux-grid.-no-gutter
         div
-          .chi-card__title.-m--0 Automatic Payments
+          .lux-card__title.-m--0 Automatic Payments
           p.-text.-mb--3 Each month, an automatic payment for the full amount of your bill will be paid to Lumen from the payment method of your choosing.
-        div.chi-col.-w-md--4
-          .chi-form__item.-mb--1
-            label.chi-label(for='Base') Choose a payment method
-            .chi-dropdown
-              button.chi-button.-xl.chi-dropdown__trigger(id='Base', onclick='selectPayment(id)') Checking account
-              .chi-dropdown__menu
-                a.chi-dropdown__menu-item(href='#checkingAccountBase', name='Checking') Checking account
-                a.chi-dropdown__menu-item(href='#savingsAccountBase', name='Savings') Savings account
-                a.chi-dropdown__menu-item(href='#creditDebitCardBase', name='Credit') Credit or debit card
-      .chi-card#checkingAccountBase.-mt--1
-        .chi-card__header.-py--0.-bg--grey-10
+        div.lux-col.-w-md--4
+          .lux-form__item.-mb--1
+            label.lux-label(for='Base') Choose a payment method
+            .lux-dropdown
+              button.lux-button.-xl.lux-dropdown__trigger(id='Base', onclick='selectPayment(id)') Checking account
+              .lux-dropdown__menu
+                a.lux-dropdown__menu-item(href='#checkingAccountBase', name='Checking') Checking account
+                a.lux-dropdown__menu-item(href='#savingsAccountBase', name='Savings') Savings account
+                a.lux-dropdown__menu-item(href='#creditDebitCardBase', name='Credit') Credit or debit card
+      .lux-card#checkingAccountBase.-mt--1
+        .lux-card__header.-py--0.-bg--grey-10
           h6 Add a checking account
-        .chi-card__content.-p--3
+        .lux-card__content.-p--3
           fieldset
-            .chi-grid.-no-gutter
-              div.chi-col.-w--12.-w-md--6
-                .chi-form__item.-mb--2.-mr-md--1
-                  label.chi-label(for='checking-routing-number') Routing number
-                  input(type="text", class="chi-input -xl", id='checking-routing-number', placeholder="")
-              div.chi-col.-w--12.-w-md--6
-                .chi-form__item.-mb--2
-                  label.chi-label(for='checking-account-number') Account number
-                  input(type="text", class="chi-input -xl", id='checking-account-number', placeholder="")
-              div.chi-col.-w--12
+            .lux-grid.-no-gutter
+              div.lux-col.-w--12.-w-md--6
+                .lux-form__item.-mb--2.-mr-md--1
+                  label.lux-label(for='checking-routing-number') Routing number
+                  input(type="text", class="lux-input -xl", id='checking-routing-number', placeholder="")
+              div.lux-col.-w--12.-w-md--6
+                .lux-form__item.-mb--2
+                  label.lux-label(for='checking-account-number') Account number
+                  input(type="text", class="lux-input -xl", id='checking-account-number', placeholder="")
+              div.lux-col.-w--12
                 .-d--flex.-justify-content--center.-mt--2
                   img.-mw--100.-h--auto(src='../../assets/images/autopay-check-hint.png', alt="savings account")
-      .chi-card#savingsAccountBase.-mt--1.-d--none
-        .chi-card__header.-py--0.-bg--grey-10
+      .lux-card#savingsAccountBase.-mt--1.-d--none
+        .lux-card__header.-py--0.-bg--grey-10
           h6 Add a savings account
-        .chi-card__content.-p--3
+        .lux-card__content.-p--3
           fieldset
-            .chi-grid.-no-gutter
-              div.chi-col.-w--12.-w-md--6
-                .chi-form__item.-mb--2.-mr-md--1
-                  label.chi-label(for='savings-routing-number') Routing number
-                  input(type="text", class="chi-input -xl", id='savings-routing-number', placeholder="")
-              div.chi-col.-w--12.-w-md--6
-                .chi-form__item.-mb--2
-                  label.chi-label(for='savings-account-number') Account number
-                  input(type="text", class="chi-input -xl", id='savings-account-number', placeholder="")
-              div.chi-col.-w--12
+            .lux-grid.-no-gutter
+              div.lux-col.-w--12.-w-md--6
+                .lux-form__item.-mb--2.-mr-md--1
+                  label.lux-label(for='savings-routing-number') Routing number
+                  input(type="text", class="lux-input -xl", id='savings-routing-number', placeholder="")
+              div.lux-col.-w--12.-w-md--6
+                .lux-form__item.-mb--2
+                  label.lux-label(for='savings-account-number') Account number
+                  input(type="text", class="lux-input -xl", id='savings-account-number', placeholder="")
+              div.lux-col.-w--12
                 .-d--flex.-justify-content--center.-mt--2
                   img.-mw--100.-h--auto(src='../../assets/images/autopay-check-hint.png', alt="savings account")
-      .chi-card#creditDebitCardBase.-mt--1.-d--none
-        .chi-card__header.-py--0.-bg--grey-10
+      .lux-card#creditDebitCardBase.-mt--1.-d--none
+        .lux-card__header.-py--0.-bg--grey-10
           h6 Add a credit or debit card
-        .chi-card__content.-p--3
+        .lux-card__content.-p--3
           fieldset
-            .chi-grid.-no-gutter
-              div.chi-col.-w--12
-                .chi-form__item.-mb--2
-                  label.chi-label(for='name') Name on card
-                  input(type="text", class="chi-input -xl", id='name', placeholder="")
-              div.chi-col.-w--12
-                .chi-form__item.-mb--2
+            .lux-grid.-no-gutter
+              div.lux-col.-w--12
+                .lux-form__item.-mb--2
+                  label.lux-label(for='name') Name on card
+                  input(type="text", class="lux-input -xl", id='name', placeholder="")
+              div.lux-col.-w--12
+                .lux-form__item.-mb--2
                   div.-d--flex.-justify-content--between.-align-items--center
-                    label.chi-label(for='number') Card number
+                    label.lux-label(for='number') Card number
                     img(src='../../assets/images/autopay-credit-cards.jpg', alt="credit cards")
-                  input(type="text", class="chi-input -xl", id='number', placeholder="")
-              div.chi-col.-w-md--4.-w-sm--12
-                .chi-form__item.-mb--2
-                  label.chi-label(for='expiration') Expiration
+                  input(type="text", class="lux-input -xl", id='number', placeholder="")
+              div.lux-col.-w-md--4.-w-sm--12
+                .lux-form__item.-mb--2
+                  label.lux-label(for='expiration') Expiration
                   .-d--flex
-                    select(class="chi-input -xl -mr--1", id='expiration')
+                    select(class="lux-input -xl -mr--1", id='expiration')
                       each day in days
                         option= day
-                    select(class="chi-input -xl -mr-md--1", id='expiration')
+                    select(class="lux-input -xl -mr-md--1", id='expiration')
                       each year in years
                         option= year
-              div.chi-col.-w-md--4.-w-sm--12
-                .chi-form__item
-                  label.chi-label(for='zip') Billing zip code
-                  input(type="text", class="chi-input -xl", id='zip', placeholder="")
+              div.lux-col.-w-md--4.-w-sm--12
+                .lux-form__item
+                  label.lux-label(for='zip') Billing zip code
+                  input(type="text", class="lux-input -xl", id='zip', placeholder="")
   :code(lang="html")
-    <div class="chi-app">
-      <div class="chi-card -p--3">
-        <div class="chi-grid -no-gutter">
+    <div class="lux-app">
+      <div class="lux-card -p--3">
+        <div class="lux-grid -no-gutter">
           <div>
-            <div class="chi-card__title -m--0">Automatic Payments</div>
+            <div class="lux-card__title -m--0">Automatic Payments</div>
             <p class="-text -mb--3">
               Each month, an automatic payment for the full amount of your bill will be paid to
               Lumen from the payment method of your choosing.
             </p>
           </div>
-          <div class="chi-col -w-md--4">
-            <div class="chi-form__item -mb--1">
-              <label class="chi-label" for="Base">Choose a payment method</label>
-              <div class="chi-dropdown">
-                <button class="chi-button -xl chi-dropdown__trigger" id="Base">Checking account</button>
-                <div class="chi-dropdown__menu">
-                  <a class="chi-dropdown__menu-item" href="#checkingAccountBase" name="Checking">
+          <div class="lux-col -w-md--4">
+            <div class="lux-form__item -mb--1">
+              <label class="lux-label" for="Base">Choose a payment method</label>
+              <div class="lux-dropdown">
+                <button class="lux-button -xl lux-dropdown__trigger" id="Base">Checking account</button>
+                <div class="lux-dropdown__menu">
+                  <a class="lux-dropdown__menu-item" href="#checkingAccountBase" name="Checking">
                     Checking account
                   </a>
-                  <a class="chi-dropdown__menu-item" href="#savingsAccountBase" name="Savings">
+                  <a class="lux-dropdown__menu-item" href="#savingsAccountBase" name="Savings">
                     Savings account
                   </a>
-                  <a class="chi-dropdown__menu-item" href="#creditDebitCardBase" name="Credit">
+                  <a class="lux-dropdown__menu-item" href="#creditDebitCardBase" name="Credit">
                     Credit or debit card
                   </a>
                 </div>
@@ -119,30 +119,30 @@ h2 Base
             </div>
           </div>
         </div>
-        <div class="chi-card -mt--1" id="checkingAccountBase">
-          <div class="chi-card__header -py--0 -bg--grey-10">
+        <div class="lux-card -mt--1" id="checkingAccountBase">
+          <div class="lux-card__header -py--0 -bg--grey-10">
             <h6>Add a checking account</h6>
           </div>
-          <div class="chi-card__content -p--3">
+          <div class="lux-card__content -p--3">
             <fieldset>
-              <div class="chi-grid -no-gutter">
-                <div class="chi-col -w--12 -w-md--6">
-                  <div class="chi-form__item -mb--2 -mr-md--1">
-                    <label class="chi-label" for="checking-routing-number">
+              <div class="lux-grid -no-gutter">
+                <div class="lux-col -w--12 -w-md--6">
+                  <div class="lux-form__item -mb--2 -mr-md--1">
+                    <label class="lux-label" for="checking-routing-number">
                       Routing number
                     </label>
-                    <input class="chi-input -xl" type="text" id="checking-routing-number" placeholder="">
+                    <input class="lux-input -xl" type="text" id="checking-routing-number" placeholder="">
                   </div>
                 </div>
-                <div class="chi-col -w--12 -w-md--6">
-                  <div class="chi-form__item -mb--2">
-                    <label class="chi-label" for="checking-account-number">
+                <div class="lux-col -w--12 -w-md--6">
+                  <div class="lux-form__item -mb--2">
+                    <label class="lux-label" for="checking-account-number">
                       Account number
                     </label>
-                    <input class="chi-input -xl" type="text" id="checking-account-number" placeholder="">
+                    <input class="lux-input -xl" type="text" id="checking-account-number" placeholder="">
                   </div>
                 </div>
-                <div class="chi-col -w--12">
+                <div class="lux-col -w--12">
                   <div class="-d--flex -justify-content--center -mt--2">
                     <img class="-mw--100 -h--auto" src="../../assets/images/autopay-check-hint.png" alt="savings account">
                   </div>
@@ -151,30 +151,30 @@ h2 Base
             </fieldset>
           </div>
         </div>
-        <div class="chi-card -mt--1 -d--none" id="savingsAccountBase">
-          <div class="chi-card__header -py--0 -bg--grey-10">
+        <div class="lux-card -mt--1 -d--none" id="savingsAccountBase">
+          <div class="lux-card__header -py--0 -bg--grey-10">
             <h6>Add a savings account</h6>
           </div>
-          <div class="chi-card__content -p--3">
+          <div class="lux-card__content -p--3">
             <fieldset>
-              <div class="chi-grid -no-gutter">
-                <div class="chi-col -w--12 -w-md--6">
-                  <div class="chi-form__item -mb--2 -mr-md--1">
-                    <label class="chi-label" for="savings-routing-number">
+              <div class="lux-grid -no-gutter">
+                <div class="lux-col -w--12 -w-md--6">
+                  <div class="lux-form__item -mb--2 -mr-md--1">
+                    <label class="lux-label" for="savings-routing-number">
                       Routing number
                     </label>
-                    <input class="chi-input -xl" type="text" id="savings-routing-number" placeholder="">
+                    <input class="lux-input -xl" type="text" id="savings-routing-number" placeholder="">
                   </div>
                 </div>
-                <div class="chi-col -w--12 -w-md--6">
-                  <div class="chi-form__item -mb--2">
-                    <label class="chi-label" for="savings-account-number">
+                <div class="lux-col -w--12 -w-md--6">
+                  <div class="lux-form__item -mb--2">
+                    <label class="lux-label" for="savings-account-number">
                       Account number
                     </label>
-                    <input class="chi-input -xl" type="text" id="savings-account-number" placeholder="">
+                    <input class="lux-input -xl" type="text" id="savings-account-number" placeholder="">
                   </div>
                 </div>
-                <div class="chi-col -w--12">
+                <div class="lux-col -w--12">
                   <div class="-d--flex -justify-content--center -mt--2">
                     <img class="-mw--100 -h--auto" src="../../assets/images/autopay-check-hint.png" alt="savings account">
                   </div>
@@ -183,34 +183,34 @@ h2 Base
             </fieldset>
           </div>
         </div>
-        <div class="chi-card -mt--1 -d--none" id="creditDebitCardBase">
-          <div class="chi-card__header -py--0 -bg--grey-10">
+        <div class="lux-card -mt--1 -d--none" id="creditDebitCardBase">
+          <div class="lux-card__header -py--0 -bg--grey-10">
             <h6>Add a credit or debit card</h6>
           </div>
-          <div class="chi-card__content -p--3">
+          <div class="lux-card__content -p--3">
             <fieldset>
-              <div class="chi-grid -no-gutter">
-                <div class="chi-col -w--12">
-                  <div class="chi-form__item -mb--2">
-                    <label class="chi-label" for="name">Name on card</label>
-                    <input class="chi-input -xl" type="text" id="name" placeholder="">
+              <div class="lux-grid -no-gutter">
+                <div class="lux-col -w--12">
+                  <div class="lux-form__item -mb--2">
+                    <label class="lux-label" for="name">Name on card</label>
+                    <input class="lux-input -xl" type="text" id="name" placeholder="">
                   </div>
                 </div>
-                <div class="chi-col -w--12">
-                  <div class="chi-form__item -mb--2">
+                <div class="lux-col -w--12">
+                  <div class="lux-form__item -mb--2">
                     <div class="-d--flex -justify-content--between -align-items--center">
-                      <label class="chi-label" for="number">
+                      <label class="lux-label" for="number">
                         Card number
                       </label>
                       <img src="../../assets/images/autopay-credit-cards.jpg" alt="credit cards">
                     </div>
-                    <input class="chi-input -xl" type="text" id="number" placeholder="">
+                    <input class="lux-input -xl" type="text" id="number" placeholder="">
                   </div>
                 </div>
-                <div class="chi-col -w-md--4 -w-sm--12">
-                  <div class="chi-form__item -mb--2">
-                    <label class="chi-label" for="expiration">Expiration</label>
-                    <div class="-d--flex"><select class="chi-input -xl -mr--1" id="expiration">
+                <div class="lux-col -w-md--4 -w-sm--12">
+                  <div class="lux-form__item -mb--2">
+                    <label class="lux-label" for="expiration">Expiration</label>
+                    <div class="-d--flex"><select class="lux-input -xl -mr--1" id="expiration">
                       <option>01</option>
                       <option>02</option>
                       <option>03</option>
@@ -242,7 +242,7 @@ h2 Base
                       <option>29</option>
                       <option>30</option>
                       <option>31</option>
-                    </select><select class="chi-input -xl -mr-md--1" id="expiration">
+                    </select><select class="lux-input -xl -mr-md--1" id="expiration">
                       <option>2019</option>
                       <option>2020</option>
                       <option>2021</option>
@@ -258,10 +258,10 @@ h2 Base
                     </select></div>
                   </div>
                 </div>
-                <div class="chi-col -w-md--4 -w-sm--12">
-                  <div class="chi-form__item">
-                    <label class="chi-label" for="zip">Billing zip code</label>
-                    <input class="chi-input -xl" type="text" id="zip" placeholder="">
+                <div class="lux-col -w-md--4 -w-sm--12">
+                  <div class="lux-form__item">
+                    <label class="lux-label" for="zip">Billing zip code</label>
+                    <input class="lux-input -xl" type="text" id="zip" placeholder="">
                   </div>
                 </div>
               </div>
@@ -273,127 +273,127 @@ h2 Base
 
 h2 Optional
 .example.-mb--3.-bg--grey-10
-  .chi-app.-p--3
-    .chi-epanel.-bordered.-p--1#autopayOptional
-      .chi-epanel__header.-d--flex.-justify-content--between
+  .lux-app.-p--3
+    .lux-epanel.-bordered.-p--1#autopayOptional
+      .lux-epanel__header.-d--flex.-justify-content--between
         div
-          .chi-card__title.-m--0 Automatic Payments
+          .lux-card__title.-m--0 Automatic Payments
           p.-text Each month, an automatic payment for the full amount of your bill will be paid to Lumen from the payment method of your choosing.
-        .chi-form__item
-          input(type="checkbox", class="chi-input -toggle", id="toggle1", data-chi-epanel-action='toggle')
+        .lux-form__item
+          input(type="checkbox", class="lux-input -toggle", id="toggle1", data-lux-epanel-action='toggle')
           label(for="toggle1")
-      .chi-epanel__collapse
+      .lux-epanel__collapse
         .-active--only
-          .chi-epanel__body
-            .chi-epanel__content.-p--0
-              .chi-grid.-no-gutter
-                div.chi-col.-w-md--4
-                  .chi-form__item.-mb--1
-                    label.chi-label(for='Optional') Choose a payment method
-                    .chi-dropdown
-                      button.chi-button.-xl.chi-dropdown__trigger(id='Optional', onclick='selectPayment(id)') Checking account
-                      .chi-dropdown__menu
-                        a.chi-dropdown__menu-item(href='#checkingAccountOptional', name='Checking') Checking account
-                          a.chi-dropdown__menu-item(href='#savingsAccountOptional', name='Savings') Savings account
-                          a.chi-dropdown__menu-item(href='#creditDebitCardOptional', name='Credit') Credit or debit card
-              .chi-card#checkingAccountOptional.-mt--1
-                .chi-card__header.-py--0.-bg--grey-10
+          .lux-epanel__body
+            .lux-epanel__content.-p--0
+              .lux-grid.-no-gutter
+                div.lux-col.-w-md--4
+                  .lux-form__item.-mb--1
+                    label.lux-label(for='Optional') Choose a payment method
+                    .lux-dropdown
+                      button.lux-button.-xl.lux-dropdown__trigger(id='Optional', onclick='selectPayment(id)') Checking account
+                      .lux-dropdown__menu
+                        a.lux-dropdown__menu-item(href='#checkingAccountOptional', name='Checking') Checking account
+                          a.lux-dropdown__menu-item(href='#savingsAccountOptional', name='Savings') Savings account
+                          a.lux-dropdown__menu-item(href='#creditDebitCardOptional', name='Credit') Credit or debit card
+              .lux-card#checkingAccountOptional.-mt--1
+                .lux-card__header.-py--0.-bg--grey-10
                   h6 Add a checking account
-                .chi-card__content.-p--3
+                .lux-card__content.-p--3
                   fieldset
-                    .chi-grid.-no-gutter
-                      div.chi-col.-w--12.-w-md--6
-                        .chi-form__item.-mb--2.-mr-md--1
-                          label.chi-label(for='checking-routing-number') Routing number
-                          input(type="text", class="chi-input -xl", id='checking-routing-number', placeholder="")
-                      div.chi-col.-w--12.-w-md--6
-                        .chi-form__item.-mb--2
-                          label.chi-label(for='checking-account-number') Account number
-                          input(type="text", class="chi-input -xl", id='checking-account-number', placeholder="")
-                      div.chi-col.-w--12
+                    .lux-grid.-no-gutter
+                      div.lux-col.-w--12.-w-md--6
+                        .lux-form__item.-mb--2.-mr-md--1
+                          label.lux-label(for='checking-routing-number') Routing number
+                          input(type="text", class="lux-input -xl", id='checking-routing-number', placeholder="")
+                      div.lux-col.-w--12.-w-md--6
+                        .lux-form__item.-mb--2
+                          label.lux-label(for='checking-account-number') Account number
+                          input(type="text", class="lux-input -xl", id='checking-account-number', placeholder="")
+                      div.lux-col.-w--12
                         .-d--flex.-justify-content--center.-mt--2
                           img.-mw--100.-h--auto(src='../../assets/images/autopay-check-hint.png', alt="savings account")
-              .chi-card#savingsAccountOptional.-mt--1.-d--none
-                .chi-card__header.-py--0.-bg--grey-10
+              .lux-card#savingsAccountOptional.-mt--1.-d--none
+                .lux-card__header.-py--0.-bg--grey-10
                   h6 Add a savings account
-                .chi-card__content.-p--3
+                .lux-card__content.-p--3
                   fieldset
-                    .chi-grid.-no-gutter
-                      div.chi-col.-w--12.-w-md--6
-                        .chi-form__item.-mb--2.-mr-md--1
-                          label.chi-label(for='savings-routing-number') Routing number
-                          input(type="text", class="chi-input -xl", id='savings-routing-number', placeholder="")
-                      div.chi-col.-w--12.-w-md--6
-                        .chi-form__item.-mb--2
-                          label.chi-label(for='savings-account-number') Account number
-                          input(type="text", class="chi-input -xl", id='savings-account-number', placeholder="")
-                      div.chi-col.-w--12
+                    .lux-grid.-no-gutter
+                      div.lux-col.-w--12.-w-md--6
+                        .lux-form__item.-mb--2.-mr-md--1
+                          label.lux-label(for='savings-routing-number') Routing number
+                          input(type="text", class="lux-input -xl", id='savings-routing-number', placeholder="")
+                      div.lux-col.-w--12.-w-md--6
+                        .lux-form__item.-mb--2
+                          label.lux-label(for='savings-account-number') Account number
+                          input(type="text", class="lux-input -xl", id='savings-account-number', placeholder="")
+                      div.lux-col.-w--12
                         .-d--flex.-justify-content--center.-mt--2
                           img.-mw--100.-h--auto(src='../../assets/images/autopay-check-hint.png', alt="savings account")
-              .chi-card#creditDebitCardOptional.-mt--1.-d--none
-                .chi-card__header.-py--0.-bg--grey-10
+              .lux-card#creditDebitCardOptional.-mt--1.-d--none
+                .lux-card__header.-py--0.-bg--grey-10
                   h6 Add a credit or debit card
-                .chi-card__content.-p--3
+                .lux-card__content.-p--3
                   fieldset
-                    .chi-grid.-no-gutter
-                      div.chi-col.-w--12
-                        .chi-form__item.-mb--2
-                          label.chi-label(for='name') Name on card
-                          input(type="text", class="chi-input -xl", id='name', placeholder="")
-                      div.chi-col.-w--12
-                        .chi-form__item.-mb--2
+                    .lux-grid.-no-gutter
+                      div.lux-col.-w--12
+                        .lux-form__item.-mb--2
+                          label.lux-label(for='name') Name on card
+                          input(type="text", class="lux-input -xl", id='name', placeholder="")
+                      div.lux-col.-w--12
+                        .lux-form__item.-mb--2
                           div.-d--flex.-justify-content--between.-align-items--center
-                            label.chi-label(for='number') Card number
+                            label.lux-label(for='number') Card number
                             img(src='../../assets/images/autopay-credit-cards.jpg', alt="credit cards")
-                          input(type="text", class="chi-input -xl", id='number', placeholder="")
-                      div.chi-col.-w-md--4.-w-sm--12
-                        .chi-form__item.-mb--2
-                          label.chi-label(for='expiration') Expiration
+                          input(type="text", class="lux-input -xl", id='number', placeholder="")
+                      div.lux-col.-w-md--4.-w-sm--12
+                        .lux-form__item.-mb--2
+                          label.lux-label(for='expiration') Expiration
                           .-d--flex
-                            select(class="chi-input -xl -mr--1", id='expiration')
+                            select(class="lux-input -xl -mr--1", id='expiration')
                               each day in days
                                 option= day
-                            select(class="chi-input -xl -mr-md--1", id='expiration')
+                            select(class="lux-input -xl -mr-md--1", id='expiration')
                               each year in years
                                 option= year
-                      div.chi-col.-w-md--4.-w-sm--12
-                        .chi-form__item
-                          label.chi-label(for='zip') Billing zip code
-                          input(type="text", class="chi-input -xl", id='zip', placeholder="")
+                      div.lux-col.-w-md--4.-w-sm--12
+                        .lux-form__item
+                          label.lux-label(for='zip') Billing zip code
+                          input(type="text", class="lux-input -xl", id='zip', placeholder="")
   :code(lang="html")
-    <div class="chi-app">
-      <div class="chi-epanel -bordered -p--1" id="autopay">
-        <div class="chi-epanel__header -d--flex -justify-content--between">
+    <div class="lux-app">
+      <div class="lux-epanel -bordered -p--1" id="autopay">
+        <div class="lux-epanel__header -d--flex -justify-content--between">
           <div>
-            <div class="chi-card__title -m--0 ">Automatic Payments</div>
+            <div class="lux-card__title -m--0 ">Automatic Payments</div>
             <p class="-text">Each month, an automatic payment for the full amount of your bill will be paid to Lumen
               from the payment method of your choosing.</p>
           </div>
-          <div class="chi-form__item">
-            <input class="chi-input -toggle" type="checkbox" id="toggle1" data-chi-epanel-action="toggle">
+          <div class="lux-form__item">
+            <input class="lux-input -toggle" type="checkbox" id="toggle1" data-lux-epanel-action="toggle">
             <label for="toggle1"></label>
           </div>
         </div>
-        <div class="chi-epanel__collapse">
+        <div class="lux-epanel__collapse">
           <div class="-active--only">
-            <div class="chi-epanel__body">
-              <div class="chi-epanel__content -p--0">
-                <div class="chi-grid -no-gutter">
-                  <div class="chi-col -w-md--4">
-                    <div class="chi-form__item -mb--1">
-                      <label class="chi-label" for="method">Choose a payment method</label>
-                      <div class="chi-dropdown">
-                        <button class="chi-button -xl chi-dropdown__trigger" id="Optional">
+            <div class="lux-epanel__body">
+              <div class="lux-epanel__content -p--0">
+                <div class="lux-grid -no-gutter">
+                  <div class="lux-col -w-md--4">
+                    <div class="lux-form__item -mb--1">
+                      <label class="lux-label" for="method">Choose a payment method</label>
+                      <div class="lux-dropdown">
+                        <button class="lux-button -xl lux-dropdown__trigger" id="Optional">
                           Checking account
                         </button>
-                        <div class="chi-dropdown__menu">
-                          <a class="chi-dropdown__menu-item" href="#checkingAccountOptional" name="Checking">
+                        <div class="lux-dropdown__menu">
+                          <a class="lux-dropdown__menu-item" href="#checkingAccountOptional" name="Checking">
                             Checking account
                           </a>
-                          <a class="chi-dropdown__menu-item" href="#savingsAccountOptional" name="Savings">
+                          <a class="lux-dropdown__menu-item" href="#savingsAccountOptional" name="Savings">
                             Savings account
                           </a>
-                          <a class="chi-dropdown__menu-item" href="#creditDebitCardOptional" name="Credit">
+                          <a class="lux-dropdown__menu-item" href="#creditDebitCardOptional" name="Credit">
                             Credit or debit card
                           </a>
                         </div>
@@ -401,30 +401,30 @@ h2 Optional
                     </div>
                   </div>
                 </div>
-                <div class="chi-card -mt--1" id="checkingAccount">
-                  <div class="chi-card__header -py--0 -bg--grey-10">
+                <div class="lux-card -mt--1" id="checkingAccount">
+                  <div class="lux-card__header -py--0 -bg--grey-10">
                     <h6>Add a checking account</h6>
                   </div>
-                  <div class="chi-card__content -p--3">
+                  <div class="lux-card__content -p--3">
                     <fieldset>
-                      <div class="chi-grid -no-gutter">
-                        <div class="chi-col -w--12 -w-md--6">
-                          <div class="chi-form__item -mb--2 -mr-md--1">
-                            <label class="chi-label" for="checking-routing-number">
+                      <div class="lux-grid -no-gutter">
+                        <div class="lux-col -w--12 -w-md--6">
+                          <div class="lux-form__item -mb--2 -mr-md--1">
+                            <label class="lux-label" for="checking-routing-number">
                               Routing number
                             </label>
-                            <input class="chi-input -xl" id="checking-routing-number" type="text" placeholder="">
+                            <input class="lux-input -xl" id="checking-routing-number" type="text" placeholder="">
                           </div>
                         </div>
-                        <div class="chi-col -w--12 -w-md--6">
-                          <div class="chi-form__item -mb--2">
-                            <label class="chi-label" for="checking-account-number">
+                        <div class="lux-col -w--12 -w-md--6">
+                          <div class="lux-form__item -mb--2">
+                            <label class="lux-label" for="checking-account-number">
                               Account number
                             </label>
-                            <input class="chi-input -xl" id="checking-account-number" type="text" placeholder="">
+                            <input class="lux-input -xl" id="checking-account-number" type="text" placeholder="">
                           </div>
                         </div>
-                        <div class="chi-col -w--12">
+                        <div class="lux-col -w--12">
                           <div class="-d--flex -justify-content--center -mt--2">
                             <img class="-mw--100 -h--auto" src="../../assets/images/autopay-check-hint.png" alt="savings account">
                           </div>
@@ -433,30 +433,30 @@ h2 Optional
                     </fieldset>
                   </div>
                 </div>
-                <div class="chi-card -mt--1 -d--none" id="savingsAccount">
-                  <div class="chi-card__header -py--0 -bg--grey-10">
+                <div class="lux-card -mt--1 -d--none" id="savingsAccount">
+                  <div class="lux-card__header -py--0 -bg--grey-10">
                     <h6>Add a savings account</h6>
                   </div>
-                  <div class="chi-card__content -p--3">
+                  <div class="lux-card__content -p--3">
                     <fieldset>
-                      <div class="chi-grid -no-gutter">
-                        <div class="chi-col -w--12 -w-md--6">
-                          <div class="chi-form__item -mb--2 -mr-md--1">
-                            <label class="chi-label" for="savings-routing-number">
+                      <div class="lux-grid -no-gutter">
+                        <div class="lux-col -w--12 -w-md--6">
+                          <div class="lux-form__item -mb--2 -mr-md--1">
+                            <label class="lux-label" for="savings-routing-number">
                               Routing number
                             </label>
-                            <input class="chi-input -xl" id="savings-routing-number" type="text" placeholder="">
+                            <input class="lux-input -xl" id="savings-routing-number" type="text" placeholder="">
                           </div>
                         </div>
-                        <div class="chi-col -w--12 -w-md--6">
-                          <div class="chi-form__item -mb--2">
-                            <label class="chi-label" for="savings-account-number">
+                        <div class="lux-col -w--12 -w-md--6">
+                          <div class="lux-form__item -mb--2">
+                            <label class="lux-label" for="savings-account-number">
                               Account number
                             </label>
-                            <input class="chi-input -xl" id="savings-account-number" type="text" placeholder="">
+                            <input class="lux-input -xl" id="savings-account-number" type="text" placeholder="">
                           </div>
                         </div>
-                        <div class="chi-col -w--12">
+                        <div class="lux-col -w--12">
                           <div class="-d--flex -justify-content--center -mt--2">
                             <img class="-mw--100 -h--auto" src="../../assets/images/autopay-check-hint.png" alt="savings account">
                           </div>
@@ -465,35 +465,35 @@ h2 Optional
                     </fieldset>
                   </div>
                 </div>
-                <div class="chi-card -mt--1 -d--none" id="creditDebitCard">
-                  <div class="chi-card__header -py--0 -bg--grey-10">
+                <div class="lux-card -mt--1 -d--none" id="creditDebitCard">
+                  <div class="lux-card__header -py--0 -bg--grey-10">
                     <h6>Add a credit or debit card</h6>
                   </div>
-                  <div class="chi-card__content -p--3">
+                  <div class="lux-card__content -p--3">
                     <fieldset>
-                      <div class="chi-grid -no-gutter">
-                        <div class="chi-col -w--12">
-                          <div class="chi-form__item -mb--2">
-                            <label class="chi-label" for="name">Name on card</label>
-                            <input class="chi-input -xl" id="name" type="text" placeholder="">
+                      <div class="lux-grid -no-gutter">
+                        <div class="lux-col -w--12">
+                          <div class="lux-form__item -mb--2">
+                            <label class="lux-label" for="name">Name on card</label>
+                            <input class="lux-input -xl" id="name" type="text" placeholder="">
                           </div>
                         </div>
-                        <div class="chi-col -w--12">
-                          <div class="chi-form__item -mb--2">
+                        <div class="lux-col -w--12">
+                          <div class="lux-form__item -mb--2">
                             <div class="-d--flex -justify-content--between -align-items--center">
-                              <label class="chi-label" for="number">
+                              <label class="lux-label" for="number">
                                 Card number
                               </label>
                               <img src="../../assets/images/autopay-credit-cards.jpg" alt="credit cards">
                             </div>
-                            <input class="chi-input -xl" id="number" type="text" placeholder="">
+                            <input class="lux-input -xl" id="number" type="text" placeholder="">
                           </div>
                         </div>
-                        <div class="chi-col -w-md--4 -w-sm--12">
-                          <div class="chi-form__item -mb--2">
-                            <label class="chi-label" for="expiration">Expiration</label>
+                        <div class="lux-col -w-md--4 -w-sm--12">
+                          <div class="lux-form__item -mb--2">
+                            <label class="lux-label" for="expiration">Expiration</label>
                             <div class="-d--flex">
-                              <select class="chi-input -xl -mr--1" id="expiration">
+                              <select class="lux-input -xl -mr--1" id="expiration">
                                 <option>01</option>
                                 <option>02</option>
                                 <option>03</option>
@@ -526,7 +526,7 @@ h2 Optional
                                 <option>30</option>
                                 <option>31</option>
                               </select>
-                              <select class="chi-input -xl -mr-md--1" id="expiration">
+                              <select class="lux-input -xl -mr-md--1" id="expiration">
                                 <option>2019</option>
                                 <option>2020</option>
                                 <option>2021</option>
@@ -543,12 +543,12 @@ h2 Optional
                             </div>
                           </div>
                         </div>
-                        <div class="chi-col -w-md--4 -w-sm--12">
-                          <div class="chi-form__item">
-                            <label class="chi-label" for="zip">
+                        <div class="lux-col -w-md--4 -w-sm--12">
+                          <div class="lux-form__item">
+                            <label class="lux-label" for="zip">
                               Billing zip code
                             </label>
-                            <input class="chi-input -xl" id="zip" type="text" placeholder="">
+                            <input class="lux-input -xl" id="zip" type="text" placeholder="">
                           </div>
                         </div>
                       </div>
@@ -566,26 +566,26 @@ script.
   document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.expansionPanel(document.getElementById('autopayOptional'));
-      chi.dropdown(document.getElementById('Base'));
-      chi.dropdown(document.getElementById('Optional'));
+      lux.expansionPanel(document.getElementById('autopayOptional'));
+      lux.dropdown(document.getElementById('Base'));
+      lux.dropdown(document.getElementById('Optional'));
     }
   );
 
 script.
   function selectPayment (id) {
     var elem = document.getElementById(id);
-    Array.prototype.forEach.call(elem.parentElement.querySelectorAll('.chi-dropdown__menu-item'), function (button) {
+    Array.prototype.forEach.call(elem.parentElement.querySelectorAll('.lux-dropdown__menu-item'), function (button) {
       button.addEventListener('click', function (e) {
         e.preventDefault();
         var elems = document.querySelectorAll('a.-active');
         [].forEach.call(elems, function (el) {
-          chi.Util.removeClass(el, '-active');
+          lux.Util.removeClass(el, '-active');
         });
-        chi.Util.addClass(button, '-active');
-        var target = chi.Util.getTarget(e.target);
+        lux.Util.addClass(button, '-active');
+        var target = lux.Util.getTarget(e.target);
         Array.prototype.forEach.call(target.parentElement.childNodes, function (card) {
-          if (card !== target && chi.Util.hasClass(card, 'chi-card')) {
+          if (card !== target && lux.Util.hasClass(card, 'lux-card')) {
             card.style.display = 'none';
           }
         });

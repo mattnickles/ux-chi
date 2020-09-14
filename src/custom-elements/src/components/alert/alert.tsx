@@ -2,7 +2,7 @@ import { Component, Element, Event, EventEmitter, Prop, Watch, h, State } from '
 import { ALERT_COLORS as VALID_COLORS, AlertColors } from '../../constants/color';
 
 @Component({
-  tag: 'chi-alert',
+  tag: 'lux-alert',
   styleUrl: 'alert.scss',
   scoped: true
 })
@@ -25,7 +25,7 @@ export class Alert {
   @Prop({ reflect: true }) color: AlertColors;
 
   /**
-   *  to avoid necessity of adding <chi-icon> to alert markup.
+   *  to avoid necessity of adding <lux-icon> to alert markup.
    */
   @Prop({ reflect: true }) icon: string;
 
@@ -115,7 +115,7 @@ export class Alert {
       this.alertTitle = this.el.getAttribute('title');
     }
 
-    if (Array.from(this.el.querySelectorAll("[slot=chi-alert__actions]")).length > 0) {
+    if (Array.from(this.el.querySelectorAll("[slot=lux-alert__actions]")).length > 0) {
       this.alertActions = true;
     }
   }
@@ -128,12 +128,12 @@ export class Alert {
   }
 
   render() {
-    const chiIcon = <chi-icon icon={this.icon} color={this.color || null} extraClass="chi-alert__icon"></chi-icon>;
-    const alertTitle = this.alertTitle && <p class="chi-alert__title">{this.alertTitle}</p>;
-    const chiActions = this.alertActions && <div class="chi-alert__actions"><slot name="chi-alert__actions"></slot></div>;
+    const luxIcon = <lux-icon icon={this.icon} color={this.color || null} extraClass="lux-alert__icon"></lux-icon>;
+    const alertTitle = this.alertTitle && <p class="lux-alert__title">{this.alertTitle}</p>;
+    const luxActions = this.alertActions && <div class="lux-alert__actions"><slot name="lux-alert__actions"></slot></div>;
 
     return (
-      <div class={`chi-alert
+      <div class={`lux-alert
         ${this.type ? `-${this.type}` : ''}
         ${this.color ? `-${this.color}` : ''}
         ${this.center ? '-center' : ''}
@@ -141,13 +141,13 @@ export class Alert {
         ${this.size ? `-${this.size}` : ''}`}
         role="alert"
       >
-        {this.icon && chiIcon}
-        <div class="chi-alert__content">
+        {this.icon && luxIcon}
+        <div class="lux-alert__content">
           {alertTitle}
-          <p class="chi-alert__text"><slot></slot></p>
-          {chiActions}
+          <p class="lux-alert__text"><slot></slot></p>
+          {luxActions}
         </div>
-        {(this.closable || this.type === 'toast') && <chi-button extraClass="chi-alert__close-button" type="close" onChiClick={() => this._dismissAlert()} />}
+        {(this.closable || this.type === 'toast') && <lux-button extraClass="lux-alert__close-button" type="close" onLuxClick={() => this._dismissAlert()} />}
       </div>
     );
   }

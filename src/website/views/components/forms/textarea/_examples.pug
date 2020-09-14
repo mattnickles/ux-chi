@@ -3,86 +3,86 @@ h2 Examples
 h3 Base
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__base") Label
-      chi-textarea(id="example__base") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__base") Label
+      lux-textarea(id="example__base") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-base
+    ul.lux-tabs#example-base
       li.-active
         a(href=`#webcomponent-base`) Web Component
       li
         a(href=`#html-base`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-base
+  .lux-tabs-panel.-active#webcomponent-base
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__base">Label</chi-label>
-        <chi-textarea id="example__base">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__base">Label</lux-label>
+        <lux-textarea id="example__base">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-base
-    .chi-tab__description
-      | To render a textarea, apply the class <code>chi-input</code> to a <code>textarea</code>.
+  .lux-tabs-panel#html-base
+    .lux-tab__description
+      | To render a textarea, apply the class <code>lux-input</code> to a <code>textarea</code>.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__base">Label</label>
-        <textarea class="chi-input" id="example__base">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__base">Label</label>
+        <textarea class="lux-input" id="example__base">Sample text</textarea>
       </div>
 
 h3 Disabled
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__disabled") Label
-      chi-textarea(id="example__disabled" disabled) Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__disabled") Label
+      lux-textarea(id="example__disabled" disabled) Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-disabled
+    ul.lux-tabs#example-disabled
       li.-active
         a(href=`#webcomponent-disabled`) Web Component
       li
         a(href=`#html-disabled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-disabled
+  .lux-tabs-panel.-active#webcomponent-disabled
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__disabled">Label</chi-label>
-        <chi-textarea id="example__disabled" disabled>Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__disabled">Label</lux-label>
+        <lux-textarea id="example__disabled" disabled>Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-disabled
+  .lux-tabs-panel#html-disabled
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__disabled">Label</label>
-        <textarea class="chi-input" id="example__disabled" disabled>Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__disabled">Label</label>
+        <textarea class="lux-input" id="example__disabled" disabled>Sample text</textarea>
       </div>
 
 h3 Invalid
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__invalid") Label
-      chi-textarea(id="example__invalid", state="danger", icon-right-color="danger", icon-right="circle-warning") Sample text
-      div.chi-label.-status.-danger This is an invalid label
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__invalid") Label
+      lux-textarea(id="example__invalid", state="danger", icon-right-color="danger", icon-right="circle-warning") Sample text
+      div.lux-label.-status.-danger This is an invalid label
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-invalid
+    ul.lux-tabs#example-state-invalid
       li.-active
         a(href=`#webcomponent-state-invalid`) Web Component
       li
         a(href=`#html-state-invalid`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-invalid
+  .lux-tabs-panel.-active#webcomponent-state-invalid
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__invalid">Label</chi-label>
-        <chi-textarea id="example__invalid" state="danger" icon-right="circle-warning" icon-right-color="danger">Sample text</chi-textarea>
-        <div class="chi-label -status -danger">This is an invalid label</div>
+      <div class="lux-form__item">
+        <lux-label for="example__invalid">Label</lux-label>
+        <lux-textarea id="example__invalid" state="danger" icon-right="circle-warning" icon-right-color="danger">Sample text</lux-textarea>
+        <div class="lux-label -status -danger">This is an invalid label</div>
       </div>
-  .chi-tabs-panel#html-state-invalid
-    .chi-tab__description
-      | Textarea supports Chi's semantic class modifier <code>-danger</code> for indicating an invalid input.
+  .lux-tabs-panel#html-state-invalid
+    .lux-tab__description
+      | Textarea supports Lux's semantic class modifier <code>-danger</code> for indicating an invalid input.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__invalid">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <textarea class="chi-input -danger" id="example__invalid">Sample text</textarea>
-          <i class="chi-icon icon-circle-warning -icon--danger"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__invalid">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <textarea class="lux-input -danger" id="example__invalid">Sample text</textarea>
+          <i class="lux-icon icon-circle-warning -icon--danger"></i>
         </div>
-        <div class="chi-label -status -danger">This is an invalid label</div>
+        <div class="lux-label -status -danger">This is an invalid label</div>
       </div>
 
 h2 Icons
@@ -90,91 +90,91 @@ h2 Icons
 h3 Left Aligned
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__icon-left") Label
-      chi-textarea(id="example__icon-left", icon-left="map-marker", icon-left-color="muted") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__icon-left") Label
+      lux-textarea(id="example__icon-left", icon-left="map-marker", icon-left-color="muted") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-icons-left
+    ul.lux-tabs#example-icons-left
       li.-active
         a(href=`#webcomponent-icons-left`) Web Component
       li
         a(href=`#html-icons-left`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-icons-left
-    .chi-tab__description
-      | To add icons to a chi textarea, add attribute <code>icon-left=""</code> or <code>icon-right=""</code>
+  .lux-tabs-panel.-active#webcomponent-icons-left
+    .lux-tab__description
+      | To add icons to a lux textarea, add attribute <code>icon-left=""</code> or <code>icon-right=""</code>
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__icon-left">Label</chi-label>
-        <chi-textarea id="example__icon-left" icon-left="map-marker" icon-left-color="muted">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__icon-left">Label</lux-label>
+        <lux-textarea id="example__icon-left" icon-left="map-marker" icon-left-color="muted">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-icons-left
-    .chi-tab__description
-      | To add icons to a textarea, wrap the input in a <code>div</code> using the class <code>chi-input__wrapper</code>.
+  .lux-tabs-panel#html-icons-left
+    .lux-tab__description
+      | To add icons to a textarea, wrap the input in a <code>div</code> using the class <code>lux-input__wrapper</code>.
       | Next, add the icon as a sibling of the <code>textarea</code> and use an icon alignment utility class
       | (e.g. <code>-icon--left</code>) to specify where it should be placed.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__icon-left">Label</label>
-        <div class="chi-input__wrapper -icon--left">
-          <textarea class="chi-input" id="example__icon-left">Sample text</textarea>
-          <i class="chi-icon icon-map-marker -icon--muted"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__icon-left">Label</label>
+        <div class="lux-input__wrapper -icon--left">
+          <textarea class="lux-input" id="example__icon-left">Sample text</textarea>
+          <i class="lux-icon icon-map-marker -icon--muted"></i>
         </div>
       </div>
 
 h3 Right Aligned
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__icon-right") Label
-      chi-textarea(id="example__icon-right", icon-right="circle-question-outline", icon-right-color="muted") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__icon-right") Label
+      lux-textarea(id="example__icon-right", icon-right="circle-question-outline", icon-right-color="muted") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-icons-right
+    ul.lux-tabs#example-icons-right
       li.-active
         a(href=`#webcomponent-icons-right`) Web Component
       li
         a(href=`#html-icons-right`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-icons-right
+  .lux-tabs-panel.-active#webcomponent-icons-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__icon-right">Label</chi-label>
-        <chi-textarea id="example__icon-right" icon-right="circle-question-outline" icon-right-color="muted">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__icon-right">Label</lux-label>
+        <lux-textarea id="example__icon-right" icon-right="circle-question-outline" icon-right-color="muted">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-icons-right
+  .lux-tabs-panel#html-icons-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__icon-right">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <textarea class="chi-input" id="example__icon-right">Sample text</textarea>
-          <i class="chi-icon icon-circle-question-outline -icon--muted"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__icon-right">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <textarea class="lux-input" id="example__icon-right">Sample text</textarea>
+          <i class="lux-icon icon-circle-question-outline -icon--muted"></i>
         </div>
       </div>
 
 h3 Left + Right Aligned
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__icon-left-right") Label
-      chi-textarea(id="example__icon-left-right", icon-left="map-marker", icon-right="check", icon-left-color="muted", icon-right-color="success") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__icon-left-right") Label
+      lux-textarea(id="example__icon-left-right", icon-left="map-marker", icon-right="check", icon-left-color="muted", icon-right-color="success") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-icons-left-right
+    ul.lux-tabs#example-icons-left-right
       li.-active
         a(href=`#webcomponent-icons-left-right`) Web Component
       li
         a(href=`#html-icons-left-right`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-icons-left-right
+  .lux-tabs-panel.-active#webcomponent-icons-left-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__icon-left-right">Label</chi-label>
-        <chi-textarea id="example__icon-left-right" icon-left="map-marker" icon-right="check" icon-left-color="muted" icon-right-color="success">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__icon-left-right">Label</lux-label>
+        <lux-textarea id="example__icon-left-right" icon-left="map-marker" icon-right="check" icon-left-color="muted" icon-right-color="success">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-icons-left-right
+  .lux-tabs-panel#html-icons-left-right
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__icon-left-right">Label</label>
-        <div class="chi-input__wrapper -icon--left -icon--right">
-          <textarea class="chi-input" id="example__icon-left-right">Sample text</textarea>
-          <i class="chi-icon icon-map-marker -icon--muted"></i>
-          <i class="chi-icon icon-check -icon--success"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__icon-left-right">Label</label>
+        <div class="lux-input__wrapper -icon--left -icon--right">
+          <textarea class="lux-input" id="example__icon-left-right">Sample text</textarea>
+          <i class="lux-icon icon-map-marker -icon--muted"></i>
+          <i class="lux-icon icon-check -icon--success"></i>
         </div>
       </div>
 
@@ -186,156 +186,156 @@ p.-text
 h3 Success
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__success") Label
-      chi-textarea(id="example__success", state="success") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__success") Label
+      lux-textarea(id="example__success", state="success") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-success
+    ul.lux-tabs#example-state-success
       li.-active
         a(href=`#webcomponent-state-success`) Web Component
       li
         a(href=`#html-state-success`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-success
+  .lux-tabs-panel.-active#webcomponent-state-success
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__success">Label</chi-label>
-        <chi-textarea id="example__success" state="success">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__success">Label</lux-label>
+        <lux-textarea id="example__success" state="success">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-state-success
+  .lux-tabs-panel#html-state-success
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__success">Label</label>
-        <textarea class="chi-input -success" id="example__success">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__success">Label</label>
+        <textarea class="lux-input -success" id="example__success">Sample text</textarea>
       </div>
 
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__success-icon") Label
-      chi-textarea(id="example__success-icon", state="success", icon-right="check", icon-right-color="success", ) Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__success-icon") Label
+      lux-textarea(id="example__success-icon", state="success", icon-right="check", icon-right-color="success", ) Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-success-icon
+    ul.lux-tabs#example-state-success-icon
       li.-active
         a(href=`#webcomponent-state-success-icon`) Web Component
       li
         a(href=`#html-state-success-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-success-icon
+  .lux-tabs-panel.-active#webcomponent-state-success-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__success-icon">Label</chi-label>
-        <chi-textarea id="example__success-icon" state="success" icon-right="check" icon-right-color="success">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__success-icon">Label</lux-label>
+        <lux-textarea id="example__success-icon" state="success" icon-right="check" icon-right-color="success">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-state-success-icon
+  .lux-tabs-panel#html-state-success-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__success-icon">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <textarea class="chi-input -success" id="example__success-icon">Sample text</textarea>
-          <i class="chi-icon icon-check -icon--success"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__success-icon">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <textarea class="lux-input -success" id="example__success-icon">Sample text</textarea>
+          <i class="lux-icon icon-check -icon--success"></i>
         </div>
       </div>
 
 h3 Warning
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__warning") Label
-      chi-textarea(id="example__warning", state="warning") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__warning") Label
+      lux-textarea(id="example__warning", state="warning") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-warning
+    ul.lux-tabs#example-state-warning
       li.-active
         a(href=`#webcomponent-state-warning`) Web Component
       li
         a(href=`#html-state-warning`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-warning
+  .lux-tabs-panel.-active#webcomponent-state-warning
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__warning">Label</chi-label>
-        <chi-textarea id="example__warning" state="warning">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__warning">Label</lux-label>
+        <lux-textarea id="example__warning" state="warning">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-state-warning
+  .lux-tabs-panel#html-state-warning
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__warning">Label</label>
-        <textarea class="chi-input -warning" id="example__warning">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__warning">Label</label>
+        <textarea class="lux-input -warning" id="example__warning">Sample text</textarea>
       </div>
 
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__warning-icon") Label
-      chi-textarea(id="example__warning-icon", state="warning", icon-right="warning", icon-right-color="warning") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__warning-icon") Label
+      lux-textarea(id="example__warning-icon", state="warning", icon-right="warning", icon-right-color="warning") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-warning-icon
+    ul.lux-tabs#example-state-warning-icon
       li.-active
         a(href=`#webcomponent-state-warning-icon`) Web Component
       li
         a(href=`#html-state-warning-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-warning-icon
+  .lux-tabs-panel.-active#webcomponent-state-warning-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__warning-icon">Label</chi-label>
-        <chi-textarea id="example__warning-icon" state="warning" icon-right="warning" icon-right-color="warning">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__warning-icon">Label</lux-label>
+        <lux-textarea id="example__warning-icon" state="warning" icon-right="warning" icon-right-color="warning">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-state-warning-icon
+  .lux-tabs-panel#html-state-warning-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__warning-icon">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <textarea class="chi-input -warning" id="example__warning-icon">Sample text</textarea>
-          <i class="chi-icon icon-warning -icon--warning"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__warning-icon">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <textarea class="lux-input -warning" id="example__warning-icon">Sample text</textarea>
+          <i class="lux-icon icon-warning -icon--warning"></i>
         </div>
       </div>
 
 h3 Danger
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__danger") Label
-      chi-textarea(id="example__danger", state="danger") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__danger") Label
+      lux-textarea(id="example__danger", state="danger") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-danger
+    ul.lux-tabs#example-state-danger
       li.-active
         a(href=`#webcomponent-state-danger`) Web Component
       li
         a(href=`#html-state-danger`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-danger
+  .lux-tabs-panel.-active#webcomponent-state-danger
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__danger">Label</chi-label>
-        <chi-textarea id="example__danger" state="danger">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__danger">Label</lux-label>
+        <lux-textarea id="example__danger" state="danger">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-state-danger
+  .lux-tabs-panel#html-state-danger
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__danger">Label</label>
-        <textarea class="chi-input -danger" id="example__danger">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__danger">Label</label>
+        <textarea class="lux-input -danger" id="example__danger">Sample text</textarea>
       </div>
 
 .example.-mb--3
   .-p--3
-    .chi-form__item(style="max-width:30rem")
-      chi-label(for="example__danger-icon") Label
-      chi-textarea(id="example__danger-icon", state="danger", icon-right="circle-warning", icon-right-color="danger") Sample text
+    .lux-form__item(style="max-width:30rem")
+      lux-label(for="example__danger-icon") Label
+      lux-textarea(id="example__danger-icon", state="danger", icon-right="circle-warning", icon-right-color="danger") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-state-danger-icon
+    ul.lux-tabs#example-state-danger-icon
       li.-active
         a(href=`#webcomponent-state-danger-icon`) Web Component
       li
         a(href=`#html-state-danger-icon`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-state-danger-icon
+  .lux-tabs-panel.-active#webcomponent-state-danger-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__danger-icon">Label</chi-label>
-        <chi-textarea id="example__danger-icon" state="danger" icon-right="circle-warning" icon-right-color="danger">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__danger-icon">Label</lux-label>
+        <lux-textarea id="example__danger-icon" state="danger" icon-right="circle-warning" icon-right-color="danger">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-state-danger-icon
+  .lux-tabs-panel#html-state-danger-icon
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__danger-icon">Label</label>
-        <div class="chi-input__wrapper -icon--right">
-          <textarea class="chi-input -danger" id="example__danger-icon">Sample text</textarea>
-          <i class="chi-icon icon-circle-warning -icon--danger"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__danger-icon">Label</label>
+        <div class="lux-input__wrapper -icon--right">
+          <textarea class="lux-input -danger" id="example__danger-icon">Sample text</textarea>
+          <i class="lux-icon icon-circle-warning -icon--danger"></i>
         </div>
       </div>
 
@@ -347,70 +347,70 @@ p.-text
 .example.-mb--3
   .-p--3
     .-p--2
-      .chi-form__item(style="max-width:30rem")
-        chi-label(for="example__sm") Label
-        chi-textarea(size="sm", id="example__sm") Sample text
+      .lux-form__item(style="max-width:30rem")
+        lux-label(for="example__sm") Label
+        lux-textarea(size="sm", id="example__sm") Sample text
     .-p--2
-      .chi-form__item(style="max-width:30rem")
-        chi-label(for="example__md") Label
-        chi-textarea(size="md", id="example__md") Sample text
+      .lux-form__item(style="max-width:30rem")
+        lux-label(for="example__md") Label
+        lux-textarea(size="md", id="example__md") Sample text
     .-p--2
-      .chi-form__item(style="max-width:30rem")
-        chi-label(for="example__lg") Label
-        chi-textarea.chi-input(size="lg", id="example__lg") Sample text
+      .lux-form__item(style="max-width:30rem")
+        lux-label(for="example__lg") Label
+        lux-textarea.lux-input(size="lg", id="example__lg") Sample text
     .-p--2
-      .chi-form__item(style="max-width:30rem")
-        chi-label(for="example__xl") Label
-        chi-textarea(size="xl", id="example__xl") Sample text
+      .lux-form__item(style="max-width:30rem")
+        lux-label(for="example__xl") Label
+        lux-textarea(size="xl", id="example__xl") Sample text
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes
+    ul.lux-tabs#example-sizes
       li.-active
         a(href=`#webcomponent-sizes`) Web Component
       li
         a(href=`#html-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes
+  .lux-tabs-panel.-active#webcomponent-sizes
     :code(lang="html")
-      <div class="chi-form__item">
-        <chi-label for="example__sm">Label</chi-label>
-        <chi-textarea size="sm" id="example__sm">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__sm">Label</lux-label>
+        <lux-textarea size="sm" id="example__sm">Sample text</lux-textarea>
       </div>
 
-      <div class="chi-form__item">
-        <chi-label for="example__md">Label</chi-label>
-        <chi-textarea size="md" id="example__md">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__md">Label</lux-label>
+        <lux-textarea size="md" id="example__md">Sample text</lux-textarea>
       </div>
 
-      <div class="chi-form__item">
-        <chi-label for="example__lg">Label</chi-label>
-        <chi-textarea size="lg" id="example__lg">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__lg">Label</lux-label>
+        <lux-textarea size="lg" id="example__lg">Sample text</lux-textarea>
       </div>
 
-      <div class="chi-form__item">
-        <chi-label for="example__xl">Label</chi-label>
-        <chi-textarea size="xl" id="example__xl">Sample text</chi-textarea>
+      <div class="lux-form__item">
+        <lux-label for="example__xl">Label</lux-label>
+        <lux-textarea size="xl" id="example__xl">Sample text</lux-textarea>
       </div>
-  .chi-tabs-panel#html-sizes
+  .lux-tabs-panel#html-sizes
     :code(lang='html')
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__sm">Label</label>
-        <textarea class="chi-input -sm" id="example__sm">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__sm">Label</label>
+        <textarea class="lux-input -sm" id="example__sm">Sample text</textarea>
       </div>
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__md">Label</label>
-        <textarea class="chi-input -md" id="example__md">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__md">Label</label>
+        <textarea class="lux-input -md" id="example__md">Sample text</textarea>
       </div>
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__lg">Label</label>
-        <textarea class="chi-input -lg" id="example__lg">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__lg">Label</label>
+        <textarea class="lux-input -lg" id="example__lg">Sample text</textarea>
       </div>
-      <div class="chi-form__item">
-        <label class="chi-label" for="example__xl">Label</label>
-        <textarea class="chi-input -xl" id="example__xl">Sample text</textarea>
+      <div class="lux-form__item">
+        <label class="lux-label" for="example__xl">Label</label>
+        <textarea class="lux-input -xl" id="example__xl">Sample text</textarea>
       </div>
 
 script.
     document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     });

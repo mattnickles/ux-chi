@@ -1,0 +1,207 @@
+---
+title: Card
+---
+
+.test-card
+  h3 Base
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__caption This is a card
+.test-card-titled
+  h3 Titled
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__title Title
+      .lux-card__caption This is a card
+.test-card-content
+  h3 Titled with content
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__title Title
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+      .lux-card__actions
+        button.lux-button.-primary Link
+.test-card-align-center
+  h3 Center Aligned
+  .lux-card.-align--center(style="width: 20rem")
+    .lux-card__content
+      .lux-card__title Title
+      .lux-card__caption
+        | This is a center aligned card
+      .lux-card__actions
+        button.lux-button.-primary Link
+.test-card-content-with-icon
+  h3 Titled with content and icon
+  .lux-card.-align--center(style="width:10rem;")
+    .lux-card__content
+      .lux-card__title Title
+      i.lux-card__icon.lux-icon.-sm--3(class ='icon-atom')
+      .lux-card__caption
+        span.-text--sm Meta Label
+        span.-text--xs.-text--grey Sublabel
+.test-card-hero
+  h3 Hero
+  .lux-card(style="width: 20rem")
+    .lux-card__hero.-text--inverse(style="width: 100%;background:rgba(0,0,0,.8);")
+      p.-text.-p--6.-text--center Hero Image
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec, ultrices in turpis.
+        | Donec sit amet consectetur elit.
+.test-card-footer
+  h3 Footer
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer
+      button.lux-button.-primary Link
+      button.lux-button Link
+.test-card-footer-right
+  h3 Footer Right Aligned
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer.-align--right
+      button.lux-button Link
+      button.lux-button.-primary Link
+.test-card-footer-center
+  h3 Footer Center Aligned
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer.-align--center
+      button.lux-button.-primary Link
+.test-card-footer-no-border
+  h3 Footer No Border
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer.-no-border
+      button.lux-button.-primary Link
+.test-card-footer-small
+  h3 Footer Small
+  .lux-card(style="width: 20rem")
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer.-sm
+      a(href="#") Link
+.test-card-header
+  h3 Header
+  .lux-card(style="width: 20rem")
+    .lux-card__header
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption This is a card with a header
+.test-card-header-right
+  h3 Header Right Aligned
+  .lux-card(style="width: 20rem")
+    .lux-card__header.-align--right
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption This is a card with a header
+.test-card-header-center
+  h3 Header Center Aligned
+  .lux-card(style="width: 20rem")
+    .lux-card__header.-align--center
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption This is a card with a header
+.test-card-header-no-border
+  h3 Header No Border
+  .lux-card(style="width: 20rem")
+    .lux-card__header.-no-border
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption This is a card with a header
+.test-card-header-small
+  h3 Header Small
+  .lux-card(style="width: 20rem")
+    .lux-card__header.-sm
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption This is a card with a header
+.test-card-header-footer
+  h3 Header + Footer
+  .lux-card(style="width: 20rem")
+    .lux-card__header
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer
+      button.lux-button.-primary Link
+.test-card-header-footer-small
+  h3 Header Small + Footer Small
+  .lux-card(style="width: 20rem")
+    .lux-card__header.-sm
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+    .lux-card__footer.-sm
+      a(href="#") Link
+.test-card-empty
+  h3 Empty
+  .lux-card.-empty(style="width:20rem;")
+    .lux-card__content
+      .lux-card__caption
+        | This is an empty card
+.test-card-active
+  h3 Active
+  .lux-card.-active(style="width:20rem;")
+    .lux-card__content
+      .lux-card__title Title
+      .lux-card__caption This is an active card
+.test-card-no-border
+  h3 No Border
+  .lux-card.-no-border(style="width:20rem;")
+    .lux-card__content.-text
+      | This is a card with no border
+.test-card-portal-base
+  h3 Portal Base
+  .lux-card.-portal(style="width:20rem;")
+    .lux-card__header.-sm
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+.test-card-portal-highlight
+  h3 Portal Base
+  .lux-card.-portal.-highlight(style="width:20rem;")
+    .lux-card__header.-sm
+      .lux-card__title Title
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.
+.test-card-portal-base-tabs
+  h3 Portal Base + Tabs
+  .lux-card.-portal(style="width:20rem;")
+    .lux-card__tabs
+      ul.lux-tabs.-xs
+        li.-active
+          a(href='#') Active Tab
+        li
+          a(href='#') Tab Link
+        li
+          a(href='#') Tab Link
+    .lux-card__content
+      .lux-card__caption
+        | Aenean pretium massa sed vehicula porta. Phasellus id metus felis.
+        | Ut felis magna, facilisis ut malesuada nec.

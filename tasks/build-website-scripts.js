@@ -57,7 +57,7 @@ function buildWebsiteScripts() {
     .pipe(gulp.dest('dist/assets/scripts'));
 }
 
-buildWebsiteScripts.description = 'Compiles Chi JavaScript library into ES6. ' +
+buildWebsiteScripts.description = 'Compiles Lux JavaScript library into ES6. ' +
 'Returns a stream. ';
 
 function createGlobalsConfigsFile() {
@@ -66,9 +66,9 @@ function createGlobalsConfigsFile() {
     through.obj((file, enc, cb) => {
       const rawJSON = file.contents.toString();
       const currentVersion = `"${JSON.parse(rawJSON).version}"`;
-      const chiLocalVersion = fs.readFileSync("src/website/assets/scripts/globalConfigs.js", "utf8");
-      if(chiLocalVersion !== `window.chiCurrentVersion=${currentVersion};`) {
-        fs.writeFile('src/website/assets/scripts/globalConfigs.js', `window.chiCurrentVersion=${currentVersion};`, function(err, result) {
+      const luxLocalVersion = fs.readFileSync("src/website/assets/scripts/globalConfigs.js", "utf8");
+      if(luxLocalVersion !== `window.luxCurrentVersion=${currentVersion};`) {
+        fs.writeFile('src/website/assets/scripts/globalConfigs.js', `window.luxCurrentVersion=${currentVersion};`, function(err, result) {
           if(err) console.log('error', err);
           return;
         });

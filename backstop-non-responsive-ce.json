@@ -1,5 +1,5 @@
 {
-  "id": "chi-non-responsive",
+  "id": "lux-non-responsive",
   "viewports": [
     {
       "label": "viewport",
@@ -235,7 +235,7 @@
       "url": "http://localhost:8000/tests/custom-elements/date-picker.html",
       "referenceUrl": "",
       "readyEvent": "",
-      "readySelector": ".test-input-combined-icon chi-date-picker.hydrated",
+      "readySelector": ".test-input-combined-icon lux-date-picker.hydrated",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],

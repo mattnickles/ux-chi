@@ -1,0 +1,477 @@
+---
+title: Steps
+---
+
+- var steps = ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
+
+h4 Base
+.test-base
+  .example(style="width:900px")
+    .-p--3
+      ul.lux-steps.-p--4.-mb--8
+        each step in steps
+          if step == 'Step 1'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+
+h4 Inverse
+.test-inverse
+  .example(style="width:900px")
+    .-p--3
+      ul.lux-steps.-p--4.-mb--8.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--4.-mb--8.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-completed
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li.-active
+              div.lux-steps__icon
+                a(href='#')= `${step}`
+              div.lux-steps__line
+
+h4 Horizontal labels
+.test-horizontal-labels
+  .example(style="width:900px")
+    .-p--3
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label
+        each step in steps
+          if step == 'Step 1'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+
+h4 Inverse horizontal labels
+.test-inverse-horizontal-labels
+  .example(style="width:900px")
+    .-p--3
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+      ul.lux-steps.-p--2.-mb--8.-horizontal-label.-inverse
+        each step in steps
+          if step == 'Step 1'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 2'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 3'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 4'
+            li.-completed
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line
+          else if step == 'Step 5'
+            li.-active
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+          else
+            li
+              div.lux-steps__icon
+              a(href='#')= `${step}`
+              div.lux-steps__line

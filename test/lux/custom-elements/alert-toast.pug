@@ -1,0 +1,26 @@
+---
+title: Alert Toasts
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+each size in ['default', 'sm', 'lg']
+  h4 Default / #{size}
+  div(class=`test-toast-${size}`)
+    each val, type in {base: 'circle-info', success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
+      if (type === 'base')
+        lux-alert.-m--2(type='toast', size=`${size === 'default' ? '' : size}`, icon=val, class=type, data-cy=`alert-toast-${type}-${size}`)
+          =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
+      else
+        lux-alert.-m--2(type='toast', size=`${size === 'default' ? '' : size}`, icon=val, color=type, data-cy=`alert-toast-${type}-${size}`)
+          =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
+
+  h4 Titled /  #{size}
+  div(class=`test-toast-titled-${size}`)
+    each val, type in {base: 'circle-info', success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
+      if (type === 'base')
+        lux-alert.-m--2(type='toast', size=`${size === 'default' ? '' : size}`, class=type, icon=val, title=type)
+          =`This is ${type === 'info' ? 'an' : 'a'} ${type} toast alert`
+      else
+        lux-alert.-m--2(type='toast', size=`${size === 'default' ? '' : size}`, color=type, icon=val, title=type)
+          =`This is ${type === 'info' ? 'an' : 'a'} ${type} toast alert`

@@ -1,0 +1,256 @@
+---
+title: Text inputs
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+- var statuses = ['initial', 'hover', 'focus', 'disabled']
+- var states = ['default', 'success', 'warning', 'danger']
+- var sizes = ['default', 'sm', 'md', 'lg', 'xl']
+
+each size in sizes
+  div(class=`test-${size}`)
+    span.-text--h2= `Text Input / ${size}`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                lux-text-input(
+                  state= state != 'default' && state,
+                  _status= status,
+                  size= size != 'default' && size,
+                  value='Value',
+                  disabled= status=='disabled'?'disabled':false)
+
+each size in sizes
+  div(class=`test-${size}`)
+    span.-text--h2= `Text Input + Label / ${size}`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                .lux-form__item
+                  label.lux-label(class=`-${size}`) Label
+                  lux-text-input(
+                    state= state != 'default' && state,
+                    _status=status,
+                    size= size != 'default' && size,
+                    value='Value',
+                    disabled=status=='disabled'?'disabled':false)
+
+  div(class=`test-${size}-icon-left`)
+    span.-text--h2= `Text Input / ${size} / icon left`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                lux-text-input(
+                  state= state != 'default' && state,
+                  _status= status,
+                  size= size != 'default' && size,
+                  value='Value',
+                  disabled=status=='disabled'?'disabled':false,
+                  icon-left='atom',
+                  icon-left-color='')
+
+  div(class=`test-${size}-icon-left`)
+    span.-text--h2= `Text Input + Label / ${size} / icon left`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                .lux-form__item
+                  label.lux-label(class=`-${size}`) Label
+                  lux-text-input(
+                    state= state != 'default' && state,
+                    _status=status,
+                    size= size != 'default' && size,
+                    value='Value',
+                    disabled=status=='disabled'?'disabled':false,
+                    icon-left='atom',
+                    icon-left-color='')
+
+  div(class=`test-${size}-icon-right`)
+    span.-text--h2= `Text Input / ${size} / icon right`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                if state == 'success'
+                  - var icon = 'check'
+                else if state == 'warning'
+                  - var icon = 'warning'
+                else if state == 'danger'
+                  - var icon = 'circle-warning'
+                else
+                  - var icon = 'circle-info-outline'
+                lux-text-input(
+                  state= state != 'default' && state,
+                  _status=status,
+                  size= size != 'default' && size,
+                  value='Value',
+                  disabled=status=='disabled'?'disabled':false,
+                  icon-right=icon,
+                  icon-right-color=state=='default'?'':state)
+
+  div(class=`test-${size}-icon-right`)
+    span.-text--h2= `Text Input + Label / ${size} / icon right`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                if state == 'success'
+                  - var icon = 'check'
+                else if state == 'warning'
+                  - var icon = 'warning'
+                else if state == 'danger'
+                  - var icon = 'circle-warning'
+                else
+                  -var icon = 'circle-info-outline'
+                .lux-form__item
+                  label.lux-label(class=`-${size}`) Label
+                  lux-text-input(
+                    state= state != 'default' && state,
+                    _status=status,
+                    size= size != 'default' && size,
+                    value='Value',
+                    disabled=status=='disabled'?'disabled':false,
+                    icon-right=icon,
+                    icon-right-color=state=='default'?'':state)
+
+  div(class=`test-${size}-icon-left-right`)
+    span.-text--h2= `Text Input / ${size} / icon left / icon right`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                if state == 'success'
+                  - var icon = 'check'
+                else if state == 'warning'
+                  - var icon = 'warning'
+                else if state == 'danger'
+                  - var icon = 'circle-warning'
+                else
+                  -var icon = 'circle-info-outline'
+                lux-text-input(
+                  state= state != 'default' && state,
+                  _status=status,
+                  size= size != 'default' && size,
+                  value='Value',
+                  disabled=status=='disabled'?'disabled':false,
+                  icon-left='atom',
+                  icon-right=icon,
+                  icon-right-color=state=='default'?'':state)
+
+  div(class=`test-${size}-icon-left-right`)
+    span.-text--h2= `Text Input + label / ${size} / icon left / icon right`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                .lux-form__item
+                  if state == 'success'
+                    - var icon = 'check'
+                  else if state == 'warning'
+                    - var icon = 'warning'
+                  else if state == 'danger'
+                    - var icon = 'circle-warning'
+                  else
+                    -var icon = 'circle-info-outline'
+                  label.lux-label(class=`-${size}`) Label
+                  lux-text-input(
+                    state= state != 'default' && state,
+                    _status=status,
+                    size= size != 'default' && size,
+                    value='Value',
+                    disabled=status=='disabled'?'disabled':false,
+                    icon-left='atom',
+                    icon-right=icon,
+                    icon-right-color=state=='default'?'':state)
+
+  div(class=`test-${size}-label-inline`)
+    span.-text--h2= `Text Input + label / ${size} / inline`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                .lux-form__item.-row
+                  label.lux-label.-mr--1(class=`-${size}`) Label
+                  lux-text-input(
+                    state= state != 'default' && state,
+                    _status=status,
+                    size= size != 'default' && size,
+                    value='Value',
+                    disabled=status=='disabled'?'disabled':false)
+
+  div(class=`test-${size}-label-with-icon`)
+    span.-text--h2= `Text Input + label with icon ${size}`
+    table(cellpadding="0" cellspacing="0" width="1200px")
+      each status in statuses
+        tr
+          td
+            small= `${status}`
+          each state in states
+            td
+              .-m--1
+                .lux-form__item
+                  .lux-label__wrapper
+                    label.lux-label(class=`-${size}`) Label
+                    i.lux-icon.icon-circle-info-outline.-icon--muted
+                  lux-text-input(
+                    state= state != 'default' && state,
+                    _status=status,
+                    size= size != 'default' && size,
+                    value='Value',
+                    disabled=status=='disabled'?'disabled':false)
+
+script.
+  function checkAllInputsHydrated() {
+    const inputs = document.querySelectorAll('lux-text-input');
+
+    return Array.from(inputs).every(x => x.classList.contains('hydrated'));
+  }
+
+  const renderCheckInterval = setInterval(function() {
+    if (checkAllInputsHydrated()) {
+      console.log("backstop_ready");
+      clearInterval(renderCheckInterval);
+    }
+  }, 3000);
+

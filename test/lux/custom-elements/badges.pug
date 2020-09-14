@@ -1,0 +1,38 @@
+---
+title: Badges
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+each type in ['solid', 'outline', 'flat']
+  div(class=`test-${type}`)
+    span.-text--h2= `Badge / ${type}`
+    div
+      each style in ['base', 'primary', 'secondary', 'success', 'warning', 'danger', 'dark', 'muted', 'light']
+        lux-badge(class='-mr--1', variant=`${type === 'solid' ? '' : type}`, color=`${style === 'base' ? '' : style}`, id=`badge-${type}-${style}` )= `${style}`
+        lux-badge(class='-mr--1', variant=`${type === 'solid' ? '' : type}`, color=`${style === 'base' ? '' : style}`, id=`badge-icon-${type}-${style}` )
+          lux-icon(icon='atom')
+          span= style
+
+h2 Badge Icons
+.test-badge-icons
+  .example.-mb--1
+    each size in ['xs', 'sm', 'default']
+      .p.-text--bold= size
+        lux-badge(size=`${size === 'default' ? '' : size}`, class='-m--1', id=`badge-${size}`)
+          lux-icon(icon='atom')
+          span Badge
+        lux-badge(size=`${size === 'default' ? '' : size}`, class='-m--1')
+          span Badge
+          lux-icon(icon='atom')
+        lux-badge(size=`${size === 'default' ? '' : size}`, class='-m--1')
+          lux-icon(icon='atom')
+          span Badge
+          lux-icon(icon='atom')
+
+h2 Text Transform
+.test-text-transform
+  .example.-mb--1
+    each transform, text in { BADGE: 'uppercase', badge: 'lowercase', Badge: 'capitalized' }
+      .p.-text--bold= transform
+        lux-badge(text-transform= transform, class='-m--1', id=`badge-${transform}`)= text

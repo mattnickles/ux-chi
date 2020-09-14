@@ -1,7 +1,7 @@
 if introduction
-    .chi-grid__container.-introduction
-        .chi-grid.-no-gutter
-            .chi-col.-w--12.-w-lg--6.-n-lg--2
+    .lux-grid__container.-introduction
+        .lux-grid.-no-gutter
+            .lux-col.-w--12.-w-lg--6.-n-lg--2
                 .introduction-graphic
                     .shape--1
                     .shape--2
@@ -9,22 +9,22 @@ if introduction
                     .shape--4
                     .shape--5
                     .shape--6
-            .chi-col.-w--12.-w-lg--6.-n-lg--1
+            .lux-col.-w--12.-w-lg--6.-n-lg--1
                 h1.docs-titlebar__title=introductionTitle
                 if introductionSubtitle
                     h2.docs-titlebar__description=introductionSubtitle
                 .docs-titlebar__buttons
-                    a.chi-button.-primary.-xl.-uppercase.-px--4.-mb--2.-mb-sm--0(href='../getting-started/installation') Install Chi
-                    a.chi-button.-dark.-outline.-xl.-uppercase.-px--4.-ml-sm--2.-mb--2.-mb-sm--0(href='../getting-started/whats-new') See What's New In v3.0.0
+                    a.lux-button.-primary.-xl.-uppercase.-px--4.-mb--2.-mb-sm--0(href='../getting-started/installation') Install Lux
+                    a.lux-button.-dark.-outline.-xl.-uppercase.-px--4.-ml-sm--2.-mb--2.-mb-sm--0(href='../getting-started/whats-new') See What's New In v3.0.0
 else
-    .chi-grid__container
+    .lux-grid__container
         h1.docs-titlebar__title=title
         if description
             .docs-titlebar__description=description
 if tabs
-    .chi-grid__container
+    .lux-grid__container
         nav
-            ul.chi-tabs#viewtabs
+            ul.lux-tabs#viewtabs
                 - var tabNumber = 0
                 each title, tab in tabs
                     if tabNumber == 0
@@ -36,4 +36,4 @@ if tabs
                     - tabNumber++
 
             script.
-                chi.tab(document.getElementById('viewtabs'));
+                lux.tab(document.getElementById('viewtabs'));

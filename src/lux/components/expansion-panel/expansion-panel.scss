@@ -1,0 +1,252 @@
+@import '_mixins';
+@import '_variables';
+
+$transition-duration: 0.2s;
+
+.lux-epanel {
+  &__header {
+    min-height: 3.5rem;
+  }
+
+  & > .lux-epanel__header {
+    display: flex;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    min-height: 0;
+
+    & > * {
+      display: block;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+
+    & > .lux-epanel__title {
+      width: 34.5%;
+    }
+
+    & > .lux-epanel__content {
+      flex: 1;
+      word-break: break-word;
+    }
+
+    & > .lux-epanel__action {
+      margin-left: auto;
+    }
+
+    @include respond-to-only(xs) {
+      & > .lux-epanel__number {
+        display: none;
+      }
+    }
+
+    @include respond-to(sm) {
+      & > .lux-epanel__number {
+        width: 7.5%;
+
+        & ~ .lux-epanel__title,
+        & ~ .lux-epanel__name {
+          width: 27%;
+        }
+      }
+    }
+
+    & > .lux-epanel__title,
+    & > .lux-epanel__number {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semi-bold;
+      line-height: 2rem;
+      margin: 0;
+      transition: color $transition-duration;
+
+      &.-centered {
+        text-align: center;
+      }
+    }
+  }
+
+  &.-active {
+    & > .lux-epanel__header {
+      & > .lux-epanel__title,
+      & > .lux-epanel__number {
+        color: $color-text-primary;
+      }
+    }
+  }
+
+  &.-disabled {
+    & > .lux-epanel__header {
+      & > .lux-epanel__title,
+      & > .lux-epanel__number {
+        color: $color-text-muted;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &:not(.-done):not(.-done--transitioning) {
+    .-done--only {
+      display: none;
+    }
+  }
+
+  &:not(.-active):not(.-active--transitioning) {
+    .-active--only {
+      display: none;
+    }
+  }
+
+  &:not(.-done) {
+    .-done--only {
+      opacity: 0;
+    }
+  }
+
+  &:not(.-active) {
+    .-active--only {
+      opacity: 0;
+    }
+  }
+
+  &__collapse {
+    position: relative;
+    transition: height $transition-duration;
+  }
+
+  &__footer {
+    align-items: center;
+    box-shadow: inset 0 1px 0 0 rgba($color-black, 0.12);
+    display: flex;
+    flex-direction: row;
+    min-height: 4rem;
+    padding: 1rem;
+    position: relative;
+
+    .lux-button {
+      & + .lux-button {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .-done--only,
+  .-active--only {
+    font-size: $font-size-base;
+    line-height: $line-height;
+    opacity: 1;
+    transition: opacity $transition-duration;
+  }
+
+  [data-lux-epanel-action] {
+    cursor: pointer;
+  }
+
+  &.-bordered {
+    background-color: white;
+    border: 0.0625rem solid $color-border-base;
+    box-shadow: map-get($shadow, 1);
+    margin-bottom: 0.5rem;
+
+    .lux-epanel__header {
+      padding: 1.25rem;
+    }
+
+    .lux-epanel__body {
+      .lux-epanel__content {
+        padding: 0 1.25rem 1.25rem;
+
+        & > :first-child {
+          margin-top: 0;
+        }
+
+        & > :last-child {
+          margin-bottom: 0;
+        }
+
+        .lux-epanel__subtitle {
+          font-size: $font-size-lg;
+          font-weight: $font-weight-semi-bold;
+          line-height: $line-height-lg;
+          margin: 0 0 0.5rem;
+        }
+
+        .lux-epanel__text {
+          font-size: $font-size-base;
+          line-height: $line-height;
+        }
+      }
+    }
+
+    & > :first-child {
+      margin-top: 0;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:not(.-bordered) {
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+
+    &:not(:last-child) {
+      border-bottom: 0.0625rem solid $color-border-base;
+    }
+
+    & > .lux-epanel__header {
+      & + .lux-epanel__collapse {
+        margin-left: 0;
+        @include respond-to(sm) {
+          margin-left: 7.5%;
+        }
+      }
+    }
+
+    .lux-epanel__body {
+      background-color: white;
+      border: 0.0625rem solid $color-border-base;
+      box-shadow: map-get($shadow, 1);
+      margin-bottom: 0.5rem;
+      margin-top: 1.25rem;
+
+      .lux-epanel__content {
+        padding: 1.5rem;
+
+        & > :first-child {
+          margin-top: 0;
+        }
+
+        & > :last-child {
+          margin-bottom: 0;
+        }
+
+        .lux-epanel__subtitle {
+          font-size: $font-size-lg;
+          font-weight: $font-weight-semi-bold;
+          line-height: $line-height-lg;
+          margin: 0 0 0.5rem;
+        }
+
+        .lux-epanel__text {
+          font-size: $font-size-base;
+          line-height: $line-height;
+        }
+      }
+    }
+  }
+
+  &.-no-step {
+    & > .lux-epanel__header {
+      & + .lux-epanel__collapse {
+        margin-left: 0;
+        @include respond-to(sm) {
+          margin-left: 0;
+        }
+      }
+
+      .lux-epanel__number {
+        display: none;
+      }
+    }
+  }
+}

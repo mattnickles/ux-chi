@@ -1,0 +1,191 @@
+$sizes: (
+  sm: (
+    height: 0.75rem,
+    top: 0.375rem,
+    width: 0.75rem,
+    spinner: (
+      right: 0.75rem,
+      top: 0.375rem,
+    ),
+  ),
+  md: (
+    height: 1rem,
+    top: 0.5rem,
+    width: 1rem,
+    spinner: (
+      right: 0.75rem,
+      top: 0.5rem,
+    ),
+  ),
+  lg: (
+    height: 1rem,
+    top: 0.75rem,
+    width: 1rem,
+    spinner: (
+      right: 0.625rem,
+      top: 0.625rem,
+    ),
+  ),
+  xl: (
+    height: 1rem,
+    top: 1rem,
+    width: 1rem,
+    spinner: (
+      right: 0.75rem,
+      top: 0.75rem,
+    ),
+  )
+);
+
+.lux-input__wrapper {
+  input {
+    &[type='date'],
+    &[type='datetime'],
+    &[type='datetime-local'],
+    &[type='email'],
+    &[type='month'],
+    &[type='password'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='text'],
+    &[type='time'],
+    &[type='url'],
+    &[type='week'] {
+      &.lux-input {
+
+        & ~ .lux-icon,
+        & ~ lux-icon {
+          height: 1rem;
+          position: absolute;
+          top: 0.5rem;
+          width: 1rem;
+        }
+
+        & ~ .lux-spinner {
+          position: absolute;
+          right: 0.75rem;
+          top: 0.5rem;
+        }
+
+        @each $type in map-keys($sizes) {
+          &.-#{$type} {
+            & ~ .lux-icon,
+            & ~ lux-icon {
+              height: map-get(map-get($sizes, $type), height);
+              top: map-get(map-get($sizes, $type), top);
+              width: map-get(map-get($sizes, $type), width);
+            }
+
+            & ~ lux-icon {
+              .lux-icon {
+                height: map-get(map-get($sizes, $type), height);
+                top: 0;
+              }
+            }
+
+            & ~ .lux-spinner {
+              right: map-get(map-get(map-get($sizes, $type), spinner), right);
+              top: map-get(map-get(map-get($sizes, $type), spinner), top);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.-icon--left {
+    input {
+      &[type='date'],
+      &[type='datetime'],
+      &[type='datetime-local'],
+      &[type='email'],
+      &[type='month'],
+      &[type='password'],
+      &[type='search'],
+      &[type='tel'],
+      &[type='text'],
+      &[type='time'],
+      &[type='url'],
+      &[type='week'] {
+        &.lux-input {
+          padding-left: 1.9375rem;
+
+          &.-sm {
+            padding-left: 1.6875rem;
+          }
+
+          &.-md {
+            padding-left: 1.9375rem;
+          }
+
+          &.-lg,
+          &.-xl {
+            padding-left: 2.4375rem;
+
+            & ~ .lux-icon,
+            & ~ lux-icon {
+              &:first-of-type {
+                left: 0.75rem;
+              }
+            }
+          }
+
+          & ~ .lux-icon,
+          & ~ lux-icon {
+            &:first-of-type {
+              left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.-icon--right {
+    input {
+      &[type='date'],
+      &[type='datetime'],
+      &[type='datetime-local'],
+      &[type='email'],
+      &[type='month'],
+      &[type='password'],
+      &[type='search'],
+      &[type='tel'],
+      &[type='text'],
+      &[type='time'],
+      &[type='url'],
+      &[type='week'] {
+        &.lux-input {
+          padding-right: 1.9375rem;
+
+          &.-sm {
+            padding-right: 1.6875rem;
+          }
+
+          &.-md {
+            padding-right: 1.9375rem;
+          }
+
+          &.-lg,
+          &.-xl {
+            padding-right: 2.4375rem;
+
+            & ~ .lux-icon,
+            & ~ lux-icon {
+              &:last-of-type {
+                right: 0.75rem;
+              }
+            }
+          }
+
+          & ~ .lux-icon,
+          & ~ lux-icon {
+            &:last-of-type {
+              right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

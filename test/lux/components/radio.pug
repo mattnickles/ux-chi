@@ -1,0 +1,38 @@
+---
+title: Radio
+---
+.test-states
+  each state, index in ['default', 'hover', 'focus', 'checked', 'disabled']
+    h5= `Radio / ${state}`
+    .lux-form__item.-row.-mb--1
+      .lux-radio
+        input.lux-radio__input(
+          type="radio"
+          id=`radio-${index}`
+          class={
+            [`-${state}`]: state == 'focus'
+          }
+          checked=state=='checked' ? 'checked' : false
+          disabled=state=='disabled' ? 'disabled' : false
+        )
+        label.lux-radio__label(for=`radio-${index}`) Radio
+
+h2 Radio Button List
+.test-states
+  each state, index in ['default', 'hover', 'focus', 'disabled']
+    h5= `Radio / ${state}`
+    ul.lux-form__item.-list(style="max-width:20rem")
+      each element in [1, 2, 3, 4, 5]
+        li.lux-form__item.-row
+          .lux-radio
+            input.lux-radio__input(
+              type="radio"
+              id=`radio--${element}`
+              name=`radio`
+              class={
+                [`-${state}`]: state == 'focus'
+              }
+              checked=state=='checked' ? 'checked' : false
+              disabled=state=='disabled' ? 'disabled' : false
+            )
+            label.lux-radio__label(for=`radio--${element}`)= `Radio-${element}`

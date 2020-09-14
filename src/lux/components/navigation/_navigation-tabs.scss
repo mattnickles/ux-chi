@@ -1,0 +1,26 @@
+@import '_variables';
+
+@mixin navigation-tabs-not-vertical {
+  & > li,
+  &.-sm > li,
+  &.-lg > li {
+    & > a {
+      &.lux-dropdown__trigger {
+        padding-right: 1.5rem;
+        position: relative;
+      }
+    }
+  }
+}
+
+.lux-tabs {
+  &:not(.-vertical):not(.-responsive) {
+    @include navigation-tabs-not-vertical
+  }
+
+  @media only screen and (min-width: $md-breakpoint) {
+    &.-responsive {
+      @include navigation-tabs-not-vertical;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import '_variables';
+@import '_mixins';
+
+.lux-radio {
+  line-height: $line-height;
+  position: relative;
+
+  input {
+    &[type='radio'] {
+      &.lux-input,
+      &.lux-radio__input {
+        & + label {
+          &.lux-radio__label {
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            line-height: $line-height;
+            margin-bottom: 0;
+            margin-right: 0;
+            padding-left: 1.5rem;
+
+            &::before {
+              left: 0;
+              position: absolute;
+              top: 0.125rem;
+            }
+
+            &::after {
+              position: absolute;
+              top: 0.4375rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+input {
+  &[type='radio'] {
+    &.lux-input,
+    &.lux-radio__input {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      pointer-events: auto;
+      position: absolute;
+      width: 1px;
+
+      & + label {
+        & {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          line-height: $line-height-sm;
+          margin: 0 0.5rem 0 0;
+          position: relative;
+        }
+
+        &::before {
+          background-color: $color-background-white;
+          border: 0.0625rem solid $color-grey-40;
+          border-radius: 0.5rem;
+          content: '';
+          cursor: pointer;
+          display: block;
+          height: 1rem;
+          transition: background-color 0.2s ease-in-out;
+          width: 1rem;
+        }
+
+        &::after {
+          background-color: $color-grey-50;
+          border-radius: 0.5rem;
+          content: '';
+          display: block;
+          height: 0.375rem;
+          left: 0.3125rem;
+          position: absolute;
+          top: calc(50% - 0.4375rem);
+          transform: scale(0);
+          transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+          width: 0.375rem;
+        }
+
+        &:hover,
+        &.-hover {
+          &::after {
+            transform: scale(1);
+          }
+        }
+      }
+
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $color-background-primary;
+            border-color: $color-border-primary;
+          }
+
+          &::after {
+            background-color: $color-background-white;
+            transform: scale(1);
+          }
+        }
+      }
+
+      &[disabled] {
+        & ~ label {
+          color: $color-grey-70;
+        }
+
+        & + label {
+          opacity: 0.6;
+          pointer-events: none;
+        }
+      }
+
+      &:focus,
+      &.-focus {
+        & + label::before {
+          outline: 0.125rem solid $focus-color;
+          outline-offset: 0.0625rem;
+        }
+      }
+    }
+  }
+}

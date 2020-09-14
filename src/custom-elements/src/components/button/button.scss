@@ -1,4 +1,4 @@
-:host(chi-button) {
+:host(lux-button) {
   @import '../../global/styles/common';
   @import 'components/buttons/_button-groups-variables';
   @import 'components/buttons/_horizontal-button-groups';
@@ -23,7 +23,7 @@
   margin-right: .5rem !important;
 }
 
-::slotted(chi-spinner) {
+::slotted(lux-spinner) {
   display: inline-flex !important;
     &[size='sm--2'], &[size='md'], &[size='lg'], &[size='xl'], &[size='xxl'] {
       svg {

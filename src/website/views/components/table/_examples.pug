@@ -23,7 +23,7 @@ p.-text
 
 h2 Row States
 p.-text
-  | Chi offers a wide variety of modifiers to express different row states.
+  | Lux offers a wide variety of modifiers to express different row states.
 
 h3 Disabled
 p.-text Disable a row by applying the attribute <code>disabled</code>.
@@ -58,13 +58,13 @@ h3 Descending
 
 h2 Content alignment
 p.-text
-  | Chi also supports additional content alignment with inline text align utilities
+  | Lux also supports additional content alignment with inline text align utilities
   | applying the modifier class <code>-text--left</code> , <code>-text--center</code>
   | or <code>-text--right</code>.
 
 :example(lang="html"):html-beautify:pug
   include ./_common.pug
-  table.chi-table
+  table.lux-table
     thead
       tr
         th.-text--left Name
@@ -86,7 +86,7 @@ p.-text
 
 h2 Additional Sizes
 p.-text
-  | Chi also supports additional table sizes: <code>-xs</code>, <code>-sm</code>, <code>-md</code>,
+  | Lux also supports additional table sizes: <code>-xs</code>, <code>-sm</code>, <code>-md</code>,
   |  <code>-lg</code>, <code>-xl</code>.
   | The default size is <code>-md</code>.
 
@@ -113,13 +113,13 @@ p.-text Render a <strong>-xl</strong> size by applying the modifier class <code>
 
 h2 Selectable
 :example(lang="html")
-  <table class="chi-table">
+  <table class="lux-table">
     <thead>
         <tr>
             <th>
               <div class="-lh--1">
-                <input class="chi-checkbox__input" type="checkbox" id="chk-1" />
-                <label class="chi-checkbox__label" for="chk-1">
+                <input class="lux-checkbox__input" type="checkbox" id="chk-1" />
+                <label class="lux-checkbox__label" for="chk-1">
                   <div class="-sr--only">Label</div>
                 </label>
               </div>
@@ -134,8 +134,8 @@ h2 Selectable
     <tbody>
         <tr class="-active">
             <td class="-lh--1">
-              <input class="chi-checkbox__input" type="checkbox" id="chk-1-01" checked="checked" />
-              <label class="chi-checkbox__label" for="chk-1-01">
+              <input class="lux-checkbox__input" type="checkbox" id="chk-1-01" checked="checked" />
+              <label class="lux-checkbox__label" for="chk-1-01">
                 <div class="-sr--only">Label</div>
               </label>
             </td>
@@ -145,8 +145,8 @@ h2 Selectable
         </tr>
         <tr>
             <td class="-lh--1">
-              <input class="chi-checkbox__input" type="checkbox" id="chk-1-02" />
-              <label class="chi-checkbox__label" for="chk-1-02">
+              <input class="lux-checkbox__input" type="checkbox" id="chk-1-02" />
+              <label class="lux-checkbox__label" for="chk-1-02">
                 <div class="-sr--only">Label</div>
               </label>
             </td>
@@ -156,8 +156,8 @@ h2 Selectable
         </tr>
         <tr>
             <td class="-lh--1">
-              <input class="chi-checkbox__input" type="checkbox" id="chk-1-03" />
-              <label class="chi-checkbox__label" for="chk-1-03">
+              <input class="lux-checkbox__input" type="checkbox" id="chk-1-03" />
+              <label class="lux-checkbox__label" for="chk-1-03">
                   <div class="-sr--only">Label</div>
               </label>
             </td>
@@ -173,10 +173,10 @@ p.-text
   | If the <code>section</code> height is smaller than the <code>table</code>
   | height, the <code>table</code> header will be fixed positioned and
   | content will scroll. Tables must be wrapped in a
-  | <code>&lt;section class="chi-table -fixed--header"&gt;</code>
+  | <code>&lt;section class="lux-table -fixed--header"&gt;</code>
 :example(lang="html"):html-beautify:pug
   include ./_common.pug
-  section.chi-table.-fixed--header(style="height: 150px")
+  section.lux-table.-fixed--header(style="height: 150px")
     div
       table
         thead
@@ -195,7 +195,7 @@ p.-text
 h2 Two tier table header
 :example(lang="html"):html-beautify:pug
   include ./_common.pug
-  table.chi-table
+  table.lux-table
     colgroup
       col
     colgroup(span='2')

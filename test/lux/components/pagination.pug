@@ -1,0 +1,635 @@
+---
+title: Pagination
+---
+- var steps = ['0', '1', '2', '3', '4', '5', '6'];
+- var stepLast = 12
+
+h4 Base
+.test-base.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -disabled`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '1'
+                      a(class=`lux-button -flat -active`, href='#')= step
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat`, href='#')= `${step}`
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light -disabled`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '1'
+                      a(class=`lux-button -flat -light -active`, href='#')= step
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light`, href='#')= `${step}`
+              .lux-pagination__end
+
+h4 Active
+.test-active.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+
+h4 Disabled
+.test-disabled.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -disabled`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -disabled`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -disabled ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light -disabled`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light -disabled`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light -disabled ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+
+h4 Truncation
+.test-truncation.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat`, href='#')= `${step}`
+                      div(class=`lux-button -flat -disabled`, href='#') ...
+                      a(class=`lux-button -flat`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat -light`, href='#')= `${step}`
+                      div(class=`lux-button -flat -light -disabled`, href='#') ...
+                      a(class=`lux-button -flat -light`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+
+h4 Double Truncation
+.test-double-truncation.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                  a(class=`lux-button -flat`, href='#') 1
+                  div(class=`lux-button -flat -disabled`) ...
+                  a(class=`lux-button -flat`, href='#') 3
+                  a(class=`lux-button -flat`, href='#') 4
+                  a(class=`lux-button -flat -active`, href='#') 5
+                  a(class=`lux-button -flat`, href='#') 6
+                  a(class=`lux-button -flat`, href='#') 7
+                  div(class=`lux-button -flat -disabled`) ...
+                  a(class=`lux-button -flat`, href='#') 12
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -light -flat`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                  a(class=`lux-button -flat -light`, href='#') 1
+                  div(class=`lux-button -flat -light -disabled`) ...
+                  a(class=`lux-button -flat -light`, href='#') 3
+                  a(class=`lux-button -flat -light`, href='#') 4
+                  a(class=`lux-button -flat -light -active`, href='#') 5
+                  a(class=`lux-button -flat -light`, href='#') 6
+                  a(class=`lux-button -flat -light`, href='#') 7
+                  div(class=`lux-button -flat -light -disabled`) ...
+                  a(class=`lux-button -flat -light`, href='#') 12
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+              .lux-pagination__end
+
+h4 Results Label
+.test-results-label.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+                .lux-pagination__results
+                  span.lux-pagination__label 240 Results
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat`, href='#')= `${step}`
+                      div(class=`lux-button -flat -disabled`, href='#') ...
+                      a(class=`lux-button -flat`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+                .lux-pagination__results
+                  span.lux-pagination__label 240 Results
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat -light`, href='#')= `${step}`
+                      div(class=`lux-button -flat -light -disabled`, href='#') ...
+                      a(class=`lux-button -flat -light`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+
+h4 Page Size
+.test-page-size.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12
+        .-p--3.-mb--4
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+                .lux-pagination__results
+                  span.lux-pagination__label 240 Results
+                .lux-pagination__page-size
+                  .lux-dropdown
+                    button.lux-button.-flat.-px--1.lux-dropdown__trigger#pagesize-1 20
+                    .lux-dropdown__menu.-w--xs
+                      a.lux-dropdown__menu-item.-active(href='#') 20
+                      a.lux-dropdown__menu-item(href='#') 40
+                      a.lux-dropdown__menu-item(href='#') 60
+                      a.lux-dropdown__menu-item(href='#') 80
+                      a.lux-dropdown__menu-item(href='#') All
+                  span.lux-pagination__label per page
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat`, href='#')= `${step}`
+                      div(class=`lux-button -flat -disabled`, href='#') ...
+                      a(class=`lux-button -flat`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+      .lux-col.-w--12
+        .-p--3.-bg--black.-mb--4
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+                .lux-pagination__results
+                  span.lux-pagination__label 240 Results
+                .lux-pagination__page-size
+                  select.lux-input
+                    option(value='20') 20
+                    option(value='40') 40
+                    option(value='60') 60
+                    option(value='80') 80
+                    option(value='all') All
+                  span.lux-pagination__label per page
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat -light`, href='#')= `${step}`
+                      div(class=`lux-button -flat -light -disabled`, href='#') ...
+                      a(class=`lux-button -flat -light`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+
+h4 Page Jumper
+.test-page-jumper.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12
+        .-p--3.-mb--4
+          nav.lux-pagination(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+                .lux-pagination__results
+                  span.lux-pagination__label 240 Results
+                .lux-pagination__page-size
+                  select.lux-input
+                    option(value='20') 20
+                    option(value='40') 40
+                    option(value='60') 60
+                    option(value='80') 80
+                    option(value='all') All
+                  span.lux-pagination__label per page
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat`, href='#')= `${step}`
+                      div(class=`lux-button -flat -disabled`, href='#') ...
+                      a(class=`lux-button -flat`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+                .lux-pagination__jumper
+                  label.lux-pagination__label(for="jumper-input-1") Go to page:
+                  input(type='text', class='lux-input', id='jumper-input-1')
+      .lux-col.-w--12
+        .-p--3.-bg--black.-mb--4
+          nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+                .lux-pagination__results
+                  span.lux-pagination__label 240 Results
+                .lux-pagination__page-size
+                  select.lux-input
+                    option(value='20') 20
+                    option(value='40') 40
+                    option(value='60') 60
+                    option(value='80') 80
+                    option(value='all') All
+                  span.lux-pagination__label per page
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  each step in steps
+                    if step == '0'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                    else if step == '5'
+                      a(class=`lux-button -flat -light`, href='#')= `${step}`
+                      div(class=`lux-button -flat -light -disabled`, href='#') ...
+                      a(class=`lux-button -flat -light`, href='#')= `${stepLast}`
+                    else if step == '6'
+                      a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                        .lux-button__content
+                          i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                    else
+                      a(class=`lux-button -flat -light ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+              .lux-pagination__end
+                .lux-pagination__jumper
+                  label.lux-pagination__label(for="jumper-input-2") Go to page:
+                  input(type='text', class='lux-input', id='jumper-input-2')
+
+h4 Compact / Base
+.test-compact-base.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination.-compact(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                .lux-pagination__label
+                  strong 2
+                  span of
+                  strong 3
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-compact.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                .lux-pagination__label
+                  strong 2
+                  span of
+                  strong 3
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+              .lux-pagination__end
+
+h4 Compact / Page Jumper
+.test-compact-jumper.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination.-compact(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                .lux-pagination__jumper
+                  input(type='text', class='lux-input', id='compact-jumper-input-1', value='2')
+                  .lux-pagination__label
+                    span of
+                    strong 3
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-compact.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                .lux-pagination__jumper
+                  input(type='text', class='lux-input', id='compact-jumper-input-2', value='2')
+                  .lux-pagination__label
+                    span of
+                    strong 3
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+              .lux-pagination__end
+
+h4 Compact / First and Last buttons
+.test-compact-first-last-buttons.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          nav.lux-pagination.-compact(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='First page')
+                    .lux-button__content
+                      i(class="lux-icon icon-page-first", aria-hidden='true')
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                .lux-pagination__label
+                  strong 2
+                  span of
+                  strong 3
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                  a(class=`lux-button -icon -flat`, href='#', aria-label='Last page')
+                    .lux-button__content
+                      i(class="lux-icon icon-page-last", aria-hidden='true')
+              .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          nav.lux-pagination.-compact.-inverse(role='navigation', aria-label='Pagination')
+            .lux-pagination__content
+              .lux-pagination__start
+              .lux-pagination__center
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='First page')
+                    .lux-button__content
+                      i(class="lux-icon icon-page-first", aria-hidden='true')
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Previous page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                .lux-pagination__label
+                  strong 2
+                  span of
+                  strong 3
+                .lux-pagination__button-group.lux-button-group
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Next page')
+                    .lux-button__content
+                      i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                  a(class=`lux-button -icon -flat -light`, href='#', aria-label='Last page')
+                    .lux-button__content
+                      i(class="lux-icon icon-page-last", aria-hidden='true')
+              .lux-pagination__end
+
+h4 Sizes
+.test-sizes.-w--100
+  .example
+    .lux-grid.-no-gutter
+      .lux-col.-w--12.-w-md--6
+        .-p--3
+          each size in ['sm', 'md', 'lg', 'xl']
+            p.-text--bold=`-${size}`
+            nav.lux-pagination(role='navigation', aria-label='Pagination')
+              .lux-pagination__content
+                .lux-pagination__start
+                .lux-pagination__center
+                  .lux-pagination__button-group.lux-button-group
+                    each step in steps
+                      if step == '0'
+                        a(class=`lux-button -icon -flat -${size}`, href='#', aria-label='Previous page')
+                          .lux-button__content
+                            i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                      else if step == '6'
+                        a(class=`lux-button -icon -flat -${size}`, href='#', aria-label='Next page')
+                          .lux-button__content
+                            i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                      else
+                        a(class=`lux-button -flat -${size} ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+                .lux-pagination__end
+      .lux-col.-w--12.-w-md--6
+        .-p--3.-bg--black
+          each size in ['sm', 'md', 'lg', 'xl']
+            p.-text--bold.-text--white=`-${size}`
+            nav.lux-pagination.-inverse(role='navigation', aria-label='Pagination')
+              .lux-pagination__content
+                .lux-pagination__start
+                .lux-pagination__center
+                  .lux-pagination__button-group.lux-button-group
+                    each step in steps
+                      if step == '0'
+                        a(class=`lux-button -icon -flat -light -${size}`, href='#', aria-label='Previous page')
+                          .lux-button__content
+                            i(class="lux-icon icon-chevron-left", aria-hidden='true')
+                      else if step == '6'
+                        a(class=`lux-button -icon -flat -light -${size}`, href='#', aria-label='Next page')
+                          .lux-button__content
+                            i(class="lux-icon icon-chevron-right", aria-hidden='true')
+                      else
+                        a(class=`lux-button -flat -light -${size} ${step === '3' ? `-active` : ''}`, href='#')= `${step}`
+                .lux-pagination__end

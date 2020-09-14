@@ -7,24 +7,24 @@ REPO_PATH=$(cd $(dirname $0)/..; pwd)
 
 if [ "x$1" = "xalias" ]; then
   if [ -f ~/.bash_profile ]; then
-    sed -i.back '/^alias chi=/d' ~/.bash_profile
+    sed -i.back '/^alias lux=/d' ~/.bash_profile
     lastline=$(tail -n 1 ~/.bash_profile; echo x); lastline=${lastline%x}
     if [ "${lastline: -1}" != $'\n' ]; then
         echo >> ~/.bash_profile
     fi
-    echo "alias chi=\"${REPO_PATH}/scripts/docker.sh\"" >> ~/.bash_profile
+    echo "alias lux=\"${REPO_PATH}/scripts/docker.sh\"" >> ~/.bash_profile
     echo "execute: . ~/.bash_profile"
   fi
   exit 0
 fi
 
 cp ${REPO_PATH}/Dockerfile ${TMPDIR}/
-cp ${REPO_PATH}/package.json ${TMPDIR}/package_chi.json
+cp ${REPO_PATH}/package.json ${TMPDIR}/package_lux.json
 cp ${REPO_PATH}/src/custom-elements/package.json ${TMPDIR}/package_custom-elements.json
 cp ${REPO_PATH}/scripts/entrypoint.sh ${TMPDIR}/
 
 pushd "${TMPDIR}"  > /dev/null
-  docker build -t chi:latest .
+  docker build -t lux:latest .
 popd >/dev/null
 rm -rf ${TMPDIR}
 
@@ -42,18 +42,18 @@ fi
 
 if [ "x$1" = "xstart" ]; then
 
-  docker run --rm -it --name chi \
+  docker run --rm -it --name lux \
           --privileged \
-          -v ${REPO_PATH}:/chi \
+          -v ${REPO_PATH}:/lux \
           -p 8000:8000 \
           -p 8001:8001 \
           -p 3333:3333 \
-          chi
+          lux
 else
   docker run --rm -ti \
               --privileged \
               --shm-size=2gb \
               --cap-add=SYS_ADMIN \
-              -v ${REPO_PATH}:/chi \
-              chi $1
+              -v ${REPO_PATH}:/lux \
+              lux $1
 fi

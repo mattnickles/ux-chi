@@ -3,7 +3,7 @@ import { Component, Element, Prop, h, Watch } from '@stencil/core';
 const VALID_SIZES = ['xs', 'sm', 'md', 'lg', 'xl'];
 
 @Component({
-  tag: 'chi-label',
+  tag: 'lux-label',
   styleUrl: 'label.scss',
   scoped: true
 })
@@ -35,8 +35,8 @@ export class Label {
   }
 
   render() {
-    const required = <abbr class="chi-label__required" title="Required field">*</abbr>;
-    const optional = <abbr class="chi-label__optional" title="Optional field">(optional)</abbr>;
+    const required = <abbr class="lux-label__required" title="Required field">*</abbr>;
+    const optional = <abbr class="lux-label__optional" title="Optional field">(optional)</abbr>;
     let message = '';
 
     if (!(this.required && this.optional)) {
@@ -50,7 +50,7 @@ export class Label {
     return (
       <label
         class={`
-          chi-label
+          lux-label
           ${this.size ? `-${this.size}` : ``}
           `}
         htmlFor={`${this.for}-control`}

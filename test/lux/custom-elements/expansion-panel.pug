@@ -1,0 +1,51 @@
+---
+title: Expansion panel
+styles:
+  - assets/styles/expansion-panel-ce
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+.test-expansion-panel-done.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #1', state="done", data-cy='test-done')
+        div(slot='done')
+            | Done content in expansion panel.
+        div(slot='change')
+            button.lux-button.-primary.-flat Change
+
+.test-expansion-panel-active.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #2', state="active", data-cy='test-active')
+        div(slot='active')
+            .lux-epanel__subtitle Active
+            p.lux-epanel__text.-mb--0 Active content in expansion panel.
+        div(slot='footer')
+            button.lux-button.-lg Previous
+            button.lux-button.-lg.-primary Continue
+
+.test-expansion-panel-pending.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #3', data-cy='test-pending')
+
+.test-expansion-panel-disabled.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #4', state="disabled", data-cy='test-disabled')
+
+.test-expansion-panel-done-bordered.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #5', state="done", bordered=true, data-cy='test-done-bordered')
+        div(slot='done')
+            | Done content in expansion panel.
+        div(slot='change')
+            button.lux-button.-primary.-flat Change
+
+.test-expansion-panel-active-bordered.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #6', state="active", bordered=true, data-cy='test-active-bordered')
+        div(slot='active')
+            .lux-epanel__subtitle Active
+            p.lux-epanel__text.-mb--0 Active content in expansion panel.
+        div(slot='footer')
+            button.lux-button.-lg Previous
+            button.lux-button.-lg.-primary Continue
+
+.test-expansion-panel-pending-bordered.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #7', bordered=true, data-cy='test-pending-bordered')
+
+.test-expansion-panel-disabled-bordered.-mb--3(style="min-width: 20rem")
+    lux-expansion-panel(title='Expansion panel #8', state="disabled", bordered=true, data-cy='test-disabled-bordered')

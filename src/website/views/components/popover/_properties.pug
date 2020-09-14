@@ -1,12 +1,12 @@
 h2 Web Component
-:stencilDoc(name='chi-popover')
+:stencilDoc(name='lux-popover')
 
-.chi-divider.-my--5
+.lux-divider.-my--5
 
 h2 JavaScript
 p.-text This component accepts options to configure its behavior.
 
-section.chi-table.chi-table__options.-bordered.-my--3
+section.lux-table.lux-table__options.-bordered.-my--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -123,16 +123,16 @@ p.-text
   | HTML DOM Element as a parameter.
 .example.-mb--3
   .-p--3
-    button#popover-2(data-popover-content='<div class="chi-popover__content">Foo</div>').chi-button.-mr--2 Popover
+    button#popover-2(data-popover-content='<div class="lux-popover__content">Foo</div>').lux-button.-mr--2 Popover
   :code(lang='html')
-    <button id='popover-2' class="chi-button" data-popover-content='<div class="chi-popover__content">Foo</div>'>Popover</button>
+    <button id='popover-2' class="lux-button" data-popover-content='<div class="lux-popover__content">Foo</div>'>Popover</button>
     <script>
-      var popover = chi.popover(document.getElementById('popover-2'));
-      popover.setContent('<div class="chi-popover__content">Bar</div>');
+      var popover = lux.popover(document.getElementById('popover-2'));
+      popover.setContent('<div class="lux-popover__content">Bar</div>');
     </script>
 
 h3 Events
-section.chi-table.chi-table__options.-bordered.-my--3
+section.lux-table.lux-table__options.-bordered.-my--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -145,14 +145,14 @@ section.chi-table.chi-table__options.-bordered.-my--3
         tr
           td
             div
-              code= 'chi.popover.show'
+              code= 'lux.popover.show'
           td
             div
               | The element the popover is attached to (usually a button), dispatches this event when the popover is to be shown.
         tr
           td
             div
-              code= 'chi.popover.hide'
+              code= 'lux.popover.hide'
           td
             div
               | The element the popover is attached to (usually a button), dispatches this event when the popover is to be hidden.
@@ -163,7 +163,7 @@ p.-text
   | and object data. You must call this method when you want to remove the component.
 :code(lang="javascript")
   var elem = document.getElementById('popover');
-  var popover = chi.popover(elem);
+  var popover = lux.popover(elem);
   // do stuff
   popover.dispose();
 
@@ -172,9 +172,9 @@ p.-text
   | associated to the trigger.
 :code(lang="javascript")
   var elem = document.getElementById('popover-1');
-  var popover = chi.popover(elem);
+  var popover = lux.popover(elem);
   var elem2 = document.getElementById('popover-1');
-  var popover2 = chi.popover(elem2);
+  var popover2 = lux.popover(elem2);
   popover === popover2; // returns true
 
   popover.dispose(); // Only have to do it once.
@@ -184,7 +184,7 @@ script.
     'DOMContentLoaded',
     function() {
 
-      var popover2 = chi.popover(document.getElementById('popover-2'));
+      var popover2 = lux.popover(document.getElementById('popover-2'));
       popover2.setContent('<div class="-px--2 -py--1">Bar</div>');
 
     }

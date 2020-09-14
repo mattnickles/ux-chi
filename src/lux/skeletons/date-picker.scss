@@ -1,0 +1,19 @@
+@import '_shine';
+
+lux-date:not(.hydrated),
+lux-date-picker:not(.hydrated) {
+  animation: shine $animation-duration infinite linear;
+  display: block;
+  font-size: 0;
+  width: 14rem;
+
+  @include background-gradient;
+}
+
+lux-date:not(.hydrated) {
+  height: 14.5rem;
+}
+
+lux-date-picker:not(.hydrated) {
+  height: 2rem;
+}

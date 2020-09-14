@@ -1,7 +1,7 @@
 import { Component, Element, Event, EventEmitter, Prop, State, Watch, h } from '@stencil/core';
 
 @Component({
-  tag: 'chi-button',
+  tag: 'lux-button',
   styleUrl: 'button.scss',
   scoped: true
 })
@@ -19,7 +19,7 @@ export class Button {
   @Prop({ reflect: true }) variant: string;
 
   /**
-   *  to disable chi-button.
+   *  to disable lux-button.
    */
   @Prop({ reflect: true }) disabled = false;
 
@@ -58,7 +58,7 @@ export class Button {
   /**
    *  to emit a custom event when button is clicked.
    */
-  @Event() chiClick: EventEmitter<any>;
+  @Event() luxClick: EventEmitter<any>;
 
   @Watch('size')
   sizeValidation(newValue: string) {
@@ -93,29 +93,29 @@ export class Button {
     this.sizeValidation(this.size);
     this.buttonTypeValidation(this.type);
     this.variantValidation(this.variant);
-    if (!this.el.querySelector('chi-icon') &&
-      !this.el.querySelector('chi-spinner')) {
+    if (!this.el.querySelector('lux-icon') &&
+      !this.el.querySelector('lux-spinner')) {
       this.slotBtnContent = false;
     }
   }
 
   _buttonClicked() {
-    this.chiClick.emit();
+    this.luxClick.emit();
   }
 
   render() {
     if (this.type === 'close') {
       return (
-        <button class={`${this.extraClass ? this.extraClass : ''} chi-button -icon -close ${this.size ? `-${this.size}` : ''}`} onClick={() => this._buttonClicked()} aria-label="Close">
-          <div class="chi-button__content">
-            <chi-icon icon={'x'} />
+        <button class={`${this.extraClass ? this.extraClass : ''} lux-button -icon -close ${this.size ? `-${this.size}` : ''}`} onClick={() => this._buttonClicked()} aria-label="Close">
+          <div class="lux-button__content">
+            <lux-icon icon={'x'} />
           </div>
         </button>
       );
     } else {
       return (
         <button
-          class={`chi-button
+          class={`lux-button
           ${this.variant ? `-${this.variant}` : ''}
           ${this.color ? `-${this.color}` : ''}
           ${this.type ? `-${this.type}` : ''}
@@ -130,7 +130,7 @@ export class Button {
           {...(this.alternativeText && {'aria-label': this.alternativeText})}
         >
           {this.slotBtnContent ?
-            <div class={'chi-button__content'}>
+            <div class={'lux-button__content'}>
               <slot />
             </div>
             : <slot />

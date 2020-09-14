@@ -1,0 +1,221 @@
+---
+title: Date picker
+scripts:
+  - js/lux
+---
+script(type='module' src='../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../js/ce/ux-lux-ce/ux-lux-ce.js')
+
+-  let day = 1;
+-  const weekS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+-  const today = 19;
+-  const active = 23;
+
+.test-base
+  span.-text--h2 Base
+  .-position--relative
+    .lux-datepicker.-week-starts-on-sun.-month-starts-on-thu
+      .lux-datepicker__month-row
+        .prev
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-left')
+        .lux-datepicker__month
+          | November 2018
+        .next
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-right')
+      .lux-datepicker__day-names
+        each weekDay in weekS
+          .lux-datepicker__week-day=weekDay
+      .lux-datepicker__days
+        while day < 31
+          .lux-datepicker__day=day++
+
+- day = 1;
+
+.test-today
+  span.-text--h2 Today
+  .-position--relative
+    .lux-datepicker.-week-starts-on-sun.-month-starts-on-thu
+      .lux-datepicker__month-row
+        .prev
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-left')
+        .lux-datepicker__month
+          | November 2018
+        .next
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-right')
+      .lux-datepicker__day-names
+        each weekDay in weekS
+          .lux-datepicker__week-day=weekDay
+      .lux-datepicker__days
+        while day < 31
+          if day === today
+            .lux-datepicker__day.-today=day++
+          else
+            .lux-datepicker__day=day++
+
+- day = 1;
+
+.test-active
+  span.-text--h2 Active
+  .-position--relative
+    .lux-datepicker.-week-starts-on-sun.-month-starts-on-thu
+      .lux-datepicker__month-row
+        .prev
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-left')
+        .lux-datepicker__month
+          | November 2018
+        .next
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-right')
+      .lux-datepicker__day-names
+        each weekDay in weekS
+          .lux-datepicker__week-day=weekDay
+      .lux-datepicker__days
+        while day < 31
+          if day === active
+            .lux-datepicker__day.-active=day++
+          else
+            .lux-datepicker__day=day++
+
+- day = 1;
+
+.test-hover
+  span.-text--h2 Hover
+  .-position--relative
+    .lux-datepicker.-week-starts-on-sun.-month-starts-on-thu
+      .lux-datepicker__month-row
+        .prev
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-left')
+        .lux-datepicker__month
+          | November 2018
+        .next
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-right')
+      .lux-datepicker__day-names
+        each weekDay in weekS
+          .lux-datepicker__week-day=weekDay
+      .lux-datepicker__days
+        while day < 31
+          if day === active
+            .lux-datepicker__day.-hover=day++
+          else
+            .lux-datepicker__day=day++
+
+
+- day = 1;
+
+.test-inactive
+  span.-text--h2 Inactive
+  .-position--relative
+    .lux-datepicker.-week-starts-on-sun.-month-starts-on-thu
+      .lux-datepicker__month-row
+        .prev.-disabled
+          .lux-icon.-sm
+            svg
+              use(xlink:href='#icon-chevron-left')
+        .lux-datepicker__month
+          | November 2018
+        .next.-disabled
+          .lux-icon.-sm
+            svg
+              use(xlink:href='#icon-chevron-right')
+      .lux-datepicker__day-names
+        each weekDay in weekS
+          .lux-datepicker__week-day=weekDay
+      .lux-datepicker__days
+        while day < 31
+          if day < today || day > today
+            .lux-datepicker__day.-inactive=day++
+          else
+            .lux-datepicker__day=day++
+
+- day = 1;
+
+.test-combined
+  span.-text--h2 Combined
+  .-position--relative
+    .lux-datepicker.-week-starts-on-sun.-month-starts-on-thu
+      .lux-datepicker__month-row
+        .prev.-disabled
+          .lux-icon.-sm
+            svg
+              use(xlink:href='#icon-chevron-left')
+        .lux-datepicker__month
+          | November 2018
+        .next
+          .lux-icon.-sm.-text--brand
+            svg
+              use(xlink:href='#icon-chevron-right')
+      .lux-datepicker__day-names
+        each weekDay in weekS
+          .lux-datepicker__week-day=weekDay
+      .lux-datepicker__days
+        while day < 31
+          if day === active
+            .lux-datepicker__day.-active=day++
+          else if day < today
+            .lux-datepicker__day.-inactive=day++
+          else
+            .lux-datepicker__day=day++
+
+.test-input-combined
+  span.-text--h2 Input Popover Combined
+  .-position--relative(style="height: 18rem; width:14rem;")
+    input#datepicker-1.lux-input.-load__datepicker(type="text", placeholder="MM/DD/YYYY")
+
+.test-input-combined-icon
+  span.-text--h2 Input Popover Combined w/ icon
+  .-position--relative(style="height: 18rem; width:14rem;")
+    .lux-input__wrapper.-icon--right
+      input#datepicker-2.lux-input.-load__datepicker(type="text", placeholder="MM/DD/YYYY")
+      .lux-icon.-icon--muted
+        svg
+          use(xlink:href="#icon-date")
+
+.test-disabled
+  span.-text--h2 Disabled date picker
+  .-position--relative(style="width:14rem;")
+    .lux-input__wrapper.-icon--right.-disabled
+      input.lux-input.-load__datepicker(type="text", placeholder="MM/DD/YYYY", disabled)
+      .lux-icon.-icon--muted
+        svg
+          use(xlink:href="#icon-date")
+
+script.
+  document.addEventListener(
+    'DOMContentLoaded',
+    function() {
+      lux.datePicker(
+        document.getElementById('datepicker-1'),
+        {
+          date: '01/24/2019',
+          min: '01/24/2019'
+        }
+      );
+      lux.datePicker(
+        document.getElementById('datepicker-2'),
+        {
+          date: '01/24/2019',
+          min: '01/24/2019'
+        }
+      );
+
+      document.getElementById('datepicker-1').focus();
+      document.getElementById('datepicker-2').focus();
+      document.getElementById('datepicker-2').blur();
+
+    }
+  );

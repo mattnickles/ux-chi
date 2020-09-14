@@ -1,0 +1,633 @@
+@import '_mixins';
+@import '_variables';
+
+@mixin tabs-vertical {
+  display: flex;
+  flex-direction: column;
+  line-height: $line-height-sm;
+
+  .lux-tabs__subtabs {
+    list-style: none;
+    padding: 0;
+
+    & > li {
+      &.-active {
+        & > a {
+          color: $color-text-primary;
+          font-weight: $font-weight-semi-bold;
+        }
+      }
+
+      & > a {
+        color: $color-text-base;
+        cursor: pointer;
+        display: block;
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+        padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-text-primary;
+        }
+      }
+    }
+  }
+
+  &.-icons {
+    & > li {
+      &.-active {
+        & > a {
+          position: relative;
+
+          & > .lux-icon {
+            color: $color-text-primary;
+            left: 1.5rem;
+          }
+        }
+      }
+
+      & > a {
+        padding-left: 3.5rem;
+        position: relative;
+
+        & > .lux-icon {
+          left: 1.5rem;
+          position: absolute;
+        }
+      }
+
+      .lux-tabs__subtabs {
+        & > li {
+          & > a {
+            padding-left: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  & > li {
+    &.lux-sliding-border {
+      left: 0;
+      position: absolute;
+      width: 0.125rem;
+    }
+
+    &.-active-alt {
+      & > a {
+        background-color: $color-grey-20;
+        color: $color-text-base;
+
+        & > .lux-icon {
+          color: $color-text-base;
+        }
+      }
+    }
+
+    & > a {
+      padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+      width: 100%;
+    }
+  }
+
+  &:not(.-sliding) {
+    & > li {
+      &.-active:not(.-has-active) > a {
+        box-shadow: inset 0.125rem 0 0 $color-border-primary;
+      }
+    }
+
+    &.-animated > li {
+      &.-active:not(.-has-active) > a {
+        box-shadow: inset 0.125rem 0 0 $color-border-primary;
+      }
+
+      & .lux-tabs__subtabs > li {
+        &.-active:not(.-has-active) > a {
+          box-shadow: inset 0.125rem 0 0 $color-border-primary;
+        }
+      }
+    }
+  }
+
+  &.-sm {
+    & > li {
+      & > a {
+        padding-bottom: 0.25rem;
+        padding-top: 0.25rem;
+      }
+    }
+
+    .lux-tabs__subtabs {
+      & > li {
+        & > a {
+          padding: 0.25rem 0.25rem 0.25rem 2.5rem;
+        }
+      }
+    }
+  }
+
+  &.-lg {
+    & > li {
+      & > a {
+        line-height: $line-height-lg;
+        padding-bottom: 0.75rem;
+        padding-top: 0.75rem;
+
+        & > .lux-icon {
+          margin-top: 0.25rem;
+        }
+      }
+    }
+  }
+
+  &.-border {
+    & > li {
+      border-bottom: 0.0625rem solid $color-border-base-dark;
+
+      &.-active {
+        & > a {
+          &::before {
+            top: -0.0625rem;
+          }
+        }
+      }
+
+      & > a {
+        padding-bottom: 0.5rem;
+        padding-top: 0.4375rem;
+      }
+
+      &:first-child {
+        border-top: 0.0625rem solid $color-border-base-dark;
+
+        & > a {
+          padding-bottom: 0.4375rem;
+          padding-top: 0.4375rem;
+        }
+      }
+    }
+
+    &.-sm {
+      & > li {
+        & > a {
+          padding-bottom: 0.25rem;
+          padding-top: 0.1875rem;
+        }
+
+        &:first-child {
+          & > a {
+            padding-bottom: 0.1875rem;
+            padding-top: 0.1875rem;
+          }
+        }
+      }
+    }
+
+    &.-lg {
+      & > li {
+        & > a {
+          padding-bottom: 0.75rem;
+          padding-top: 0.6875rem;
+        }
+
+        &:first-child {
+          & > a {
+            padding-bottom: 0.6875rem;
+            padding-top: 0.6875rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.-list {
+    > li {
+      .lux-tabs_item {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+          font-weight: $font-weight-semi-bold;
+        }
+
+        &-text {
+          font-weight: $font-weight-normal;
+        }
+      }
+    }
+  }
+
+  &.-portal {
+    > li {
+      .lux-tabs_item {
+        padding-left: 2.25rem;
+        padding-right: 2.5rem;
+
+        > .lux-icon {
+          font-size: $font-size-base;
+          height: 0.875rem;
+          left: 1rem;
+          width: 0.875rem;
+        }
+
+        .lux-button {
+          &.-icon {
+            position: absolute;
+            right: 0.5rem;
+            top: calc(50% - 1rem);
+
+            .lux-icon {
+              opacity: 0;
+            }
+
+            &:hover,
+            &:active {
+              background-color: transparent;
+            }
+
+            &:focus {
+              border-color: transparent;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $color-grey-25;
+          color: $color-text-base;
+
+          .lux-button {
+            &.-icon {
+              .lux-icon {
+                opacity: 0.75;
+              }
+            }
+          }
+        }
+      }
+
+      .lux-tabs__subtabs {
+        > li {
+          > a {
+            padding-left: 3.25rem;
+            position: relative;
+
+            &::before {
+              border-bottom: 0.0625rem dotted $color-grey-100;
+              border-left: 0.0625rem dotted $color-grey-100;
+              content: '';
+              height: 0.6875rem;
+              left: 2.375rem;
+              position: absolute;
+              top: 0.125rem;
+              width: 0.6875rem;
+              z-index: 1;
+            }
+          }
+
+          .lux-tabs__subtabs {
+            > li {
+              > a {
+                padding-left: 4.25rem;
+                position: relative;
+
+                &::before {
+                  left: 3.375rem;
+                }
+              }
+            }
+          }
+
+          &.-active {
+            .lux-tabs_item {
+              background-color: $color-background-primary-light;
+              box-shadow: inset 0.125rem 0 0 $color-border-primary;
+              color: $color-text-primary;
+
+              .lux-button {
+                &.-icon {
+                  .lux-icon {
+                    opacity: 0.75;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.-active {
+        .lux-tabs_item {
+          color: $color-text-primary;
+
+          > .lux-icon {
+            left: 1rem;
+          }
+
+          .lux-button {
+            &.-icon {
+              .lux-icon {
+                opacity: 0.75;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &:not(.-sliding) > li.-active:not(.-has-active) > a {
+      background-color: $color-background-primary-light;
+    }
+  }
+}
+
+@mixin tabs-not-vertical {
+  height: 3.5rem;
+
+  &.-icons {
+    & > li {
+      &.-active {
+        .lux-icon {
+          color: $color-text-primary;
+        }
+      }
+
+      & > a {
+        padding-left: 1.5rem;
+        position: relative;
+
+        .lux-icon {
+          left: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  &.-border {
+    border-bottom: 0.0625rem solid $color-border-base-dark;
+
+    & > li {
+      &.lux-sliding-border {
+        bottom: -0.0625rem;
+      }
+    }
+  }
+
+  & > li {
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+
+    & > a {
+      line-height: $line-height-sm;
+      padding: 1.25rem 0;
+    }
+
+    &.lux-sliding-border {
+      bottom: 0;
+      height: 0.125rem;
+      margin-left: 0;
+    }
+  }
+
+  &:not(.-sliding) > li {
+    &.-active > a {
+      border-bottom: 0.125rem solid $color-border-primary;
+      padding-bottom: 1.125rem;
+    }
+  }
+
+  &.-xs {
+    height: 2.5rem;
+
+    & > li {
+      &.-active > a {
+        padding-bottom: 0.5625rem;
+      }
+
+      & > a {
+        font-size: $font-size-xs;
+        padding: 0.8125rem 0 0.6875rem 0;
+      }
+    }
+  }
+
+  &.-sm {
+    height: 3rem;
+
+    & > li {
+      &.-active > a {
+        padding-bottom: 0.875rem;
+      }
+
+      & > a {
+        line-height: $line-height-sm;
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  &.-lg {
+    height: 4rem;
+
+    & > li:not(.lux-sliding-border) {
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+
+      &.-active > a {
+        padding-bottom: 1.125rem;
+      }
+
+      & > a {
+        line-height: $line-height-lg;
+      }
+    }
+  }
+}
+
+.lux-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  & > li {
+    display: inline-block;
+
+    &.-active > a {
+      color: $color-text-primary;
+    }
+
+    &.-disabled {
+      &,
+      & > a {
+        color: $color-text-muted;
+        font-weight: $font-weight-semi-bold;
+        opacity: 0.75;
+        pointer-events: none;
+      }
+    }
+
+    & > a {
+      color: $color-text-base;
+      cursor: pointer;
+      display: block;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semi-bold;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-text-primary;
+      }
+    }
+
+    &.lux-sliding-border {
+      background-color: $color-border-primary;
+      display: none;
+      position: absolute;
+    }
+  }
+
+  &.-sliding > li {
+    &.lux-sliding-border {
+      display: block;
+      transition: 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+    }
+  }
+
+  &.-lg {
+    & > li {
+      & > a {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  &.-inverse {
+    & > li {
+      &.-active > a {
+        color: $color-text-white;
+      }
+
+      & > a {
+        color: $color-text-white;
+
+        &:hover {
+          color: $color-text-white;
+        }
+      }
+
+      &.-disabled {
+        &,
+        & > a {
+          color: $color-text-white;
+          font-weight: $font-weight-semi-bold;
+          opacity: 0.75;
+          pointer-events: none;
+        }
+      }
+
+      &.lux-sliding-border {
+        background-color: $color-background-white;
+      }
+    }
+
+    &:not(.-vertical):not(.-responsive):not(.-sliding) > li {
+      &.-active > a {
+        border-bottom: 0.125rem solid $color-border-white;
+
+        .lux-icon {
+          color: $color-text-white;
+        }
+      }
+    }
+
+    &:not(.-vertical):not(.-responsive) {
+      &.-border {
+        border-bottom: 0.0625rem solid $color-grey-80;
+      }
+    }
+
+    &.-vertical {
+      // sass-lint:disable-block force-element-nesting
+      &:not(.-sliding) > li.-active:not(.-has-active) > a,
+      &:not(.-sliding).-animated > li.-active:not(.-has-active) > a,
+      &:not(.-sliding).-animated .lux-tabs__subtabs > li.-active:not(.-has-active) > a {
+        box-shadow: inset 0.125rem 0 0 $color-white;
+      }
+      // sass-lint:disable-block force-element-nesting
+
+      & > li {
+        &.-active > a {
+          color: $color-text-white;
+        }
+      }
+
+      &.-icons {
+        & > li {
+          &.-active > a {
+            .lux-icon {
+              color: $color-text-white;
+            }
+          }
+        }
+      }
+
+      &.-border {
+        > li {
+          border-bottom: 0.0625rem solid $color-grey-80;
+
+          &:first-child {
+            border-top: 0.0625rem solid $color-grey-80;
+          }
+        }
+      }
+
+      .lux-tabs__subtabs {
+        & > li {
+          &.-active {
+            & > a {
+              color: $color-text-white;
+            }
+          }
+
+          & > a {
+            color: $color-text-white;
+
+            &:hover {
+              color: $color-text-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:not(.-vertical):not(.-responsive) {
+    @include tabs-not-vertical;
+  }
+
+  &.-vertical {
+    @include tabs-vertical;
+  }
+
+  @media only screen and (min-width: $md-breakpoint) {
+    &.-responsive {
+      @include tabs-not-vertical;
+    }
+  }
+
+  @media only screen and (max-width: $md-breakpoint - 1) {
+    &.-responsive {
+      @include tabs-vertical;
+    }
+  }
+}
+
+.lux-tabs-panel:not(.-active) {
+  display: none;
+}

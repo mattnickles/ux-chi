@@ -1,75 +1,75 @@
-script(type='module' src='../../../js/ce/ux-chi-ce/ux-chi-ce.esm.js')
-script(nomodule='' src='../../../js/ce/ux-chi-ce/ux-chi-ce.js')
+script(type='module' src='../../../js/ce/ux-lux-ce/ux-lux-ce.esm.js')
+script(nomodule='' src='../../../js/ce/ux-lux-ce/ux-lux-ce.js')
 
 h2 Examples
 h3 Base
 p.-text An initial value is optional. If an initial value is not provided, <code>0</code> will be taken as default.
 .example.-mb--3
   .-p--3
-    .chi-form__item
-      chi-label(for="example-1") Label
-      chi-number-input#example-1
+    .lux-form__item
+      lux-label(for="example-1") Label
+      lux-number-input#example-1
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-default
+    ul.lux-tabs#examples-default
       li.-active
         a(href=`#webcomponent`) Web Component
       li
         a(href=`#html`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent
+  .lux-tabs-panel.-active#webcomponent
     :code(lang="html")
-      <chi-label for="example-1">Label</chi-label>
-      <chi-number-input id="example-1"></chi-number-input>
-  .chi-tabs-panel#html
-    .chi-tab__description
+      <lux-label for="example-1">Label</lux-label>
+      <lux-number-input id="example-1"></lux-number-input>
+  .lux-tabs-panel#html
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-base">Label</label>
-        <div class="chi-number-input">
-          <input id="input-example-base" type="number" class="chi-input" value="0" aria-label="Input Label">
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-base">Label</label>
+        <div class="lux-number-input">
+          <input id="input-example-base" type="number" class="lux-input" value="0" aria-label="Input Label">
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
 
-      <script>chi.numberInput(document.getElementById('input-example-base'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-base'));</script>
 
 h3 Disabled
 .example.-mb--3
   .-p--3
-    .chi-form__item
-      chi-label(for="example-2") Label
-      chi-number-input(disabled=true)#example-2
+    .lux-form__item
+      lux-label(for="example-2") Label
+      lux-number-input(disabled=true)#example-2
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-disabled
+    ul.lux-tabs#examples-disabled
       li.-active
         a(href=`#webcomponent-disabled`) Web Component
       li
         a(href=`#html-disabled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-disabled
+  .lux-tabs-panel.-active#webcomponent-disabled
     :code(lang="html")
-      <chi-label for="example-2">Label</chi-label>
-      <chi-number-input disabled id="example-2"></chi-number-input>
-  .chi-tabs-panel#html-disabled
-    .chi-tab__description
+      <lux-label for="example-2">Label</lux-label>
+      <lux-number-input disabled id="example-2"></lux-number-input>
+  .lux-tabs-panel#html-disabled
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-disabled">Label</label>
-        <div class="chi-number-input">
-          <input id="input-example-disabled" type="number" class="chi-input" value="0" aria-label="Input Label" disabled>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-disabled">Label</label>
+        <div class="lux-number-input">
+          <input id="input-example-disabled" type="number" class="lux-input" value="0" aria-label="Input Label" disabled>
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
 
-      <script>chi.numberInput(document.getElementById('input-example-disabled'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-disabled'));</script>
 
 h3 Sizes
 p.-text
@@ -77,170 +77,170 @@ p.-text
   |  <code>lg</code>, <code>xl</code>. The default size is <code>md</code>.
 .example.-mb--3
   .-p--3
-    .chi-grid.-no-gutter
+    .lux-grid.-no-gutter
       each size in ['sm', 'md', 'lg', 'xl']
-        .chi-col.-w--12.-w-sm--6.-w-lg--3.-my--2.-align--bottom
-          .chi-form__item.-inline.-mr--3
-            chi-label(for=`example-3-${size}`) Label
-            chi-number-input(size=`${size}`, id=`example-3-${size}`)
+        .lux-col.-w--12.-w-sm--6.-w-lg--3.-my--2.-align--bottom
+          .lux-form__item.-inline.-mr--3
+            lux-label(for=`example-3-${size}`) Label
+            lux-number-input(size=`${size}`, id=`example-3-${size}`)
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-sizes
+    ul.lux-tabs#examples-sizes
       li.-active
         a(href=`#webcomponent-sizes`) Web Component
       li
         a(href=`#html-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes
+  .lux-tabs-panel.-active#webcomponent-sizes
     :code(lang="html")
       <!-- sm -->
-      <chi-label for="example-3-sm">Label</chi-label>
-      <chi-number-input size="sm" id="example-3-sm"></chi-number-input>
+      <lux-label for="example-3-sm">Label</lux-label>
+      <lux-number-input size="sm" id="example-3-sm"></lux-number-input>
 
       <!-- md -->
-      <chi-label for="example-3-md">Label</chi-label>
-      <chi-number-input size="md" id="example-3-md"></chi-number-input>
+      <lux-label for="example-3-md">Label</lux-label>
+      <lux-number-input size="md" id="example-3-md"></lux-number-input>
 
       <!-- lg -->
-      <chi-label for="example-3-lg">Label</chi-label>
-      <chi-number-input size="lg" id="example-3-lg"></chi-number-input>
+      <lux-label for="example-3-lg">Label</lux-label>
+      <lux-number-input size="lg" id="example-3-lg"></lux-number-input>
 
       <!-- xl -->
-      <chi-label for="example-3-xl">Label</chi-label>
-      <chi-number-input size="xl" id="example-3-xl"></chi-number-input>
-  .chi-tabs-panel#html-sizes
-    .chi-tab__description
+      <lux-label for="example-3-xl">Label</lux-label>
+      <lux-number-input size="xl" id="example-3-xl"></lux-number-input>
+  .lux-tabs-panel#html-sizes
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
       <!-- sm -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-sm">Label</label>
-        <div class="chi-number-input -sm">
-          <input id="input-example-sm" type="number" class="chi-input" value="0" aria-label="Input Label">
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-sm">Label</label>
+        <div class="lux-number-input -sm">
+          <input id="input-example-sm" type="number" class="lux-input" value="0" aria-label="Input Label">
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-sm'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-sm'));</script>
 
       <!-- md -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-md">Label</label>
-        <div class="chi-number-input -md">
-          <input id="input-example-md" type="number" class="chi-input" value="0" aria-label="Input Label">
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-md">Label</label>
+        <div class="lux-number-input -md">
+          <input id="input-example-md" type="number" class="lux-input" value="0" aria-label="Input Label">
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-md'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-md'));</script>
 
       <!-- lg -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-lg">Label</label>
-        <div class="chi-number-input -lg">
-          <input id="input-example-lg" type="number" class="chi-input" value="0" aria-label="Input Label">
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-lg">Label</label>
+        <div class="lux-number-input -lg">
+          <input id="input-example-lg" type="number" class="lux-input" value="0" aria-label="Input Label">
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-lg'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-lg'));</script>
 
       <!-- xl -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-xl">Label</label>
-        <div class="chi-number-input -xl">
-          <input id="input-example-xl" type="number" class="chi-input" value="0" aria-label="Input Label">
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-xl">Label</label>
+        <div class="lux-number-input -xl">
+          <input id="input-example-xl" type="number" class="lux-input" value="0" aria-label="Input Label">
           <button aria-label="Decrease"></button>
           <button aria-label="Increase"></button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-xl'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-xl'));</script>
 
 h2 Expanded version
 h3 Base
 .example.-mb--3
   .-p--3
-    .chi-form__item
-      chi-label(for="example-4") Label
-      chi-number-input(expanded=true)#example-4
+    .lux-form__item
+      lux-label(for="example-4") Label
+      lux-number-input(expanded=true)#example-4
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-expanded
+    ul.lux-tabs#examples-expanded
       li.-active
         a(href=`#webcomponent-expanded`) Web Component
       li
         a(href=`#html-expanded`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-expanded
+  .lux-tabs-panel.-active#webcomponent-expanded
     :code(lang="html")
-      <chi-label for="example-4">Label</chi-label>
-      <chi-number-input expanded id="example-4"></chi-number-input>
-  .chi-tabs-panel#html-expanded
-    .chi-tab__description
+      <lux-label for="example-4">Label</lux-label>
+      <lux-number-input expanded id="example-4"></lux-number-input>
+  .lux-tabs-panel#html-expanded
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-expanded">Label</label>
-        <div class="chi-number-input -expanded">
-          <input id="input-example-expanded" class="chi-input" type="number" value="0" aria-label="Input Label">
-          <button class="chi-button -icon" aria-label="Decrease">
-            <div class="chi-button__content">
-              <i class="chi-icon icon-minus"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-expanded">Label</label>
+        <div class="lux-number-input -expanded">
+          <input id="input-example-expanded" class="lux-input" type="number" value="0" aria-label="Input Label">
+          <button class="lux-button -icon" aria-label="Decrease">
+            <div class="lux-button__content">
+              <i class="lux-icon icon-minus"></i>
             </div>
           </button>
-          <button class="chi-button -icon" aria-label="Increase">
-            <div class="chi-button__content">
-              <i class="chi-icon icon-plus"></i>
+          <button class="lux-button -icon" aria-label="Increase">
+            <div class="lux-button__content">
+              <i class="lux-icon icon-plus"></i>
             </div>
           </button>
         </div>
       </div>
 
-      <script>chi.numberInput(document.getElementById('input-example-expanded'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-expanded'));</script>
 
 h3 Disabled
 .example.-mb--3
   .-p--3
-    .chi-form__item
-      chi-label(for="example-5") Label
-      chi-number-input(expanded=true disabled=true)#example-5
+    .lux-form__item
+      lux-label(for="example-5") Label
+      lux-number-input(expanded=true disabled=true)#example-5
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-expanded-disabled
+    ul.lux-tabs#examples-expanded-disabled
       li.-active
         a(href=`#webcomponent-expanded-disabled`) Web Component
       li
         a(href=`#html-expanded-disabled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-expanded-disabled
+  .lux-tabs-panel.-active#webcomponent-expanded-disabled
     :code(lang="html")
-      <chi-label for="example-5">Label</chi-label>
-      <chi-number-input expanded disabled id="example-5"></chi-number-input>
-  .chi-tabs-panel#html-expanded-disabled
-    .chi-tab__description
+      <lux-label for="example-5">Label</lux-label>
+      <lux-number-input expanded disabled id="example-5"></lux-number-input>
+  .lux-tabs-panel#html-expanded-disabled
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-expanded-disabled">Label</label>
-        <div class="chi-number-input -expanded">
-          <input id="input-example-expanded-disabled" class="chi-input" type="number" value="0" aria-label="Input Label" disabled>
-          <button class="chi-button -icon" aria-label="Decrease">
-            <div class="chi-button__content">
-              <i class="chi-icon icon-minus"></i>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-expanded-disabled">Label</label>
+        <div class="lux-number-input -expanded">
+          <input id="input-example-expanded-disabled" class="lux-input" type="number" value="0" aria-label="Input Label" disabled>
+          <button class="lux-button -icon" aria-label="Decrease">
+            <div class="lux-button__content">
+              <i class="lux-icon icon-minus"></i>
             </div>
           </button>
-          <button class="chi-button -icon" aria-label="Increase">
-            <div class="chi-button__content">
-              <i class="chi-icon icon-plus"></i>
+          <button class="lux-button -icon" aria-label="Increase">
+            <div class="lux-button__content">
+              <i class="lux-icon icon-plus"></i>
             </div>
           </button>
         </div>
       </div>
 
-      <script>chi.numberInput(document.getElementById('input-example-expanded-disabled'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-expanded-disabled'));</script>
 
 h3 Sizes
 p.-text
@@ -248,112 +248,112 @@ p.-text
   |  <code>lg</code>, <code>xl</code>. The default size is <code>md</code>.
 .example.-mb--3
   .-p--3
-    .chi-grid.-no-gutter
+    .lux-grid.-no-gutter
       each size in ['sm', 'md', 'lg', 'xl']
-        .chi-col.-w--12.-w-sm--6.-w-lg--4.-w-xl--3.-my--2.-align--bottom
-          .chi-form__item.-inline.-mr--3
-            chi-label(for=`example-5-${size}`) Label
-            chi-number-input(expanded=true, size=`${size}`, class='-mr--2', id=`example-5-${size}`)
+        .lux-col.-w--12.-w-sm--6.-w-lg--4.-w-xl--3.-my--2.-align--bottom
+          .lux-form__item.-inline.-mr--3
+            lux-label(for=`example-5-${size}`) Label
+            lux-number-input(expanded=true, size=`${size}`, class='-mr--2', id=`example-5-${size}`)
   .example-tabs.-pl--2
-    ul.chi-tabs#examples-expanded-sizes
+    ul.lux-tabs#examples-expanded-sizes
       li.-active
         a(href=`#webcomponent-expanded-sizes`) Web Component
       li
         a(href=`#html-expanded-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-expanded-sizes
+  .lux-tabs-panel.-active#webcomponent-expanded-sizes
     :code(lang="html")
       <!-- sm -->
-      <chi-label for="example-6-sm">Label</chi-label>
-      <chi-number-input expanded size="sm" id="example-6-sm"></chi-number-input>
+      <lux-label for="example-6-sm">Label</lux-label>
+      <lux-number-input expanded size="sm" id="example-6-sm"></lux-number-input>
 
       <!-- md -->
-      <chi-label for="example-6-md">Label</chi-label>
-      <chi-number-input expanded size="md" id="example-6-md"></chi-number-input>
+      <lux-label for="example-6-md">Label</lux-label>
+      <lux-number-input expanded size="md" id="example-6-md"></lux-number-input>
 
       <!-- lg -->
-      <chi-label for="example-6-lg">Label</chi-label>
-      <chi-number-input expanded size="lg" id="example-6-lg"></chi-number-input>
+      <lux-label for="example-6-lg">Label</lux-label>
+      <lux-number-input expanded size="lg" id="example-6-lg"></lux-number-input>
 
       <!-- xl -->
-      <chi-label for="example-6-xl">Label</chi-label>
-      <chi-number-input expanded size="xl" id="example-6-xl"></chi-number-input>
-  .chi-tabs-panel#html-expanded-sizes
-    .chi-tab__description
+      <lux-label for="example-6-xl">Label</lux-label>
+      <lux-number-input expanded size="xl" id="example-6-xl"></lux-number-input>
+  .lux-tabs-panel#html-expanded-sizes
+    .lux-tab__description
       span.-text--grey
         | This HTML Blueprint requires JavaScript.
-        | You may use your own solution, or use Chi's vanilla JavaScript solution,
-        | <a href="../../../getting-started/installation">Chi.js</a>.
+        | You may use your own solution, or use Lux's vanilla JavaScript solution,
+        | <a href="../../../getting-started/installation">Lux.js</a>.
     :code(lang="html")
       <!-- sm -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-expanded-sm">Label</label>
-        <div class="chi-number-input -expanded -sm">
-          <input id="input-example-expanded-sm" class="chi-input" type="number" value="0" aria-label="Input Label">
-          <button class="chi-button -icon" aria-label="Decrease">
-            <div class="chi-button__content"><i class="chi-icon icon-minus"></i></div>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-expanded-sm">Label</label>
+        <div class="lux-number-input -expanded -sm">
+          <input id="input-example-expanded-sm" class="lux-input" type="number" value="0" aria-label="Input Label">
+          <button class="lux-button -icon" aria-label="Decrease">
+            <div class="lux-button__content"><i class="lux-icon icon-minus"></i></div>
           </button>
-          <button class="chi-button -icon" aria-label="Increase">
-            <div class="chi-button__content"><i class="chi-icon icon-plus"></i>
+          <button class="lux-button -icon" aria-label="Increase">
+            <div class="lux-button__content"><i class="lux-icon icon-plus"></i>
           </div>
           </button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-expanded-sm'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-expanded-sm'));</script>
 
       <!-- md -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-expanded-md">Label</label>
-        <div class="chi-number-input -expanded -md">
-          <input id="input-example-expanded-md" class="chi-input" type="number" value="0" aria-label="Input Label">
-          <button class="chi-button -icon" aria-label="Decrease">
-            <div class="chi-button__content"><i class="chi-icon icon-minus"></i></div>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-expanded-md">Label</label>
+        <div class="lux-number-input -expanded -md">
+          <input id="input-example-expanded-md" class="lux-input" type="number" value="0" aria-label="Input Label">
+          <button class="lux-button -icon" aria-label="Decrease">
+            <div class="lux-button__content"><i class="lux-icon icon-minus"></i></div>
           </button>
-          <button class="chi-button -icon" aria-label="Increase">
-            <div class="chi-button__content"><i class="chi-icon icon-plus"></i></div>
+          <button class="lux-button -icon" aria-label="Increase">
+            <div class="lux-button__content"><i class="lux-icon icon-plus"></i></div>
           </button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-expanded-md'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-expanded-md'));</script>
 
       <!-- lg -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-expanded-lg">Label</label>
-        <div class="chi-number-input -expanded -lg">
-          <input id="input-example-expanded-lg" class="chi-input" type="number" value="0" aria-label="Input Label">
-          <button class="chi-button -icon" aria-label="Decrease">
-            <div class="chi-button__content"><i class="chi-icon icon-minus"></i></div>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-expanded-lg">Label</label>
+        <div class="lux-number-input -expanded -lg">
+          <input id="input-example-expanded-lg" class="lux-input" type="number" value="0" aria-label="Input Label">
+          <button class="lux-button -icon" aria-label="Decrease">
+            <div class="lux-button__content"><i class="lux-icon icon-minus"></i></div>
           </button>
-          <button class="chi-button -icon" aria-label="Increase">
-            <div class="chi-button__content"><i class="chi-icon icon-plus"></i></div>
+          <button class="lux-button -icon" aria-label="Increase">
+            <div class="lux-button__content"><i class="lux-icon icon-plus"></i></div>
           </button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-expanded-lg'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-expanded-lg'));</script>
 
       <!-- xl -->
-      <div class="chi-form__item">
-        <label class="chi-label" for="input-example-expanded-xl">Label</label>
-        <div class="chi-number-input -expanded -xl">
-          <input id="input-example-expanded-xl" class="chi-input" type="number" value="0" aria-label="Input Label">
-          <button class="chi-button -icon" aria-label="Decrease">
-            <div class="chi-button__content"><i class="chi-icon icon-minus"></i></div>
+      <div class="lux-form__item">
+        <label class="lux-label" for="input-example-expanded-xl">Label</label>
+        <div class="lux-number-input -expanded -xl">
+          <input id="input-example-expanded-xl" class="lux-input" type="number" value="0" aria-label="Input Label">
+          <button class="lux-button -icon" aria-label="Decrease">
+            <div class="lux-button__content"><i class="lux-icon icon-minus"></i></div>
           </button>
-          <button class="chi-button -icon" aria-label="Increase">
-            <div class="chi-button__content"><i class="chi-icon icon-plus"></i></div>
+          <button class="lux-button -icon" aria-label="Increase">
+            <div class="lux-button__content"><i class="lux-icon icon-plus"></i></div>
           </button>
         </div>
       </div>
-      <script>chi.numberInput(document.getElementById('input-example-expanded-xl'));</script>
+      <script>lux.numberInput(document.getElementById('input-example-expanded-xl'));</script>
 
 script.
     document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.getElementById('examples-default'));
-      chi.tab(document.getElementById('examples-disabled'));
-      chi.tab(document.getElementById('examples-sizes'));
-      chi.tab(document.getElementById('examples-expanded'));
-      chi.tab(document.getElementById('examples-expanded-disabled'));
-      chi.tab(document.getElementById('examples-expanded-sizes'));
+      lux.tab(document.getElementById('examples-default'));
+      lux.tab(document.getElementById('examples-disabled'));
+      lux.tab(document.getElementById('examples-sizes'));
+      lux.tab(document.getElementById('examples-expanded'));
+      lux.tab(document.getElementById('examples-expanded-disabled'));
+      lux.tab(document.getElementById('examples-expanded-sizes'));
     }
   );

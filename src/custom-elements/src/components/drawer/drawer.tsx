@@ -5,7 +5,7 @@ import { ANIMATION_DURATION, CLASSES } from '../../constants/constants';
 import { contains } from '../../utils/utils';
 
 @Component({
-  tag: 'chi-drawer',
+  tag: 'lux-drawer',
   styleUrl: 'drawer.scss',
   scoped: true
 })
@@ -124,19 +124,19 @@ export class Drawer {
   /**
    * Drawer show method has executed, but the showing animation has not started yet
    */
-  @Event({ eventName: 'chiDrawerShow' }) eventShow: EventEmitter;
+  @Event({ eventName: 'luxDrawerShow' }) eventShow: EventEmitter;
   /**
    * Drawer hide method has executed, but the closing animation has not started yet
    */
-  @Event({ eventName: 'chiDrawerHide' }) eventHide: EventEmitter;
+  @Event({ eventName: 'luxDrawerHide' }) eventHide: EventEmitter;
   /**
    * Drawer has been shown to the user and is fully visible. The animation has completed.
    */
-  @Event({ eventName: 'chiDrawerShown' }) eventShown: EventEmitter;
+  @Event({ eventName: 'luxDrawerShown' }) eventShown: EventEmitter;
   /**
    * Drawer has been hidden to the user. The animation has completed.
    */
-  @Event({ eventName: 'chiDrawerHidden' }) eventHidden: EventEmitter;
+  @Event({ eventName: 'luxDrawerHidden' }) eventHidden: EventEmitter;
 
   private _show() {
     if (this.animation && !this.animation.isStopped()) {
@@ -218,7 +218,7 @@ export class Drawer {
   }
 
   private _documentClickHandler = (ev): void => {
-    const drawerElement = this.el.querySelector('.chi-drawer');
+    const drawerElement = this.el.querySelector('.lux-drawer');
     const drawerCloseButton = this.nonClosable ? null : drawerElement.querySelector('button.-close');
     const clickTarget = ev.target as HTMLElement;
 
@@ -253,17 +253,17 @@ export class Drawer {
   }
 
   render() {
-    // TODO: change this into <chi-button/> element.
+    // TODO: change this into <lux-button/> element.
     const xIconProperties = {icon: 'x'};
-    const closeButton = <button class="chi-button -icon -close" onClick={() => this.hide()} aria-label="Close">
-      <div class="chi-button__content">
-        <chi-icon {...xIconProperties}></chi-icon>
+    const closeButton = <button class="lux-button -icon -close" onClick={() => this.hide()} aria-label="Close">
+      <div class="lux-button__content">
+        <lux-icon {...xIconProperties}></lux-icon>
       </div>
     </button>;
 
     const drawer = (
       <div
-        class={`chi-drawer -animated
+        class={`lux-drawer -animated
         ${this.position ? `-${this.position}` : ''}
         ${this._animationClasses}
         ${this.portal ? '-portal' : ''}
@@ -277,19 +277,19 @@ export class Drawer {
             : <slot></slot>
           : !this.nonClosable
             ? [
-              <div class="chi-drawer__header">
-                <span class="chi-drawer__title">{this.drawerTitle}</span>
+              <div class="lux-drawer__header">
+                <span class="lux-drawer__title">{this.drawerTitle}</span>
                 {closeButton}
               </div>,
-              <div class="chi-drawer__content">
+              <div class="lux-drawer__content">
                 <slot></slot>
               </div>
             ]
             : [
-              <div class="chi-drawer__header">
-                <span class="chi-drawer__title">{this.drawerTitle}</span>
+              <div class="lux-drawer__header">
+                <span class="lux-drawer__title">{this.drawerTitle}</span>
               </div>,
-              <div class="chi-drawer__content">
+              <div class="lux-drawer__content">
                 <slot></slot>
               </div>
             ]
@@ -299,11 +299,11 @@ export class Drawer {
 
     if (this.backdrop || this.backdrop === '') {
       return (
-        <div class={`chi-backdrop -animated
+        <div class={`lux-backdrop -animated
           ${this.backdrop === 'inverse' ? '-inverse' : ''}
           ${this._backdropAnimationClasses}
         `}>
-          <div class="chi-backdrop__wrapper">
+          <div class="lux-backdrop__wrapper">
             {drawer}
           </div>
         </div>

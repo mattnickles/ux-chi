@@ -6,7 +6,7 @@ p.-text
   | and object data. You must call this method when you want to remove the component.
 :code(lang="javascript")
   var elem = document.getElementById('dropdown-3');
-  var dropdown = chi.dropdown(elem);
+  var dropdown = lux.dropdown(elem);
   // do stuff
   dropdown.dispose();
 
@@ -15,9 +15,9 @@ p.-text
   | associated to the trigger.
 :code(lang="javascript")
   var elem = document.getElementById('dropdown-4');
-  var dropdown = chi.dropdown(elem);
+  var dropdown = lux.dropdown(elem);
   var elem2 = document.getElementById('dropdown-4');
-  var dropdown2 = chi.dropdown(elem2);
+  var dropdown2 = lux.dropdown(elem2);
   dropdown === dropdown2; // returns true
 
   dropdown.dispose(); // Only have to do it once.

@@ -3,101 +3,101 @@ h2 Examples
 h3 Bubble
 p.-text
   | Bubble alerts are designed for displaying inline messages and notifications within forms, panels, cards, and other content areas.
-  | They are Chi's default Alert type.
+  | They are Lux's default Alert type.
 
 h4 Default
 .example.-mb--3
   .-p--1
-    chi-alert(icon='circle-info').-m--2
+    lux-alert(icon='circle-info').-m--2
       | This is a base alert
     each val, type in {success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
-      chi-alert.-m--2(color=type, icon=val)
+      lux-alert.-m--2(color=type, icon=val)
         =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-default
+    ul.lux-tabs#example-default
       li.-active
         a(href=`#webcomponent`) Web Component
       li
         a(href=`#html`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent
-    .chi-tab__description
-      | To render an alert use the tag <code>chi-alert</code>.
+  .lux-tabs-panel.-active#webcomponent
+    .lux-tab__description
+      | To render an alert use the tag <code>lux-alert</code>.
       | Use the color attribute to define a semantic color that corresponds to the meaning
       | or value state of your alert. Supported colors include <code>success</code>, <code>danger</code>, <code>warning</code>,
       | <code>info</code>, and <code>muted</code>. If no color is defined, alerts will default to the base style which uses the body
       | text color. This is useful for displaying neutral alerts with no specific value state.
     :code(lang="html")
       <!-- Base - No semantic color defined -->
-      <chi-alert icon="circle-info">
+      <lux-alert icon="circle-info">
         This is a base alert
-      </chi-alert>
+      </lux-alert>
       <!-- Success -->
-      <chi-alert color="success" icon="circle-check">
+      <lux-alert color="success" icon="circle-check">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Danger -->
-      <chi-alert color="danger" icon="circle-warning">
+      <lux-alert color="danger" icon="circle-warning">
         This is a danger alert
-      </chi-alert>
+      </lux-alert>
       <!-- Warning -->
-      <chi-alert color="warning" icon="warning">
+      <lux-alert color="warning" icon="warning">
         This is a warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Info -->
-      <chi-alert color="info" icon="circle-info">
+      <lux-alert color="info" icon="circle-info">
         This is an info alert
-      </chi-alert>
+      </lux-alert>
       <!-- Muted -->
-      <chi-alert color="muted" icon="circle-info">
+      <lux-alert color="muted" icon="circle-info">
         This is a muted alert
-      </chi-alert>
-  .chi-tabs-panel#html
-    .chi-tab__description
-      | To render an alert, use the class <code>chi-alert</code>. Apply a semantic color class that corresponds to the meaning
+      </lux-alert>
+  .lux-tabs-panel#html
+    .lux-tab__description
+      | To render an alert, use the class <code>lux-alert</code>. Apply a semantic color class that corresponds to the meaning
       | or value state of your alert. Supported classes include <code>-success</code>, <code>-danger</code>, <code>-warning</code>,
       | <code>-info</code>, and <code>-muted</code>. If no class is defined, alerts will default to the base style which uses the body
       | text color. This is useful for displaying neutral alerts with no specific value state.
     :code(lang="html")
       <!-- Base - No semantic color class defined -->
-      <div class="chi-alert" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a base alert</p>
+      <div class="lux-alert" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a base alert</p>
         </div>
       </div>
       <!-- Success -->
-      <div class="chi-alert -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Danger -->
-      <div class="chi-alert -danger" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a danger alert</p>
+      <div class="lux-alert -danger" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a danger alert</p>
         </div>
       </div>
       <!-- Warning -->
-      <div class="chi-alert -warning" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a warning alert</p>
+      <div class="lux-alert -warning" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a warning alert</p>
         </div>
       </div>
       <!-- Info -->
-      <div class="chi-alert -info" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is an info alert</p>
+      <div class="lux-alert -info" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is an info alert</p>
         </div>
       </div>
       <!-- Muted -->
-      <div class="chi-alert -muted" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a muted alert</p>
+      <div class="lux-alert -muted" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a muted alert</p>
         </div>
       </div>
 
@@ -108,29 +108,29 @@ p.-text
   | Centered alerts do not support titles.
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(color='danger', icon='circle-warning', center)
+    lux-alert.-m--2(color='danger', icon='circle-warning', center)
       | This is a centered danger alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-centered
+    ul.lux-tabs#example-centered
       li.-active
         a(href=`#webcomponent-centered`) Web Component
       li
         a(href=`#html-centered`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-centered
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-centered
+    .lux-tab__description
       | Use the attribute <code>center</code> to center the content of a Bubble Alert.
     :code(lang="html")
-      <chi-alert color="danger" icon="circle-warning" center>
+      <lux-alert color="danger" icon="circle-warning" center>
         This is a centered danger alert
-      </chi-alert>
-  .chi-tabs-panel#html-centered
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-centered
+    .lux-tab__description
       | Apply the class <code>-center</code> to center the content of a Bubble Alert.
     :code(lang="html")
-      <div class="chi-alert -danger -center" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a centered danger alert</p>
+      <div class="lux-alert -danger -center" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a centered danger alert</p>
         </div>
       </div>
 
@@ -139,96 +139,96 @@ p.-text
   | The title will automatically get colored based on the alerts semantic color class.
 .example.-mb--3
   .-p--1
-    chi-alert(icon='circle-info', title="Base").-m--2
+    lux-alert(icon='circle-info', title="Base").-m--2
       | This is a base alert
     each val, type in {success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
-      chi-alert.-m--2(color=type, icon=val, title=type)
+      lux-alert.-m--2(color=type, icon=val, title=type)
         =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-titled
+    ul.lux-tabs#example-titled
       li.-active
         a(href=`#webcomponent-titled`) Web Component
       li
         a(href=`#html-titled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-titled
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-titled
+    .lux-tab__description
       | Use the <code>title=""</code> attribute to display a title above the alert text.
     :code(lang="html")
       <!-- Base - No semantic color defined -->
-      <chi-alert icon="circle-info" title="Base">
+      <lux-alert icon="circle-info" title="Base">
         This is a base alert
-      </chi-alert>
+      </lux-alert>
       <!-- Success -->
-      <chi-alert color="success" icon="circle-check" title="Success">
+      <lux-alert color="success" icon="circle-check" title="Success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Danger -->
-      <chi-alert color="danger" icon="circle-warning" title="Danger">
+      <lux-alert color="danger" icon="circle-warning" title="Danger">
         This is a danger alert
-      </chi-alert>
+      </lux-alert>
       <!-- Warning -->
-      <chi-alert color="warning" icon="warning" title="Warning">
+      <lux-alert color="warning" icon="warning" title="Warning">
         This is a warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Info -->
-      <chi-alert color="info" icon="circle-info" title="Info">
+      <lux-alert color="info" icon="circle-info" title="Info">
         This is an info alert
-      </chi-alert>
+      </lux-alert>
       <!-- Muted -->
-      <chi-alert color="muted" icon="circle-info" title="Muted">
+      <lux-alert color="muted" icon="circle-info" title="Muted">
         This is a muted alert
-      </chi-alert>
-  .chi-tabs-panel#html-titled
-    .chi-tab__description
-      | Use <code>chi-alert__title</code> to add a title to an Alert.
+      </lux-alert>
+  .lux-tabs-panel#html-titled
+    .lux-tab__description
+      | Use <code>lux-alert__title</code> to add a title to an Alert.
       | To override the title color, apply a text color utility class.
     :code(lang="html")
       <!-- Base - No semantic color class defined -->
-      <div class="chi-alert" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Base</p>
-          <p class="chi-alert__text">This is a base alert</p>
+      <div class="lux-alert" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Base</p>
+          <p class="lux-alert__text">This is a base alert</p>
         </div>
       </div>
       <!-- Success -->
-      <div class="chi-alert -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Danger -->
-      <div class="chi-alert -danger" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Danger</p>
-          <p class="chi-alert__text">This is a danger alert</p>
+      <div class="lux-alert -danger" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Danger</p>
+          <p class="lux-alert__text">This is a danger alert</p>
         </div>
       </div>
       <!-- Warning -->
-      <div class="chi-alert -warning" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a warning alert</p>
+      <div class="lux-alert -warning" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a warning alert</p>
         </div>
       </div>
       <!-- Info -->
-      <div class="chi-alert -info" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Info</p>
-          <p class="chi-alert__text">This is an info alert</p>
+      <div class="lux-alert -info" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Info</p>
+          <p class="lux-alert__text">This is an info alert</p>
         </div>
       </div>
       <!-- Muted -->
-      <div class="chi-alert -muted" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Muted</p>
-          <p class="chi-alert__text">This is a muted alert</p>
+      <div class="lux-alert -muted" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Muted</p>
+          <p class="lux-alert__text">This is a muted alert</p>
         </div>
       </div>
 
@@ -237,101 +237,101 @@ h4 Sizes
 .example.-mb--3
   .-p--1
     p.-text--bold.-ml--2 sm
-    chi-alert.-m--2(color='success', icon='circle-check', size='sm')
+    lux-alert.-m--2(color='success', icon='circle-check', size='sm')
       | This is a small success alert
-    chi-alert.-m--2(color='success', icon='circle-check', size='sm', title="Success")
+    lux-alert.-m--2(color='success', icon='circle-check', size='sm', title="Success")
       | This is a small success alert
     p.-text--bold.-ml--2 md (default)
-    chi-alert.-m--2(color='success', icon='circle-check')
+    lux-alert.-m--2(color='success', icon='circle-check')
       | This is a success alert
-    chi-alert.-m--2(color='success', icon='circle-check', title="Success")
+    lux-alert.-m--2(color='success', icon='circle-check', title="Success")
       | This is a success alert
     p.-text--bold.-ml--2 lg
-    chi-alert.-m--2(color='success', icon='circle-check', size='lg')
+    lux-alert.-m--2(color='success', icon='circle-check', size='lg')
       | This is a large success alert
-    chi-alert.-m--2(color='success', icon='circle-check', size='lg', title="Success")
+    lux-alert.-m--2(color='success', icon='circle-check', size='lg', title="Success")
       | This is a large success alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-sizes
+    ul.lux-tabs#example-sizes
       li.-active
         a(href=`#webcomponent-sizes`) Web Component
       li
         a(href=`#html-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-sizes
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-sizes
+    .lux-tab__description
       | Use the <code>size=""</code> attribute to customize the size of an alert. Supported sizes are <code>sm</code>, <code>md</code>, and <code>lg</code>.
     :code(lang="html")
       <!-- Small -->
-      <chi-alert color="success" icon="circle-check" size="sm">
+      <lux-alert color="success" icon="circle-check" size="sm">
         This is a small success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Small Titled -->
-      <chi-alert color="success" icon="circle-check" size="sm" title="Success">
+      <lux-alert color="success" icon="circle-check" size="sm" title="Success">
         This is a small success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Medium -->
-      <chi-alert color="success" icon="circle-check">
+      <lux-alert color="success" icon="circle-check">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Medium Titled -->
-      <chi-alert color="success" icon="circle-check" title="Success">
+      <lux-alert color="success" icon="circle-check" title="Success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large -->
-      <chi-alert color="success" icon="circle-check" size="lg">
+      <lux-alert color="success" icon="circle-check" size="lg">
         This is a large success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large Titled -->
-      <chi-alert color="success" icon="circle-check" size="lg" title="Success">
+      <lux-alert color="success" icon="circle-check" size="lg" title="Success">
         This is a large success alert
-      </chi-alert>
-  .chi-tabs-panel#html-sizes
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-sizes
+    .lux-tab__description
       | Use size classes to customize the size of an alert. Supported size classes are <code>-sm</code>, <code>-md</code>, and <code>-lg</code>.
     :code(lang="html")
       <!-- Small -->
-      <div class="chi-alert -success -sm" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a small success alert</p>
+      <div class="lux-alert -success -sm" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a small success alert</p>
         </div>
       </div>
       <!-- Small Titled -->
-      <div class="chi-alert -success -sm" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a small success alert</p>
+      <div class="lux-alert -success -sm" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a small success alert</p>
         </div>
       </div>
       <!-- Medium -->
-      <div class="chi-alert -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Medium Titled -->
-      <div class="chi-alert -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Large -->
-      <div class="chi-alert -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a large success alert</p>
+      <div class="lux-alert -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a large success alert</p>
         </div>
       </div>
       <!-- Large Titled -->
-      <div class="chi-alert -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a large success alert</p>
+      <div class="lux-alert -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a large success alert</p>
         </div>
       </div>
 
@@ -340,76 +340,76 @@ p.-text
   | To allow users to dismiss an alert.
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(color='warning', icon='warning', closable)
+    lux-alert.-m--2(color='warning', icon='warning', closable)
       | This is a closable warning alert
-    chi-alert.-m--2(color='warning', icon='warning', title="Warning", closable)
+    lux-alert.-m--2(color='warning', icon='warning', title="Warning", closable)
       | This is a closable warning alert
-    chi-alert.-m--2(color='warning', icon='warning', size='lg', title="Warning", closable)
+    lux-alert.-m--2(color='warning', icon='warning', size='lg', title="Warning", closable)
       | This is a large closable warning alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-closable
+    ul.lux-tabs#example-closable
       li.-active
         a(href=`#webcomponent-closable`) Web Component
       li
         a(href=`#html-closable`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-closable
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-closable
+    .lux-tab__description
       | Use attribute <code>closable</code> to render a close button that allows users to dismiss an alert.
       br
       | Use attribute <code>mutable</code> to remove alert once close buttons is clicked.
     :code(lang="html")
       <!-- closable -->
-      <chi-alert color="warning" icon="warning" closable>
+      <lux-alert color="warning" icon="warning" closable>
         This is a closable warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- closable Titled -->
-      <chi-alert color="warning" icon="warning" title="Warning" closable>
+      <lux-alert color="warning" icon="warning" title="Warning" closable>
         This is a closable warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large closable Titled -->
-      <chi-alert color="warning" icon="warning" size="lg" title="Warning" closable>
+      <lux-alert color="warning" icon="warning" size="lg" title="Warning" closable>
         This is a large closable warning alert
-      </chi-alert>
-  .chi-tabs-panel#html-closable
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-closable
+    .lux-tab__description
       | Use the class <code>-close</code>
-      | and insert a close button <code>chi-alert__close-button</code>.
+      | and insert a close button <code>lux-alert__close-button</code>.
     :code(lang="html")
       <!-- Closable -->
-      <div class="chi-alert -warning -close" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a closable warning alert</p>
+      <div class="lux-alert -warning -close" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a closable warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- closable Titled -->
-      <div class="chi-alert -warning -close" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a closable warning alert</p>
+      <div class="lux-alert -warning -close" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a closable warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Large closable Titled -->
-      <div class="chi-alert -warning -close -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a large closable warning alert</p>
+      <div class="lux-alert -warning -close -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a large closable warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
@@ -417,49 +417,49 @@ p.-text
 h4 Actionable
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(color='success', icon='circle-check', size='lg', title="Success", closable)
+    lux-alert.-m--2(color='success', icon='circle-check', size='lg', title="Success", closable)
       | This is a large closable success alert
-      chi-button(slot="chi-alert__actions", size='lg') Secondary action
-      chi-button(slot="chi-alert__actions", color='primary', size='lg') Primary action
+      lux-button(slot="lux-alert__actions", size='lg') Secondary action
+      lux-button(slot="lux-alert__actions", color='primary', size='lg') Primary action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-actionable
+    ul.lux-tabs#example-actionable
       li.-active
         a(href=`#webcomponent-actionable`) Web Component
       li
         a(href=`#html-actionable`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-actionable
-    .chi-tab__description
-      | Add buttons to an alert by defining <code>slot="chi-alert__actions"</code> on each <code>chi-button</code>.
+  .lux-tabs-panel.-active#webcomponent-actionable
+    .lux-tab__description
+      | Add buttons to an alert by defining <code>slot="lux-alert__actions"</code> on each <code>lux-button</code>.
     :code(lang="html")
-      <chi-alert color="success" icon="circle-check" size="lg" title="Success" closable>
+      <lux-alert color="success" icon="circle-check" size="lg" title="Success" closable>
         This is a large closable success alert
-        <chi-button slot="chi-alert__actions" size="lg">Secondary action</chi-button>
-        <chi-button slot="chi-alert__actions" color="primary" size="lg">Primary action</chi-button>
-      </chi-alert>
-  .chi-tabs-panel#html-actionable
-    .chi-tab__description
-      | While <code>chi-alert__actions</code> can be added to any Alert, alert actions are best suited for default or Titled alerts with the size class <code>-lg</code>.
+        <lux-button slot="lux-alert__actions" size="lg">Secondary action</lux-button>
+        <lux-button slot="lux-alert__actions" color="primary" size="lg">Primary action</lux-button>
+      </lux-alert>
+  .lux-tabs-panel#html-actionable
+    .lux-tab__description
+      | While <code>lux-alert__actions</code> can be added to any Alert, alert actions are best suited for default or Titled alerts with the size class <code>-lg</code>.
       br
-      | Large Alerts have extra <code>chi-alert</code> padding, a larger <code>chi-alert__icon</code>, and a larger <code>chi-alert__close-button</code>.
+      | Large Alerts have extra <code>lux-alert</code> padding, a larger <code>lux-alert__icon</code>, and a larger <code>lux-alert__close-button</code>.
     :code(lang="html")
-      <div class="chi-alert -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a large closable success alert</p>
-          <div class="chi-alert__actions">
-            <button class="chi-button -lg">Secondary action</button>
-            <button class="chi-button -lg -primary">Primary action</button>
+      <div class="lux-alert -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a large closable success alert</p>
+          <div class="lux-alert__actions">
+            <button class="lux-button -lg">Secondary action</button>
+            <button class="lux-button -lg -primary">Primary action</button>
           </div>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
 
-div.chi-divider.-my--6.-bt--2
+div.lux-divider.-my--6.-bt--2
 
 h3 Banner
 p.-text
@@ -469,85 +469,85 @@ p.-text
 h4 Default
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(type='banner', icon='circle-info')
+    lux-alert.-m--2(type='banner', icon='circle-info')
       | This is a base alert
     each val, type in {success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
-      chi-alert.-m--2(color=type, icon=val, type='banner')
+      lux-alert.-m--2(color=type, icon=val, type='banner')
         =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-banner-default
+    ul.lux-tabs#example-banner-default
       li.-active
         a(href=`#webcomponent-banner-default`) Web Component
       li
         a(href=`#html-banner-default`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-banner-default
+  .lux-tabs-panel.-active#webcomponent-banner-default
     :code(lang="html")
       <!-- Base - No semantic color defined -->
-      <chi-alert type="banner" icon="circle-info">
+      <lux-alert type="banner" icon="circle-info">
         This is a base alert
-      </chi-alert>
+      </lux-alert>
       <!-- Success -->
-      <chi-alert type="banner" icon="circle-check" color="success">
+      <lux-alert type="banner" icon="circle-check" color="success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Danger -->
-      <chi-alert type="banner" icon="circle-warning" color="danger">
+      <lux-alert type="banner" icon="circle-warning" color="danger">
         This is a danger alert
-      </chi-alert>
+      </lux-alert>
       <!-- Warning -->
-      <chi-alert type="banner" icon="warning" color="warning">
+      <lux-alert type="banner" icon="warning" color="warning">
         This is a warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Info -->
-      <chi-alert type="banner" icon="circle-info" color="info">
+      <lux-alert type="banner" icon="circle-info" color="info">
         This is an info alert
-      </chi-alert>
+      </lux-alert>
       <!-- Muted -->
-      <chi-alert type="banner" icon="circle-info" color="muted">
+      <lux-alert type="banner" icon="circle-info" color="muted">
         This is a muted alert
-      </chi-alert>
-  .chi-tabs-panel#html-banner-default
+      </lux-alert>
+  .lux-tabs-panel#html-banner-default
     :code(lang="html")
       <!-- Base - No semantic color class defined -->
-      <div class="chi-alert -banner" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a base alert</p>
+      <div class="lux-alert -banner" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a base alert</p>
         </div>
       </div>
       <!-- Success -->
-      <div class="chi-alert -banner -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -banner -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Danger -->
-      <div class="chi-alert -banner -danger" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a danger alert</p>
+      <div class="lux-alert -banner -danger" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a danger alert</p>
         </div>
       </div>
       <!-- Warning -->
-      <div class="chi-alert -banner -warning" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a warning alert</p>
+      <div class="lux-alert -banner -warning" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a warning alert</p>
         </div>
       </div>
       <!-- Info -->
-      <div class="chi-alert -banner -info" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is an info alert</p>
+      <div class="lux-alert -banner -info" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is an info alert</p>
         </div>
       </div>
       <!-- Muted -->
-      <div class="chi-alert -banner -muted" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a muted alert</p>
+      <div class="lux-alert -banner -muted" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a muted alert</p>
         </div>
       </div>
 
@@ -557,29 +557,29 @@ p.-text
   | Centered Banner alerts should only be used to render brief messages. Centered alerts do not support titles.
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(type='banner', icon='circle-warning', color='danger', center)
+    lux-alert.-m--2(type='banner', icon='circle-warning', color='danger', center)
       | This is a centered danger alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-banner-centered
+    ul.lux-tabs#example-banner-centered
       li.-active
         a(href=`#webcomponent-banner-centered`) Web Component
       li
         a(href=`#html-banner-centered`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-banner-centered
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-banner-centered
+    .lux-tab__description
       | Use the attribute <code>center</code> to center the content of a Banner Alert.
     :code(lang="html")
-      <chi-alert type="banner" icon="circle-warning" color="danger" center>
+      <lux-alert type="banner" icon="circle-warning" color="danger" center>
         This is a centered danger alert
-      </chi-alert>
-  .chi-tabs-panel#html-banner-centered
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-banner-centered
+    .lux-tab__description
       | Apply the class <code>-center</code> to center the content of a Banner Alert.
     :code(lang="html")
-      <div class="chi-alert -banner -danger -center" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a centered danger alert</p>
+      <div class="lux-alert -banner -danger -center" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a centered danger alert</p>
         </div>
       </div>
 
@@ -589,95 +589,95 @@ p.-text
   | To override the title color, apply a text color utility class.
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(type='banner', icon='circle-info', title="Base")
+    lux-alert.-m--2(type='banner', icon='circle-info', title="Base")
       | This is a base alert
     each val, type in {success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
-      chi-alert.-m--2(color=type, type='banner', icon=val, title=type)
+      lux-alert.-m--2(color=type, type='banner', icon=val, title=type)
         =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-banner-titled
+    ul.lux-tabs#example-banner-titled
       li.-active
         a(href=`#webcomponent-banner-titled`) Web Component
       li
         a(href=`#html-banner-titled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-banner-titled
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-banner-titled
+    .lux-tab__description
       | Use <code>title=""</code> attribute to add a title to an Alert.
     :code(lang="html")
       <!-- Base - No semantic color defined -->
-      <chi-alert type="banner" icon="circle-info" title="Base">
+      <lux-alert type="banner" icon="circle-info" title="Base">
         This is a base alert
-      </chi-alert>
+      </lux-alert>
       <!-- Success -->
-      <chi-alert type="banner" icon="circle-check" color="success" title="Success">
+      <lux-alert type="banner" icon="circle-check" color="success" title="Success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Danger -->
-      <chi-alert type="banner" icon="circle-warning" color="danger" title="Danger">
+      <lux-alert type="banner" icon="circle-warning" color="danger" title="Danger">
         This is a danger alert
-      </chi-alert>
+      </lux-alert>
       <!-- Warning -->
-      <chi-alert type="banner" icon="warning" color="warning" title="Warning">
+      <lux-alert type="banner" icon="warning" color="warning" title="Warning">
         This is a warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Info -->
-      <chi-alert type="banner" icon="circle-info" color="info" title="Info">
+      <lux-alert type="banner" icon="circle-info" color="info" title="Info">
         This is an info alert
-      </chi-alert>
+      </lux-alert>
       <!-- Muted -->
-      <chi-alert type="banner" icon="circle-info" color="muted" title="Muted">
+      <lux-alert type="banner" icon="circle-info" color="muted" title="Muted">
         This is a muted alert
-      </chi-alert>
-  .chi-tabs-panel#html-banner-titled
-    .chi-tab__description
-      | Use <code>chi-alert__title</code> class to add a title to an Alert.
+      </lux-alert>
+  .lux-tabs-panel#html-banner-titled
+    .lux-tab__description
+      | Use <code>lux-alert__title</code> class to add a title to an Alert.
     :code(lang="html")
       <!-- Base - No semantic color class defined -->
-      <div class="chi-alert -banner" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Base</p>
-          <p class="chi-alert__text">This is a base alert</p>
+      <div class="lux-alert -banner" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Base</p>
+          <p class="lux-alert__text">This is a base alert</p>
         </div>
       </div>
       <!-- Success -->
-      <div class="chi-alert -banner -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -banner -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Danger -->
-      <div class="chi-alert -banner -danger" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Danger</p>
-          <p class="chi-alert__text">This is a danger alert</p>
+      <div class="lux-alert -banner -danger" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Danger</p>
+          <p class="lux-alert__text">This is a danger alert</p>
         </div>
       </div>
       <!-- Warning -->
-      <div class="chi-alert -banner -warning" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a warning alert</p>
+      <div class="lux-alert -banner -warning" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a warning alert</p>
         </div>
       </div>
       <!-- Info -->
-      <div class="chi-alert -banner -info" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Info</p>
-          <p class="chi-alert__text">This is an info alert</p>
+      <div class="lux-alert -banner -info" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Info</p>
+          <p class="lux-alert__text">This is an info alert</p>
         </div>
       </div>
       <!-- Muted -->
-      <div class="chi-alert -banner -muted" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Muted</p>
-          <p class="chi-alert__text">This is a muted alert</p>
+      <div class="lux-alert -banner -muted" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Muted</p>
+          <p class="lux-alert__text">This is a muted alert</p>
         </div>
       </div>
 
@@ -685,175 +685,175 @@ h4 Sizes
 .example.-mb--3
   .-p--1
     p.-text--bold.-ml--2 sm
-    chi-alert.-m--2(type='banner', icon='circle-check', color='success', size='sm')
+    lux-alert.-m--2(type='banner', icon='circle-check', color='success', size='sm')
       | This is a small success alert
-    chi-alert.-m--2(type='banner', icon='circle-check', color='success', size='sm', title="Success")
+    lux-alert.-m--2(type='banner', icon='circle-check', color='success', size='sm', title="Success")
       | This is a small success alert
     p.-text--bold.-ml--2 md (default)
-    chi-alert.-m--2(type='banner', icon='circle-check', color='success')
+    lux-alert.-m--2(type='banner', icon='circle-check', color='success')
       | This is a success alert
-    chi-alert.-m--2(type='banner', icon='circle-check', color='success', title="Success")
+    lux-alert.-m--2(type='banner', icon='circle-check', color='success', title="Success")
       | This is a success alert
     p.-text--bold.-ml--2 lg
-    chi-alert.-m--2(type='banner', icon='circle-check', color='success', size='lg')
+    lux-alert.-m--2(type='banner', icon='circle-check', color='success', size='lg')
       | This is a large success alert
-    chi-alert.-m--2(type='banner', icon='circle-check', color='success', size='lg', title='Success')
+    lux-alert.-m--2(type='banner', icon='circle-check', color='success', size='lg', title='Success')
       | This is a large success alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-banner-sizes
+    ul.lux-tabs#example-banner-sizes
       li.-active
         a(href=`#webcomponent-banner-sizes`) Web Component
       li
         a(href=`#html-banner-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-banner-sizes
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-banner-sizes
+    .lux-tab__description
       | Use the <code>size=""</code> attribute to customize the size of an alert. Supported sizes are <code>sm</code>, <code>md</code>, and <code>lg</code>.
     :code(lang="html")
       <!-- Small -->
-      <chi-alert type="banner" color="success" icon="circle-check" size="sm">
+      <lux-alert type="banner" color="success" icon="circle-check" size="sm">
         This is a small success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Small Titled -->
-      <chi-alert type="banner" color="success" icon="circle-check" size="sm" title="Success">
+      <lux-alert type="banner" color="success" icon="circle-check" size="sm" title="Success">
         This is a small success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Medium -->
-      <chi-alert type="banner" color="success" icon="circle-check">
+      <lux-alert type="banner" color="success" icon="circle-check">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Medium Titled -->
-      <chi-alert type="banner" color="success" icon="circle-check" title="Success">
+      <lux-alert type="banner" color="success" icon="circle-check" title="Success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large -->
-      <chi-alert type="banner" color="success" icon="circle-check" size="lg">
+      <lux-alert type="banner" color="success" icon="circle-check" size="lg">
         This is a large success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large Titled -->
-      <chi-alert type="banner" color="success" icon="circle-check" size="lg" title="Success">
+      <lux-alert type="banner" color="success" icon="circle-check" size="lg" title="Success">
         This is a large success alert
-      </chi-alert>
-  .chi-tabs-panel#html-banner-sizes
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-banner-sizes
+    .lux-tab__description
       | Use size classes to customize the size of an alert. Supported size classes are <code>-sm</code>, <code>-md</code>, and <code>-lg</code>.
     :code(lang="html")
       <!-- Small -->
-      <div class="chi-alert -banner -success -sm" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a small success alert</p>
+      <div class="lux-alert -banner -success -sm" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a small success alert</p>
         </div>
       </div>
       <!-- Small Titled -->
-      <div class="chi-alert -banner -success -sm" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a small success alert</p>
+      <div class="lux-alert -banner -success -sm" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a small success alert</p>
         </div>
       </div>
       <!-- Medium -->
-      <div class="chi-alert -banner -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -banner -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Medium Titled -->
-      <div class="chi-alert -banner -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -banner -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
       </div>
       <!-- Large -->
-      <div class="chi-alert -banner -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a large success alert</p>
+      <div class="lux-alert -banner -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a large success alert</p>
         </div>
       </div>
       <!-- Large Titled -->
-      <div class="chi-alert -banner -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a large success alert</p>
+      <div class="lux-alert -banner -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a large success alert</p>
         </div>
       </div>
 
 h4 Closable
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(type='banner', icon='warning', color='warning', closable)
+    lux-alert.-m--2(type='banner', icon='warning', color='warning', closable)
       | This is a closable warning alert
-    chi-alert.-m--2(type='banner', color='warning', icon='warning', title="Warning", closable)
+    lux-alert.-m--2(type='banner', color='warning', icon='warning', title="Warning", closable)
       | This is a closable warning alert
-    chi-alert.-m--2(type='banner', color='warning', icon='warning', size='lg', title="Warning", closable)
+    lux-alert.-m--2(type='banner', color='warning', icon='warning', size='lg', title="Warning", closable)
       | This is a large closable warning alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-banner-closable
+    ul.lux-tabs#example-banner-closable
       li.-active
         a(href=`#webcomponent-banner-closable`) Web Component
       li
         a(href=`#html-banner-closable`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-banner-closable
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-banner-closable
+    .lux-tab__description
       | Use the <code>closable</code> attribute to render a close button that allows users to dismiss an alert.
     :code(lang="html")
       <!-- closable -->
-      <chi-alert type="banner" color="warning" icon="warning" closable>
+      <lux-alert type="banner" color="warning" icon="warning" closable>
         This is a closable warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- closable Titled -->
-      <chi-alert type="banner" color="warning" icon="warning" title="Warning" closable>
+      <lux-alert type="banner" color="warning" icon="warning" title="Warning" closable>
         This is a closable warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large closable Titled -->
-      <chi-alert type="banner" color="warning" icon="warning" size="lg" title="Warning" closable>
+      <lux-alert type="banner" color="warning" icon="warning" size="lg" title="Warning" closable>
         This is a large closable warning alert
-      </chi-alert>
-  .chi-tabs-panel#html-banner-closable
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-banner-closable
+    .lux-tab__description
       | To allow users to dismiss an alert, use the class <code>-close</code>
-      | and insert a dismiss button <code>chi-alert__close-button</code>.
+      | and insert a dismiss button <code>lux-alert__close-button</code>.
     :code(lang="html")
       <!-- Closable Base -->
-      <div class="chi-alert -banner -warning -close" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a base closable warning alert</p>
+      <div class="lux-alert -banner -warning -close" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a base closable warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Closable Titled -->
-      <div class="chi-alert -banner -warning -close" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a closable warning alert</p>
+      <div class="lux-alert -banner -warning -close" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a closable warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Large Closable Titled -->
-      <div class="chi-alert -banner -warning -close -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a closable warning alert</p>
+      <div class="lux-alert -banner -warning -close -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a closable warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
@@ -861,49 +861,49 @@ h4 Closable
 h4 Actionable
 .example.-mb--3
   .-p--1.-bg--grey-20
-    chi-alert.-m--2(type='banner', icon='circle-info', size='lg', title="Base", closable)
+    lux-alert.-m--2(type='banner', icon='circle-info', size='lg', title="Base", closable)
       | This is a large closable alert
-      chi-button(slot="chi-alert__actions", size='lg') Secondary action
-      chi-button(slot="chi-alert__actions", color='primary', size='lg') Primary action
+      lux-button(slot="lux-alert__actions", size='lg') Secondary action
+      lux-button(slot="lux-alert__actions", color='primary', size='lg') Primary action
   .example-tabs.-pl--2
-    ul.chi-tabs#example-banner-actionable
+    ul.lux-tabs#example-banner-actionable
       li.-active
         a(href=`#webcomponent-banner-actionable`) Web Component
       li
         a(href=`#html-banner-actionable`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-banner-actionable
-    .chi-tab__description
-      | Add buttons to an alert by defining <code>slot="chi-alert__actions"</code> on each <code>chi-button</code>.
+  .lux-tabs-panel.-active#webcomponent-banner-actionable
+    .lux-tab__description
+      | Add buttons to an alert by defining <code>slot="lux-alert__actions"</code> on each <code>lux-button</code>.
     :code(lang="html")
-      <chi-alert type="banner" icon="circle-info" size="lg" title="Base" closable>
+      <lux-alert type="banner" icon="circle-info" size="lg" title="Base" closable>
         This is a large closable alert
-        <chi-button slot="chi-alert__actions" size="lg">Secondary action</chi-button>
-        <chi-button slot="chi-alert__actions" color="primary" size="lg">Primary action</chi-button>
-      </chi-alert>
-  .chi-tabs-panel#html-banner-actionable
-    .chi-tab__description
-      | While <code>chi-alert__actions</code> can be added to any Alert, alert actions are best suited for default or Titled alerts with the size class <code>-lg</code>.
+        <lux-button slot="lux-alert__actions" size="lg">Secondary action</lux-button>
+        <lux-button slot="lux-alert__actions" color="primary" size="lg">Primary action</lux-button>
+      </lux-alert>
+  .lux-tabs-panel#html-banner-actionable
+    .lux-tab__description
+      | While <code>lux-alert__actions</code> can be added to any Alert, alert actions are best suited for default or Titled alerts with the size class <code>-lg</code>.
       br
-      | Large Alerts have extra <code>chi-alert</code> padding, a larger <code>chi-alert__icon</code>, and a larger <code>chi-alert__close-button</code>.
+      | Large Alerts have extra <code>lux-alert</code> padding, a larger <code>lux-alert__icon</code>, and a larger <code>lux-alert__close-button</code>.
     :code(lang="html")
-      <div class="chi-alert -banner -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Base</p>
-          <p class="chi-alert__text">This is a large closable alert</p>
-          <div class="chi-alert__actions">
-            <button class="chi-button -lg -dark -outline">Secondary action</button>
-            <button class="chi-button -lg -primary">Primary action</button>
+      <div class="lux-alert -banner -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Base</p>
+          <p class="lux-alert__text">This is a large closable alert</p>
+          <div class="lux-alert__actions">
+            <button class="lux-button -lg -dark -outline">Secondary action</button>
+            <button class="lux-button -lg -primary">Primary action</button>
           </div>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
 
-div.chi-divider.-my--6.-bt--2
+div.lux-divider.-my--6.-bt--2
 
 h3 Toast
 p.-text
@@ -911,118 +911,118 @@ p.-text
 h4 Default
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(type='toast', icon='circle-info')
+    lux-alert.-m--2(type='toast', icon='circle-info')
       | This is a base alert
     each val, type in {success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
-      chi-alert.-m--2(type='toast', icon=val, color=type)
+      lux-alert.-m--2(type='toast', icon=val, color=type)
         =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-toast-default
+    ul.lux-tabs#example-toast-default
       li.-active
         a(href=`#webcomponent-toast-default`) Web Component
       li
         a(href=`#html-toast-default`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-toast-default
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-toast-default
+    .lux-tab__description
       | To use a toast alert, set the <code>type</code> attribute to <code>toast</code>.
     :code(lang="html")
       <!-- Base - No semantic color defined -->
-      <chi-alert type="toast" icon="circle-info">
+      <lux-alert type="toast" icon="circle-info">
         This is a base alert
-      </chi-alert>
+      </lux-alert>
       <!-- Success -->
-      <chi-alert type="toast" color="success" icon="circle-check">
+      <lux-alert type="toast" color="success" icon="circle-check">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Danger -->
-      <chi-alert type="toast" color="danger" icon="circle-warning">
+      <lux-alert type="toast" color="danger" icon="circle-warning">
         This is a danger alert
-      </chi-alert>
+      </lux-alert>
       <!-- Warning -->
-      <chi-alert type="toast" color="warning" icon="warning">
+      <lux-alert type="toast" color="warning" icon="warning">
         This is a warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Info -->
-      <chi-alert type="toast" color="info" icon="circle-info">
+      <lux-alert type="toast" color="info" icon="circle-info">
         This is an info alert
-      </chi-alert>
+      </lux-alert>
       <!-- Muted -->
-      <chi-alert type="toast" color="muted" icon="circle-info">
+      <lux-alert type="toast" color="muted" icon="circle-info">
         This is a muted alert
-      </chi-alert>
-  .chi-tabs-panel#html-toast-default
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-toast-default
+    .lux-tab__description
       | To use a toast alert, apply the class <code>-toast</code>.
     :code(lang="html")
       <!-- Base - No semantic color class defined -->
-      <div class="chi-alert -toast" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a base alert</p>
+      <div class="lux-alert -toast" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a base alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Success -->
-      <div class="chi-alert -toast -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -toast -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Danger -->
-      <div class="chi-alert -toast -danger" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a danger alert</p>
+      <div class="lux-alert -toast -danger" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a danger alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Warning -->
-      <div class="chi-alert -toast -warning" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a warning alert</p>
+      <div class="lux-alert -toast -warning" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Info -->
-      <div class="chi-alert -toast -info" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is an info alert</p>
+      <div class="lux-alert -toast -info" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is an info alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Muted -->
-      <div class="chi-alert -toast -muted" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a muted alert</p>
+      <div class="lux-alert -toast -muted" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a muted alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
@@ -1030,120 +1030,120 @@ h4 Default
 h4 Titled
 .example.-mb--3
   .-p--1
-    chi-alert.-m--2(type='toast', icon='circle-info', title="Base")
+    lux-alert.-m--2(type='toast', icon='circle-info', title="Base")
       | This is a base alert
     each val, type in {success:'circle-check', danger:'circle-warning', warning:'warning', info:'circle-info', muted:'circle-info'}
-      chi-alert.-m--2(type='toast', color=type, icon=val, title=type)
+      lux-alert.-m--2(type='toast', color=type, icon=val, title=type)
         =`This is ${type === 'info' ? 'an' : 'a'} ${type} alert`
   .example-tabs.-pl--2
-    ul.chi-tabs#example-toast-titled
+    ul.lux-tabs#example-toast-titled
       li.-active
         a(href=`#webcomponent-toast-titled`) Web Component
       li
         a(href=`#html-toast-titled`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-toast-titled
+  .lux-tabs-panel.-active#webcomponent-toast-titled
     :code(lang="html")
       <!-- Base - No semantic color defined -->
-      <chi-alert type="toast" icon="circle-info" title="Base">
+      <lux-alert type="toast" icon="circle-info" title="Base">
         This is a base alert
-      </chi-alert>
+      </lux-alert>
       <!-- Success -->
-      <chi-alert type="toast" icon="circle-check" color="success" title="Success">
+      <lux-alert type="toast" icon="circle-check" color="success" title="Success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Danger -->
-      <chi-alert type="toast" color="danger" icon="circle-warning" title="Danger">
+      <lux-alert type="toast" color="danger" icon="circle-warning" title="Danger">
         This is a danger alert
-      </chi-alert>
+      </lux-alert>
       <!-- Warning -->
-      <chi-alert type="toast" color="warning" icon="warning" title="Warning">
+      <lux-alert type="toast" color="warning" icon="warning" title="Warning">
         This is a warning alert
-      </chi-alert>
+      </lux-alert>
       <!-- Info -->
-      <chi-alert type="toast" color="info" icon="circle-info" title="Info">
+      <lux-alert type="toast" color="info" icon="circle-info" title="Info">
         This is an info alert
-      </chi-alert>
+      </lux-alert>
       <!-- Muted -->
-      <chi-alert type="toast" color="muted" icon="circle-info" title="Muted">
+      <lux-alert type="toast" color="muted" icon="circle-info" title="Muted">
         This is a muted alert
-      </chi-alert>
-  .chi-tabs-panel#html-toast-titled
+      </lux-alert>
+  .lux-tabs-panel#html-toast-titled
     :code(lang="html")
       <!-- Base - No semantic color class defined -->
-      <div class="chi-alert -toast" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Base</p>
-          <p class="chi-alert__text">This is a base alert</p>
+      <div class="lux-alert -toast" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Base</p>
+          <p class="lux-alert__text">This is a base alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Success -->
-      <div class="chi-alert -toast -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -toast -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Danger -->
-      <div class="chi-alert -toast -danger" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Danger</p>
-          <p class="chi-alert__text">This is a danger alert</p>
+      <div class="lux-alert -toast -danger" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Danger</p>
+          <p class="lux-alert__text">This is a danger alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Warning -->
-      <div class="chi-alert -toast -warning" role="alert">
-        <i class="chi-alert__icon chi-icon icon-warning"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Warning</p>
-          <p class="chi-alert__text">This is a warning alert</p>
+      <div class="lux-alert -toast -warning" role="alert">
+        <i class="lux-alert__icon lux-icon icon-warning"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Warning</p>
+          <p class="lux-alert__text">This is a warning alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Info -->
-      <div class="chi-alert -toast -info" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Info</p>
-          <p class="chi-alert__text">This is an info alert</p>
+      <div class="lux-alert -toast -info" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Info</p>
+          <p class="lux-alert__text">This is an info alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
       <!-- Muted -->
-      <div class="chi-alert -toast -muted" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-info"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Muted</p>
-          <p class="chi-alert__text">This is a muted alert</p>
+      <div class="lux-alert -toast -muted" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-info"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Muted</p>
+          <p class="lux-alert__text">This is a muted alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
@@ -1152,124 +1152,124 @@ h4 Sizes
 .example.-mb--3
   .-p--1
     p.-text--bold.-ml--2 sm
-    chi-alert.-m--2(type='toast', color='success', icon='circle-check', size='sm')
+    lux-alert.-m--2(type='toast', color='success', icon='circle-check', size='sm')
       | This is a small success alert
-    chi-alert.-m--2(type='toast', color='success', icon='circle-check', size='sm', title='Success')
+    lux-alert.-m--2(type='toast', color='success', icon='circle-check', size='sm', title='Success')
       | This is a small success alert
     p.-text--bold.-ml--2 md (default)
-    chi-alert.-m--2(type='toast', color='success', icon='circle-check')
+    lux-alert.-m--2(type='toast', color='success', icon='circle-check')
       | This is a success alert
-    chi-alert.-m--2(type='toast', color='success', icon='circle-check', title='Success')
+    lux-alert.-m--2(type='toast', color='success', icon='circle-check', title='Success')
       | This is a success alert
     p.-text--bold.-ml--2 lg
-    chi-alert.-m--2(type='toast', color='success', icon='circle-check', size='lg')
+    lux-alert.-m--2(type='toast', color='success', icon='circle-check', size='lg')
       | This is a large success alert
-    chi-alert.-m--2(type='toast', color='success', icon='circle-check', size='lg', title='Success')
+    lux-alert.-m--2(type='toast', color='success', icon='circle-check', size='lg', title='Success')
       | This is a large success alert
   .example-tabs.-pl--2
-    ul.chi-tabs#example-toast-sizes
+    ul.lux-tabs#example-toast-sizes
       li.-active
         a(href=`#webcomponent-toast-sizes`) Web Component
       li
         a(href=`#html-toast-sizes`) HTML Blueprint
-  .chi-tabs-panel.-active#webcomponent-toast-sizes
-    .chi-tab__description
+  .lux-tabs-panel.-active#webcomponent-toast-sizes
+    .lux-tab__description
       | Use the <code>size=""</code> attribute to customize the size of an alert. Supported sizes are <code>sm</code>, <code>md</code>, and <code>lg</code>.
     :code(lang="html")
       <!-- Small -->
-      <chi-alert type="toast" color="success" icon="circle-check" size="sm">
+      <lux-alert type="toast" color="success" icon="circle-check" size="sm">
         This is a small success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Small Titled -->
-      <chi-alert type="toast" color="success" icon="circle-check" size="sm" title="Success">
+      <lux-alert type="toast" color="success" icon="circle-check" size="sm" title="Success">
         This is a small success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Medium -->
-      <chi-alert type="toast" color="success" icon="circle-check">
+      <lux-alert type="toast" color="success" icon="circle-check">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Medium Titled -->
-      <chi-alert type="toast" color="success" icon="circle-check" title="Success">
+      <lux-alert type="toast" color="success" icon="circle-check" title="Success">
         This is a success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large -->
-      <chi-alert type="toast" color="success" icon="circle-check" size="lg">
+      <lux-alert type="toast" color="success" icon="circle-check" size="lg">
         This is a large success alert
-      </chi-alert>
+      </lux-alert>
       <!-- Large Titled -->
-      <chi-alert type="toast" color="success" icon="circle-check" size="lg" title="Success">
+      <lux-alert type="toast" color="success" icon="circle-check" size="lg" title="Success">
         This is a large success alert
-      </chi-alert>
-  .chi-tabs-panel#html-toast-sizes
-    .chi-tab__description
+      </lux-alert>
+  .lux-tabs-panel#html-toast-sizes
+    .lux-tab__description
       | Use size classes to customize the size of an alert. Supported size classes are <code>-sm</code>, <code>-md</code>, and <code>-lg</code>.
     :code(lang="html")
-      <div class="chi-alert -toast -success -sm" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a small success alert</p>
+      <div class="lux-alert -toast -success -sm" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a small success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
-      <div class="chi-alert -toast -success -sm" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a small success alert</p>
+      <div class="lux-alert -toast -success -sm" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a small success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
-      <div class="chi-alert -toast -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -toast -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
-      <div class="chi-alert -toast -success" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a success alert</p>
+      <div class="lux-alert -toast -success" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
-      <div class="chi-alert -toast -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__text">This is a large success alert</p>
+      <div class="lux-alert -toast -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__text">This is a large success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
-      <div class="chi-alert -toast -success -lg" role="alert">
-        <i class="chi-alert__icon chi-icon icon-circle-check"></i>
-        <div class="chi-alert__content">
-          <p class="chi-alert__title">Success</p>
-          <p class="chi-alert__text">This is a large success alert</p>
+      <div class="lux-alert -toast -success -lg" role="alert">
+        <i class="lux-alert__icon lux-icon icon-circle-check"></i>
+        <div class="lux-alert__content">
+          <p class="lux-alert__title">Success</p>
+          <p class="lux-alert__text">This is a large success alert</p>
         </div>
-        <button class="chi-alert__close-button chi-button -icon -close" aria-label="Close">
-          <div class="chi-button__content">
-            <i class="chi-icon icon-x"></i>
+        <button class="lux-alert__close-button lux-button -icon -close" aria-label="Close">
+          <div class="lux-button__content">
+            <i class="lux-icon icon-x"></i>
           </div>
         </button>
       </div>
@@ -1278,5 +1278,5 @@ script.
     document.addEventListener(
     'DOMContentLoaded',
     function() {
-      chi.tab(document.querySelectorAll('.chi-tabs-panel .chi-tabs'));
+      lux.tab(document.querySelectorAll('.lux-tabs-panel .lux-tabs'));
     });

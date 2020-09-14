@@ -7,7 +7,7 @@ import postcss from 'gulp-postcss';
 import sass from 'gulp-sass';
 import { Folders } from './constants';
 import {server} from './serve';
-import * as chi from "../scripts/chi";
+import * as lux from "../scripts/lux";
 
 
 function buildWebsiteStyles () {
@@ -35,6 +35,6 @@ function buildWebsiteStyles () {
   }
 }
 
-buildWebsiteStyles.description = 'Builds Chi CSS library. Returns a stream.';
+buildWebsiteStyles.description = 'Builds Lux CSS library. Returns a stream.';
 
 gulp.task('build:website:styles', buildWebsiteStyles);

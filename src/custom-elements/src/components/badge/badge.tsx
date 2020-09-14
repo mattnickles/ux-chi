@@ -1,7 +1,7 @@
 import { Component, Element, Prop, State, Watch, h } from '@stencil/core';
 
 @Component({
-  tag: 'chi-badge',
+  tag: 'lux-badge',
   styleUrl: 'badge.scss',
   scoped: true
 })
@@ -55,21 +55,21 @@ export class Badge {
     this.colorValidation(this.color);
     this.sizeValidation(this.size);
     this.variantValidation(this.variant);
-    if (!this.el.querySelector('chi-icon')) {
+    if (!this.el.querySelector('lux-icon')) {
       this.slotBadgeContent = false;
     }
   }
 
   render() {
     return (
-      <div class={`chi-badge
+      <div class={`lux-badge
 	        ${this.size ? `-${this.size}` : ''}
 	        ${this.color ? `-${this.color}` : ''}
 	        ${this.variant ? `-${this.variant}` : ''}
 	        ${this.textTransform ? `-text--${this.textTransform}` : ''}`}
       >
         {this.slotBadgeContent ?
-          <div class="chi-badge__content">
+          <div class="lux-badge__content">
             <slot></slot>
           </div> :
           <span>

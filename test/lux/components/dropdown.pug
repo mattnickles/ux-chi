@@ -1,0 +1,221 @@
+---
+title: Dropdown
+---
+
+- var dropdownStates = ["", "-active"];
+- var textCombinations = [{"t_text": "Click me", "d_text": "Element"}, {"t_text": "Long trigger text, click me", "d_text": "Element"}, {"t_text": "Click me", "d_text": "Long text dropdown element"}];
+- var menuItemStates = [{"title":"Normal", "class": ""}, {"title":"Active", "class": "-active"}, {"title":"Disabled", "class": "-disabled"}, {"title":"Hover", "class": "-hover"}];
+
+each menuItemState in menuItemStates
+  div(class=`test-basicDropdown${menuItemState.class}`)
+    span.-text--h2=menuItemState.title
+    .-d--flex
+      each textCombination in textCombinations
+        each dropdownState in dropdownStates
+          .lux-dropdown(style="margin-bottom: 8em")
+            button(class=`lux-button lux-dropdown__trigger ${dropdownState}`)=textCombination.t_text
+            div(class=`lux-dropdown__menu ${dropdownState}`)
+              each i in [1, 2, 3]
+                a(class=`lux-dropdown__menu-item ${menuItemState.class}`, href='#')=textCombination.d_text + " " + i
+
+div(class=`test-dropdown-list`)
+  span.-text--h2 List
+  .-d--flex
+    div(class=`lux-dropdown__menu -list -active`)
+      a.lux-dropdown__menu-item(href='#')
+        p.lux-dropdown__menu-item_title Normal element
+        p.lux-dropdown__menu-item_text Normal element
+      a.lux-dropdown__menu-item.-active(href='#')
+        p.lux-dropdown__menu-item_title Normal element
+        p.lux-dropdown__menu-item_text Active element
+      a.lux-dropdown__menu-item.-disabled(href='#')
+        p.lux-dropdown__menu-item_title Normal element
+        p.lux-dropdown__menu-item_text Disabled element
+      a.lux-dropdown__menu-item.-hover(href='#')
+        p.lux-dropdown__menu-item_title Normal element
+        p.lux-dropdown__menu-item_text Hovered item
+
+div(class=`test-dropdown-divider`)
+  span.-text--h2 Divider
+  .-d--flex
+    div(class=`lux-dropdown__menu -active`)
+      each i in [1, 2]
+        a(class=`lux-dropdown__menu-item`, href='#')="Text " + i
+      .lux-divider
+      each i in [3, 4]
+        a(class=`lux-dropdown__menu-item`, href='#')="Text " + i
+
+div(class=`test-dropdown-icons`)
+  span.-text--h2 Icons
+  .-d--flex
+    .lux-dropdown__menu.-active
+      a.lux-dropdown__menu-item(href='#')
+        .lux-icon
+          svg
+            use(xlink:href='#icon-file-outline')
+        = "New"
+      a.lux-dropdown__menu-item.-disabled(href='http://www.centurylink.com')
+        .lux-icon
+          svg
+            use(xlink:href='#icon-arrow-to-bottom')
+        = "Save"
+      .lux-divider
+      a.lux-dropdown__menu-item(href='#')
+        .lux-icon
+          svg
+            use(xlink:href='#icon-mail')
+        = "Send"
+      a.lux-dropdown__menu-item.-active(href='#')
+        .lux-icon
+          svg
+            use(xlink:href='#icon-cart')
+        = "Buy"
+      a.lux-dropdown__menu-item.-hover(href='#')
+        .lux-icon
+          svg
+            use(xlink:href='#icon-users')
+        = "Share"
+      .lux-divider
+      a.lux-dropdown__menu-item(href='#')
+        .lux-icon
+          svg
+            use(xlink:href='#icon-logout')
+        = "Logout"
+
+div(class=`test-dropdown-searchBox`)
+  span.-text--h2 Search box
+  .-d--flex
+    .lux-dropdown__menu.-active
+      .lux-input__wrapper.-icon--left.lux-dropdown__menu-item
+        input(type="text", class="lux-input", placeholder="Search")
+        .lux-icon
+          svg
+            use(xlink:href='#icon-search')
+      a.lux-dropdown__menu-item(href='#') Element 1
+      a.lux-dropdown__menu-item(href='#') Element 2
+
+- var inputStates = ["", "disabled", "checked"]
+div(class=`test-dropdown-checkbox`)
+  span.-text--h2 checkbox
+  .lux-dropdown__menu.-active
+    each inputState in inputStates
+      .lux-dropdown__menu-item
+        .lux-checkbox
+          input(type="checkbox", class="lux-checkbox__input", checked=(inputState==="checked"), disabled=(inputState==="disabled"))
+          label.lux-checkbox__label(for=`checkbox${inputState}`)="Element checkbox " + inputState
+
+div(class=`test-dropdown-checkbox-icon`)
+  span.-text--h2 checkbox with icons
+  .lux-dropdown__menu.-active
+    each inputState in inputStates
+      .lux-dropdown__menu-item
+        .lux-checkbox
+          input(type="checkbox", class="lux-checkbox__input", checked=(inputState==="checked"), disabled=(inputState==="disabled"))
+          label.lux-checkbox__label(for=`checkbox${inputState}`)
+            .lux-icon
+              svg
+                use(xlink:href='#icon-logo-centurylink')
+            ="Element checkbox " + inputState
+
+- var inputStates = ["", "disabled", "checked"]
+div(class=`test-dropdown-radio`)
+  span.-text--h2 radio
+  .lux-dropdown__menu.-active
+    each inputState in inputStates
+      .lux-dropdown__menu-item
+        .lux-radio
+          input(type="radio", class="lux-radio__input", checked=(inputState==="checked"), disabled=(inputState==="disabled"))
+          label.lux-radio__label(for=`radio${inputState}`)="Element radio " + inputState
+
+div(class=`test-dropdown-radio-icon`)
+  span.-text--h2 radio with icons
+  .lux-dropdown__menu.-active
+    each inputState in inputStates
+      .lux-dropdown__menu-item
+        .lux-radio
+          input(type="radio", class="lux-radio__input", checked=(inputState==="checked"), disabled=(inputState==="disabled"))
+          label.lux-radio__label(for=`radio${inputState}`)
+            .lux-icon
+              svg
+                use(xlink:href='#icon-logo-centurylink')
+            ="Element radio " + inputState
+
+div(class=`test-dropdown-text`)
+  span.-text--h2 Plain text
+  .-d--flex
+    .lux-dropdown__menu.-active
+      span.lux-dropdown__menu-item Text 1
+      span.lux-dropdown__menu-item Text 2
+      span.lux-dropdown__menu-item Text 3
+      span.lux-dropdown__menu-item Text 4
+
+div(class=`test-dropdown-range`)
+  span.-text--h2 Range
+  .-d--flex
+    .lux-dropdown__menu.-active
+      .lux-dropdown__menu-item
+        label.-text.-mr--2 200GB
+        input.lux-input(type="range")
+        label.-text.-ml--2 5TB
+      .lux-divider
+      span.lux-dropdown__menu-item Select range
+      .lux-dropdown__menu-item
+        input.lux-input(type="range")
+
+div(class=`test-dropdown-toggle`)
+  span.-text--h2 Toggle input
+  .-d--flex
+    .lux-dropdown__menu.-active
+      .lux-dropdown__menu-item.-h--auto
+        .lux-form__item
+          label.lux-switch(for="toggle1")
+            input(type="checkbox", class="lux-switch__input", id="toggle1")
+            span(class="lux-switch__content")
+              span.lux-switch__thumb
+            span.lux-switch__label Label
+      .lux-dropdown__menu-item.-h--auto
+        .lux-form__item
+          label.lux-switch(for="toggle2")
+            input(type="checkbox", class="lux-switch__input", id="toggle2", checked)
+            span(class="lux-switch__content")
+              span.lux-switch__thumb
+            span.lux-switch__label Label
+      .lux-dropdown__menu-item.-h--auto
+        .lux-form__item
+          label.lux-switch(for="toggle3")
+            input(type="checkbox", class="lux-switch__input", id="toggle3", disabled)
+            span(class="lux-switch__content")
+              span.lux-switch__thumb
+            span.lux-switch__label Label
+
+
+div(class=`test-dropdown-ellipsis-helper`)
+  span.-text--h2 Ellipsis helper
+  .-d--flex
+    .lux-dropdown__menu.-active(style="width:10rem")
+      a.lux-dropdown__menu-item(href='#') Element 1
+      a.lux-dropdown__menu-item(href='#') Element 2
+      a.lux-dropdown__menu-item(href='#')
+        .-flex--ellipsis Longer text element 3
+      a.lux-dropdown__menu-item(href='#') Element 4
+
+div(class=`test-dropdown-higher-helper`)
+  span.-text--h2 Higher menu items helper
+  .-d--flex
+    .lux-dropdown__menu.-active(style="width:10rem")
+      a.lux-dropdown__menu-item(href="#") Link 1
+      .lux-dropdown__menu-item.-h--auto.-py--1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      a.lux-dropdown__menu-item(href="#") Link 2
+
+- var triggerSizes = ["-lg", "", "-sm"];
+- var triggerStates = dropdownStates;
+- var dropdownPositions = ["", "default", "initial", "top", "right", "bottom", "left", "top-start", "top-end", "right-start", "right-end", "bottom-start", "bottom-end", "left-start", "left-end"];
+
+each triggerSize in triggerSizes
+  div(class=`test-dropdown-button${triggerSize}`)
+    span.-text--h2=`Button${triggerSize}`
+    each triggerState in triggerStates
+      span.-text--h3=`State ${triggerState}`
+      each position in dropdownPositions
+        .-d--flex
+          button(class=`lux-button lux-dropdown__trigger ${triggerSize} ${triggerState}`, data-position=position)=`Button ${triggerState} ${position}`

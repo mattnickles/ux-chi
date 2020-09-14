@@ -8,24 +8,24 @@ h3 Brand
 p.-text
   | Brand icon colors reinforce Lumen's brand. Use primary and secondary as accents, and dark, grey, and light as neutrals.
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12.-w-md--6.-p--1.-d--flex.-justify-content--center
+  .lux-grid.-no-gutter
+    .lux-col.-w--12.-w-md--6.-p--1.-d--flex.-justify-content--center
       each color in ['icon--dark', 'icon--primary', 'icon--grey']
-        i(class=`chi-icon icon-atom -md -${color} -m--1`)
-    .chi-col.-w--12.-w-md--6.-bg--black.-p--1.-d--flex.-justify-content--center
+        i(class=`lux-icon icon-atom -md -${color} -m--1`)
+    .lux-col.-w--12.-w-md--6.-bg--black.-p--1.-d--flex.-justify-content--center
       each color in ['icon--secondary', 'icon--light']
         if (color === 'icon--secondary')
-          i(class=`chi-icon icon-atom -md -icon--secondary -m--1`)
+          i(class=`lux-icon icon-atom -md -icon--secondary -m--1`)
         else if (color === 'icon--light')
-          i(class=`chi-icon icon-atom -md -icon--light -m--1`)
+          i(class=`lux-icon icon-atom -md -icon--light -m--1`)
   :code(lang="html")
     <!-- For light backgrounds -->
-    <i class="chi-icon icon-atom -md -icon--dark"></i>
-    <i class="chi-icon icon-atom -md -icon--primary"></i>
-    <i class="chi-icon icon-atom -md -icon--grey"></i>
+    <i class="lux-icon icon-atom -md -icon--dark"></i>
+    <i class="lux-icon icon-atom -md -icon--primary"></i>
+    <i class="lux-icon icon-atom -md -icon--grey"></i>
     <!-- For dark backgrounds -->
-    <i class="chi-icon icon-atom -md -icon--secondary"></i>
-    <i class="chi-icon icon-atom -md -icon--light"></i>
+    <i class="lux-icon icon-atom -md -icon--secondary"></i>
+    <i class="lux-icon icon-atom -md -icon--light"></i>
 h3 Semantic
 p.-text
   | Use semantic text colors to communicate meaning to users. Examples include displaying alerts, form field
@@ -33,16 +33,16 @@ p.-text
   | for informative, red (danger) for negative, yellow (warning) for needs attention, and grey (muted)
   | for neutral. Semantic colors should never be used for decorative purposes.
 .example.-mb--3
-  .chi-grid.-no-gutter
-    .chi-col.-w--12-text--center.-p--1.-d--flex.-justify-content--center
+  .lux-grid.-no-gutter
+    .lux-col.-w--12-text--center.-p--1.-d--flex.-justify-content--center
       each color in ['icon--success', 'icon--info', 'icon--warning', 'icon--danger', 'icon--muted']
-        i(class=`chi-icon icon-atom -md -${color} -m--1`)
+        i(class=`lux-icon icon-atom -md -${color} -m--1`)
   :code(lang="html")
-    <i class="chi-icon icon-atom -md -icon--success"></i>
-    <i class="chi-icon icon-atom -md -icon--info"></i>
-    <i class="chi-icon icon-atom -md -icon--warning"></i>
-    <i class="chi-icon icon-atom -md -icon--danger"></i>
-    <i class="chi-icon icon-atom -md -icon--muted"></i>
+    <i class="lux-icon icon-atom -md -icon--success"></i>
+    <i class="lux-icon icon-atom -md -icon--info"></i>
+    <i class="lux-icon icon-atom -md -icon--warning"></i>
+    <i class="lux-icon icon-atom -md -icon--danger"></i>
+    <i class="lux-icon icon-atom -md -icon--muted"></i>
 
 h2 Background-color
 p.-text
@@ -52,7 +52,7 @@ p.-text
 h3 Brand
 p.-text
   | Brand background-colors reinforce Lumen's brand.
-section.chi-table.-bordered.-mt--3.-mb--3
+section.lux-table.-bordered.-mt--3.-mb--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -75,7 +75,7 @@ section.chi-table.-bordered.-mt--3.-mb--3
 
 h3 Brand complimentary
 p.-text More background-colors that can be used to compliment the primary brand palette.
-section.chi-table.-bordered.-mt--3.-mb--3
+section.lux-table.-bordered.-mt--3.-mb--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -99,7 +99,7 @@ section.chi-table.-bordered.-mt--3.-mb--3
 h3 Neutral
 p.-text
   | Neutral background-colors provide low-contrast backgrounds for application containers, cards, and more.
-section.chi-table.-bordered.-mt--3.-mb--3
+section.lux-table.-bordered.-mt--3.-mb--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -126,7 +126,7 @@ p.-text
   | validation, user status, application state and more. Use green (success) for positive, blue (info)
   | for informative, red (danger) for negative, yellow (warning) for needs attention, and grey (muted)
   | for neutral. Semantic colors should never be used for decorative purposes.
-section.chi-table.-bordered.-mt--3.-mb--3
+section.lux-table.-bordered.-mt--3.-mb--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -149,7 +149,7 @@ section.chi-table.-bordered.-mt--3.-mb--3
 
 h3 None
 p.-text Use to render an element with no background-color.
-section.chi-table.-bordered.-mt--3.-mb--3
+section.lux-table.-bordered.-mt--3.-mb--3
   div
     table.-text(cellpadding='0', cellspacing='0')
       thead
@@ -171,7 +171,7 @@ section.chi-table.-bordered.-mt--3.-mb--3
 
 h3 Target specific breakpoints
 p.-text To target a specific breakpoint, add the breakpoint abbreviation to the class.
-section.chi-table.-bordered.-mt--3.-mb--3
+section.lux-table.-bordered.-mt--3.-mb--3
   div
     table(cellpadding='0', cellspacing='0')
       thead
