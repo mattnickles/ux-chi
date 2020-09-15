@@ -1,1 +1,1 @@
-window.luxCurrentVersion="3.0.0";
+window.luxCurrentVersion="4.0.0";

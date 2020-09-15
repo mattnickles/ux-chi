@@ -1,6 +1,6 @@
 {
   "name": "@centurylink/lux",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Lux is Lumen's design system for building consistent digital products and experiences.",
   "license": "MIT",
   "main": "bin/lux.js",

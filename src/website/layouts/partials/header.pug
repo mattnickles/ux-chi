@@ -60,19 +60,9 @@ header.lux-header.docs-header.-z--20
           i.lux-icon.icon-search
     .lux-header__end
       .lux-dropdown
-        button.lux-button.-flat.-px--1.lux-dropdown__trigger.-animate(data-position='bottom-end', id='version-dropdown', aria-label="Toggle Lux version") v3.0.0
+        button.lux-button.-flat.-px--1.lux-dropdown__trigger.-animate(data-position='bottom-end', id='version-dropdown', aria-label="Toggle Lux version") v4.0.0
         .lux-dropdown__menu(style='width:10rem;')#versionDropdown
-          a.lux-dropdown__menu-item.-active(href='https://assets.ctl.io/lux/3.0.0') v3.0.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.7.0') v2.7.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.6.0') v2.6.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.5.1') v2.5.1
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.5.0') v2.5.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.4.1') v2.4.1
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.4.0') v2.4.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.3.0') v2.3.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.2.0') v2.2.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.1.0') v2.1.0
-          a.lux-dropdown__menu-item(href='https://assets.ctl.io/lux/2.0.0') v2.0.0
+          a.lux-dropdown__menu-item.-active(href='https://assets.ctl.io/lux/4.0.0') v4.0.0
       script.
         if (localStorage.getItem("luxVersions") !== null) {
           if (versionCompare(window.luxCurrentVersion, JSON.parse(localStorage.getItem("luxVersions"))[0])) {

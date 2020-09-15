@@ -1,4 +1,9 @@
 # CHANGELOG
+## 4.0.0 (September 18, 2020)
+### Components
+#### Breaking changes
+* Renamed: The project and all component class prefixes have been renamed from Chi to Lux (Lumen UX) to better align with Lumen, our new company name.
+
 ## 3.0.0 (September 13, 2020)
 ### Components
 #### Added
@@ -112,7 +117,7 @@
 * Changed: All component semantic states have been updated to render with new brighter semantic colors.
 * Changed: Alert banners no longer render with a bottom border.
 #### Fixed
-* Fixed: Icon font face lux.eot error in Internet Explorer.
+* Fixed: Icon font face chi.eot error in Internet Explorer.
 * Fixed: Icon bug which displayed the SVG for icon-check-alt in place of icon-check.
 * Fixed: Steps component active step was slightly misaligned in IE11.
 ### Documentation
@@ -139,7 +144,7 @@
 * Changed: Tooltip styles have been updated to appear less like dropdown menus.
 * Changed: Tooltip now renders with a 0.5s delay by default.
 * Changed: Modal portal theme shadow and header background-color have been updated to reflect latest designs.
-* Changed: Backdrop portal theme has been removed. Portal has adopted Chi's default theme. The class `-portal` is no longer necessary on `lux-backdrop`.
+* Changed: Backdrop portal theme has been removed. Portal has adopted Chi's default theme. The class `-portal` is no longer necessary on `chi-backdrop`.
 * Changed: Icons `icon-address-book`, `icon-arrow-to-bottom`, `icon-user`, `icon-users`, `icon-visible-off`, `icon-visible`, `icon-x-alt`
 #### Fixed
 * Fixed: Popover web component did not flip arrows correctly when space was insufficient.
@@ -208,7 +213,7 @@
 #### Fixed
 * Fixed: Sizing utility values did not have enough specificity to override default component sizes.
 * Fixed: Sizing utility for width auto was not working.
-* Fixed: Header container `lux-header__start` was not rendering dropdown menus correctly due to an overflow:hidden.
+* Fixed: Header container `chi-header__start` was not rendering dropdown menus correctly due to an overflow:hidden.
 * Fixed: Modal footer buttons were not rendering with sufficient space between buttons.
 * Fixed: Modal content font-size and line-height did not align with Chi's base font and line-height.
 
@@ -221,21 +226,21 @@
 * Changed: Removed Design Kit button from docs sidenav.
 #### Fixed
 * Fixed: Modal code samples were missing trigger and javascript example code.
-* Fixed: Pagination code samples which contained icon buttons were missing the `-icon` class on `lux-button`.
-* Fixed: Pagination code samples which contained icon buttons were missing the `lux-button__content` container in `lux-button`.
+* Fixed: Pagination code samples which contained icon buttons were missing the `-icon` class on `chi-button`.
+* Fixed: Pagination code samples which contained icon buttons were missing the `chi-button__content` container in `chi-button`.
 
 ## 2.0.0 (April 23, 2020)
 
 ### Components
 #### Breaking changes
-* Renamed: All component class prefixes for consistency with Chi's web component names. (e.g. `a-icon` is now `lux-icon`).
+* Renamed: All component class prefixes for consistency with Chi's web component names. (e.g. `a-icon` is now `chi-icon`).
 * Renamed: All legacy camel case classes to kebab case (e.g. `-floatingLabel` is now `-floating-label`).
 * Renamed: Text utility size classes for consistency (e.g. `-text--smaller` is now `-text--xs`).
-* Renamed: Alert close CSS classes from `dismiss` to `close` (e.g. `m-alert__dismiss-button` is now `lux-alert__close-button`).
-* Renamed: Number input component container from `m-input__wrapper` to `lux-number-input`.
-* Renamed: Number input Expanded component container from `m-inputNumber` to `lux-number-input -expanded`.
-* Changed: Number input sizes (e.g. `-sm`) are now declared on the component container `lux-number-input` instead of the input.
-* Changed: Card content `lux-card__content` now displays as flex column by default for consistency with primary use cases. Flex column utility classes no longer need to be applied.
+* Renamed: Alert close CSS classes from `dismiss` to `close` (e.g. `m-alert__dismiss-button` is now `chi-alert__close-button`).
+* Renamed: Number input component container from `m-input__wrapper` to `chi-number-input`.
+* Renamed: Number input Expanded component container from `m-inputNumber` to `chi-number-input -expanded`.
+* Changed: Number input sizes (e.g. `-sm`) are now declared on the component container `chi-number-input` instead of the input.
+* Changed: Card content `chi-card__content` now displays as flex column by default for consistency with primary use cases. Flex column utility classes no longer need to be applied.
 #### Added
 * Added: Icons to support Enterprise ticketing portal use cases (`icon-filter`, `icon-flag`, `icon-paste`).
 * Added: Consistent 508/WCAG compliant focus state to all Button and Form components.
@@ -245,7 +250,7 @@
 * Added: Breadcrumb now supports five size classes (e.g. `-xs`, `-sm`) to render the component larger or smaller.
 * Added: Tabs now support the ability to mark specific tab links as disabled with class `-disabled`.
 * Added: Text utility heading size classes `-text--h1` - `-text--h6` to render text with h1-h6 heading tag styles.
-* Added: Card content now supports the child element `lux-card__caption` as a more consistent way of storing card captions.
+* Added: Card content now supports the child element `chi-card__caption` as a more consistent way of storing card captions.
 * Added: Card now supports the class `-align--center` to flex center align all child elements for Enterprise Portal KPI style cards.
 * Added: Card now supports the class `-hover--animate` to animate a KPI style card on hover.
 * Added: Card now supports the class `-no-border` to render cards without a border.
@@ -293,7 +298,7 @@
 * Added: Text Utilities have been updated with new documentation for text sizes and headings.
 * Added: Card examples that illustrate new behavior: No border, Align center, Animate on hover.
 #### Changed
-* Changed: Removed Icon SVG sprite method (lux-icons.js) from Icon page in favor of Web Component and Web Font methods.
+* Changed: Removed Icon SVG sprite method (chi-icons.js) from Icon page in favor of Web Component and Web Font methods.
 * Changed: Unified icons in all documentation examples with web fonts for HTML Blueprints and web component icons for Web Components.
 * Changed: Popover documentation has been updated with new examples.
 * Changed: Moved Development Workflow information to dedicated page within Getting Started.
@@ -448,7 +453,7 @@
 * Updated base Header and Footer components to use the black Brand logo for consistency with dot com.
 * Fixed Icon Button bug which rendered incorrect padding on :active when a size class was defined.
 * Fixed Tab component animation which was buggy on -lg sized horizontal tabs.
-* Created lux alias to run all development environment commands.
+* Created chi alias to run all development environment commands.
 * Fixed wrapping and margin bugs in documentation examples.
 * Renamed text color utility from -text--inverse to -text--light.
 * Added new reference images for BackstopJS regression tests.
@@ -592,7 +597,7 @@
 * Added Getting Started section.
 * Improved compatibility with Edge and IE11.
 * Added flex utility classes.
-* Merged ux-lux-docs into ux-lux.
+* Merged ux-chi-docs into ux-chi.
 
 ## 0.8.1 (July 13, 2018)
 
@@ -620,7 +625,7 @@
 * Removed hosted fallback support for Open Sans fonts.
 * Updated Google Fonts reference to always load via https.
 * Moved the package into the `@centurylink` scope (from `@ctl`, which we don't control).
-* Updated package metadata to point to the GitHub repository and the CenturyLink Assets Server (https://assets.ctl.io/lux) as the project homepage.
+* Updated package metadata to point to the GitHub repository and the CenturyLink Assets Server (https://assets.ctl.io/chi) as the project homepage.
 * Added licensing and the CenturyLink contributor notice.
 * Removed unintentionally rounded corners on banner alerts.
 * Added close buttons to bubble alerts.
